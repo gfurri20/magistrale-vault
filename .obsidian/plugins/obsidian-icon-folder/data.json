@@ -26,46 +26,9 @@
     "iconsBackgroundCheckEnabled": true,
     "iconsInNotesEnabled": true
   },
-  "Fondamenti di Sicurezza": {
-    "iconName": "IbLocked",
-    "inheritanceIcon": "IbLocked"
-  },
-  "Fondamenti di Sicurezza/Progetto": {
-    "iconName": null,
-    "inheritanceIcon": "IbLocked"
-  },
   "SIA": {
     "iconName": "IbDatabse",
     "inheritanceIcon": "IbDatabse"
-  },
-  "Fondamenti di linguaggi di programmazione e specifica": {
-    "iconName": "IbArrowCircleForward",
-    "inheritanceIcon": "IbArrowCircleForward"
-  },
-  "Fondamenti di complessità ed algoritmi": {
-    "iconName": "IbTreeMapDown",
-    "inheritanceIcon": "IbTreeMapDown"
-  },
-  "Cyberchallenge": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
-  },
-  "Cyberchallenge/sw_sec": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
-  },
-  "Cyberchallenge/writeups": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
-  },
-  "Cyberchallenge/writeups/crypto": "IbChip",
-  "Cyberchallenge/writeups/web_sec": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
-  },
-  "Cyberchallenge/writeups/sw_sec": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
   },
   "Network Security": {
     "iconName": "IbInternetBrowser",
@@ -75,20 +38,57 @@
     "iconName": null,
     "inheritanceIcon": "IbInternetBrowser"
   },
-  "Fondamenti di complessità ed algoritmi/Problemi": {
-    "iconName": "IbTreeMapDown",
-    "inheritanceIcon": "IbTreeMapDown"
-  },
-  "Cyberchallenge/writeups/net_sec": {
-    "iconName": "IbChip",
-    "inheritanceIcon": "IbChip"
-  },
-  "Fondamenti di complessità ed algoritmi/Problemi/problema-accensione.md": {
-    "iconName": "IbTreeMapDown",
-    "inheritanceIcon": "IbTreeMapDown"
-  },
   "codice-malevolo": {
     "iconName": "IbLightning",
     "inheritanceIcon": "IbLightning"
+  },
+  "cyberchallenge": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "cyberchallenge/sw_sec": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "cyberchallenge/writeups": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "cyberchallenge/writeups/crypto": "IbChip",
+  "cyberchallenge/writeups/net_sec": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "cyberchallenge/writeups/sw_sec": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "cyberchallenge/writeups/web_sec": {
+    "iconName": "IbChip",
+    "inheritanceIcon": "IbChip"
+  },
+  "complessita-e-algoritmi": {
+    "iconName": "IbTreeMapDown",
+    "inheritanceIcon": "IbTreeMapDown"
+  },
+  "complessita-e-algoritmi/Problemi": {
+    "iconName": "IbTreeMapDown",
+    "inheritanceIcon": "IbTreeMapDown"
+  },
+  "complessita-e-algoritmi/Problemi/problema-accensione.md": {
+    "iconName": "IbTreeMapDown",
+    "inheritanceIcon": "IbTreeMapDown"
+  },
+  "flips": {
+    "iconName": "IbArrowCircleForward",
+    "inheritanceIcon": "IbArrowCircleForward"
+  },
+  "cybersecurity": {
+    "iconName": "IbLocked",
+    "inheritanceIcon": "IbLocked"
+  },
+  "cybersecurity/Progetto": {
+    "iconName": null,
+    "inheritanceIcon": "IbLocked"
   }
 }
