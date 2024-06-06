@@ -26,21 +26,9 @@
     "iconsBackgroundCheckEnabled": true,
     "iconsInNotesEnabled": true
   },
-  "SIA": {
-    "iconName": "IbDatabse",
-    "inheritanceIcon": "IbDatabse"
-  },
-  "Network Security": {
-    "iconName": "IbInternetBrowser",
-    "inheritanceIcon": "IbInternetBrowser"
-  },
   "Network Security/Lab. 1 - 10 aprile 2024.md": {
     "iconName": null,
     "inheritanceIcon": "IbInternetBrowser"
-  },
-  "codice-malevolo": {
-    "iconName": "IbLightning",
-    "inheritanceIcon": "IbLightning"
   },
   "cyberchallenge": {
     "iconName": "IbChip",
@@ -67,28 +55,40 @@
     "iconName": "IbChip",
     "inheritanceIcon": "IbChip"
   },
-  "complessita-e-algoritmi": {
+  "corsi/codice-malevolo": {
+    "iconName": "IbLightning",
+    "inheritanceIcon": "IbLightning"
+  },
+  "corsi/complessita-e-algoritmi": {
     "iconName": "IbTreeMapDown",
     "inheritanceIcon": "IbTreeMapDown"
   },
-  "complessita-e-algoritmi/Problemi": {
+  "corsi/complessita-e-algoritmi/Problemi": {
     "iconName": "IbTreeMapDown",
     "inheritanceIcon": "IbTreeMapDown"
   },
-  "complessita-e-algoritmi/Problemi/problema-accensione.md": {
+  "corsi/complessita-e-algoritmi/Problemi/problema-accensione.md": {
     "iconName": "IbTreeMapDown",
     "inheritanceIcon": "IbTreeMapDown"
   },
-  "flips": {
-    "iconName": "IbArrowCircleForward",
-    "inheritanceIcon": "IbArrowCircleForward"
-  },
-  "cybersecurity": {
+  "corsi/cybersecurity": {
     "iconName": "IbLocked",
     "inheritanceIcon": "IbLocked"
   },
-  "cybersecurity/Progetto": {
+  "corsi/cybersecurity/Progetto": {
     "iconName": null,
     "inheritanceIcon": "IbLocked"
+  },
+  "corsi/flips": {
+    "iconName": "IbArrowCircleForward",
+    "inheritanceIcon": "IbArrowCircleForward"
+  },
+  "corsi/network-security": {
+    "iconName": "IbInternetBrowser",
+    "inheritanceIcon": "IbInternetBrowser"
+  },
+  "corsi/sia": {
+    "iconName": "IbDatabse",
+    "inheritanceIcon": "IbDatabse"
   }
 }
