@@ -7,7 +7,7 @@ Quindi come vettori per inoltrare il malware.
 
 # Struttura di un PDF
 
-Ci sono diversi tipi di elementi che compongono un documento malevolo:
+Ci sono diversi tipi di elementi che compongono un pdf malevolo:
 - oggetti
 - parole chiave
 

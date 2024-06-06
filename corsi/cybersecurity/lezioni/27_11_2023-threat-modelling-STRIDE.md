@@ -48,7 +48,7 @@ Ogni elemento, che compone il sistema, inserito all'interno del DFD deve essere 
 | <span style="color:#ffc000">**I**</span>nformation Disclosure | --> | Confidentiality | Esposizione di info a qualcuno che non è autorizzato ad averle |
 | <span style="color:#ffc000">**D**</span>enial of Service | --> | Availability | Negazione o degradazione dei servizi utente |
 | <span style="color:#ffc000">**E**</span>levation of Privilege | --> | Authorization | Ottenimento di privilegi amministrativi senza autorizzazione (bypass dell'access control) |
-Guarda un po' ci sono [[I Sei Pilastri]].
+Guarda un po' ci sono [[i-sei-pilastri]].
 
 Ogni elemento definito da STRIDE può essere mappato su un elemento grafico fornito dai DFD, fornendo così informazioni relative a quali minacce possono essere soggetti i vari elementi:
 
@@ -88,7 +88,7 @@ Ogni cerchio rappresenta una super-minaccia (perché comprende altri scenari).
 
 Dopo aver stilato l'albero completo di ogni super-minaccia rispetto ad ogni elemento del nostro sistema (quindi sì è un bel lavorone, proporzionato alla gradenzza del sistema) si fa necessario attuare un'analisi dei rischi per eseguire una priorizzazione.
 
-L'analisi dei rischi si esegue confrontando *likelihood* e *impact*, nelle modalità descritte in [[Cyber Risk Management]].
+L'analisi dei rischi si esegue confrontando *likelihood* e *impact*, nelle modalità descritte in [[22_11_2023-cyber-risk-management]].
 
 STRIDE offre una categorizzazione dei rischi in base a quattro possibili livelli (da 1 il più alto a 4 il più basso):
 1. **very high** - deve essere gestito nella fase di sviluppo, immediatamente

@@ -129,7 +129,7 @@ Essi includono:
 
 ## Impact - Technical factors
 Questi fattori sono correlati all'impatto tecnico della vulnerabilità se fosse sfruttata e mirano a stimare la magnitudo dell'impatto sul sistema.
-Come si nota facilmente essi si rifanno a [[I Sei Pilastri]] della sicurezza informatica.
+Come si nota facilmente essi si rifanno a [[i-sei-pilastri]] della sicurezza informatica.
 
 Essi includono:
 - **Loss of Confidentiality** - quantità ed importanza dei dati che potrebbero essere trafugati. <small>Può variare da "Minimal non-sensitive data disclosed (2)", "Minimal critical data disclosed (6)", "Extensive non-sensitive data disclosed (6)", "Extensive critical data disclosed (7)", "All data disclosed (9)"</small>

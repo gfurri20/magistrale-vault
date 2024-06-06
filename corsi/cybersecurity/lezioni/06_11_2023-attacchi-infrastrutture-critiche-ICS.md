@@ -16,7 +16,7 @@ Gli ICS controllano 3 tipi di dispositivi collegati alla rete:
 - OT (Operational Technology), tutti quei dispositivi aziendali che controllano i dati prelevati dai sensori e dalle macchina nella catena di produzione
 - IOMT (Internet Of Medical Things), tutti quei dispositivi medicali collegati alla rete (e.g. elettrocardiogramma)
 
-La cyber kill chain che descrive un attacco ad ICS non si differenzia troppo dalla [[Cyber Kill Chain & MITRE]] generale.
+La cyber kill chain che descrive un attacco ad ICS non si differenzia troppo dalla [[04_10_2023-cyber-kill-chain-MITRE]] generale.
 
 Essa si divide in due "stage":
 1. Preparazione ed esecuzione dell'**intrusione**

@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cf8977e29b8c19d2",
+        "id": "e1e27f41b1c08bb8",
         "type": "tabs",
         "children": [
           {
-            "id": "c865c174b2ae082c",
+            "id": "630174d165fb7717",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/cybersecurity/lezioni/Social Engineering & Phishing.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/Social Engineering & Phishing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/Social Engineering & Phishing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "corsi/cybersecurity/lezioni/Social Engineering & Phishing.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,38 +138,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c865c174b2ae082c",
+  "active": "630174d165fb7717",
   "lastOpenFiles": [
-    "corsi/cybersecurity/lezioni/Cyber Kill Chain & MITRE.md",
-    "corsi/cybersecurity/lezioni/Cyber Risk Management.md",
-    "corsi/cybersecurity/lezioni/introduzione.md",
+    "cyberchallenge/sw_sec/Teoria.md",
+    "corsi/network-security/network-security.md",
+    "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
+    "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/sia/26_01_2024-data-warehousing.md",
+    "corsi/sia/07_02_2024-domande-esame.md",
+    "corsi/sia/teoria-organizzazione.md",
+    "corsi/sia/schedule.md",
+    "corsi/network-security/lab/05_06_2024-lab-5.md",
+    "corsi/network-security/lab",
+    "corsi/flips/19_02_2024-laboratorio.md",
+    "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/cybersecurity.md",
-    "corsi/cybersecurity/lezioni/Access Control.md",
+    "corsi/cybersecurity/lezioni/04_10_2023-cyber-kill-chain-MITRE.md",
+    "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
+    "corsi/cybersecurity/lezioni/i-sei-pilastri.md",
+    "corsi/cybersecurity/lezioni/09_10_2023-malware.md",
+    "corsi/cybersecurity/lezioni/27_11_2023-threat-modelling-STRIDE.md",
+    "corsi/cybersecurity/lezioni/22_11_2023-cyber-risk-management.md",
+    "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
+    "corsi/cybersecurity/lezioni/15_11_2023-autenticazione-passwordless.md",
+    "corsi/cybersecurity/lezioni/08_11_2023-autenticazione-utente.md",
+    "corsi/cybersecurity/lezioni/06_11_2023-attacchi-infrastrutture-critiche-ICS.md",
+    "corsi/cybersecurity/lezioni/16_10_2023-social-engineering-phishing.md",
     "corsi/cybersecurity/lezioni",
     "README.md",
     "corsi/complessita-e-algoritmi/complessita-e-algoritmi.md",
     "corsi/complessita-e-algoritmi/lezioni-rizzi/05_03_2024-introduzione-laboratorio.md",
     "corsi/complessita-e-algoritmi/tutorato/03_06_2024-tutor-algoritmi.md",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
-    "corsi/complessita-e-algoritmi/Untitled.md",
     "corsi/complessita-e-algoritmi/tutorato",
-    "corsi/codice-malevolo/codice-malevolo.md",
-    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
-    "corsi/codice-malevolo/lezioni/06_03_2024-introduzione.md",
-    "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
-    "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
     "corsi/codice-malevolo/lezioni",
-    "corsi/codice-malevolo/29_05_2024-missing.md",
-    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi",
-    "corsi/cybersecurity/lezioni/Attacchi ad Infrastrutture Critiche & ICS.md",
-    "corsi/network-security/05_06_2024-lab-5.md",
-    "corsi/network-security/05_06_2024-progetti.md",
-    "corsi/network-security/22_05_2024-lab-3.md",
-    "corsi/network-security/08_05_2024-lab-2.md",
-    "corsi/network-security/24_04_2024-lab-1.md",
-    "corsi/complessita-e-algoritmi/lezioni-rizzi/17_05_2024-DFS.md",
-    "corsi/complessita-e-algoritmi/lezioni-rizzi/16_04_2024-BFS-&-DFS.md",
     "cyberchallenge/writeups/net_sec",
     "Network Security/Untitled.canvas"
   ]
