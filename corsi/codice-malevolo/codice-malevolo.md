@@ -1,4 +1,23 @@
 Indice delle lezioni:
-- 6 marzo 2024 - [[06_03_2024-introduzione]]
-- 8 marzo 2024 - [[08_03_2024-malware-analysis]]
-- 27 marzo 2024 - [[27_03_2024-analisi-statica]]
+- 6 marzo 2024 → [[06_03_2024-introduzione]]
+- 8 marzo 2024 → [[08_03_2024-malware-analysis]]
+- 20 marzo 2024 -> **missing**
+- 27 marzo 2024 -> [[27_03_2024-analisi-statica]]
+- 3 aprile 2024 -> [[03_04_2024-analisi-dinamica]]
+- 5 aprile 2024 -> [[05_04_2024-analisi-traffico-rete]]
+- 12 aprile 2024 -> [[12_04_2024-assembly-code-analysis]]
+- 17 aprile 2024 -> [[17_04_2024-analisi-di-malware]]
+- 19 aprile 2024 -> **missing**
+- 3 maggio 2024 -> **missing**
+- 8 maggio 2024 -> **missing**
+- 10 maggio 2024 -> **missing**
+- 15 maggio 2024 -> [[15_05_2024-debugger]]
+- 17 maggio 2024 -> [[17_05_2024-recap-malware-analysis]]
+- 22 maggio 2024 -> [[22_05_2024-anti-analysis-analysis]]
+- 24 maggio 2024 -> [[24_05_2024-analisi-di-malware]]
+- 29 maggio 2024 -> **missing**
+- 31 maggio 2024 -> [[31_05_2024-tecniche-di-unpacking]]
+- 5 giugno 2024 -> [[05_06_2024-pdf-analisys]]
+- 7 giugno 2024 ->
+- 12 giugno 2024 ->
+- 14 giugno 2024 ->

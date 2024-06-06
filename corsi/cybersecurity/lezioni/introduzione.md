@@ -30,7 +30,7 @@ Prima di procedere alla spiegazione di ogni elemento definiamo alcuni termini fo
 > [!info] Asset
 > Tutto ciò che è di valore all'azienda. Quindi tutto ciò che diviene essenziale proteggere (e.g. dispositivi, reti, individuo, eccetera)
 
-> [!info] **Vulnerability**
+> [!info] Vulnerability
 > Tradotto letteralmente una vulnerabilità. Un bug, una debolezza oppure un errore che potrebbe compromettere la confidenzialità, l'integrità o la disponibilità
 
 > [!info] Cyber Threat

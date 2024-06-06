@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "IbTreeMapDown",
+      "IbWeather",
+      "IbDatabse",
       "RiArtboardLine",
-      "IbInternetBrowser",
-      "IbLightning",
-      "IbChip",
-      "IbTreeMapDown"
+      "IbInternetBrowser"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -63,14 +63,6 @@
     "iconName": "IbTreeMapDown",
     "inheritanceIcon": "IbTreeMapDown"
   },
-  "corsi/complessita-e-algoritmi/Problemi": {
-    "iconName": "IbTreeMapDown",
-    "inheritanceIcon": "IbTreeMapDown"
-  },
-  "corsi/complessita-e-algoritmi/Problemi/problema-accensione.md": {
-    "iconName": "IbTreeMapDown",
-    "inheritanceIcon": "IbTreeMapDown"
-  },
   "corsi/cybersecurity": {
     "iconName": "IbLocked",
     "inheritanceIcon": "IbLocked"
@@ -91,5 +83,16 @@
     "iconName": "IbDatabse",
     "inheritanceIcon": "IbDatabse"
   },
-  "corsi": "RiArtboardLine"
+  "corsi": "IbWeather",
+  "corsi/codice-malevolo/lezioni": "IbLightning",
+  "corsi/complessita-e-algoritmi/problemi": {
+    "iconName": "IbTreeMapDown",
+    "inheritanceIcon": "IbTreeMapDown"
+  },
+  "corsi/complessita-e-algoritmi/problemi/problema-accensione.md": {
+    "iconName": "IbTreeMapDown",
+    "inheritanceIcon": "IbTreeMapDown"
+  },
+  "corsi/complessita-e-algoritmi/lezioni-rizzi": "IbTreeMapDown",
+  "corsi/complessita-e-algoritmi/tutorato": "IbTreeMapDown"
 }

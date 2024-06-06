@@ -1,2 +1,3 @@
 # magistrale-vault
-Appunti, note, e flussi di coscienza. Magistrale in Ingegneria Informatica @univr
+
+Appunti, note, e flussi di coscienza *"accademici"*. Magistrale in Ingegneria Informatica @univr
