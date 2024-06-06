@@ -1,6 +1,6 @@
 [
   "obsidian-icon-folder",
-  "colored-text",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "symbols-prettifier"
 ]
