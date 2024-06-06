@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiArtboardLine",
       "IbInternetBrowser",
       "IbLightning",
       "IbChip",
-      "IbTreeMapDown",
-      "IbArrowCircleForward"
+      "IbTreeMapDown"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -90,5 +90,6 @@
   "corsi/sia": {
     "iconName": "IbDatabse",
     "inheritanceIcon": "IbDatabse"
-  }
+  },
+  "corsi": "RiArtboardLine"
 }
