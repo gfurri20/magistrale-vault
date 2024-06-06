@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "e26e44df7052bfe4",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ec23494194ee78c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4e6efa7d34c3b4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a7452146b6eb04c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c22fd85de9146b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57379b1213ae8f08",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ad2762fe2cea8a6e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ac0967d088ded40f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f13b5f1f71e7aebf",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e642f1b2d51a080",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af2e7c43c751a6b6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "712a301f89da59a9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7bf1f7d4ecdad0fd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6b8ebec1a6676900",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "57379b1213ae8f08",
+  "lastOpenFiles": [
+    "codice-malevolo/05_06_2024-pdf-analisys.md",
+    "Fondamenti di Sicurezza/Introduzione.md",
+    "Fondamenti di Sicurezza/Cyber Risk Management.md",
+    "Fondamenti di Sicurezza/Cyber Kill Chain & MITRE.md",
+    "Fondamenti di Sicurezza/Attacchi ad Infrastrutture Critiche & ICS.md",
+    "Fondamenti di Sicurezza/Access Control.md",
+    "codice-malevolo/29_05_2024-missing.md",
+    "Network Security/05_06_2024-lab-5.md",
+    "Network Security/05_06_2024-progetti.md",
+    "Network Security/22_05_2024-lab-3.md",
+    "Network Security/08_05_2024-lab-2.md",
+    "Network Security/24_04_2024-lab-1.md",
+    "Fondamenti di complessità ed algoritmi/17_05_2024-DFS.md",
+    "Fondamenti di complessità ed algoritmi/16_04_2024-BFS-&-DFS.md",
+    "Fondamenti di complessità ed algoritmi/10_05_2024-prog-dinamica.md",
+    "Fondamenti di complessità ed algoritmi/05_03_2024-introduzione-laboratorio.md",
+    "codice-malevolo/08_03_2024-malware-analysis.md",
+    "codice-malevolo/06_03_2024-introduzione.md",
+    "codice-malevolo/31_05_2024-tecniche-di-unpacking.md",
+    "codice-malevolo/27_03_2024-analisi-statica.md",
+    "codice-malevolo/24_05_2024-analisi-di-malware.md",
+    "codice-malevolo/22_05_2024-anti-analysis-analysis.md",
+    "codice-malevolo/17_05_2024-recap-malware-analysis.md",
+    "codice-malevolo/17_04_2024-analisi-di-malware.md",
+    "codice-malevolo/15_05_2024-debugger.md",
+    "codice-malevolo/12_04_2024-assembly-code-analysis.md",
+    "Cyberchallenge/writeups/net_sec",
+    "Network Security/Untitled.canvas"
+  ]
+}

@@ -1,0 +1,1 @@
+- Ma sto defender va tenuto attivo oppure no? In caso debba essere tenuto attivo come si fa? (Facile senza)
