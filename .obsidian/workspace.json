@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f85a8b76e75abc90",
+            "id": "2a583052635ae03a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md"
+                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md"
               }
             }
           }
@@ -146,12 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f85a8b76e75abc90",
+  "active": "2a583052635ae03a",
   "lastOpenFiles": [
+    "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
+    "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
     "cyberchallenge/sw_sec/Teoria.md",
     "corsi/network-security/network-security.md",
-    "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
-    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/sia/26_01_2024-data-warehousing.md",
     "corsi/sia/07_02_2024-domande-esame.md",
     "corsi/sia/teoria-organizzazione.md",
@@ -176,7 +177,6 @@
     "README.md",
     "corsi/complessita-e-algoritmi/complessita-e-algoritmi.md",
     "corsi/complessita-e-algoritmi/lezioni-rizzi/05_03_2024-introduzione-laboratorio.md",
-    "corsi/complessita-e-algoritmi/tutorato/03_06_2024-tutor-algoritmi.md",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
     "corsi/complessita-e-algoritmi/tutorato",
     "corsi/codice-malevolo/lezioni",

@@ -94,5 +94,6 @@
     "inheritanceIcon": "IbTreeMapDown"
   },
   "corsi/complessita-e-algoritmi/lezioni-rizzi": "IbTreeMapDown",
-  "corsi/complessita-e-algoritmi/tutorato": "IbTreeMapDown"
+  "corsi/complessita-e-algoritmi/tutorato": "IbTreeMapDown",
+  "corsi/network-security/lab": "IbInternetBrowser"
 }
