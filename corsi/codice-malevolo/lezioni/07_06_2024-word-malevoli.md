@@ -124,4 +124,12 @@ File: `~/Desktop/Samples/Samples/malicious-documents/statement.doc`
 
 - microsoft word 2007 -> formato nuovo
 - con `exiftool` si capisce che è stato generato da un template che accetta macro
-- 
+- usiamo yara ma *con zipdump perché è formato nuovo*:
+	`zipdump -y ~/Desktop/Samples/yara/rules/index.yar <file>`
+- `olevba.py -c <file> > file.vba` - estraiamo il codice della macro
+	- quando viene aperto il documento viene eseguita `GOODSub`:
+		- crea o accede ad un file temporaneo.
+		- prende il contenuto della macro e lo salva
+		- cerca le istanze della stringa `RELAX` all'interno della macro (quindi di sè stessa)
+		- usa la funzione `Right` per prendere il contenuto della stringa eliminando la parola `RELAX`, in questo modo, "pulisce" il codice.
+- Sostanzialmente la macro va a modificare il proprio codice per evadere i controlli dei vari software antivirus
