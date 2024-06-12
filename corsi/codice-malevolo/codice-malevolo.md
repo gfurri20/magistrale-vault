@@ -19,5 +19,5 @@ Indice delle lezioni:
 - 31 maggio 2024 -> [[31_05_2024-tecniche-di-unpacking]]
 - 5 giugno 2024 -> [[05_06_2024-pdf-analisys]]
 - 7 giugno 2024 -> [[07_06_2024-word-malevoli]]
-- 12 giugno 2024 ->
+- 12 giugno 2024 -> [[12_06_2024_analisi-pdf-file]]
 - 14 giugno 2024 ->

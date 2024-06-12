@@ -57,8 +57,8 @@ Una volta fatto ciò si possono analizzare le keywords per cercare oggetti codif
 ## Tools
 - `strings` - analisi delle stringhe
 - `exiftool` - analisi dei metadati
-- `pdfid` - restituisce info sulla struttura del pdf, tipologia di oggetti, parole chiave eccetera
-- `pdf-parser` - permette di estrarre il contenuto di un oggetto e di codificarlo di conseguenza
+- `pdfid.py` - restituisce info sulla struttura del pdf, tipologia di oggetti, parole chiave eccetera
+- `pdf-parser.py` - permette di estrarre il contenuto di un oggetto e di codificarlo di conseguenza
 - `peepdf` - mostra gli oggetti che possono contenere codice JS, marca gli oggetti che contengono parole chiave ed inoltre salva il contenuto di un oggetto (è il tool più completo)
 
 ## Analisi del codice JS
