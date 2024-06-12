@@ -89,7 +89,7 @@ Cosa si nota:
 - riferimento al comando `ping`
 - alcune stringhe sono completamente offuscate
 
-Possiamo de-offuscare le stringhe possiamo attraverso il comando:
+Possiamo de-offuscare le stringhe attraverso il comando:
 `olevba.py --reveal --deobf`.
 
 A seguito della de-offuscazione (non so come si dica) individuiamo:

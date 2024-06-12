@@ -84,7 +84,10 @@
     "inheritanceIcon": "IbDatabse"
   },
   "corsi": "IbWeather",
-  "corsi/codice-malevolo/lezioni": "IbLightning",
+  "corsi/codice-malevolo/lezioni": {
+    "iconName": "IbLightning",
+    "inheritanceIcon": "IbLightning"
+  },
   "corsi/complessita-e-algoritmi/problemi": {
     "iconName": "IbTreeMapDown",
     "inheritanceIcon": "IbTreeMapDown"
@@ -95,5 +98,8 @@
   },
   "corsi/complessita-e-algoritmi/lezioni-rizzi": "IbTreeMapDown",
   "corsi/complessita-e-algoritmi/tutorato": "IbTreeMapDown",
-  "corsi/network-security/lab": "IbInternetBrowser"
+  "corsi/network-security/lab": {
+    "iconName": "IbInternetBrowser",
+    "inheritanceIcon": "IbInternetBrowser"
+  }
 }
