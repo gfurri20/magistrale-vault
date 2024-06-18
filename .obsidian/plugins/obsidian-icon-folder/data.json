@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "IbLocked",
       "IbTreeMapDown",
       "IbWeather",
       "IbDatabse",
-      "RiArtboardLine",
-      "IbInternetBrowser"
+      "RiArtboardLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -105,5 +105,13 @@
   "corsi/network-security/teoria": {
     "iconName": "IbInternetBrowser",
     "inheritanceIcon": "IbInternetBrowser"
+  },
+  "corsi/cybersecurity/lezioni": {
+    "iconName": "IbLocked",
+    "inheritanceIcon": "IbLocked"
+  },
+  "corsi/cybersecurity/progetto": {
+    "iconName": "IbLocked",
+    "inheritanceIcon": "IbLocked"
   }
 }
