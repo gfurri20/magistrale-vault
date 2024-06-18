@@ -20,4 +20,5 @@ Indice delle lezioni:
 - 5 giugno 2024 -> [[05_06_2024-pdf-analisys]]
 - 7 giugno 2024 -> [[07_06_2024-word-malevoli]]
 - 12 giugno 2024 -> [[12_06_2024_analisi-pdf-file]]
-- 14 giugno 2024 ->
+- 13 giugno 2024 -> [[13_06_2024_laboratorio]]
+- 14 giugno 2024 -> [[14_06_2024_laboratorio]]

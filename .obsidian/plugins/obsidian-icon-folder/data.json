@@ -101,5 +101,9 @@
   "corsi/network-security/lab": {
     "iconName": "IbInternetBrowser",
     "inheritanceIcon": "IbInternetBrowser"
+  },
+  "corsi/network-security/teoria": {
+    "iconName": "IbInternetBrowser",
+    "inheritanceIcon": "IbInternetBrowser"
   }
 }
