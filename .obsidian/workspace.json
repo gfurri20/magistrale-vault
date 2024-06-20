@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md"
               }
             }
           }
@@ -147,9 +147,10 @@
   },
   "active": "9f96158a02161891",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-introduction.md",
+    "Untitled.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
@@ -173,7 +174,6 @@
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
     "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
-    "cyberchallenge/sw_sec/Teoria.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",

@@ -32,3 +32,15 @@ I principali algoritmi di crittografia simmetrici sono:
 - **Triple DES**
 - **AES** (**A**dvanced **E**ncryption **S**tandard)
 
+### DES
+DES è stato il primo standard di crittografia simmetrico, al giorno d'oggi non è più usato perché considerato **non sicuro**.
+
+Utilizza una versione semplificata della rete di Feistel a 16 round con chiavi di 56 bits (in realtà la chiave è 64 bit ma 8 sono bit di controllo).
+
+La causa principale che lo rende insicuro è proprio la chiave da 56 bits, facilmente attaccabile anche a forza bruta.
+
+### Triple DES
+TripleDES non è altro che la ripetizione tripla di DES, questo con l'obiettivo di aumentare la grandezza della chiave, aggregando tre chiavi da 56 bits. In totale 168 bits.
+In questo modo non era necessario andare a modificare per 
+
+
