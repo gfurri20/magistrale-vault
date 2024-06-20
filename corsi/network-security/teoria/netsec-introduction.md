@@ -96,7 +96,82 @@ Ormai i meccanismi di sicurezza sono molti e di svariate topologie:
 In particolare gli algoritmi crittografici si snodano in diversi modi.
 
 ### Algoritmi crittografici
-Innanzitutto un algoritmo crittografico sono procedure che permettono di modificare in base a diversi obiettivi.
+Innanzitutto, un algoritmo crittografico è una procedura che permette di alterare i dati in base a diversi obiettivi.
 
-Ad ogni obiettivo è associato una categoria di algoritmi crittografici:
-- 
+In generale ci sono due tipi di protocolli crittografici:
+- algoritmi **reversibili** - cripta i dati in una maniera tale che possano essere decriptati
+- algoritmi **irreversibili** - cripta di dati in modo che non possa essere recuperato il contenuto originale, questi meccanismi vengono utilizzati per implementare protocolli di hashing e firma digitale
+
+Inoltre ogni algoritmo crittografico è caratterizzato dal numero di chiavi crittografiche che vengono utilizzate durante il processo di codifica.
+Distinguiamo tre classi relative:
+- **Keyless**
+- **Single Key**
+- **Two Keys**
+
+#### Key-less
+Gli algoritmi key-less non utilizzano chiavi. I più famosi sono funzioni che trasformano informazioni in hash o digest.
+Gli hash spesso vengono usati per verificare l'integrità di un file oppure per salvare le password nei database.
+Inoltre, fanno parte di questa categoria i generatori di numeri (pseudo)-random.
+
+#### Single Key
+Gli algoritmi Single Key sono dipendenti da una chiave singola segreta.
+Tendenzialmente quando si parla di Single Key Algorithms si fa riferimento agli algoritmi di **crittografia simmetrica**.
+
+Questo tipo di sistemi utilizzano la stessa chiave segreta per criptare e decriptare il contenuto.
+
+A loro volta si dividono in:
+- **cifrari a blocchi** - cifra il payload dividendolo in blocchi di lunghezza prefissata (e.g. DES)
+- **cifrari a flusso** - cifra il payload operando sulla sequenza di bit che compongono il payload
+- **message authentication code (MAC)** - nello specifico il MAC è un'entità, che viene allegata al payload, che permette di verificare l'integrità del messaggio. Per validare il messaggio viene svolto un controllo tra il MAC calcolato dal messaggio ricevuto ed il MAC allegato
+
+#### Two Key
+Gli algoritmi Two Key fanno affidamento su due chiavi dette, rispettivamente, *chiave pubblica* e *chiave privata*.
+Fanno riferimento agli algoritmi di **crittografia asimmetrica**.
+
+A loro volta si sotto-strutturano in:
+- **Digital Signature Algorithm** - generano una firma che permette di verificare l'autenticità del messaggio
+- **Key Exchange** - permettono di implementare protocolli per lo scambio di chiavi simmetriche
+- **User Authentication** - permettono di implementare protocolli di autenticazione utente
+
+---
+
+# Network Security
+La Network Security mira a proteggere due elementi fondamentali:
+- La **comunicazione** tra entità - attraverso specifici protocolli che definiscono standard e procedure che governano l'ordine di trasmissione dei dati (e.g. HTTPS)
+- I **dispositivi** fisici - attraverso strumenti che hanno l'obiettivo di analizzare il traffico in entrata ed uscita del dispositivo
+
+Per proteggere i dispositivi fisici ci sono tre possibilità
+- **Firewall** - soluzione HW/SW che permette di limitare gli accessi o il traffico ai dispositivi in base a delle *politiche di sicurezza*, sostanzialmente agisce da filtro
+- **Intrusion detection** - soluzione HW/SW che analizza il traffico sulla rete con l'obiettivo di individuare eventuali attacchi in corso
+- **Intrusion prevention** - soluzione HW/SW creata per rilevare attività sospette, tentativi di attacco oppure rischi di sicurezza
+
+---
+
+# Trust Model
+La messa in sicurezza di un'infrastruttura non è sicuramente un processo banale, e spesso introduce dei gradi di complessità che tendono anche ad appesantire i processi esposti.
+
+Quindi, alcune volte è utile prendersi dei rischi e "fidarsi" del fatto che se anche avviene un'attacco esso causa danni limitati o, comunque, reversibili.
+
+Per questo motivo viene definito un **modello di fiducia** che specifica quali rischi un'organizzazione si permette.
+
+>[!info] Fiducia
+>La fiducia è la confidenza che un'entità agirà in modo da non compromettere la sicurezza dell'utente del sistema di cui quell'entità fa parte.
+
+Definiamo tre concetti rilevanti che caratterizzano un **modello di fiducia**.
+1. **Affidabilità (Trustworthiness)** - caratteristica di un'entità che riflette il grado di merito di fiducia che tale entità possiede
+2. **Propensione a fidarsi (Propensity to trust)** - tendenza a essere disposti a fidarsi degli altri in una vasta gamma di situazioni e obiettivi di fiducia. Questo suggerisce che ogni individuo ha un livello di base di fiducia che influenzerà la sua disponibilità a fare affidamento sulle parole e azioni degli altri
+3. **Rischio (Risk)** - misura in cui un'entità è minacciata da una circostanza o evento potenziale, e tipicamente una funzione di:
+    - gli impatti negativi che sorgerebbero se la circostanza o l'evento si verificasse
+    - la probabilità di occorrenza
+
+Inoltre possiamo specificare il concetto di fiducia nei confronti di tre diverse entità:
+- fiducia nei confronti dell'**individuo** - l'individuo può essere interno (il dipendente) oppure esterno (i clienti)
+- fiducia nei confronti di altre **aziende** - spesso un'azienda fa affidamento su sistemi e servizi offerti da aziende esterne attraverso una *relazione di fiducia*
+- fiducia nei confronti del **sistema informativo** - la robustezza del sistema informatico che le aziende adottano
+
+Una *relazione di fiducia* può essere stabilità in diversi modi:
+- attraverso un'azienda authority che assicura il tasso di fiducia
+- attraverso una relazione di fiducia già esistente o storicamente solida
+
+
+

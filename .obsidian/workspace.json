@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "99745ff689cf8501",
+        "id": "072c41e82a53c66b",
         "type": "tabs",
         "children": [
           {
-            "id": "a371aec675fb73b5",
+            "id": "7cc79985a45cdce8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "46a0601ffacd7879",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md"
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md"
               }
             }
           }
@@ -159,12 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "46a0601ffacd7879",
+  "active": "7cc79985a45cdce8",
   "lastOpenFiles": [
+    "corsi/network-security/network-security.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/cybersecurity.md",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
