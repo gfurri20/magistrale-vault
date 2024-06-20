@@ -96,17 +96,25 @@ Ormai i meccanismi di sicurezza sono molti e di svariate topologie:
 In particolare gli algoritmi crittografici si snodano in diversi modi.
 
 ### Algoritmi crittografici
-Innanzitutto, un algoritmo crittografico è una procedura che permette di alterare i dati in base a diversi obiettivi.
+Innanzitutto, un algoritmo crittografico è una procedura che permette di cifrare i dati per cercare di renderli visibili solo a coloro che sono autorizzati.
 
-In generale ci sono due tipi di protocolli crittografici:
-- algoritmi **reversibili** - cripta i dati in una maniera tale che possano essere decriptati
-- algoritmi **irreversibili** - cripta di dati in modo che non possa essere recuperato il contenuto originale, questi meccanismi vengono utilizzati per implementare protocolli di hashing e firma digitale
+Gli algoritmi di crittografia possono essere divisi in diverse categorie.
+- Reversibilità del payload:
+	- algoritmi **reversibili** - cripta i dati in una maniera tale che possano essere decriptati
+	- algoritmi **irreversibili** - cripta di dati in modo che non possa essere recuperato il contenuto originale, questi meccanismi vengono utilizzati per implementare protocolli di hashing e firma digitale
+- Tipologia di operazioni che vengono applicate al testo da cifrare:
+	- **Sostituzioni** - ogni elemento all'interno del testo da cifrare è mappato ad un *diverso* elemento
+	- **Trasposizioni** - gli elementi del testo da cifrare sono ri-arrangiati nel testo cifrato, senza perdita di informazione
+	- **Ibridi** - applica entrambe le operazioni precedenti in diversi stages
+- Numero di chiavi crittografiche che vengono utilizzate durante il processo di codifica:
+	- **Keyless** - nessuna chiave
+	- **Single Key** - singola chiave di cifratura
+	- **Two Keys** - coppia di chiavi distinte
 
-Inoltre ogni algoritmo crittografico è caratterizzato dal numero di chiavi crittografiche che vengono utilizzate durante il processo di codifica.
-Distinguiamo tre classi relative:
-- **Keyless**
-- **Single Key**
-- **Two Keys**
+#### Cryptanalysis
+Un sistema di crittografia è considerato computazionalmente sicuro se:
+1. Il **costo** per rompere il cifrario supera il valore delle informazioni cifrate
+2. Il **tempo** richiesto per rompere il cifrario supera la vita utile delle informazioni
 
 #### Key-less
 Gli algoritmi key-less non utilizzano chiavi. I più famosi sono funzioni che trasformano informazioni in hash o digest.
@@ -114,6 +122,7 @@ Gli hash spesso vengono usati per verificare l'integrità di un file oppure per 
 Inoltre, fanno parte di questa categoria i generatori di numeri (pseudo)-random.
 
 #### Single Key
+Ref.: [[netsec-symmetric-crypto]]
 Gli algoritmi Single Key sono dipendenti da una chiave singola segreta.
 Tendenzialmente quando si parla di Single Key Algorithms si fa riferimento agli algoritmi di **crittografia simmetrica**.
 
@@ -125,6 +134,7 @@ A loro volta si dividono in:
 - **message authentication code (MAC)** - nello specifico il MAC è un'entità, che viene allegata al payload, che permette di verificare l'integrità del messaggio. Per validare il messaggio viene svolto un controllo tra il MAC calcolato dal messaggio ricevuto ed il MAC allegato
 
 #### Two Key
+Ref.: [[netsec-public-key-crypto]]
 Gli algoritmi Two Key fanno affidamento su due chiavi dette, rispettivamente, *chiave pubblica* e *chiave privata*.
 Fanno riferimento agli algoritmi di **crittografia asimmetrica**.
 
