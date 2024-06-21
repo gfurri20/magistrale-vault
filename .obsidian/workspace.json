@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md"
+                "file": "corsi/network-security/network-security.md"
               }
             }
           }
@@ -147,8 +147,9 @@
   },
   "active": "9f96158a02161891",
   "lastOpenFiles": [
-    "Untitled.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/codice-malevolo/codice-malevolo.md",
+    "Untitled.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
@@ -164,7 +165,6 @@
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-crypto.md",
     "corsi/network-security/teoria",
-    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
