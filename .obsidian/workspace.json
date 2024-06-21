@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a0ddebfc20a0d303",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md"
               }
             }
           }
@@ -145,12 +158,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f96158a02161891",
+  "active": "a0ddebfc20a0d303",
   "lastOpenFiles": [
+    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/teoria/netsec-public-key-crypto.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "Untitled.md",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
@@ -163,7 +177,6 @@
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/teoria/netsec-public-key-crypto.md",
     "corsi/network-security/teoria",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",

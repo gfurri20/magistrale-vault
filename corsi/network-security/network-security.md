@@ -12,7 +12,7 @@ Indice degli appunti:
 - Network Endpoint Security -> [[netsec-net-endpoint-sec]]
 - Industrial Control Systems Security -> [[netsec-ICS-sec]]
 
-Indice dei laboratori: ^03c90b
+Indice dei laboratori:
 - 24 aprile 2024 -> [[24_04_2024-lab-1]]
 - 8 maggio 2024 -> [[08_05_2024-lab-2]]
 - 22 maggio 2024 -> [[22_05_2024-lab-3]]
