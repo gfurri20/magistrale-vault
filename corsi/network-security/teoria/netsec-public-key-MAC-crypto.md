@@ -141,6 +141,20 @@ L'algoritmo teorico si divide in tre operazioni:
 	3. si calcola la funzione $\phi(n) = (p - 1)(q - 1)$
 	4. si sceglie un numero $e$ (detto esponente pubblico) t.c. $e$ è co-primo di $n$ e $e < \phi(n)$
 	5. si calcola il numero $d$ (detto esponente privato) t.c. $ed = 1$
-	6. la chiave pubblica è formata dalla coppia $$
-2. codifica
-3. decodifica
+	6. la *chiave pubblica* è formata dalla coppia $K_{pub} = \{n, e\}$
+	7. la **chiave privata** è formata dalla coppia $K_{priv} = \{n, d\}$
+2. codifica -> dato $M$ plain-text t.c. $M < n$
+	- cipher-text -> $C = M^e \texttt{ mod } n$ 
+3. decodifica -> dato $C$ cipher-text
+	- plain-text -> $M = C^d \texttt{ mod } n$ 
+
+La robustezza di RSA dipende dalla scelta dei parametri che generano le chiavi, essi devono essere selezionati accuratamente per evitare che RSA sia vulnerabile:
+- *Mathematical attacks* -> necessario scegliere $p, q$ di almeno 2048 bit
+- *Timing attacks* -> necessario fare in modo che la decodifica sia sempre della stessa velocità
+- *Chosen cipher text attacks* -> per messaggi piccoli potrebbe essere possibile eseguire brute force, allora è necessario introdurre un padding
+
+Per introdurre un padding si usa OAEP, uno schema di padding basato su una sorta di rete di Feistel che permette di introdurre un fattore casuale.
+
+
+
+## DSS - Digital Signature Standard
