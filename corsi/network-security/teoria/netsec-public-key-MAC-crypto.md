@@ -156,5 +156,20 @@ La robustezza di RSA dipende dalla scelta dei parametri che generano le chiavi, 
 Per introdurre un padding si usa OAEP, uno schema di padding basato su una sorta di rete di Feistel che permette di introdurre un fattore casuale.
 
 
+## ECC - Elliptic Curve Cryptography
+Questa tecnica si basa su una funzione matematica conosciuta come elliptic curve.
+
+La differenza principale da RSA è che garantisce robustezza anche con input piccoli, ma la fiducia nei confronti di questo algoritmo è ancora scarsa.
+
 
 ## DSS - Digital Signature Standard
+
+> [!info] Digital Signature
+> Una firma digitale è un pattern di bit che dipende dai dati in input, generato da una funzione che processa un file, un messaggio o altre forme di dati
+
+DSS offre un meccanismo che garantisce **autenticità**, **integrità** e **non repudiabilità** di dati.
+
+Per fare ciò possono essere usati tre tipi di algoritmi a chiave asimmetrica:
+- *DSA* - Digital Signature Algorithm
+- *RSA* - versione digital signature
+- *Elliptic Curve* - versione digital signature

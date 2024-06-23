@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2eec1a08b66c19e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "9f96158a02161891",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/network-security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md"
+                "file": "corsi/network-security/network-security.md"
               }
             }
           }
@@ -160,9 +147,9 @@
   },
   "active": "9f96158a02161891",
   "lastOpenFiles": [
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/assets/mitm-diffie-hellman.png",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
