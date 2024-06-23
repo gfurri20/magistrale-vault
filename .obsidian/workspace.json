@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "2eec1a08b66c19e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "9f96158a02161891",
             "type": "leaf",
             "state": {
@@ -19,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -145,13 +158,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57379b1213ae8f08",
+  "active": "9f96158a02161891",
   "lastOpenFiles": [
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+    "corsi/network-security/network-security.md",
     "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
-    "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "Untitled.md",
     "corsi/network-security/teoria/netsec-introduction.md",
