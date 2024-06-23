@@ -134,7 +134,7 @@ A loro volta si dividono in:
 - **message authentication code (MAC)** - nello specifico il MAC è un'entità, che viene allegata al payload, che permette di verificare l'integrità del messaggio. Per validare il messaggio viene svolto un controllo tra il MAC calcolato dal messaggio ricevuto ed il MAC allegato
 
 #### Two Key
-Ref.: [[netsec-public-key-crypto]]
+Ref.: [[netsec-public-key-MAC-crypto]]
 Gli algoritmi Two Key fanno affidamento su due chiavi dette, rispettivamente, *chiave pubblica* e *chiave privata*.
 Fanno riferimento agli algoritmi di **crittografia asimmetrica**.
 

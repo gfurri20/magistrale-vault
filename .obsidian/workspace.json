@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-crypto.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md"
               }
             }
           }
@@ -162,7 +162,7 @@
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-    "corsi/network-security/teoria/netsec-public-key-crypto.md",
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "Untitled.md",
     "corsi/network-security/teoria/netsec-introduction.md",
