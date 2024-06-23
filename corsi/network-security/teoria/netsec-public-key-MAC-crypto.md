@@ -88,4 +88,4 @@ Esistono diverse implementazioni pratiche:
 
 | Implementazione  | enc/dec | digital sign | key exchange |
 | ---------------- | ------- | ------------ | ------------ |
-| *Diffie-Hellman* |         |              |              |
+| *Diffie-Hellman* |  yes       |              |              |
