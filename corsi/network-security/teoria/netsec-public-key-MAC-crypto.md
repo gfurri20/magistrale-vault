@@ -88,4 +88,9 @@ Esistono diverse implementazioni pratiche:
 
 | Implementazione  | enc/dec | digital sign | key exchange |
 | ---------------- | ------- | ------------ | ------------ |
-| *Diffie-Hellman* |  yes       |              |              |
+| *Diffie-Hellman* | ❌       | ❌            | ✅            |
+| *RSA*            | ✅       | ✅            | ✅            |
+| *DSS*            | ❌       | ✅            | ✅            |
+| *Elliptic Curve* | ✅       | ✅            | ✅            |
+
+## Diffie-Hellman
