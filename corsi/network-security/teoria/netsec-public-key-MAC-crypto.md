@@ -94,3 +94,53 @@ Esistono diverse implementazioni pratiche:
 | *Elliptic Curve* | ✅       | ✅            | ✅            |
 
 ## Diffie-Hellman
+Primo algoritmo a chiave pubblica creato, utilizzato per lo scambio sicuro di chiavi simmetriche.
+
+La **robustezza** di questo algoritmo fa affidamento sulla difficoltà di calcolare logaritmi discreti.
+
+In $\textcolor{blue}{blu}$ indichiamo i parametri pubblici e in $\textcolor{red}{rosso}$ i parametri segreti:
+1. Alice e Bob stabiliscono pubblicamente due valori $\textcolor{blue}{p}$ e $\textcolor{blue}{\alpha}$, il primo è un numero primo casuale, il secondo è un generatore modulo $\textcolor{blue}{p}$ (rif.: [radice primitiva](https://it.wikipedia.org/wiki/Radice_primitiva_modulo_n)), nella pratica vengono usati numeri piccoli
+2. Entrambi gli attori generano un numero casuale privato e calcolano un numero modulo $\textcolor{blue}{p}$:
+	1. Alice genera $\textcolor{red}{a}$ (minore di $\textcolor{blue}{p}$)e calcola $\textcolor{blue}{A} = \textcolor{blue}{\alpha^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
+	2. Bob genera $\textcolor{red}{b}$ (minore di $\textcolor{blue}{p}$) e calcola $\textcolor{blue}{B} = \textcolor{blue}{\alpha^{\textcolor{red}{b}}} \texttt{ mod } \textcolor{blue}{p}$
+3. Alice invia a Bob $\textcolor{blue}{A}$ e viceversa, Bob invia ad Alice $\textcolor{blue}{B}$
+4. Entrambi gli attori, una volta ricevuti i numeri, calcolano:
+	1. Alice $\textcolor{red}{k_A} = \textcolor{blue}{B^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
+	2. Bob $\textcolor{red}{k_B} = \textcolor{blue}{A^{\textcolor{red}{b}}} \texttt{ mod } \textcolor{blue}{p}$
+5. Ora Alice e Bob condividono lo stesso segreto: $\textcolor{red}{k_A} = \textcolor{red}{k_B}$
+
+Questo ultimo statement è vero perché:
+$$\textcolor{red}{k_A} = \textcolor{blue}{A^{\textcolor{red}{b}}} \texttt{ mod } \textcolor{blue}{p} = \textcolor{blue}{\alpha^{\textcolor{red}{ab}}} \texttt{ mod } p = \textcolor{blue}{\alpha^{\textcolor{red}{ba}}} \texttt{ mod } p = \textcolor{blue}{B^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p} = \textcolor{red}{k_B}$$
+Nello specifico il passaggio $(\textcolor{blue}{\alpha^{\textcolor{red}{ab}}} \texttt{ mod } p)$ non può essere calcolato perché nessuno, tecnicamente, possiede sia $\textcolor{red}{a}$ che $\textcolor{red}{b}$.
+
+Per rendere efficace tale algoritmo è necessario scegliere numeri enormi, impossibili da scomporre in tempi utili.
+
+Il **problema** di Diffie-Hellman vanilla è che **le chiavi non sono autenticate** e questo potrebbe permettere di esporre lo scambio ad un attacco MITM.
+
+Se assumiamo che un utente malevolo Evil si interpone nella comunicazione ==dall'inizio== allora Evil potrebbe ingannare Alice e Bob allo stesso tempo, facendoli pensare di aver costruito un segreto condiviso solo da loro due.
+
+Alla fine dell'attacco Evil possederà due chiavi:
+- comunicazione tra Alice ed Evil -> $\textcolor{red}{k_{a \leftrightarrow e}} = \textcolor{blue}{\alpha^{\textcolor{red}{ae}}} \texttt{ mod } p$
+- comunicazione tra Bob ed Evil -> $\textcolor{red}{k_{b \leftrightarrow e}} = \textcolor{blue}{\alpha^{\textcolor{red}{be}}} \texttt{ mod } p$
+
+![[mitm-diffie-hellman.png]]
+
+Inoltre si può aumentare il numero di entità che condividono il segreto, aumentando il numero di interi segreti che calcolano la chiave.
+Assumiamo 3 entità: Alice, Bob e Charlie, si può creare una chiave segreta condivisa del tipo:
+$$\textcolor{red}{K} = \textcolor{blue}{\alpha^{\textcolor{red}{abc}}} \texttt{ mod } \textcolor{blue}{p}$$
+
+
+## RSA - Rivest Shamir Adleman
+L'algoritmo *RSA si basa sulla difficoltà di fattorizzare un numero molto grande in due numeri primi*.
+Quindi, anche se qualcuno ha accesso all'informazione cifrata e alla chiave pubblica, è molto difficile per loro scoprire la chiave privata che è necessaria per decodificare il messaggio.
+
+L'algoritmo teorico si divide in tre operazioni:
+1. generazione delle chiavi
+	1. vengono scelti due numeri primi casuali grandi $p, q$ t.c. $p \neq q$
+	2. si calcola il prodotto $n = p q$, detto modulo; la fattorizzazione di $n$ è conosciuta solo a chi sceglie i due numeri primi $p, q$
+	3. si calcola la funzione $\phi(n) = (p - 1)(q - 1)$
+	4. si sceglie un numero $e$ (detto esponente pubblico) t.c. $e$ è co-primo di $n$ e $e < \phi(n)$
+	5. si calcola il numero $d$ (detto esponente privato) t.c. $ed = 1$
+	6. la chiave pubblica è formata dalla coppia $$
+2. codifica
+3. decodifica
