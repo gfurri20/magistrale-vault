@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/network-security.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0ddebfc20a0d303",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,11 +145,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a0ddebfc20a0d303",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
+    "corsi/network-security/assets/message_auth_modes.png",
+    "corsi/network-security/assets",
     "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "Untitled.md",
     "corsi/network-security/teoria/netsec-introduction.md",
@@ -186,7 +175,6 @@
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
-    "corsi/codice-malevolo/lezioni/05_06_2024-pdf-analisys.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",
