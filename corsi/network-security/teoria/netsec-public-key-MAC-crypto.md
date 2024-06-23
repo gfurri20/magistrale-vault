@@ -53,7 +53,18 @@ Ci sono *diverse implementazioni* di one way hash functions:
 	- funzione one way hash senza chiave, creata dal NIST all'inizio degli anni 90
 	- esistono diverse versioni che si differenziano in base al numero di bit che compongono il digest in output, fino a SHA-512
 	- divide il messaggio in blocchi e computa l'hash blocco per blocco utilizzando, nella formula l'hash del blocco precedente
+	- si adatta poco ad essere un MAC, in quando non è stato progettato per questo scopo
 - HMAC - key-Hashed Message Authentication Code
+	- introduce una *chiave* nel processo di generazione del digest
+	- *non utilizza una funzione hash specifica*, questo rende possibile una sostituzione nel caso in cui una funzione hash divenisse insicura
+	- viene utilizzato in protocolli sicuri di Internet come IPSec e TLS
+	- il messaggio viene suddiviso in blocchi di lunghezza fissata $n$. Viene poi selezionata una chiave segreta $K$. Se questa risulta essere più lunga di $n$ bit, a questa viene applicata la funzione $H$.
+- CMAC
+	- il MAC viene generato attraverso crittografia simmetrica
+
+
+# Public Cryptography
+
 
 
 
