@@ -1,7 +1,7 @@
 Indice degli appunti:
 - Introduction -> [[netsec-introduction]]
 - Symmetric Cryptography -> [[netsec-symmetric-crypto]]
-- Public Key Cryptography -> [[netsec-public-key-crypto]]
+- Public Key Cryptography -> [[netsec-public-key-MAC-crypto]]
 - Public Key Infrastructure -> [[netsec-public-key-infra]]
 - User Authentication -> [[netsec-user-auth]]
 - Transport Level Security -> [[netsec-transport-lv-sec]]
