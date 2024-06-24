@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
               }
             }
           }
@@ -147,10 +147,11 @@
   },
   "active": "9f96158a02161891",
   "lastOpenFiles": [
+    "corsi/network-security/assets/kdc.png",
+    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/assets/mitm-diffie-hellman.png",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
     "corsi/codice-malevolo/codice-malevolo.md",
