@@ -147,6 +147,13 @@
   },
   "active": "9f96158a02161891",
   "lastOpenFiles": [
+    "Untitled.md",
+    "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/assets/adv-asym-key-exchange.png",
+    "corsi/network-security/assets/mitm-simple-key-exchange.png",
+    "corsi/network-security/assets/simple-key-exchange.png",
+    "corsi/network-security/assets/simple-key-exchange",
+    "corsi/network-security/assets/simple-key-exchange.svg",
     "corsi/network-security/assets/kdc.png",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
@@ -155,7 +162,6 @@
     "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
     "corsi/codice-malevolo/codice-malevolo.md",
-    "Untitled.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
@@ -165,7 +171,6 @@
     "corsi/network-security/teoria/netsec-anonimity-privacy.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/teoria/netsec-mail-sec.md",
-    "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria",
@@ -184,7 +189,6 @@
     "corsi/complessita-e-algoritmi/tutorato",
     "corsi/codice-malevolo/lezioni",
     "corsi",
-    "cyberchallenge/writeups/net_sec",
     "Network Security/Untitled.canvas"
   ]
 }
