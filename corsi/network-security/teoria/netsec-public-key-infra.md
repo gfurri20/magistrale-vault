@@ -52,18 +52,29 @@ Ci sono diversi approcci per lo scambio di chiavi di sessione tramite crittograf
 3. `Alice` decripta con la propria chiave privata ed ottiene $K_s$
 4. Infine entrambi scartano le chiavi asimmetriche usate
 
-Questo approccio, però, è vulnerabile ad attacchi MITM in quanto ==le chiavi non sono autenticate== ed un eventuale utente malevolo potrebbe interporsi nella comunicazione ed impersonare gli host.
+Questo approccio, però, è **vulnerabile ad attacchi MITM** in quanto ==le chiavi non sono autenticate== ed un eventuale utente malevolo potrebbe interporsi nella comunicazione ed impersonare gli host.
 
 ![[mitm-simple-key-exchange.png]]
 
-Il risultato è che `Alice` e `Bob` pensano di parlare privatamente tra di loro ma in realtà sono ascoltati da `Evil`.
+Il risultato è che `Alice` e `Bob` pensano di parlare privatamente tra di loro ma in realtà sono "manipolati" da `Evil`.
 
-#### Advance Approach
-Per ==aggiungere confidenzialità ed autenticità== (ed evitare attacchi di tipo replay) è necessario migliorare lo scambio di messaggi, aggiungendo timestamp e nonce.
-
-Questo approccio rimane ancora vulnerabile ad alcuni attacchi MITM.
+#### Needham-Schroeder Public Key
+Per ==aggiungere confidenzialità ed autenticità== (ed evitare attacchi di tipo replay) è necessario migliorare lo scambio di messaggi, aggiungendo alcune nonce.
 
 ![[adv-asym-key-exchange.png]]
+
+Questo approccio si chiama *Needham-Schroeder Public Key* (NSPK) ma rimane ancora vulnerabile ad attacchi MITM.
+
+In un primo caso potrebbe succedere che `Evil` inganni `Bob` di star parlando con `Alice` quando invece è in comunicazione con `Evil`:
+![[nspk-mitm-1.png]]
+In questo modo `Bob` pensa di parlare con `Alice`, quando invece sta parlando con `Evil`.
+
+Per migliorare la situazione si può introdurre un identificatore di `Bob` al passaggio (3): $\{N_A,N_B,\textcolor{blue}{ID_B}\}_{PU_A}$, il protocollo così modificato si chiama *NSL*.
+In questo caso **il replay non potrà avere effetto** in quanto `Alice` si accorgerà che il mittente e $ID_B$ non corrispondono.
+
+Se `Evil` riuscisse a manomettere il messaggio (3) in modo tale che risulti contenere l'ID di Evil ($\{N_A,N_B,\textcolor{red}{ID_E}\}_{PU_A}$), allora non si verifica errore e l'attacco procederà.
+
+#### Otway-Rees Protocol
 
 
 ## Asymmetric Key Distribution

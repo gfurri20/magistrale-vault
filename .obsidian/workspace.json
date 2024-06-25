@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c971e3572391fb95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
               }
             }
           }
@@ -145,10 +158,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f5e0ce121b0e89e",
+  "active": "c971e3572391fb95",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+    "corsi/network-security/teoria/netsec-introduction.md",
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/assets/nspk-mitm-1.png",
+    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/assets/pki-scenario.png",
     "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
@@ -158,13 +176,10 @@
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets/simple-key-exchange.svg",
     "corsi/network-security/assets/kdc.png",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/assets/mitm-diffie-hellman.png",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
     "corsi/codice-malevolo/codice-malevolo.md",
-    "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
@@ -174,7 +189,6 @@
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
-    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",

@@ -115,6 +115,11 @@ Nello specifico il passaggio $(\textcolor{blue}{\alpha^{\textcolor{red}{ab}}} \t
 
 Per rendere efficace tale algoritmo è necessario scegliere numeri enormi, impossibili da scomporre in tempi utili.
 
+Inoltre si può aumentare il numero di entità che condividono il segreto, aumentando il numero di interi segreti che calcolano la chiave.
+Assumiamo 3 entità: Alice, Bob e Charlie, si può creare una chiave segreta condivisa del tipo:
+$$\textcolor{red}{K} = \textcolor{blue}{\alpha^{\textcolor{red}{abc}}} \texttt{ mod } \textcolor{blue}{p}$$
+
+### Vulnerabilità
 Il **problema** di Diffie-Hellman vanilla è che **le chiavi non sono autenticate** e questo potrebbe permettere di esporre lo scambio ad un attacco MITM.
 
 Se assumiamo che un utente malevolo Evil si interpone nella comunicazione ==dall'inizio== allora Evil potrebbe ingannare Alice e Bob allo stesso tempo, facendoli pensare di aver costruito un segreto condiviso solo da loro due.
@@ -124,11 +129,6 @@ Alla fine dell'attacco Evil possederà due chiavi:
 - comunicazione tra Bob ed Evil -> $\textcolor{red}{k_{b \leftrightarrow e}} = \textcolor{blue}{\alpha^{\textcolor{red}{be}}} \texttt{ mod } p$
 
 ![[mitm-diffie-hellman.png]]
-
-Inoltre si può aumentare il numero di entità che condividono il segreto, aumentando il numero di interi segreti che calcolano la chiave.
-Assumiamo 3 entità: Alice, Bob e Charlie, si può creare una chiave segreta condivisa del tipo:
-$$\textcolor{red}{K} = \textcolor{blue}{\alpha^{\textcolor{red}{abc}}} \texttt{ mod } \textcolor{blue}{p}$$
-
 
 ## RSA - Rivest Shamir Adleman
 L'algoritmo *RSA si basa sulla difficoltà di fattorizzare un numero molto grande in due numeri primi*.

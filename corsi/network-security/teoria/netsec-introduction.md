@@ -46,9 +46,12 @@ Spesso questi attacchi sono effettuati con l'obiettivo di individuare eventuali 
 Tentativo di modifica del flusso di dati o creazione di flussi falsi, con l'obiettivo di *alterare le risorse del sistema vittima* oppure di manomettere i servizi esposti.
 
 Ci sono svariati tipi di attacchi attivi, ne distinguiamo alcuni:
-- **Impersonation** - tentativo di impersonare un'entità diversa per accedere a risorse private
-- **Replay** - tentativo di ritrasmettere pacchetti catturati in precedenza per ottenere autorizzazioni non legittime
-- **Data Modification** - tentativo di modifica di pacchetti o messaggi per cercare di ottenere autorizzazioni non legittime
+- **Impersonation (o masquerading) Attack** - tentativo di impersonare un'entità diversa per accedere a risorse private (e.g. [[netsec-public-key-MAC-crypto#Vulnerabilità]])
+- **Replay Attack** - tentativo di ritrasmettere pacchetti catturati in precedenza per ottenere autorizzazioni non legittime (e.g. [[netsec-public-key-infra#Advanced Approach]])
+- **Data Modification Attack** - tentativo di modifica di pacchetti o messaggi per cercare di ottenere autorizzazioni non legittime
+- **Reflection Attack** - tentativo di ritrasmettere informazioni di ritorno al mittente per causare effetti non desiderati
+- **Oracle Attacks** - tentativo di approfittarsi di alcune debolezze di un protocollo per ricevere risposte che potrebbero contenere informazioni private (e.g. padding oracle attack)
+- **Type Flaw Attack** - tentativo di sfruttare un campo assegnandoli valori che non si aspetta di norma
 - **Denial Of Services** - tentativo di mettere fuori uso un servizio
 
 ## 🔥 Security Services
