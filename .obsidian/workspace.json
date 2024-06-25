@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "04c3130772085a50",
+        "id": "40f7048565809571",
         "type": "tabs",
         "children": [
           {
-            "id": "9f96158a02161891",
+            "id": "7812d754bf3b4c6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -145,17 +145,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f96158a02161891",
+  "active": "7812d754bf3b4c6d",
   "lastOpenFiles": [
-    "Untitled.md",
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/assets/pki-scenario.png",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/assets/flow-ca.png",
+    "Untitled.md",
     "corsi/network-security/assets/adv-asym-key-exchange.png",
     "corsi/network-security/assets/mitm-simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets/simple-key-exchange.svg",
     "corsi/network-security/assets/kdc.png",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/assets/mitm-diffie-hellman.png",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
