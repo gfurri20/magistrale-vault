@@ -164,8 +164,18 @@ Ogni CA `X` può mantenere una cache (aggiornata periodicamente) per non dover i
 - un certificato si dice **forward certificate** se appartiene ad `X` ma è prodotto da altre CAs
 - un certificato si dice **reverse certificate** se appartiene ad altre CAs ma è prodotto da `X`
 
-#### Web of Trust
+#### Web of Trust e PGP
+Ibrido tra Direct Trust ed Hierarchical Trust. Quindi un certificato può essere verificato direttamente, attraverso una catena o da un gruppo di entità.
 
+Questo approccio è spesso utilizzato da **PGP** (Pretty Good Privacy), ovvero uno standard con lo stesso scopo di X.509, la più grande differenza sta nel fatto che PGP non è centralizzato ma si basa su una *rete di fiducie*.
+
+A differenza di X.509, PGP possiede diverse caratteristiche:
+- una PGP key può essere associata a più signature
+- un utente può creare e firmare certificati (cosa che può fare solo una CA in X.509) per i suoi conoscenti, ogni utente è una CA
+- le firme per una singola chiave potrebbero corrispondere a diversi livelli di fiducia
+- un utente `A` può ritenere valido il certificato di `B` solo se tale certificato è stato firmato da un utente `C` ritenuto affidabile da `A`
+- l'insieme delle chiavi possedute da un utente è sostanzialmente una rete di fiducia relative a quell'utente
+Con questo approccio ==il livello di fiducia è indicato nel certificato (cosa che manca in X.509)==.
 
 ### Revoca di un certificato
 Un certificato deve essere revocato nel caso in cui:

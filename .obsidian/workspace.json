@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "40f7048565809571",
+        "id": "fd5c187bd641da94",
         "type": "tabs",
         "children": [
           {
-            "id": "7812d754bf3b4c6d",
+            "id": "3f5e0ce121b0e89e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
+                "file": "corsi/network-security/teoria/netsec-user-auth.md"
               }
             }
           }
@@ -145,11 +145,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7812d754bf3b4c6d",
+  "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
-    "corsi/network-security/assets/pki-scenario.png",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/assets/pki-scenario.png",
     "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
     "corsi/network-security/assets/adv-asym-key-exchange.png",
