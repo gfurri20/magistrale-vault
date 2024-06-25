@@ -142,7 +142,7 @@ Gli algoritmi Two Key fanno affidamento su due chiavi dette, rispettivamente, *c
 Fanno riferimento agli algoritmi di **crittografia asimmetrica**.
 
 A loro volta si sotto-strutturano in:
-- **Digital Signature Algorithm** - generano una firma che permette di verificare l'autenticità del messaggio
+- **Digital Signature Algorithm** - generano una firma che permette di verificare l'*autenticità* del messaggio
 - **Key Exchange** - permettono di implementare protocolli per lo scambio di chiavi simmetriche
 - **User Authentication** - permettono di implementare protocolli di autenticazione utente
 

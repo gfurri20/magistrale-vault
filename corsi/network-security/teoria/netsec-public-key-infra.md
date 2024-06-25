@@ -39,6 +39,26 @@ Nello specifico, il KDC, può operare in due modalità:
 ![[kdc.png]]
 Le chiavi simmetriche di sessione possono essere distribuite lungo una gerarchia, le chiavi più in basso sono usate maggiormente ma devono essere cambiate spesso (i.e. **ephemeral keys**); mentre le chiavi più in alto permettono la generazione delle chiavi sottostanti e possiedono un ciclo di vita maggiore (i.e. **master keys**).
 
+#### Otway-Rees Protocol
+Otway-Rees è un protocollo ==server-based== (i.e. prevede la presenza di un server centrale) che permette la ==mutua autenticazione== attraverso la generazione di una chiave simmetrica tra due utenti (la chiave simmetrica tra utenti e server si suppone esista).
+
+Se implementato correttamente ==è immune== ad attacchi **MITM**, **Replay** e **Data Modification**.
+![[otway-rees-protocol.png]]
+Purtroppo questo algoritmo soffre un attacco particolare: **Reflection + Type Flaw Attack**.
+Se un eventuale utente malevolo `Evil` si interpone bloccando il messaggio (4) potrebbe sostituire il parametro $\{N_A, K_{AB}\}_{K_{AS}}$ con $\{N_A, \textcolor{red}{ID_{Sess}, ID_A, ID_B}\}_{K_{AS}}$ (supponendo che $|K_{AB}| = |ID_{Sess}, ID_A, ID_B|$).
+In questo modo `Alice` vede $N_A$, la considera valida, ed accetta $\{ID_{Sess}, ID_A, ID_B\}$ come chiave simmetrica di sessione.
+
+==In questo modo l'autenticazione e la segretezza sono compromesse.==
+
+#### Andrew Secret RPC Protocol
+Andrew Secret RPC è un protocollo che permette di scambiare una nuova chiave di sessione $K'_{AB}$ tra `Alice` e `Bob` direttamente (non c'è il server), sfruttando la presenza di una chiave di sessione già presente $K_{AB}$.
+![[andrew-secret-protocol.png]]
+Purtroppo questo algoritmo soffre un attacco particolare: **Reflection + Type Flaw Attack** (simile all'attacco per Otway-Rees).
+Se un eventuale utente malevolo `Evil` si interpone intercettando il messaggio (3), potrebbe successivamente inoltrare al posto del massaggio (4) un payload modificato t.c. $\{\textcolor{red}{N_A + 1}, \textcolor{red}{N_B}\}_{K_{AB}}$ in direzione di `Alice` (supponendo che $|K'_{AB}| = |N_B|$).
+In questo modo `Alice`  accetta $\{N_A + 1\}$ come chiave simmetrica di sessione.
+
+Questo attacco viola l'autenticazione ma **non** la segretezza!
+
 ### Using Asymmetric Cryptography
 Uno degli usi più utili della crittografia simmetrica è proprio lo scambio di chiavi.
 Ci sono diversi approcci per lo scambio di chiavi di sessione tramite crittografia simmetrica.
@@ -72,10 +92,13 @@ In questo modo `Bob` pensa di parlare con `Alice`, quando invece sta parlando co
 Per migliorare la situazione si può introdurre un identificatore di `Bob` al passaggio (3): $\{N_A,N_B,\textcolor{blue}{ID_B}\}_{PU_A}$, il protocollo così modificato si chiama *NSL*.
 In questo caso **il replay non potrà avere effetto** in quanto `Alice` si accorgerà che il mittente e $ID_B$ non corrispondono.
 
-Se `Evil` riuscisse a manomettere il messaggio (3) in modo tale che risulti contenere l'ID di Evil ($\{N_A,N_B,\textcolor{red}{ID_E}\}_{PU_A}$), allora non si verifica errore e l'attacco procederà.
+Se `Evil` riuscisse a manomettere il messaggio (3) in modo tale che risulti contenere $ID_E$ di `Evil` ($\{N_A,N_B,\textcolor{red}{ID_E}\}_{PU_A}$), allora non si verifica errore e l'attacco procederà (tale attacco è detto **Type Flaw Attack**).
 
-#### Otway-Rees Protocol
-
+Per migliorare al massimo la sicurezza di *NSL* è necessario firmare alcuni parametri con le chiavi private dei mittenti:
+1. `Alice` ->  `Bob`: $\{[N_A, ID_A]_{PR_A}\}_{PU_{B}}$
+2. `Bob` -> `Alice`: $\{N_A, [N_B]_{PR_B}\}_{PU_A}$
+3. `Alice` -> `Bob`: $\{[N_B]_{PR_A}\}_{PU_B}$
+`Evil` è ancora in grado di **impersonare** `Alice` dal punto di vista di `Bob` però non riuscirà più ad effettuare il **reflecting** verso `Alice` dei messaggi di `Bob` in quanto `Alice` si accorgerà dell'errore verificando la presenza della firma di `Evil`.
 
 ## Asymmetric Key Distribution
 Anche le chiavi pubbliche asimmetriche devono poter essere condivise, per fare ciò si possono usare diverse tecniche:
@@ -207,4 +230,21 @@ Considerando `Alice` che necessita di usare la chiave pubblica di `Bob`:
 
 ![[pki-scenario.png]]
 
+---
+
+# Alcune note sui protocolli di sicurezza
+Rif.: [Crypto protcols for session keys File](https://moodledidattica.univr.it/mod/resource/view.php?id=502678)
+
+Un sistema crittografico da solo spesso non basta per garantire la sicurezza e necessita, quindi, di essere integrato all'interno di un protocollo.
+
+Non sempre un protocollo può garantire ogni obiettivo di sicurezza e spesso l'uso di più protocolli insieme potrebbe causare diverse falle di sicurezza.
+==Per considerare un protocollo sicuro **rispetto a determinati obiettivi di sicurezza** è necessario eseguire su di esso un'analisi formale completa attraverso un modello.==
+
+Si preferisce un protocollo rispetto ad un altro in base alle **necessità**.
+
+La crittografia asimmetrica offre due servizi di sicurezza:
+- *confidenzialità* attraverso la possibilità di criptare un messaggio utilizzando una chiave pubblica valida $\{M\}_{PU_A}$
+- *data integrity con identificazione dell'origine* attraverso la possibilità di firmare digitalmente un messaggio utilizzando una chiave privata valida $[M]_{PR_A}$
+
+Un messaggio può essere crittografato da $PU_1$ e allo stesso firmato da $PR_2$ per garantire ognuno dei precedenti obiettivi ${M}_{PU_1}^{PR_2}$.
 

@@ -13,21 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "file": "corsi/network-security/network-security.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c971e3572391fb95",
+            "id": "6352455594f8b3d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.6.5"
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/network-security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/network-security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
+                "file": "corsi/network-security/network-security.md"
               }
             }
           }
@@ -158,15 +156,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c971e3572391fb95",
+  "active": "6352455594f8b3d9",
   "lastOpenFiles": [
-    "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-    "corsi/network-security/teoria/netsec-introduction.md",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-    "corsi/network-security/teoria/netsec-public-key-infra.md",
-    "corsi/network-security/assets/nspk-mitm-1.png",
     "corsi/network-security/teoria/netsec-user-auth.md",
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/teoria/netsec-introduction.md",
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+    "corsi/network-security/assets/andrew-secret-protocol.png",
+    "corsi/network-security/assets/otway-rees-protocol.png",
+    "corsi/network-security/assets/mermaid-diagram-2024-06-25-172020.png",
+    "corsi/network-security/assets/mermaid-diagram-2024-06-25-171818.png",
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/assets/nspk-mitm-1.png",
     "corsi/network-security/assets/pki-scenario.png",
     "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
@@ -174,10 +176,6 @@
     "corsi/network-security/assets/mitm-simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
-    "corsi/network-security/assets/simple-key-exchange.svg",
-    "corsi/network-security/assets/kdc.png",
-    "corsi/network-security/assets/mitm-diffie-hellman.png",
-    "corsi/network-security/assets/message_auth_modes.png",
     "corsi/network-security/assets",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",

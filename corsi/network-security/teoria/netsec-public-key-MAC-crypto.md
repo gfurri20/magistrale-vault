@@ -30,7 +30,7 @@ Si può aggiungere un layer crittografico in tre diverse modalità:
 
 ![[message_auth_modes.png]]
 Dove:
-- $K$ - chiave simmetrica
+- $K_{ab}$ - chiave simmetrica (o di sessione tra `A` e `B`)
 - $PR_a$ - chiave privata di $a$
 - $PU_a$ - chiave pubblica di $a$
 - $H$ - funzione one way che genera il digest
