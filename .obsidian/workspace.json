@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/codice-malevolo/codice-malevolo.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/codice-malevolo/codice-malevolo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/codice-malevolo/codice-malevolo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/codice-malevolo/codice-malevolo.md"
               }
             }
           }
@@ -147,9 +147,11 @@
   },
   "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/codice-malevolo/progetto",
+    "corsi/codice-malevolo/progetto.md",
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/assets/andrew-secret-protocol.png",
@@ -184,14 +186,12 @@
     "12_06_2024_analisi-di-file.md",
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
-    "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
     "corsi/complessita-e-algoritmi/tutorato",
     "corsi/codice-malevolo/lezioni",
-    "corsi",
     "Network Security/Untitled.canvas"
   ]
 }
