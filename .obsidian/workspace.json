@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6352455594f8b3d9",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -156,7 +145,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6352455594f8b3d9",
+  "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/network-security.md",
