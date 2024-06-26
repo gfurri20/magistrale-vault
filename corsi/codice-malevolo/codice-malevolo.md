@@ -1,5 +1,5 @@
 Analisi dei file per l'esame:
-- ciao
+- Malware -> [[analisi-malware]]
 
 Indice delle lezioni:
 - 6 marzo 2024 → [[06_03_2024-introduzione]]
