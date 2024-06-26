@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "6352455594f8b3d9",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/network-security/teoria/netsec-user-auth.md"
               }
             }
           }
@@ -156,10 +145,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6352455594f8b3d9",
+  "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
