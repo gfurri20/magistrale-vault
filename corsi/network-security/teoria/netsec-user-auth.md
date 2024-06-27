@@ -45,7 +45,7 @@ Ci sono diverse modalità di attacco attraverso il replay dei messaggi:
 Per cercare di difendersi da queste tipologie di attacchi è possibile adottare diverse contromisure:
 - utilizzare un *sequence number* per ordinare il flusso di messaggi, è una tecnica troppo onerosa che nono viene usata
 - utilizzare dei *timestamps* per individuare messaggi e fresh e non, richiede la sincronizzazione dei clock
-	- si potrebbe attaccare i clock per de-sincronizzare 
+	- si potrebbe attaccare i clock per de-sincronizzare i dispositivi utente e quindi per sabotare il controllo della finestra temporale
 - utilizzare delle *nonce*, ovvero delle stringhe alfanumeriche generate random che fungono da challenge/response
 
 # Kerberos
