@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md"
+                "file": "corsi/network-security/teoria/netsec-user-auth.md"
               }
             }
           }
@@ -147,11 +147,12 @@
   },
   "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
+    "corsi/network-security/network-security.md",
+    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/progetto",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
@@ -169,7 +170,6 @@
     "corsi/network-security/assets/simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
-    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
