@@ -80,7 +80,23 @@ Un utente che ottiene un `ticket` per un determinato servizio può salvarlo per 
 Kerberos v.4 si basa su DES e quindi individuiamo le chiavi simmetriche usate per la codifica:
 - $K_{c,as}$ -> la chiave simmetrica ottenuta dalla `password` dell'utente condivisa tra client e AS
 - $K_{c,tgs}$ -> la chiave simmetrica condivisa tra client e TGS
-- $K_{c,v}$ -> la chiave simmetrica condivisa tra client e servizio
+- $\textcolor{green}{K_{c,v}}$ -> la chiave simmetrica condivisa tra client e servizio
 - $K_{v,as}$ -> la chiave simmetrica condivisa tra servizio e AS
 - $K_{v,tgs}$ -> la chiave simmetrica condivisa tra servizio e TGS
 - $K_{as,tgs}$ -> la chiave simmetrica condivisa tra AS e TGS
+![[kerberos-v4-scenario.png]]
+Gli oggetti principali sono:
+- il `granting-ticket`, ovvero il ticket utile per ottenere il `ticket` di servizio, è codificato con la chiave tra AS e TGS, quindi il client non può fare altro che inoltrarlo
+$$\textcolor{blue}{Ticket_{tgs} = \{K_{c,tgs}, ID_c, AD_c, ID_{tgs}, TS_2, LT_2\}_{K_{as,tgs}}}$$
+- `autenticatore` tra client e TGS, ovvero un oggetto che permette di provare che il client che ha eseguito la richiesta è anche colui che riceverà il ticket di servizio
+$$\textcolor{orange}{Auth_{c,tgs} = \{ID_c, AD_c, TS_3\}_{K_{c,tgs}}}$$
+- il `ticket` di servizio, ovvero il ticket utile per ottenere l'accesso al servizio desiderato, è codificato con la chiave tra servizio e TGS, quindi il client non può fare altro che inoltrarlo
+$$\textcolor{red}{ Ticket_v = \{\textcolor{green}{K_{c,v}}, ID_c, AD_c, ID_v, TS_4, LT_4\}_{K_{v,tgs}} }$$
+- `autenticatore` tra client e servizio, ovvero un oggetto che permette di provare che il client che utilizza il ticket è anche colui che l'ha richiesto
+$$\textcolor{violet}{Auth_{c,v} = \{ID_c, AD_c, TS_5\}_{K_{c,v}}}$$
+
+Individuiamo ulteriori elementi:
+- $LT_x$ -> lifetime, ovvero una scadenza di validità
+- $AD_x$ -> l'indirizzo IP (o del protocollo usato) di $x$
+
+Il passaggio (6) dell'immagine permette di garantire la **mutua autenticazione**, non è sempre obbligatorio, dipende dalle impostazioni e policies.
