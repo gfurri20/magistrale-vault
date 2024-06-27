@@ -49,3 +49,17 @@ Per cercare di difendersi da queste tipologie di attacchi è possibile adottare 
 - utilizzare delle *nonce*, ovvero delle stringhe alfanumeriche generate random che fungono da challenge/response
 
 # Kerberos
+Kerberos è un **servizio di mutua autenticazione centralizzato**. Utilizza un authentication server (AS) centrale per autenticare utenti con server e server con utenti.
+Fa affidamento **solamente all'uso di chiavi simmetriche** di sessione.
+
+L'autenticazione di una semplice postazione di lavoro non può sostituirsi all'autenticazione di un utente:
+- un utente non autorizzato potrebbe utilizzare la postazione di un utente autorizzato
+- un utente potrebbe alterare gli indirizzi IP sulla rete per cambiare le postazioni
+- un utente potrebbe compiere un replay attack
+
+Kerberos si prepone essere:
+- **Sicuro** -> un ascoltatore malevolo non riesce ad ottenere abbastanza informazioni per impersonare un utente
+- **Reliable** -> un AS può essere immediatamente rimpiazzato da server di backup
+- **Transparent** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
+- **Scalable** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
+
