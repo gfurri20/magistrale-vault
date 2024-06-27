@@ -70,7 +70,9 @@ L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
 - **TGS** (Ticket-Granting Server) che distribuisce un `ticket` agli utenti autorizzati dall'AS rispetto ad uno specifico servizio
 - il **servizio** a cui l'utente è interessato ad accedere a cui verrà presentato il `ticket`, anche il server del servizio ha l'obbligo di autenticarsi nei confronti del client
 
-Il `ticket` è un oggetto distribuito dal TGS che viene generato previa autenticazione dell'utente per ogni specifico servizio offerto sulla rete.
+Esistono due tipi di `ticket`:
+- il `granting-ticket` ovvero l'autorizzazione concessa dal AS a ottenere il `ticket` di servizio dal TGS
+- il `ticket` di servizio che è un oggetto distribuito dal TGS che viene generato previa autenticazione dell'utente per ogni specifico servizio offerto sulla rete.
 Un utente che ottiene un `ticket` per un determinato servizio può salvarlo per ri-utilizzarlo più avanti nel tempo (entro una certa scadenza). In questo modo non si affolla di richieste né l'AS né il TGS.
 
 ==In sostanza con l'autenticazione un utente può richiedere più ticket e con un ticket un utente può richiedere più accessi al servizio.==
