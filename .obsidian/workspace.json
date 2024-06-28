@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
+                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
+                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md"
               }
             }
           }
@@ -158,10 +157,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f5e0ce121b0e89e",
+  "active": "e996aefb91b9224c",
   "lastOpenFiles": [
-    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/network-security/assets/kerberos-v4-scenario.png",
