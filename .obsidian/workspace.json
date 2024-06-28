@@ -8,18 +8,31 @@
         "type": "tabs",
         "children": [
           {
+            "id": "9433d7cc410140bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "3f5e0ce121b0e89e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 392.5086555480957
+    "width": 344.5026054382324
   },
   "right": {
     "id": "f13b5f1f71e7aebf",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "file": "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md"
+                "file": "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md"
               }
             }
           }
@@ -147,13 +160,21 @@
   },
   "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
-    "corsi/network-security/assets/kerberos-v4-scenario.png",
-    "corsi/network-security/network-security.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
-    "corsi/codice-malevolo/progetto",
+    "corsi/network-security/assets/kerberos-v4-scenario.png",
+    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
+    "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
+    "corsi/codice-malevolo/lezioni/06_03_2024-introduzione.md",
+    "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
+    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
+    "corsi/codice-malevolo/lezioni/22_05_2024-anti-analysis-analysis.md",
+    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
+    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
@@ -168,7 +189,6 @@
     "Untitled.md",
     "corsi/network-security/assets/adv-asym-key-exchange.png",
     "corsi/network-security/assets/mitm-simple-key-exchange.png",
-    "corsi/network-security/assets/simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
@@ -177,22 +197,14 @@
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
     "corsi/network-security/teoria/netsec-anonimity-privacy.md",
-    "corsi/network-security/teoria/netsec-ip-sec.md",
-    "corsi/network-security/teoria/netsec-mail-sec.md",
-    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/teoria",
-    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
-    "corsi/codice-malevolo/lezioni/12_06_2024.md",
-    "12_06_2024_analisi-di-file.md",
-    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
     "corsi/complessita-e-algoritmi/tutorato",
     "corsi/codice-malevolo/lezioni",
+    "corsi",
     "Network Security/Untitled.canvas"
   ]
 }
