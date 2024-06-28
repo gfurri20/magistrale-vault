@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -157,8 +158,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e996aefb91b9224c",
+  "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
+    "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
