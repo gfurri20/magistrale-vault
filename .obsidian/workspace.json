@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md"
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md"
               }
             }
           }
@@ -147,12 +147,14 @@
   },
   "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+    "corsi/network-security/assets/remote-port-forwarding.png",
+    "corsi/network-security/assets/local-port-forwarding.png",
     "corsi/network-security/assets/ssh-tlp-packet.png",
     "corsi/network-security/assets/tls-record-schema.png",
-    "corsi/network-security/network-security.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/assets/kerberos-v4-scenario.png",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/progetto",
@@ -166,10 +168,7 @@
     "corsi/network-security/assets/mermaid-diagram-2024-06-25-171818.png",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/assets/nspk-mitm-1.png",
-    "corsi/network-security/assets/pki-scenario.png",
-    "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
-    "corsi/network-security/assets/adv-asym-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",

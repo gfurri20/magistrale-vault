@@ -103,7 +103,7 @@ Se una connessione TLS viene chiusa prima dello scambio di tutti i messaggi il p
 ---
 
 # SSH (Secure Shell)
-SSH è un protocollo che permette l'utilizzo di una shell remota su un client attraverso l'uso di una connessione sicura.
+SSH è un protocollo che permette la **creazione di un tunnel sicuro** attraverso un mezzo di comunicazione considerato insicuro, come Internet.
 
 SSH fa affidamento a tre protocolli che girano al di sopra di TCP:
 - **Transport Layer Protocol** -> provvede all'autenticazione del server, alla confidenzialità e all'integrità (potrebbe introdurre compressione)
@@ -146,7 +146,43 @@ Scambio di messaggi:
 5. $Server \rightarrow Client$: se l'autenticazione va a buon fine allora il server conferma l'avvenuta autenticazione
 
 ## Connection Protocol
+Questo protocollo entra in azione una volta che la connessione sicura è stata instaurata, ovvero una volta creato un *tunnel SSH sicuro*.
 
+Il compito del Connection Protocol è quello di gestire il tunnel SSH e di conseguenza l'invio dei dati astraendoli all'interno di questa connessione sicura definita dal tunnel.
+
+Ogni comunicazione SSH utilizza un canale separato, esso può essere aperto da entrambi gli attori.
+Un canale è controllato attraverso un meccanismo di windowing.
+
+La vita di un canale sicuro è divisa in tre fasi:
+1. *apertura* del canale -> client e server si scambiano due pacchetti di apertura
+2. *trasferimento* dei dati -> se l'apertura ha successo allora gli attori possono comunicare
+3. *chiusura* del canale -> chi ha aperto il canale procede alla chiusura
+
+Esistono quattro tipi di canali, ognuno con le sue caratteristiche:
+- **Session** -> permette l'esecuzione remota di un programma (e.g. shell remota)
+- **X11** -> apre una sorta di remote desktop GUI nei confronti di un'applicazione che gira su server
+- **Forwarded-tcpip** -> remote port forwarding
+- **Direct-tcpip** -> local port forwarding
+
+### Port Forwarding
+Una delle feature più utili di SSH è il port forwarding, ovvero la ***possibilità di tradurre qualsiasi connessione TCP insicura in una connessione SSH sicura***; difatti è anche detta SSH tunneling.
+
+Dati due client `A` e `B` che vogliono comunicare attraverso TCP, per proteggere questa connessione, SSH è configurato in modo tale che il **Transport Layer Protocol** stabilisca una connessione TCP tra il client `A` e il server `B`, rispettivamente sulle porte $a$ e $b$.
+Grazie al port forwarding ==viene stabilito un tunnel SSH sicuro tra i due end point==: il traffico proveniente dal client dalla porta $a$ viene re-indirizzato alla porta $x$ e spedito sulla rete in modo sicuro.
+Il server `B` riceverà i messaggi sulla propria porta $y$, attraverso un altro re-indirizzamento interno il traffico raggiungerà l'applicazione destinazione sulla porta $b$.
+
+#### Local Port Forwarding
+Il Local Port Forwarding permette al client di avviare un processo che re-indirizza un certo traffico, uscente da una determinata porta, da TCP ad un tunnel SSH sicuro.
+
+![[local-port-forwarding.png]]
+
+#### Remote Port Forwarding
+Il remote port forwarding è particolarmente utile per esporre, temporaneamente, un servizio sulla rete o per garantire l'accesso remoto ad una rete locale (VPN).
+
+Sostanzialmente il remote forwarding permette di inoltrare delle richieste attraverso un tunnel SSH in modo da rendere sicura la comunicazione.
+Il server ascolta le richieste in entrata e le inoltra al client che la gestirà.
+
+![[remote-port-forwarding.png]]
 
 
 ---
