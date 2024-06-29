@@ -82,8 +82,23 @@ Definisce i parametri associati ad ogni SA, alcuni dei parametri sono:
 ### Security Policy Database
 Contiene le policy che relazionano la gestione di un determinato traffico IP rispetto ad una specifica SA.
 
+Ogni entry nel SPD è definita da un insieme di IP e da un insieme di protocolli di livelli superiori, detti *selettori*. Quest'ultimi vengono utilizzati per filtrare il traffico in uscita di una specifica SA.
+
+| #   | Protocol | Local IP  | Port | Remote IP  | Port | Action        |
+| --- | -------- | --------- | ---- | ---------- | ---- | ------------- |
+| 1   | UDP      | 1.2.3.101 | 500  | *          | 500  | `BYPASS`      |
+| 2   | TCP      | 1.2.3.101 | *    | 1.2.4.0/24 | *    | `PROTECT:ESP` |
+| 3   | *        | *         | *    | *          | *    | `DISCARD`     |
+In questo caso all'interno del SPD sono specificate 3 policies, il processo che si occupa di analizzare il pacchetto in uscita dovrà scorrere ogni regola sequenzialmente, se il pacchetto combacia allora verrà eseguita l'operazione specificataa in **Action**. Vediamo l'esempio:
+1. la prima regola lascia passare tutti i pacchetti che usano il protocollo UDP, originari da `1.2.3.101:500` verso ogni IP esterno ma diretto alla porta `500`
+2. la seconda regola protegge i pacchetti compatibili attraverso l'uso di ESP
+3. la terza regola è la **regola di default** che scarta tutti quei pacchetti che non hanno trovato compatibilità nelle regole precedenti.
+==Quando un pacchetto deve essere protetto allora si interroga il SAD per ottenere le procedura di crittografia attraverso ESP oppure per instaurare delle nuove SA attraverso IKE.==
+
+Anche per i pacchetti in input è possibile definire dei filtri attraverso delle policies.
 
 ## ESP
+ESP (successore di AH) è il protocollo che permette l'incapsulamento vero e proprio dei dati. Esso cifra sempre i dati applicazione e l'header TCP, ma gestisce gli header IP in base alla modalità di utilizzo scelta.
 
 ### Tunnel Mode
 
