@@ -147,6 +147,8 @@
   },
   "active": "3f5e0ce121b0e89e",
   "lastOpenFiles": [
+    "corsi/network-security/assets/ssh-tlp-packet.png",
+    "corsi/network-security/assets/tls-record-schema.png",
     "corsi/network-security/network-security.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
@@ -168,7 +170,6 @@
     "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
     "corsi/network-security/assets/adv-asym-key-exchange.png",
-    "corsi/network-security/assets/mitm-simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
