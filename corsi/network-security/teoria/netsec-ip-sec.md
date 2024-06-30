@@ -97,11 +97,65 @@ In questo caso all'interno del SPD sono specificate 3 policies, il processo che 
 
 Anche per i pacchetti in input è possibile definire dei filtri attraverso delle policies.
 
-## ESP
-ESP (successore di AH) è il protocollo che permette l'incapsulamento vero e proprio dei dati. Esso cifra sempre i dati applicazione e l'header TCP, ma gestisce gli header IP in base alla modalità di utilizzo scelta.
+### SA bundles
+Le SA possono essere raggruppate in bundles, ovvero una sequenza di SA che specificano le caratteristiche che un determinato tipo di traffico IP deve avere.
 
-### Tunnel Mode
+==Sostanzialmente è possibile incapsulare SA dentro altre SA creando questi SA bundles.== In questo modo le proprietà di ogni SA potranno essere sommate.
+
+Come detto ESP non integra immediatamente l'autenticazione, se lo fa agisce autentica direttamente il cipher-text.
+
+Ci sono altri, attraverso i bundle, per garantire autenticazione dopo la cifratura:
+- **Transport Adjacency** -> permette un solo livello di combinazione
+	- applica più protocolli di sicurezza allo stesso pacchetto IP
+	- applica prima ESP senza autenticazione
+	- successivamente AH
+	- introduce overhead
+- **Iterated Tunneling** -> permette molteplici livelli innestati di combinazioni
+	- con questa modalità l'autenticazione viene eseguita sul plain-text quindi prima della cifratura
+	- prima viene applicato AH in transport mode
+	- e successivamente ESP in tunnel mode
+
+## ESP
+ESP (successore di AH) è il protocollo che **permette l'incapsulamento** vero e proprio dei dati. Esso cifra sempre i dati applicazione e l'header TCP, ma gestisce gli header IP in base alla modalità di utilizzo scelta.
+
+Potrebbe essere aggiunto del *padding* ai dati, nel caso in cui l'algoritmo di cifratura necessitasse di lunghezze specifiche.
+
+AH garantiva out-of-the-box anche l'autenticazione, mentre ESP no. Con ESP è il primo utente che allega il campo autenticazione, nel caso avesse necessità di farlo. ==La procedura di autenticazione in ESP viene eseguita sul cipher-text.==
+
+#### AH
+AH è effettivamente il predecessore di ESP ma non introduceva cifratura, **garantiva solo integrità**.
+
+Quindi permetteva solo di introdurre canali autenticati ma non confidenziali.
 
 ### Transport Mode
+Nella modalità trasporto ==l'header IP originario non viene incluso nei dati cifrati==, quindi sostanzialmente non viene toccato.
+![[ipsec-tranport.png]]
+- `Orig IP hdr` -> l'header IP originale che non viene cifrato, resta in chiaro
+- `ESP hdr` -> l'header ESP non viene cifrato ma solamente autenticato
+- `TCP` -> l'header TCP
+- `Data` -> i dati contenuti nel messaggio
+- `ESP trlr` -> trailer ESP che contiene l'eventuale padding e le info sul prossimo pacchetto
+- `ESP auth` -> il digest dei parametri hashati con HMAC
 
+Con questa modalità non vengono creati nuovi pacchetti e quindi funziona bene La procedura di autenticazione in ESP viene eseguita sul cipher-text.in reti in cui l'incremento della grandezza di un pacchetto potrebbe causare problemi.
+Alle volte, questa modalità, ==potrebbe essere vittima di analisi del traffico==.
 
+Spesso usato per le **remote-access VPNs**.
+
+### Tunnel Mode
+Nella modalità tunnel ==l'header IP originario viene anch'esso incapsulato==, producendone uno nuovo, quindi si viene a creare un nuovo pacchetto IP più grande.
+![[ipsec-tunnel.png]]
+
+In questa modalità l'intero pacchetto IP è protetto e quindi nessun router o dispositivo intermedio riesce ad accedere al pacchetto IP originario.
+Dato che si aggiunge `New IP hdr` allora il pacchetto IP nuovo ==potrebbe possedere diverse sorgente e destinazione==.
+
+Questa modalità viene implementata tra due *security gateways* e non direttamente tra gli host. In questo modo si semplifica la distribuzione delle chiavi.
+
+Spesso usato per **site-to-site VPN**.
+
+### Anti-replay Mechanism
+Si può introdurre un controllo basato su una finestra a scorrimento per cercare di prevenire replay attacks.
+
+Grazie ad un meccanismo basato sull'introduzione dei sequence numbers è possibile gestire i pacchetti in modo da evitare di prendere in considerazioni eventuali duplicati.
+
+Solo i pacchetti il cui sequence number è all'interno di un intervallo sono considerati validi.
