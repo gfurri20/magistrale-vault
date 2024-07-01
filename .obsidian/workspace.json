@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "11527455e8b1e12b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "54232a9deceb8c5d",
             "type": "leaf",
             "state": {
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
+                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md"
               }
             }
           }
@@ -145,9 +157,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "54232a9deceb8c5d",
+  "active": "11527455e8b1e12b",
   "lastOpenFiles": [
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/assets/tls-record-schema.png",
     "corsi/network-security/assets/ssh-tlp-packet.png",
@@ -155,7 +168,6 @@
     "corsi/network-security/assets/local-port-forwarding.png",
     "corsi/network-security/assets/ipsec-tunnel.png",
     "corsi/network-security/assets/ipsec-tranport.png",
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
     "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
@@ -166,7 +178,7 @@
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
-    "corsi/codice-malevolo/lezioni/22_05_2024-anti-analysis-analysis.md",
+    "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",

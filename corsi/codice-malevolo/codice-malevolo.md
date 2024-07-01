@@ -16,7 +16,7 @@ Indice delle lezioni:
 - 10 maggio 2024 -> **missing**
 - 15 maggio 2024 -> [[15_05_2024-debugger]]
 - 17 maggio 2024 -> [[17_05_2024-recap-malware-analysis]]
-- 22 maggio 2024 -> [[22_05_2024-anti-analysis-analysis]]
+- 22 maggio 2024 -> [[22_05_2024-anti-debug-analysis]]
 - 24 maggio 2024 -> [[24_05_2024-analisi-di-malware]]
 - 29 maggio 2024 -> **missing**
 - 31 maggio 2024 -> [[31_05_2024-tecniche-di-unpacking]]
