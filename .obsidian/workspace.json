@@ -11,8 +11,12 @@
             "id": "54232a9deceb8c5d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -139,6 +147,13 @@
   },
   "active": "54232a9deceb8c5d",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "corsi/network-security/assets/tls-record-schema.png",
+    "corsi/network-security/assets/ssh-tlp-packet.png",
+    "corsi/network-security/assets/remote-port-forwarding.png",
+    "corsi/network-security/assets/local-port-forwarding.png",
+    "corsi/network-security/assets/ipsec-tunnel.png",
+    "corsi/network-security/assets/ipsec-tranport.png",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
     "corsi/codice-malevolo/codice-malevolo.md",
@@ -152,7 +167,6 @@
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-analysis-analysis.md",
-    "conflict-files-obsidian-git.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
@@ -161,14 +175,8 @@
     "corsi/network-security/assets/andrew-secret-protocol.png",
     "corsi/network-security/assets/otway-rees-protocol.png",
     "corsi/network-security/assets/mermaid-diagram-2024-06-25-172020.png",
-    "corsi/network-security/assets/mermaid-diagram-2024-06-25-171818.png",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
-    "corsi/network-security/assets/nspk-mitm-1.png",
-    "corsi/network-security/assets/pki-scenario.png",
-    "corsi/network-security/assets/flow-ca.png",
     "Untitled.md",
-    "corsi/network-security/assets/adv-asym-key-exchange.png",
-    "corsi/network-security/assets/mitm-simple-key-exchange.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
@@ -176,7 +184,6 @@
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
-    "corsi/network-security/teoria/netsec-anonimity-privacy.md",
     "corsi/network-security/teoria",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",

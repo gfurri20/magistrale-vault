@@ -7,6 +7,10 @@ L'autenticazione permette alle aziende di aumentare la sicurezza dei propri serv
 $$\texttt{Message Authentication} \neq \texttt{User Authentication}$$
 L'autenticazione del messaggio verifica che il messaggio non sia stato manomesso e che la sorgente sia autentica.
 
+Esistono due tipi di processi ai autenticazione:
+- **mutua autenticazione** -> autentica entrambe le entità (o tutte) comprese nella comunicazione
+- **autenticazione one-way** -> coinvolge un trasferimento singolo di informazione da `A` a `B`
+
 ## Authentication Principles
 Definiamo tre principi su cui si basa l'autenticazione:
 - **Digital identity** -> rappresentazione univoca dell'utente in un determinato contesto, composta da un insieme di attributi
@@ -48,9 +52,13 @@ Per cercare di difendersi da queste tipologie di attacchi è possibile adottare 
 	- si potrebbe attaccare i clock per de-sincronizzare i dispositivi utente e quindi per sabotare il controllo della finestra temporale
 - utilizzare delle *nonce*, ovvero delle stringhe alfanumeriche generate random che fungono da challenge/response
 
-# Kerberos
-Kerberos è un **servizio di mutua autenticazione centralizzato**. Utilizza un authentication server (AS) centrale per autenticare utenti con server e server con utenti.
-Fa affidamento **solamente all'uso di chiavi simmetriche** di sessione.
+## User authentication con crittografia simmetrica
+### Kerberos (Mutua Autenticazione)
+
+>[!important] Kerberos
+>Kerberos è un protocollo di mutua autenticazione centralizzato basato solo su chiavi simmetriche.
+
+Utilizza un authentication server (AS) centrale per autenticare utenti con server e server con utenti.
 
 L'autenticazione di una semplice postazione di lavoro non può sostituirsi all'autenticazione di un utente:
 - un utente non autorizzato potrebbe utilizzare la postazione di un utente autorizzato
@@ -63,10 +71,10 @@ Kerberos si prepone essere:
 - **Transparent** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
 - **Scalable** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
 
-## Kerberos v.4 Architecture
+#### Kerberos v.4 Architecture
 L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
 - il **client** che possiede una propria `password` di accesso
-- **AS** (Authentication Server) centralizzato, che conosce le `password` di tutti gli utenti all'interno della rete
+- **AS** (Authentication Server) centralizzato, che conosce le `password` (di solito salvate hashate) di tutti gli utenti all'interno della rete
 - **TGS** (Ticket-Granting Server) che distribuisce un `ticket` agli utenti autorizzati dall'AS rispetto ad uno specifico servizio
 - il **servizio** a cui l'utente è interessato ad accedere a cui verrà presentato il `ticket`, anche il server del servizio ha l'obbligo di autenticarsi nei confronti del client
 
@@ -100,3 +108,56 @@ Individuiamo ulteriori elementi:
 - $AD_x$ -> l'indirizzo IP (o del protocollo usato) di $x$
 
 Il passaggio (6) dell'immagine permette di garantire la **mutua autenticazione**, non è sempre obbligatorio, dipende dalle impostazioni e policies.
+
+#### Kerberos Realms
+L'insieme di tutti gli utenti associati ad un determinato AS e TGS è detto Kerberos Realm, all'interno di quest'ultimo esistono molteplici servizi ai quali i client possono accedere.
+
+Potrebbe succedere che un utente voglia accedere ad un servizio presente su un Realm diverso da quello a cui appartiene, in questo caso il TGS locale non produrrà il `ticket` di servizio ma bensì un `remote-ticket` che potrà essere presentato ad un TGS esterno per ottener il `ticket` di servizio esterno utile per accedere al servizio non locale desiderato.
+
+Ovviamente questo metodo necessità di un numero elevato di chiavi tra entità.
+
+## Kerberos v.5
+Kerberos v.5 apporta delle migliorie tecniche alla v.4:
+- sostituisce DES con **AES**
+- migliora i $LT_x$ aggiungendo una data di inizio ed una di fine
+- authentication forwarding, permette all'utente di accedere a più servizi in modo transitivo senza ri-eseguire l'autenticazione
+- **migliora l'autenticazione tra Realms**, utilizzando meno chiavi
+- rimuove la doppia cifratura nei messaggi (2) e (4) per snellire il processo
+- aggiunge dei meccanismi che garantiscono **integrità**
+- rende più difficoltosi attacchi di brute-force sulla password (non li evita)
+
+---
+
+## User authentication con crittografia asimmetrica
+
+### Mutua autenticazione
+Possiamo individuare alcuni protocolli di mutua autenticazione basati su chiave pubblica/privata:
+- **Denning Sacco protocol** -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
+- **Woo Lam protocol** -> con questo approccio vengono usate delle nonce al posto dei timestamp
+Entrambi i protocolli hanno comunque delle debolezze e questo dimostra quanto sia difficile creare un protocollo solido di autenticazione.
+
+### Autenticazione one-way
+L'autenticazione one-way nella sua forma più semplice stabilisce se un token di autenticazione generato da `A` sia effettivamente inviato al destinatario `B`.
+
+Vediamola per gradi.
+
+Possiamo garantire **non repudiabilità** e **authentication** con questo payload:
+$$A \rightarrow B: \{msg, [msg]_{PRa,}, [Cert_a]_{PR_{as}}\}$$
+Quindi `B`:
+1. Utilizza la chiave pubblica di `AS` per recuperare $Cert_a$ e quindi la chiave pubblica di A $PU_a$
+2. Successivamente usa la chiave pubblica di `A` per verificare la signature
+
+Se si vuole introdurre anche la **confidenzialità** allora si incapsula tutto con la chiave pubblica di `B`:
+$$A \rightarrow B: \{msg, [msg]_{PRa,}, [Cert_a]_{PR_{as}}\}_{PU_b}$$
+Si può introdurre un ulteriore grado di sicurezza utilizzando un one-time pad e quindi una one-time key $K$:
+$$A \rightarrow B: \{\{msg\}_K, [msg]_{PRa,}, [Cert_a]_{PR_{as}}, K\}_{PU_b}$$
+---
+
+# Federated Identity Management
+Un concetto che permette di utilizzare un'identità comune per molteplici servizi.
+
+==L'obiettivo è quello di associare ad ogni utente un'identità (insieme di attributi) che può essere utilizzata per essere autenticati su diversi servizi.==
+Questa è la base delle tecnologie e dei protocolli di **SSO** (Single Sign On), che permettono molteplici accessi attraverso una singola autenticazione.
+
+Quando un utente vuole accedere ad un servizio attraverso SSO, viene interrogato un server detto **Identity Provider** che, previa autenticazione, preleverà l'identità dell'utente.
+Tale identità verrà inoltrata al **Service Provider** che provvederà ad aprire la sessione con l'utente.
