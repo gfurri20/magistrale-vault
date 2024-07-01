@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -157,8 +158,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "11527455e8b1e12b",
+  "active": "54232a9deceb8c5d",
   "lastOpenFiles": [
+    "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
@@ -178,7 +180,6 @@
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
