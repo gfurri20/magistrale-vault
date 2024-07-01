@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -147,6 +147,7 @@
   },
   "active": "54232a9deceb8c5d",
   "lastOpenFiles": [
+    "corsi/codice-malevolo/codice-malevolo.md",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/assets/tls-record-schema.png",
     "corsi/network-security/assets/ssh-tlp-packet.png",
@@ -156,7 +157,6 @@
     "corsi/network-security/assets/ipsec-tranport.png",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
-    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/network-security/assets/kerberos-v4-scenario.png",
