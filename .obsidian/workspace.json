@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/codice-malevolo.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -147,8 +147,8 @@
   },
   "active": "11527455e8b1e12b",
   "lastOpenFiles": [
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/06_03_2024-introduzione.md",
     "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
