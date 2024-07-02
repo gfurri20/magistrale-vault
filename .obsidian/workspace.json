@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "95bace7688c1f4ef",
+        "id": "21a1c3413c1a2a85",
         "type": "tabs",
         "children": [
           {
-            "id": "11527455e8b1e12b",
+            "id": "054048cbf3044d8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "54232a9deceb8c5d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5026054382324
+    "width": 392.5086555480957
   },
   "right": {
     "id": "f13b5f1f71e7aebf",
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
+                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md"
               }
             }
           }
@@ -158,30 +145,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "54232a9deceb8c5d",
+  "active": "054048cbf3044d8b",
   "lastOpenFiles": [
-    "corsi/codice-malevolo/lezioni/24_05_2024-analisi-di-malware.md",
+    "corsi/network-security/network-security.md",
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
-    "conflict-files-obsidian-git.md",
-    "corsi/network-security/assets/tls-record-schema.png",
-    "corsi/network-security/assets/ssh-tlp-packet.png",
-    "corsi/network-security/assets/remote-port-forwarding.png",
-    "corsi/network-security/assets/local-port-forwarding.png",
     "corsi/network-security/assets/ipsec-tunnel.png",
     "corsi/network-security/assets/ipsec-tranport.png",
-    "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
-    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
-    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
-    "corsi/network-security/assets/kerberos-v4-scenario.png",
-    "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
-    "corsi/codice-malevolo/lezioni/06_03_2024-introduzione.md",
-    "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
-    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
+    "Untitled.canvas",
+    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+    "corsi/network-security/assets/remote-port-forwarding.png",
+    "corsi/network-security/assets/local-port-forwarding.png",
+    "corsi/network-security/assets/ssh-tlp-packet.png",
+    "corsi/network-security/assets/tls-record-schema.png",
     "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/network-security.md",
+    "corsi/network-security/assets/kerberos-v4-scenario.png",
+    "corsi/codice-malevolo/progetto/analisi-malware.md",
+    "corsi/codice-malevolo/progetto",
+    "conflict-files-obsidian-git.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
@@ -197,14 +179,21 @@
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
+    "corsi/network-security/teoria/netsec-anonimity-privacy.md",
+    "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/teoria",
+    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
+    "corsi/codice-malevolo/lezioni/12_06_2024.md",
+    "12_06_2024_analisi-di-file.md",
+    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
     "corsi/complessita-e-algoritmi/tutorato",
     "corsi/codice-malevolo/lezioni",
-    "corsi",
     "Network Security/Untitled.canvas"
   ]
 }
