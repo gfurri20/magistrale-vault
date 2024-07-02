@@ -105,4 +105,85 @@ I dispositivi mobili all'interno di un DS possono slittare da una BSS (cella) al
 
 Per inviare dei dati all'interno di un DS è necessario conoscere le informazioni della Stazione destinataria e quindi dell'AP associato.
 - *Associazione* -> connessione preliminare tra Stazione ed AP, a questo punto l'AP può informare anche gli altri BSS
-- *Re-associazione* -> 
+- *Re-associazione* -> permette la transizione tra un BSS all'altro aventi AP differenti
+- *De-associazione* -> notifica di disconnessione (anche quando si lascia l'ESS o si spegne il dispositivo)
+
+--- 
+
+# IEEE 802.11i WLAN Security
+Ogni Stazione all'interno del raggio di un BSS può, potenzialmente, inviare pacchetti sulla rete.
+Diventa quindi ==necessario introdurre standard di sicurezza robusti==.
+- **Wired Equivalent Privacy (WEP)** nel 1999 -> standard che introduce la privacy ma pieno di debolezze (e.g. usava RC4 per la confidenzialità e CRC per l'integrità)
+- **Wi-Fi Protected Access (WPA)** nel 2003 -> aumenta la sicurezza introducendo anche l'autenticazione per le reti Wi-Fi
+- **Robust Security Network (RSN)** anche chiamato ***WPA2/3*** -> standard complesso che estende la sicurezza nelle reti wireless
+
+## Standard RSN
+Lo standard RSN definisce i seguenti servizi, ad ogni servizio è associato un set di protocolli che ne permettono l'implementazione:
+- **Authentication** and **Key Generation** -> *Extensible Authentication Protocol (EAP)*
+	- mutua autenticazione
+	- scambio delle chiavi di sessione
+- **Access Control** -> *IEEE 802.1 Port-based AC*
+- **Confidenzialità, Origin Auth, Integrità e Replay Protection** -> prima *TKIP* e poi *CCMP*
+	- dati del livello MAC (secondo livello di IEEE 802.11) crittografati e controllata l'integrità
+Ognuno di questi protocolli sfruttano diversi algoritmi di cifratura per raggiungere i propri scopi.
+
+==RSN ha il compito di mettere in sicurezza solamente la comunicazione tra Stazione e il suo AP di riferimento.==
+
+Le operazioni amministrate da RSN possono scomposte in cinque gruppi:
+1. **Discovery**
+2. **Authentication**
+3. **Key Management**
+4. **Protected Data Transfer**
+5. **Connection Terminated**
+
+![[rsn.png]]
+
+### 1. Discovery
+Lo scopo di questa fase è fare in modo che ==AP e Stazione si riconoscano e si accordino sulle policies di sicurezza attraverso sulla base delle quali creare una prima associazione==.
+
+Nello specifico tali policies di sicurezza indicano:
+- quale algoritmo di autenticazione utilizzare
+- quale algoritmo di scambio delle chiavi sfruttare
+- quale protocollo utilizzare per garantire confidenzialità ed integrità durante lo scambio dei messaggi veri e propri
+Quindi, *la fase di discovery influenza tutte le fasi successive*.
+
+La fase di **Discovery** si divide in tre micro-fasi:
+1. **Network and security capability discovery** -> la Stazione scopre l'esistenza della rete e capisce le necessità di sicurezza implementate dall'AP, questo può farlo in due modi
+	- attraverso un specifica richiesta all'AP, detta `probe request` 
+	- attraverso il `beacon` inviato in broadcast periodicamente dall'AP
+2. **Open system auth** -> scambio degli identificatori da parte della Stazione e dell'AP
+3. **Associaiton** -> la Stazione, scelte le specifiche di sicurezza, invia le proprie scelte all'AP attraverso una `Association Request` a cui seguirà una `Association Response` da parte dell'AP
+
+### 2. Authentication
+Durante questa fase la Stazione e l'AP eseguono la ==mutua autenticazione==. In questo modo si tenta di far comunicare sulla rete solo coloro che si sono identificati legittimamente.
+
+Il protocollo che gestisce questa fase è *Extensible Authentication Protocol (EAP)*.
+Esso si divide in due micro-fasi:
+1. **EAP exchange** -> scambio di informazioni preliminare che ==permette l'autenticazione==, viene utilizzato il protocollo scelto durante la fase di Discovery. L'autenticazione coinvolge un AS centralizzato.
+2. **Secure key delivery** -> infine l'==AS genera una MSK== (Master Session Key), che verrà spedita in modo sicuro alla Stazione
+
+La **MSK** è una chiave segreta che l'AP condivide con ogni client, essa permette di generare tutte le altre chiavi utili.
+La sua alternativa è la **Pre-Shared Key (PSK)**.
+
+### 3. Key Management
+Durante questa fase ==le chiavi utili alla comunicazione vengono generate== (a partire dalla MSK, quindi esiste una gerarchia delle chiavi) ==e distribuite alla Stazione== coinvolta.
+
+Ci sono due tipi di chiavi:
+- **Pairwise keys** -> utilizzate nelle comunicazione tra Stazione e AP
+	- queste chiavi derivano dalla Pairwise Master Key che a sua volte deriva dalla MSK
+	- sono tre chiavi, dette *Pairwise Transient Keys (PTK)*, che ==permettono la comunicazione sicura tra Stazione ed AP==, insieme queste chiavi garantiscono confidenzialità, autenticazione dell'origine ed integrità
+- **Group keys** -> usate per le comunicazione in multicast (più utenti ma selezionati)
+	- la gerarchia è più snella perché la Group Master Key (GMK) è generata direttamente dall'AP
+	- dalla GMK deriva una singola chiave detta *Group Temporal Key (GTK)* che permette la comunicazione multicast sicura
+	- la GTK sfrutta le chiavi pairwise per essere condivisa
+	- ==la GTK è cambiata ogni volta che il dispositivo lascia la rete==
+
+
+### 4. Protected Data Transfer
+Per proteggere i dati da trasmette RSN sfrutta uno tra due protocolli:
+- **Temporal Key Integrity Protocol (TKIP)** -> creato per sostituire WEP su dispositivi vecchi, garantisce
+	- *integrità* -> attraverso un message integrity code (MIC)
+	- *confidenzialità* -> attraverso RC4, cifrando MPDU e MIC
+- **Counter Mode-CBC Mac Protocol (CCMP)** -> creato per dispositivi moderni, garantisce
+	- *integrità* -> attraverso CBC-MAC (quindi Message Auth Code in modalità CBC di concatenazione)
+	- *confidenzialità* -> attraverso AES in modalità CTR

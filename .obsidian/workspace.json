@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/network-security.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/network-security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/network-security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md"
+                "file": "corsi/network-security/network-security.md"
               }
             }
           }
@@ -147,13 +147,16 @@
   },
   "active": "054048cbf3044d8b",
   "lastOpenFiles": [
+    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
+    "corsi/network-security/assets/rsn.png",
     "corsi/network-security/assets/ess.png",
     "corsi/network-security/assets/mpdu.png",
     "corsi/network-security/assets/stack-ieee802.png",
-    "corsi/network-security/network-security.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/codice-malevolo.md",
-    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/network-security/assets/ipsec-tunnel.png",
@@ -165,14 +168,11 @@
     "corsi/network-security/assets/ssh-tlp-packet.png",
     "corsi/network-security/assets/tls-record-schema.png",
     "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/assets/kerberos-v4-scenario.png",
     "corsi/codice-malevolo/progetto",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-    "corsi/network-security/assets/andrew-secret-protocol.png",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
@@ -193,7 +193,6 @@
     "corsi/cybersecurity/lezioni",
     "corsi/complessita-e-algoritmi/lezioni-rizzi",
     "corsi/complessita-e-algoritmi/tutorato",
-    "corsi/codice-malevolo/lezioni",
     "Network Security/Untitled.canvas"
   ]
 }
