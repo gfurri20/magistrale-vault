@@ -104,12 +104,25 @@ Un sistema DNS si compone di quattro elementi principali:
 	- strutturati in modo gerarchico, specificando i nomi tra il punto `.` si livellano gli host (e.g. `tickets.acdraldon.it` è un sotto-dominio di `acdraldon.it`)
 	- sono database distribuiti per garantire ridondanza
 - *Name servers* -> gestiscono e distribuiscono le informazioni possedute da un determinato name space
+	- ogni server può mantenere una cache degli RR per agevolare determinate interrogazioni
 - *Resolvers* -> permettono la comunicazione tra name servers e client
-
+![[dns-scheme.png]]
 Esistono diversi tipi di Resource Record, ognuno con una funzionalità diversa:
 - `A` -> associa hostname con IPv4
 - `AAAA` -> associa hostname con IPv6
-- `CNAME`
-- `MX`
+- `CNAME` -> specifica degli eventuali alias per un host
 - etc.
 
+## DNSSEC
+Una richiesta DNS vanilla potrebbe essere intercettata, un attaccante potrebbe restituire un IP di un server malevolo a client ignari, quindi è necessario introdurre un grado di sicurezza.
+Garantisce protezione end-to-end attraverso l'uso di firme digitali, introducendo **integrità** ed **autenticazione**.
+
+L'amministratore DNS della zona firmerà digitalmente ogni gruppo di RR. ==Per verificare l'integrità della chiave pubblica dell'amministratore è necessario scendere la catena di fiducia partendo da una zona DNS sicura==. La chiave pubblica di una zona fidata è detta **trust anchor**.
+
+DNSSEC amplia l'insieme dei RR:
+- **DNSKEY** -> contiene la chiave pubblica dell'amministratore di zona
+- **RRSIG** -> firma digitale di un RR
+- **NSEC** -> conferma firmata della NON esistenza di un RR
+- **DS** -> delegato che firma un RR, per garantire la condivisione tra le varie zone
+
+## DANE
