@@ -68,6 +68,9 @@ Introduce un livello di sicurezza su MIME. Per fare ciò implementa diverse funz
 - *Digital signature* (Autenticazione) -> usa RSA per creare un digest del contenuto della mail
 - *Message Encryption* (Confidenzialità) -> usa AES per cifrare il messaggio attraverso una ==one-time session key== (trasferita con RSA)
 - *Compression* -> compressione utile alla trasmissione
+	- permette di guadagnare spazio (funziona bene con base64)
+- *Email Compatibility* ->utilizza base64 per rendere "universale" il contenuto
+S/MIME utilizza certificati X.509 per la gestione delle chiavi pubbliche, segue l'architettura basata sull'interazione con le CA.
 
 #### Autenticazione
 L'autenticazione di una mail è implementata attraverso la firma digitale, sostanzialmente viene prodotto l'hash del messaggio che verrà cifrato con la chiave privata della sorgente.
@@ -77,6 +80,36 @@ Il destinatario userà la chiave pubblica della sorgente per validare l'integrit
 
 #### Confidenzialità
 Ogni chiave di cifratura del messaggio viene utilizzata una singola volta, ==per ogni messaggio viene generata una nuova chiave==.
-La chiave viene protetta attraverso la chiave pubblica della sorgente.
+La chiave viene incapsulata attraverso la chiave pubblica della destinazione.
 ![[smime-flow.png]]
+
+#### Migliorie di sicurezza
+S/MIME, introduce inoltre quattro funzionalità aggiuntive per aumentare il grado di sicurezza:
+- *Signed receipts* -> prova dell'avvenuta consegna (una ricevuta firmata digitalmente)
+- *Security labels* -> indica il grado di confidenzialità del messaggio
+- *Secure mailing lists* -> applica confidenzialità al messaggio da inviare per ogni destinatario presente
+- *Signing certificates* -> associa in modo sicuro il certificato della sorgente con la propria firma, attraverso uno specifico attributo
+
+---
+
+# Domain Name System (DNS)
+DNS è un servizio che permette di individuare l'associazione tra un hostname ed un indirizzo IP, e.g. `acdraldon.it` -> `77.39.210.53`.
+
+Ne fanno ampio uso sia i MUA che gli MTA per individuare il loro prossimo hop sulla rete.
+
+Un sistema DNS si compone di quattro elementi principali:
+- *domain name space* -> una struttura ad albero che mantiene i riferimenti agli hostname registrati
+- *DNS database* -> contiene le associazioni tra IP e nomi
+	- contengono i **resource records** (i.e. nome, IP, info aggiuntive sugli host)
+	- strutturati in modo gerarchico, specificando i nomi tra il punto `.` si livellano gli host (e.g. `tickets.acdraldon.it` è un sotto-dominio di `acdraldon.it`)
+	- sono database distribuiti per garantire ridondanza
+- *Name servers* -> gestiscono e distribuiscono le informazioni possedute da un determinato name space
+- *Resolvers* -> permettono la comunicazione tra name servers e client
+
+Esistono diversi tipi di Resource Record, ognuno con una funzionalità diversa:
+- `A` -> associa hostname con IPv4
+- `AAAA` -> associa hostname con IPv6
+- `CNAME`
+- `MX`
+- etc.
 
