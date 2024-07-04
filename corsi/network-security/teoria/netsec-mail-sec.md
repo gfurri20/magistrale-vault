@@ -126,3 +126,11 @@ DNSSEC amplia l'insieme dei RR:
 - **DS** -> delegato che firma un RR, per garantire la condivisione tra le varie zone
 
 ## DANE
+Lo scopo di DANE è quello di ==sostituire la dipendenza alle CA facendo affidamento sulla sicurezza fornita da DNSSEC==.
+Sostanzialmente è un modo per introdurre i certificati X.509 nel sistema di sicurezza specificato da DNSSEC, ignorando le CA.
+
+Il punto più debole di un sistema PKI sono proprio le CA più in alto nella gerarchia, se viene bucate una di esse allora i problemi di sicurezza si propagherebbero verso il basso.
+
+DANE definisce un nuovo tipo di RR, detto **TLSA**, che può essere usato per autenticare i certificati TLS: quando un client riceve un certificato, interroga i TLSA RR di riferimento per quel dominio e compara le caratteristiche per validare il certificato.
+
+## Sender Policy Framework (SPF)
