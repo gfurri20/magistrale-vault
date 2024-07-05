@@ -49,10 +49,36 @@ Nasce come un meccanismo per garantire l'anonimato nelle mail (non si può se no
 Grazie a questi meccanismi **un attaccante non è in grado di associare un messaggio ricevuto ad un messaggio inviato**, anche conoscendo gli utenti.
 
 L'elemento principale è il ***MIX server***, che processa ogni oggetto.
-Esegue le stesse azioni di un proxy (padding + cifratura), aggiungendo meccanismi in grado di mischiare il traffico.
+Esegue le stesse azioni di un proxy (padding + cifratura), aggiungendo meccanismi in grado di mischiare il traffico, nel ==tentativo di vanificare l'analisi del traffico==.
 
-ARRIVATO a pagina 17 della dispensa
+Azioni compiute dai server mix:
+1. agisce su blocchi di **lunghezza costante**, quindi aggiunge padding oppure splitta il messaggio
+2. nasconde l'ordine di arrivo, spedendo in output gli elementi in gruppi (i.e. **batches** di output)
+3. blocca informazioni ripetute per **prevenire replay attacks**
+4. necessita di un **anonymity set di grandi dimensioni**, in caso contrario si potrebbe fare in modo che i client inviino spesso messaggi fasulli
+5. possibilità di garantire **non-ripudiabilità inviando delle ricevute** relative ai messaggi, grazie a tale oggetto anche il client può autenticare l'invio
 
+Come per i proxies, un singolo mix server, potrebbe essere un bersaglio interessante, quindi è consigliabile utilizzare diversi mixer all'interno della rete.
+
+### Mixnet
+Una rete composta da un insieme di mixer in cascata è detta **mixnet**.
+
+Un pacchetto che attraversa una mixnet, viene cifrato ad ogni mixer, finché non raggiunge la destinazione.
+Inoltre, ogni mixer, aggiunge le proprie contromisure per evitare replay attack o l'analisi del traffico.
+
+Ovviamente il grande numero di mixer da attraversare potrebbe rendere il traffico pesante, a causa del numero di cifrature/de-cifrature da effettuare (il numero di chiavi è elevato).
+
+Vantaggi:
+- **alto livello di anonimato**
+	- non c'è correlazione tra pacchetti in input ed in output ad un mixer
+	- accetta mixer malevoli
+	- se l'anonymity set è piccolo basta introdurre del traffico falso
+- il tracciamento di un messaggio è prevenuto dai messaggi fasulli
+- i replay attack sono prevenuti dai filtri appositi
+
+***+ anonimato, - prestazioni*** (alta latenza, costoso computazionalmente)
+
+Si potrebbe cercare di diminuire la latenza stabilendo, attraverso delle chiavi asimmetrica, un canale di comunicazione basato su chiavi simmetriche.
 
 
 ## Routing Randomizzato
