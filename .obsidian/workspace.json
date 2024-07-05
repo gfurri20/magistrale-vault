@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
+                "file": "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
+                "file": "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md"
               }
             }
           }
@@ -148,10 +148,12 @@
   "active": "11527455e8b1e12b",
   "lastOpenFiles": [
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
+    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/codice-malevolo/lezioni/31_05_2024-tecniche-di-unpacking.md",
     "corsi/codice-malevolo/lezioni/17_05_2024-recap-malware-analysis.md",
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "conflict-files-obsidian-git.md",
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
@@ -173,7 +175,6 @@
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-introduction.md",
@@ -184,7 +185,6 @@
     "corsi/network-security/assets",
     "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
-    "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
