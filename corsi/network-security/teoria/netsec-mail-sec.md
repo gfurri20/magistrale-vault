@@ -58,7 +58,12 @@ Per contrastare (o limitare) questi rischi è necessario introdurre una serie di
 - ***DANE*** -> introduce un nuovo metodo di scambio chiavi per DNSSEC, permette di certificare i domini associati ad uno specifico IP
 - ***Sender Policy Framework (SPF)*** -> associa un dominio ad un insieme di indirizzi IP
 - ***DKIM*** -> permette agli MTA di firmare digitalmente alcuni header del body del messaggio SMTP
+	- DKIM permette di firmare le mail in modo da garantire **non-ripudiabilità** sulle mail inviate da uno specifico dominio
+	- la mail di un utente è firmata attraverso la chiave privata del dominio mittente
+	- l'MDA destinatario interroga il DNS per ottenere la chiave pubblica del dominio mittente
 - ***DMARC*** -> mette a conoscenza della sorgente delle policy applicate da SPF e DKIM
+	- specifica le policies attraverso le quali le mail di un determinato dominio devono essere gestite
+	- standardizza il modo in cui i riceventi eseguono il controllo dell'autenticazione attraverso DKIM e SPF
 
 ![[email-sec-protocols.png]]
 
@@ -134,3 +139,27 @@ Il punto più debole di un sistema PKI sono proprio le CA più in alto nella ger
 DANE definisce un nuovo tipo di RR, detto **TLSA**, che può essere usato per autenticare i certificati TLS: quando un client riceve un certificato, interroga i TLSA RR di riferimento per quel dominio e compara le caratteristiche per validare il certificato.
 
 ## Sender Policy Framework (SPF)
+SPF è lo standard per un dominio mittente di identificare e dichiarare i mittenti di posta elettronica.
+
+==SPF consente al proprietario di un dominio di definire le regole per identificare i server autorizzati a mandare e-mail con un indirizzo del mittente in quel dominio==, utilizzando opportuni SPF resource records del DNS.
+
+**Lo scopo principale di SPF è fornire un meccanismo per verificare l'autenticità dell'origine di un'email, attraverso i RR DNS.**
+
+e.g.:
+1. Server `220 foo.com SMTP Ready`
+2. Client `HELO mta.example.net`
+3. Server `250 OK`
+4. Client `MAIL FROM:<alice@example.org>`
+5. Server `OK`
+6. ...
+7. Client `From: alice.sender@example.net` (Header) 
+
+Il mittente utilizza il tag `MAIL FROM:<alice@example.org>` indicando che il messaggio ha origine nel dominio `example.org`.
+L'header specifica, però, specifica l'indirizzo `alice.sender@example.net`.
+
+**Il receivers utilizza un RR di tipo SPF verso `example.net` per controllare che `alice@example.org` sia un indirizzo mail valido.**
+
+Un dominio mittente è obbligato a verificare l'identità di tutti i mittenti per quel dominio e ad aggiungere tutte le informazioni nel DNS database (e.g. un range di indirizzi IPv4 verificati come mittenti).
+
+
+

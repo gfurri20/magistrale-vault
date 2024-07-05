@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/teoria/netsec-anonimity-privacy.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/teoria/netsec-anonimity-privacy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/teoria/netsec-anonimity-privacy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md"
+                "file": "corsi/network-security/teoria/netsec-anonimity-privacy.md"
               }
             }
           }
@@ -147,10 +147,11 @@
   },
   "active": "054048cbf3044d8b",
   "lastOpenFiles": [
+    "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
@@ -167,7 +168,6 @@
     "Untitled.canvas",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/assets/remote-port-forwarding.png",
-    "corsi/network-security/assets/local-port-forwarding.png",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/codice-malevolo/progetto",
     "conflict-files-obsidian-git.md",
@@ -182,7 +182,6 @@
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
     "corsi/network-security/teoria/netsec-anonimity-privacy.md",
-    "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/teoria",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
