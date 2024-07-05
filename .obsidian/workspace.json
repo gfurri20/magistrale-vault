@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -147,10 +147,10 @@
   },
   "active": "11527455e8b1e12b",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
-    "corsi/network-security/assets/dns-scheme.png",
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
+    "conflict-files-obsidian-git.md",
+    "corsi/network-security/assets/dns-scheme.png",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",

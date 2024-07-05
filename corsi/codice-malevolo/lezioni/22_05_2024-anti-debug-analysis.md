@@ -4,7 +4,7 @@ Ovviamente ci sono diverse tecniche per evitare (o rendere più complessa) l'ana
 - **anti-VM**
 - **anti-sandbox**
 
-# Anti-Debugging tecniques
+# Anti-Debugging techniques
 L'obiettivo è quello di rendere inutile il debug del malware.
 
 Si possono usare svariate tecniche:
