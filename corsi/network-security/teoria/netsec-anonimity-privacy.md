@@ -26,6 +26,7 @@ Esistono diversi tipi di attacchi che potrebbero rompere l'anonimato:
 - compromissioni di nodi di rete (e.g. routers)
 	- diventano indispensabili meccanismi di ridondanza
 
+
 ## Anonymization Proxy
 Un primo modo per costruire un canale anonimo è quello di introdurre dei proxies che tentano di anonimizzare il traffico.
 
@@ -41,6 +42,7 @@ Per aumentare la sicurezza si potrebbe costruire una rete di proxies in cascata,
 Più livelli si introducono più il sistema sarà lento e pesante.
 
 Inoltre è ancora possibile l'analisi del traffico.
+
 
 ## Reti MIX
 Le reti MIX nascono nel 1981 con l'obiettivo di creare un canale che garantisse l'anonimato in un ambiente ostile.
@@ -82,3 +84,37 @@ Si potrebbe cercare di diminuire la latenza stabilendo, attraverso delle chiavi 
 
 
 ## Routing Randomizzato
+Un altro approccio è quello di nascondere i messaggi randomizzando il routing del pacchetto.
+
+I router non sanno se il mittente del pacchetto che ricevono è il vero mittente oppure un altro router.
+
+### Onion Routing
+L'**Onion Routing** permette di randomizzare il percorso scegliendo una sequenza di router casualmente.
+Questa tecnica ammette anche la presenza di alcuni router malevoli.
+
+Ogni router incapsula le informazioni ricevute con la propria chiave pubblica, ed invia il pacchetto al prossimo hop, unico host di cui è a conoscenza il router.
+
+Un esempio di software che sfrutta l'onion routing è `Tor`.
+
+Tor, per aumentare le prestazioni, instaura un canale simmetrico con ogni router facente parte del percorso.
+In questo modo il client possiederà tante chiavi simmetriche quanti sono gli hop del percorso di routing che deve seguire il pacchetto.
+
+Tor ha delle difficoltà:
+1. molteplici applicazioni condividono lo stesso percorso
+2. un router tor non richiede privilegi di amministratore, è facile per tutti creare il proprio router
+3. esistono dei directory servers che gestiscono i router sulla rete
+
+Si cerca di creare un **Location Hidden Server (LHS)**, ovvero un server capace di comunicare sulla rete ma che non si sa dove si trovi fisicamente, o da chi sia gestito:
+- accessibile ovunque
+- resistente alla censura
+- resistente ad attacchi DoS
+
+Ogni LHS è associato a degli **introduction points**, ovvero dei dispositivi che permettono l'accesso al server.
+Tali dispositivi hanno un ciclo di vita breve e vengono spesso sostituiti.
+
+Per ottenere l'accesso ad un introduction point è necessario contattare il server di lookup.
+
+1. il client crea un circuito sicuro (a cipolla) fino al punto detto *rendezvous*
+2. sempre il client invia ad un *intro point* l'indirizzo del rendezvous e le autorizzazioni necessarie
+3. se il server associato all'intro point utilizzato decide di voler parlare con il client si **instaura un circuito sicuro tra rendezvous e server**
+
