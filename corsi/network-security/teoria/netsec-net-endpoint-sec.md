@@ -111,11 +111,19 @@ Di solito si individua un **FW esterno**, che garantisce una protezione iniziale
 >Un insieme di processi SW e componenti HW che implementano il processo di intrusion detection e rendicontazione dei vari tentativi di intrusione non autorizzati.
 
 Gli IDS possono essere *classificati come segue*:
-- **Host-Based** IDS -> vengono associati ad un ==singolo host==, ogni evento relativo è analizzato ed, in caso, riportato
-	- analisi più tempestiva, precisa e completa
+- **Host-Based** IDS -> vengono associati ad un ==singolo host==, aggiungono un layer di sicurezza specializzato a dispositivi a rischio
+	- analisi più tempestiva, precisa e completa attuata in diverse modalità
+	- in alcuni casi può anche fermare un attacco in corso
+	- permette di identificare *sia minacce esterne che interne*
+	- sfrutta una *combinazione tra anomaly detection e misuse detection*
 	- introducono un certo grado di overhead
 - **Network-Based** IDS -> ==monitorano il traffico della rete== a cui sono associati e dei dispositivi facentene parte
+	- ascolta il traffico in modalità promiscua in punti strategici
 	- si concentrano sul traffico livello rete, trasporto ed applicazione
+	- i pacchetti sono considerati *interessanti se matchano una firma*
+		- cerca in base al testo
+		- cerca in base a porte conosciute
+		- cerca in base a combinazioni sospette di header
 
 Un IDS si compone di *tre parti logiche*:
 - **Sensori** -> responsabili della ==raccolta dei dati==
@@ -137,7 +145,7 @@ Gli obiettivi principiali di un IDS sono:
 ## Approcci alla Intrusion detection
 Alla base dell'intrusion detection c'è la possibilità di ==registrare il comportamento degli utenti per individuare in modo efficace ed efficiente eventuali comportamenti anomali==. Distinguiamo due approcci complementari:
 - **Misuse detection** -> definisce regole in modo da *identificare incidenti di sicurezza o pattern ricorrenti di attacco*
-	- sfrutta algoritmi di pattern-matching e raccolte di tecniche già utilizzate
+	- sfrutta algoritmi di pattern-matching e database di tecniche già analizzate
 	- *debole contro attacchi inediti*
 	- possibili falsi positivi
 - **Anomaly detection** -> *cerca comportamenti anomali* rispetto alla normalità
@@ -145,13 +153,12 @@ Alla base dell'intrusion detection c'è la possibilità di ==registrare il compo
 	- potrebbe essere in grado di *scoprire nuovi attacchi*
 	- trade-off tra falsi positivi e falsi negativi (i.e. certe volte le attività di un utente malevolo si possono sovrapporre a quelle di un utente legittimo)
 
-## Tecniche Host-Based
-
-
-
-
-
-
+## Network-Based IDS (NIDS)
+Un NIDS può essere configurato in diverse posizioni della rete per garantire il controllo di traffichi differenti:
+1. all'imbocco della rete esterna
+2. nella DMZ per l'analisi del traffico relativo ai servizi
+3. all'interno della rete interna dedicata ai servizi locali
+4. all'interno della rete interna dedicata ai dipendenti
 
 ---
 
