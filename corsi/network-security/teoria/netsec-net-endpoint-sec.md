@@ -163,3 +163,39 @@ Un NIDS può essere configurato in diverse posizioni della rete per garantire il
 ---
 
 # Malware
+
+>[!info] Malware
+>Programma, segretamente, iniettato in un dispositivo (attraverso svariate modalità) con lo scopo di rompere confidenzialità, integrità e autorizzazione rispetto ad un insieme di informazioni o di processi.
+
+Un malware può essere creato per cercare di attaccare qualsiasi aspetto che caratterizza un dispositivo, sistema o infrastruttura informatica.
+
+Esistono svariate tipologie di malware:
+- **Virus** -> programma che si copia nel dispositivo ed infetta la macchina nel tentativo di causare danni al sistema, spesso si introduce nel sistema sfruttando l'*inconsapevolezza umana*
+- **Worm** -> un programma che si auto-replica e propaga per la rete nel tentativo di infettare più macchine possibili, *autonomamente*
+- **Trojan** -> un programma malevolo mascherato in un programma all'apparenza sicuro e legittimo, spesso è dotato di backdoors per *rubare informazioni*
+- **Spyware** -> programma dedicato allo *spionaggio*, installato per raccogliere informazioni su utenti o aziende
+- **Rootkit** -> programma malevolo utilizzato a seguito di privilege-escalation per mantenere e *sfruttare i permessi amministrativi*
+- **Bot** -> programma che permette di *installare un canale di controllo* malevolo sulla macchina, un rete interconnessa di bot è detta **botnet**
+
+## Malware Defense
+I malware sono in continua evoluzione ed è necessario adottare tecniche per prevenire o curare attacchi malware.
+
+La difesa si basa su quattro principi:
+- **Network Traffic Analysis** -> monitoraggio del traffico di rete per evidenziare eventuali attività malevoli (e.g. vedere i NIDS)
+	- uso di *misuse detection* per identificare eventuali pattern di attacco
+	- uso di *anomaly detection* per la profilatura degli utenti sulla rete
+- **Payload Analysis** -> analisi del contenuto dei pacchetti e dei software 
+	- controllo per riscontri già conosciuti o pattern anomali
+	- è utile l'uso di *sandbox* per l'analisi dinamica in ambienti controllati
+- **Endpoint Behavior Analysis** -> controllo sull'end-point (e.g. Host-Based IDS, ovvero il "semplice" antivirus)
+	- applicazione di restrizioni in ambienti sensibili
+	- utilizzo di container per isolare servizi o sistemi interi (e.g. virtualizzazione o docker)
+- **Incident Management** -> capacità di gestione dell'incidente e di recupero dai danni, necessita di
+	- dispositivi di analisi e raccolta dati per imparare e fare ricerca
+	- dispositivi sicuri di recupero dati (e.g. backup, NAS)
+	- tecniche di allarme e messa in sicurezza
+	- metodologie di reporting
+
+---
+
+# Denial of Services (DoS)
