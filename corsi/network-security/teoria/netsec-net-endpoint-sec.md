@@ -100,6 +100,54 @@ Di solito si individua un **FW esterno**, che garantisce una protezione iniziale
 
 # Intrusion Detection Systems (IDS)
 
+>[!info] Intrusion
+>Violazione della policy di sicurezza, con l'obiettivo di violare la confidenzialità, integrità o disponibilità di un determinato servizio, sistema o infrastruttura.
+>Può essere causa di un attaccante esterno/interno oppure di un dipendente che sfrutta le proprie autorizzazioni.
+
+>[!info] Intrusion detection
+>Il processo che raccoglie ed analizza le informazioni relative agli eventi del sistema e che permette di individuare segni di intrusione.
+
+>[!important] Intrusion Detection System
+>Un insieme di processi SW e componenti HW che implementano il processo di intrusion detection e rendicontazione dei vari tentativi di intrusione non autorizzati.
+
+Gli IDS possono essere *classificati come segue*:
+- **Host-Based** IDS -> vengono associati ad un ==singolo host==, ogni evento relativo è analizzato ed, in caso, riportato
+	- analisi più tempestiva, precisa e completa
+	- introducono un certo grado di overhead
+- **Network-Based** IDS -> ==monitorano il traffico della rete== a cui sono associati e dei dispositivi facentene parte
+	- si concentrano sul traffico livello rete, trasporto ed applicazione
+
+Un IDS si compone di *tre parti logiche*:
+- **Sensori** -> responsabili della ==raccolta dei dati==
+	- raccolgono informazioni di natura diversa (e.g. pacchetti di rete, file di log, ...)
+	- inviano le informazioni agli analizzatori
+- **Analizzatori** -> responsabili di ==identificare se un'intrusione è avvenuta== o meno attraverso l'analisi dei dati
+	- ricevono dati dai sensori oppure da altri analizzatori
+	- possono essere in grado anche di elencare eventuali contromisure
+- **Interfacce utente** -> fornisce l'==interazione con l'utente==
+	- visualizzazione dei risultati
+	- impostazioni relative al sistema
+
+## Obiettivi
+Gli obiettivi principiali di un IDS sono:
+- **prevenzione efficace** di intrusioni evitando falsi negativi o positivi
+- **identificare velocemente** eventuali intrusioni in modo da prendere provvedimenti utili nell'immediato
+- rilevazioni di informazioni utili per lo **studio delle tecniche di intrusione**
+
+## Approcci alla Intrusion detection
+Alla base dell'intrusion detection c'è la possibilità di ==registrare il comportamento degli utenti per individuare in modo efficace ed efficiente eventuali comportamenti anomali==. Distinguiamo due approcci complementari:
+- **Misuse detection** -> definisce regole in modo da *identificare incidenti di sicurezza o pattern ricorrenti di attacco*
+	- sfrutta algoritmi di pattern-matching e raccolte di tecniche già utilizzate
+	- *debole contro attacchi inediti*
+	- possibili falsi positivi
+- **Anomaly detection** -> *cerca comportamenti anomali* rispetto alla normalità
+	- sfrutta file di audit e treshold oppure la *profilatura delle attività* degli utenti
+	- potrebbe essere in grado di *scoprire nuovi attacchi*
+	- trade-off tra falsi positivi e falsi negativi (i.e. certe volte le attività di un utente malevolo si possono sovrapporre a quelle di un utente legittimo)
+
+## Tecniche Host-Based
+
+
 
 
 
