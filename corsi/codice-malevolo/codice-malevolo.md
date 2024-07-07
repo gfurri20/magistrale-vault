@@ -1,5 +1,6 @@
 Analisi dei file per l'esame:
 - Malware -> [[analisi-malware]]
+- Documento Word -> [[analisi-documento]]
 
 Indice delle lezioni:
 - 6 marzo 2024 → [[06_03_2024-introduzione]]
