@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "11527455e8b1e12b",
+            "id": "f19eb6c6c673db21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "corsi/codice-malevolo/progetto/analisi-documento.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "11527455e8b1e12b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
                 "mode": "source",
                 "source": false
               }
@@ -145,16 +157,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "11527455e8b1e12b",
+  "active": "f19eb6c6c673db21",
   "lastOpenFiles": [
     "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
+    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
+    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/network-security/assets/fw-sceheme.png",
     "conflict-files-obsidian-git.md",
-    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/codice-malevolo/lezioni/31_05_2024-tecniche-di-unpacking.md",
     "corsi/codice-malevolo/lezioni/17_05_2024-recap-malware-analysis.md",
