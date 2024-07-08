@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "11527455e8b1e12b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5026054382324,
-    "collapsed": true
+    "width": 344.5026054382324
   },
   "right": {
     "id": "f13b5f1f71e7aebf",
@@ -99,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -159,16 +143,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "11527455e8b1e12b",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
+    "Pasted image 20240708164141.png",
+    "conflict-files-obsidian-git.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",
+    "corsi/network-security/assets/cps.png",
+    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/network-security/assets/fw-sceheme.png",
-    "conflict-files-obsidian-git.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "corsi/codice-malevolo/lezioni/31_05_2024-tecniche-di-unpacking.md",
     "corsi/codice-malevolo/lezioni/17_05_2024-recap-malware-analysis.md",
@@ -183,8 +169,6 @@
     "corsi/network-security/assets/rsn.png",
     "corsi/network-security/assets/mpdu.png",
     "corsi/network-security/assets/ess.png",
-    "corsi/network-security/assets/tls-record-schema.png",
-    "corsi/network-security/assets/ssh-tlp-packet.png",
     "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
     "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
@@ -198,7 +182,6 @@
     "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
-    "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/network-security/teoria",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",

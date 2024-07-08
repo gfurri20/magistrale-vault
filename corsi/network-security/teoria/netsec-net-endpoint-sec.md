@@ -199,3 +199,13 @@ La difesa si basa su quattro principi:
 ---
 
 # Denial of Services (DoS)
+Un attacco DoS è un tentativo di mettere fuori uso un determinato servizio o dispositivo.
+Quando un attacco *DoS è effettuato in modo organizzato*, ovvero da un sistema distribuito di dispositivi, esso prende il nome di **DDoS** (Distributed Denial of Service).
+==Un attacco DDoS potrebbe essere in grado di mettere fuori uso intere infrastrutture.==
+
+Una botnet è un attaccante perfetto, in quanto molteplici dispositivi infetti potrebbero essere coinvolti in un attacco su larga scala.
+
+Esistono diverse contro-misure:
+- **prevenzione** (prima dell'attacco) -> regole che regolano il consumo delle risorse o il numero di pacchetti che possono essere elaborati
+- **detection e filtering** (durante l'attacco) -> controllo di pattern sospetti con lo scopo di eliminare informazioni malevole
+- **traceback and identification** (durante e dopo) -> tentativo di identificazioni dell'attaccante con l'obiettivo di raccogliere info utili per raffinare la prevenzione
