@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5026054382324
+    "width": 344.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "f13b5f1f71e7aebf",
@@ -157,13 +159,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f19eb6c6c673db21",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
+    "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
     "corsi/network-security/assets/fw-sceheme.png",
     "conflict-files-obsidian-git.md",
