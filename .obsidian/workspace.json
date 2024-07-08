@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-documento.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-documento.md",
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/codice-malevolo/progetto/analisi-documento.md"
+                "file": "corsi/codice-malevolo/progetto/analisi-malware.md"
               }
             }
           }
@@ -159,11 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57379b1213ae8f08",
+  "active": "11527455e8b1e12b",
   "lastOpenFiles": [
+    "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/lezioni/07_06_2024-word-malevoli.md",
-    "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/progetto/analisi-malware.md",
