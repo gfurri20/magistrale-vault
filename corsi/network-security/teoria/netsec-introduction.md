@@ -173,9 +173,9 @@ Per questo motivo viene definito un **modello di fiducia** che specifica quali r
 >La fiducia è la confidenza che un'entità agirà in modo da non compromettere la sicurezza dell'utente del sistema di cui quell'entità fa parte.
 
 Definiamo tre concetti rilevanti che caratterizzano un **modello di fiducia**.
-1. **Affidabilità (Trustworthiness)** - caratteristica di un'entità che riflette il grado di merito di fiducia che tale entità possiede
-2. **Propensione a fidarsi (Propensity to trust)** - tendenza a essere disposti a fidarsi degli altri in una vasta gamma di situazioni e obiettivi di fiducia. Questo suggerisce che ogni individuo ha un livello di base di fiducia che influenzerà la sua disponibilità a fare affidamento sulle parole e azioni degli altri
-3. **Rischio (Risk)** - misura in cui un'entità è minacciata da una circostanza o evento potenziale, e tipicamente una funzione di:
+1. **Affidabilità (Trustworthiness)** -> caratteristica di un'entità che riflette il grado di fiducia che tale entità possiede
+2. **Propensione a fidarsi (Propensity to trust)** -> tendenza a essere disposti a fidarsi degli altri in una vasta gamma di situazioni e rispetto agli obiettivi di fiducia. Questo suggerisce che ogni individuo ha un livello base di fiducia che influenzerà la sua disponibilità a fare affidamento sulle azioni degli altri
+3. **Rischio (Risk)** -> misura in cui un'entità è minacciata da una circostanza o evento potenziale, e tipicamente una funzione di:
     - gli impatti negativi che sorgerebbero se la circostanza o l'evento si verificasse
     - la probabilità di occorrenza
 

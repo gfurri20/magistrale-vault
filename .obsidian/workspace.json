@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b2a847f210ca70f4",
+            "id": "f19eb6c6c673db21",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,12 +20,24 @@
             }
           },
           {
-            "id": "f19eb6c6c673db21",
+            "id": "31d13d20ab3e0b83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60609d4b09825dde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,11 +170,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f19eb6c6c673db21",
+  "active": "31d13d20ab3e0b83",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/teoria/netsec-introduction.md",
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",
@@ -194,7 +207,6 @@
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",

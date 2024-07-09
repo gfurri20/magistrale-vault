@@ -94,7 +94,7 @@ Esistono diverse implementazioni pratiche:
 | *Elliptic Curve* | ✅       | ✅            | ✅            |
 
 ## Diffie-Hellman
-Primo algoritmo a chiave pubblica creato, utilizzato per lo scambio sicuro di chiavi simmetriche.
+Primo algoritmo a chiave pubblica, utilizzato per lo scambio sicuro di chiavi simmetriche.
 
 La **robustezza** di questo algoritmo fa affidamento sulla difficoltà di calcolare logaritmi discreti.
 
