@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "b2a847f210ca70f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/network-security.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "f19eb6c6c673db21",
             "type": "leaf",
             "state": {
@@ -19,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -148,8 +161,8 @@
   "active": "f19eb6c6c673db21",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-introduction.md",
+    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",

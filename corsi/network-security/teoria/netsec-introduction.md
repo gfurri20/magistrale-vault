@@ -8,20 +8,21 @@ Distinguiamo due approcci alla sicurezza in base all'ambito:
 - **Network Security** - fa riferimento specifico alla protezione delle infrastrutture di rete e dei servizi che implementano
 
 ## Obiettivi
-La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione, sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
+La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione; sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
 
 L'ambito che ci interessa maggiormente è la **Network Security**, e quindi, tali obiettivi assumono un carattere specifico:
 - *Confidentiality* -> assicura che utenti non autorizzati non abbiano accesso a risorse private
 - *Integrity* -> assicura che un servizio (o infrastruttura) svolga i compiti per il quale è stato progettato e costruito
 - *Availability* -> assicura che un servizio (o infrastruttura) sia sempre disponibile nei momenti in cui è stata progettata per esserlo; in sostanza cerca di evitare disservizi
 - *Authentication* -> assicura che l'accesso ad un servizio è eseguito previa verifica dell'identità dell'utente
+- *Accountability* -> capacità di associare azioni compiute al responsabile
 
 ---
 # OSI Security Architecture
 Definiamo gli elementi che caratterizzano l'architettura di sicurezza definita dal modello OSI.
 
 > [!warning] Security Attacks
-> Azioni che compromettono la sicurezza delle informazioni
+> Azioni che compromettono la sicurezza delle informazioni o dell'infratruttura in generale
 
 > [!tip] Security Services
 > Servizi che migliorano la sicurezza dei sistemi di elaborazione dati e dei trasferimenti di informazioni
