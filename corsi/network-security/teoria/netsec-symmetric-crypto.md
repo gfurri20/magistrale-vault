@@ -45,7 +45,7 @@ Entrambi i concetti sono stati definiti da Shannon.
 >[!info] Confusione
 > Cerca di aumentare il grado di separazione tra il plain-text, la chiave di cifratura e il cipher-text, aumentando al massimo l'ambiguità in uscita
 
-La rete di Feistel processa i dati attraverso una serie di round, ad ogni round viene applicata in ordine, un'operazione di sostituzione e, successivamente, una trasposizione. (per approfondire: [Feistel Network](https://www.tutorialspoint.com/cryptography/feistel_block_cipher.htm)).
+La rete di Feistel processa i dati attraverso una *serie di round*, ad ogni round viene applicata in ordine, un'operazione di sostituzione e, successivamente, una trasposizione. (per approfondire: [Feistel Network](https://www.tutorialspoint.com/cryptography/feistel_block_cipher.htm)).
 
 I principali algoritmi di crittografia simmetrici sono:
 - **DES** (**D**ata **E**ncryption **S**tandard)
@@ -63,21 +63,25 @@ La causa principale che lo rende insicuro è proprio la chiave da 56 bits, facil
 Triple DES non è altro che la ripetizione tripla di DES, questo con l'obiettivo di aumentare la grandezza della chiave, aggregando tre chiavi da 56 bits. In totale 168 bits.
 In questo modo non era necessario andare a modificare l'algoritmo per aumentare la grandezza della chiave.
 
+In questo modo, però, l'inefficienza aumenta a causa della tripla applicazione di DES.
+
 ![TDES](https://www.splunk.com/content/dam/splunk-blogs/images/en_us/2023/02/triple-des2.png)
 
 ### AES
-AES è lo standard di crittografia simmetrica a blocchi più recente (1997). Aumenta la sicurezza e l'efficienza di TDES (3 applicazioni di DES significa essere tre volte più lento) significativamente attraverso blocchi di 128 bits e chiavi che variano da 128, 192 e 256 bits.
+AES è lo standard di crittografia simmetrica a blocchi più recente (1997). Aumenta la sicurezza e l'efficienza di TDES (3 applicazioni di DES significa essere tre volte più lento), significativamente, attraverso blocchi di 128 bits e chiavi che variano da 128, 192 e 256 bits.
 
 Inoltre AES non si basa sulla rete di Feistel perché elabora i blocchi in parallelo per massimizzare l'efficienza. Ovviamente i principi di *confusione* e *diffusione* sono mantenuti.
 
 ### Block processing
 Un algoritmo di crittografia simmetrica processa un blocco alla volta.
 Quindi è possibile utilizzare modalità di processing dei blocchi differente, nello specifico ne esistono cinque:
-- **ECB** - Ogni blocco di plain-text è cifrato indipendentemente usando la stessa chiave, il che può portare a problemi di sicurezza per messaggi lunghi e strutturati.
-- **CBC** - Ogni blocco di plain-text è XORato con il blocco cifrato precedente prima di essere cifrato, migliorando la sicurezza (non al massimo perché soffre ancora contro attacchi di bit-flipping).
-- **CFB** - Il plain-text è diviso in segmenti e ogni segmento è cifrato separatamente ed influenzato dal segmento precedente.
-- **OFB** - è simile a CFB ma semplicemente non restituisce il feedback come CFB.
-- **CTR** - Permette la *cifratura parallela* dei blocchi, migliorando l'efficienza hardware e software.
+- **ECB** -> Ogni blocco di plain-text è cifrato indipendentemente usando la stessa chiave, il che può portare a problemi di sicurezza per messaggi lunghi e strutturati
+	- blocchi con lo stesso testo vengono cifrati con lo stesso cipher-text (attacchi padding oracle)
+	- NON usa un IV (initialization vector)
+- **CBC** -> Ogni blocco di plain-text è XORato con il blocco cifrato precedente prima di essere cifrato, migliorando la sicurezza (non al massimo perché soffre ancora contro attacchi di bit-flipping).
+- **CFB** -> Il plain-text è diviso in segmenti e ogni segmento è cifrato separatamente ed influenzato dal segmento precedente attraverso diverse operazioni (tra cui shifts e xors)
+- **OFB** -> è simile a CFB ma semplicemente non restituisce il feedback come CFB.
+- **CTR** -> Permette la *cifratura parallela* dei blocchi, migliorando l'efficienza hardware e software.
 	- l'i-esimo blocco è acceduto random, aumentando le prestazioni
 	- è sicuro almeno tanto quanto gli altri processing
 	- richiede l'implementazione solo dell'algoritmo di cifratura e non di de-cifratura
