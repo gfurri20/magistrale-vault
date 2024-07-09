@@ -152,8 +152,8 @@ A loro volta si sotto-strutturano in:
 
 # Network Security
 La Network Security mira a proteggere due elementi fondamentali:
-- La **comunicazione** tra entità - attraverso specifici protocolli che definiscono standard e procedure che governano l'ordine di trasmissione dei dati (e.g. HTTPS)
-- I **dispositivi** fisici - attraverso strumenti che hanno l'obiettivo di analizzare il traffico in entrata ed uscita del dispositivo
+- La **comunicazione** tra entità -> attraverso specifici protocolli che definiscono standard e procedure che governano l'ordine di trasmissione dei dati (e.g. HTTPS)
+- I **dispositivi** fisici -> attraverso strumenti che hanno l'obiettivo di analizzare il traffico in entrata ed uscita del dispositivo
 
 Per proteggere i dispositivi fisici ci sono tre possibilità
 - **Firewall** - soluzione HW/SW che permette di limitare gli accessi o il traffico ai dispositivi in base a delle *politiche di sicurezza*, sostanzialmente agisce da filtro
