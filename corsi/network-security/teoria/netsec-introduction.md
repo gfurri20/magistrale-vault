@@ -11,9 +11,10 @@ Distinguiamo due approcci alla sicurezza in base all'ambito:
 La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione, sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
 
 L'ambito che ci interessa maggiormente è la **Network Security**, e quindi, tali obiettivi assumono un carattere specifico:
-- *Confidentiality* - assicura che utenti non autorizzati non abbiano accesso a risorse private
-- *Integrity* - assicura che un servizio (o infrastruttura) svolga i compiti per il quale è stato progettato e costruito
-- *Availability* - assicura che un servizio (o infrastruttura) sia sempre disponibile nei momenti in cui è stat progettata per esserlo; in sostanza cerca di evitare disservizi
+- *Confidentiality* -> assicura che utenti non autorizzati non abbiano accesso a risorse private
+- *Integrity* -> assicura che un servizio (o infrastruttura) svolga i compiti per il quale è stato progettato e costruito
+- *Availability* -> assicura che un servizio (o infrastruttura) sia sempre disponibile nei momenti in cui è stata progettata per esserlo; in sostanza cerca di evitare disservizi
+- *Authentication* -> assicura che l'accesso ad un servizio è eseguito previa verifica dell'identità dell'utente
 
 ---
 # OSI Security Architecture
@@ -28,10 +29,10 @@ Definiamo gli elementi che caratterizzano l'architettura di sicurezza definita d
 > [!note] Security Mechanisms
 > Processi o dispositivi che rilevano, prevengono, mitigano o recuperano da un Security Attack
 
-## ⚠ Security Attack
+## ❗ Security Attack
 Innanzitutto definiamo una sostanziale differenza tra **Threats** e **Attacks**:
-- **Threats** - *Potenziali* violazioni della sicurezza che potrebbero causare danni sfruttando eventuali vulnerabilità
-- **Attacks** - Tentativi *deliberati* di eludere i servizi di sicurezza e violare le politiche di sicurezza del sistema
+- **Threats** -> *Potenziali* violazioni della sicurezza che potrebbero causare danni sfruttando eventuali vulnerabilità
+- **Attacks** -> Tentativi *deliberati* di eludere i servizi di sicurezza e violare le politiche di sicurezza del sistema
 
 In generale esistono due tipi di attacchi (ref.: [RFC 4949](https://datatracker.ietf.org/doc/html/rfc4949)): **Passivi** e **Attivi**.
 
@@ -99,7 +100,7 @@ Ormai i meccanismi di sicurezza sono molti e di svariate topologie:
 In particolare gli algoritmi crittografici si snodano in diversi modi.
 
 ### Algoritmi crittografici
-Innanzitutto, un algoritmo crittografico è una procedura che permette di cifrare i dati per cercare di renderli visibili solo a coloro che sono autorizzati.
+Innanzitutto, un algoritmo crittografico è una procedura che permette di cifrare i dati per cercare di renderli ==comprensibili solo a coloro che sono autorizzati==.
 
 Gli algoritmi di crittografia possono essere divisi in diverse categorie.
 - Reversibilità del payload:
