@@ -3,7 +3,7 @@ L'obiettivo è difendersi dagli attacchi passivi ed attivi. Grazie alla semplice
 Gli attacchi attivi, d'altro canto, mirano a manipolare la comunicazione e non sempre la crittografia permette la massima protezione, e.g. attacchi di bit flipping possono permettere all'attaccante di modificare il payload a piacere.
 
 # Message Authentication
-Le procedure di Message Auth permettono di verificare che i messaggi ricevuti siano autentici:
+Le procedure di Message Authentication permettono di verificare che i messaggi ricevuti siano autentici:
 1. verificano che l'origine sia autentica
 2. verificano che il messaggio non sia stato manipolato
 

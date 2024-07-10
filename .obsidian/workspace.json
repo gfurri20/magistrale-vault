@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "31d13d20ab3e0b83",
+            "id": "a3329a14b36dfa26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60609d4b09825dde",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md"
               }
             }
           }
@@ -170,11 +158,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "60609d4b09825dde",
+  "active": "a3329a14b36dfa26",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+    "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
     "corsi/codice-malevolo/codice-malevolo.md",
