@@ -173,8 +173,9 @@
   "active": "52bd20d8b2a88fc9",
   "lastOpenFiles": [
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-    "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-user-auth.md",
+    "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
@@ -206,7 +207,6 @@
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
-    "corsi/network-security/teoria/netsec-user-auth.md",
     "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
