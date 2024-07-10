@@ -244,7 +244,7 @@ Si preferisce un protocollo rispetto ad un altro in base alle **necessità**.
 
 La crittografia asimmetrica offre due servizi di sicurezza:
 - *confidenzialità* attraverso la possibilità di criptare un messaggio utilizzando una chiave pubblica valida $\{M\}_{PU_A}$
-- *data integrity con identificazione dell'origine* attraverso la possibilità di firmare digitalmente un messaggio utilizzando una chiave privata valida $[M]_{PR_A}$
+- *data integrity con autenticazione dell'origine* attraverso la possibilità di firmare digitalmente un messaggio utilizzando una chiave privata valida $[M]_{PR_A}$
 
 Un messaggio può essere crittografato da $PU_1$ e allo stesso firmato da $PR_2$ per garantire ognuno dei precedenti obiettivi ${M}_{PU_1}^{PR_2}$.
 

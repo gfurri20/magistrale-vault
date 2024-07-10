@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md"
+                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
               }
             }
           }
@@ -170,11 +170,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a3329a14b36dfa26",
+  "active": "52bd20d8b2a88fc9",
   "lastOpenFiles": [
+    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
