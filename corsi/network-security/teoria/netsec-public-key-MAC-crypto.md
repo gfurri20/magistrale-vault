@@ -15,14 +15,14 @@ Questo si può fare in due modalità:
 	- si possono introdurre codici di verifica, numeri di sequenza e timestamp per cercare di aumentare la sicurezza
 - *senza la crittografia* - il messaggio è lasciato in chiaro, viene semplicemente autenticato
 	- non c'è confidenzialità (potrebbe essere letto da altri)
-	- viene aggiunto un `authentication tag` che permetterà di verificare l'originalità del messaggio
+	- viene aggiunto un `authentication tag/code` che permetterà di verificare l'originalità del messaggio
 
 ## One Way Functions
-Questo `authentication tag` è generato da una **One Way Hash Function** che prende in input, solamente, il messaggio e genera una sequenza alfanumerica di lunghezza fissata detta *digest*. Non serve una chiave.
+Questo `authentication tag` è generato da una **One Way Hash Function** che prende in input solamente il messaggio e genera una sequenza alfanumerica di lunghezza fissata detta *digest*. Non serve una chiave.
 
 La caratteristica principale delle One Way Hash Functions è che, attraverso il solo digest non è possibile ricomporre il payload originale.
 
-Quindi si prende il payload, si genera il suo digest e lo si allega al payload.
+Quindi si prende il payload, si genera il suo digest e lo si allega al messaggio.
 Si può aggiungere un layer crittografico in tre diverse modalità:
 1. crittografia simmetrica
 2. crittografia asimmetrica
@@ -62,12 +62,13 @@ Ci sono *diverse implementazioni* di one way hash functions:
 - **CMAC**
 	- il MAC viene generato attraverso un algoritmo di crittografia simmetrica
 	- di solito usa la modalità CBC di gestione dei blocchi
+	- utilizza una chiave $K$
 
 	![CMAC-CBC](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/CBC-MAC_structure_%28en%29.svg/600px-CBC-MAC_structure_%28en%29.svg.png)
 
 - **CCM** - utilizza i cifrari a blocchi per creare il MAC, segue una procedura detta "authenticate-then-encrypt":
 	- CMAC crea il message authentication code
-	- successivamente il messaggio e il MAC creato vengono uniti e criptati usando la modalità CTR, rif.: [[netsec-symmetric-crypto#Block processing]]
+	- successivamente il messaggio e il MAC creato vengono uniti e cifrati usando la modalità CTR, rif.: [[netsec-symmetric-crypto#Block processing]]
 	- questo metodo, quindi, garantisce ==confidenzialità== e ==autenticità== simultaneamente
 
 # Public Cryptography
