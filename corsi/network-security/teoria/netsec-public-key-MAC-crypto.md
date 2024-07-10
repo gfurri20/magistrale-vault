@@ -78,11 +78,11 @@ Diffie e Hellman, nel 1976, furono i primi a teorizzare e sperimentare tale appr
 La sostanza è semplice: ad ogni individuo sono associate **due chiavi**, una **privata** ed un **pubblica**. La prima è in possesso del singolo soggetto, mentre la seconda è, appunto, di dominio pubblico.
 
 I tre usi più comuni sono:
-1. *digital signature* - utilizzo della chiave privata per crittografare un payload, in questo modo il payload sarà leggibile da tutti coloro che possiedono la chiave pubblica, questo garantisce **autenticità**
+1. *digital signature* -> utilizzo della chiave privata per crittografare un payload, in questo modo il payload sarà verificabile da tutti coloro che possiedono la chiave pubblica, questo garantisce **autenticità**
 		![digital-sign](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Private_key_signing.svg/375px-Private_key_signing.svg.png)
-1. *public-key encryption* - utilizzo della chiave pubblica per crittografare un payload, in questo modo solo chi possederà la rispettiva chiave privata potrà accedere al payload, ciò garantisce **confidenzialità**
+2. *public-key encryption* - utilizzo della chiave pubblica per crittografare un payload, in questo modo solo chi possederà la rispettiva chiave privata potrà accedere al payload, ciò garantisce **confidenzialità**
 		![public-key-enc](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/375px-Public_key_encryption.svg.png)
-1. *key exchange* - utilizzo combinato delle chiavi asimmetriche per lo scambio sicuro di eventuali chiavi simmetriche
+3. *key exchange* - utilizzo combinato delle chiavi asimmetriche per lo scambio sicuro di eventuali chiavi simmetriche
 		![key-exchange](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Public_key_shared_secret.svg/375px-Public_key_shared_secret.svg.png)
 
 Esistono diverse implementazioni pratiche:
