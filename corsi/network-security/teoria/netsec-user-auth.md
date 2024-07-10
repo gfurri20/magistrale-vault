@@ -67,9 +67,9 @@ L'autenticazione di una semplice postazione di lavoro non può sostituirsi all'a
 
 Kerberos si prepone essere:
 - **Sicuro** -> un ascoltatore malevolo non riesce ad ottenere abbastanza informazioni per impersonare un utente
-- **Reliable** -> un AS può essere immediatamente rimpiazzato da server di backup
-- **Transparent** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
-- **Scalable** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
+- **Affidabile** -> un AS può essere immediatamente rimpiazzato da server di backup
+- **Trasparente** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
+- **Scalabile** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
 
 #### Kerberos v.4 Architecture
 L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
