@@ -101,8 +101,8 @@ La **robustezza** di questo algoritmo fa affidamento sulla difficoltà di calcol
 
 In $\textcolor{blue}{blu}$ indichiamo i parametri pubblici e in $\textcolor{red}{rosso}$ i parametri segreti:
 1. Alice e Bob stabiliscono pubblicamente due valori $\textcolor{blue}{p}$ e $\textcolor{blue}{\alpha}$, il primo è un numero primo casuale, il secondo è un generatore modulo $\textcolor{blue}{p}$ (rif.: [radice primitiva](https://it.wikipedia.org/wiki/Radice_primitiva_modulo_n)), nella pratica vengono usati numeri piccoli
-2. Entrambi gli attori generano un numero casuale privato e calcolano un numero modulo $\textcolor{blue}{p}$:
-	1. Alice genera $\textcolor{red}{a}$ (minore di $\textcolor{blue}{p}$)e calcola $\textcolor{blue}{A} = \textcolor{blue}{\alpha^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
+2. Entrambi gli attori generano un numero casuale privato e calcolano un numero modulo $\textcolor{blue}{p}$
+	1. Alice genera $\textcolor{red}{a}$ (minore di $\textcolor{blue}{p}$) e calcola $\textcolor{blue}{A} = \textcolor{blue}{\alpha^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
 	2. Bob genera $\textcolor{red}{b}$ (minore di $\textcolor{blue}{p}$) e calcola $\textcolor{blue}{B} = \textcolor{blue}{\alpha^{\textcolor{red}{b}}} \texttt{ mod } \textcolor{blue}{p}$
 3. Alice invia a Bob $\textcolor{blue}{A}$ e viceversa, Bob invia ad Alice $\textcolor{blue}{B}$
 4. Entrambi gli attori, una volta ricevuti i numeri, calcolano:
