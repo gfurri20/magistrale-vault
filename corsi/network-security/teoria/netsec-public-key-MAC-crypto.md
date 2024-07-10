@@ -116,6 +116,8 @@ Nello specifico il passaggio $(\textcolor{blue}{\alpha^{\textcolor{red}{ab}}} \t
 
 Per rendere efficace tale algoritmo è necessario scegliere numeri enormi, impossibili da scomporre in tempi utili.
 
+Diffie-Hellman gode della proprietà di **perfect forward secrecy**, ovvero assicura che se una chiave di cifratura a lungo termine viene compromessa, le chiavi di sessione generate a partire da essa rimangono riservate.
+
 Inoltre si può aumentare il numero di entità che condividono il segreto, aumentando il numero di interi segreti che calcolano la chiave.
 Assumiamo 3 entità: Alice, Bob e Charlie, si può creare una chiave segreta condivisa del tipo:
 $$\textcolor{red}{K} = \textcolor{blue}{\alpha^{\textcolor{red}{abc}}} \texttt{ mod } \textcolor{blue}{p}$$
