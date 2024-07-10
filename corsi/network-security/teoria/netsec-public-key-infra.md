@@ -81,6 +81,19 @@ Il risultato è che `Alice` e `Bob` pensano di parlare privatamente tra di loro 
 
 Quindi la segretezza e l'autenticazine sono rotte.
 
+#### Denning-Sacco Protocol
+Il protocollo permette lo scambio di una chiave di sessione simmetrica tra due client. Si prevede la presenza di un server che distribuisce certificati digitali (i.e. una CA).
+
+1. `Alice` -> `Server`: $ID_A, ID_B$
+2. `Server` - > `Alice`: $C_A, C_B$
+3. `Alice` -> `Bob`: $C_A, C_B, \{ [T_A, K_s]_{PR_A} \}_{PU_B}$
+
+Il punto di forza di questo protocollo risiede nel fatto che `Bob` è sicuro che la chiave pubblica sia di `Alice` in quanto è firmata con la sua chiave privata, il tutto cifrato con la chiave pubblica di `Bob`, il che indica che il messaggio è per `Bob`. Come extra, la chiave di `Alice` è provata da $C_A$.
+
+Questo protocollo è vulnerabile ad un MITM, ma è risolvibile aggiungendo i nomi di `Alice` e `Bob` insieme al timestamp e la chiave. In tal modo è facile verificare se qualcuno usa la propria chiave per modificare la cifratura della firma.
+
+3. `A` -> `B`: $C_A, C_B, \{ [ID_A, ID_B, T_A, K_s]_{PR_A} \}_{PU_B}$
+
 #### Needham-Schroeder Public Key
 Per ==aggiungere confidenzialità ed autenticità== (ed evitare attacchi di tipo replay) è necessario migliorare lo scambio di messaggi, aggiungendo alcune nonce.
 
@@ -101,13 +114,13 @@ Per migliorare al massimo la sicurezza di *NSL* è necessario firmare alcuni par
 1. `Alice` ->  `Bob`: $\{[N_A, ID_A]_{PR_A}\}_{PU_{B}}$
 2. `Bob` -> `Alice`: $\{N_A, [N_B]_{PR_B}\}_{PU_A}$
 3. `Alice` -> `Bob`: $\{[N_B]_{PR_A}\}_{PU_B}$
-4. `Alice` -> `Bob`: $\{ \{K_s\}_{PR_A} \}_{PU_B}$
+4. `Alice` -> `Bob`: $\{ [K_s]_{PR_A} \}_{PU_B}$
 `Evil` è ancora in grado di **impersonare** `Alice` dal punto di vista di `Bob` però non riuscirà più ad effettuare il **reflecting** verso `Alice` dei messaggi di `Bob` in quanto `Alice` si accorgerà dell'errore verificando la presenza della firma di `Evil`.
 
 ## Asymmetric Key Distribution
 Anche le chiavi pubbliche asimmetriche devono poter essere condivise, per fare ciò si possono usare diverse tecniche:
 1. *Public Announcement* -> condivisione in broadcast delle chiavi pubbliche
-	-  approccio conveniente ma chiunque può condividere chiavi pubbliche
+	- approccio conveniente ma chiunque può condividere chiavi pubbliche
 	- alcuni utenti malevoli potrebbero impersonare un altro utente ma distribuire la propria chiave pubblica
 2. *Publicly Available Directory* -> mantenimento delle chiavi pubbliche in una repository pubblica gestita da un'entità autorizzata centrale
 	- la registrazione della chiave e l'accesso alla repo devono essere autenticati
@@ -117,9 +130,9 @@ Anche le chiavi pubbliche asimmetriche devono poter essere condivise, per fare c
 	- la comunicazione è caratterizzata da un maggior numero di messaggi perché è necessario eseguire le richieste
 	- è buona pratica refreshare le chiavi spesso (aumenta il traffico)
 	- l'==authority rimane un collo di bottiglia== a causa dell'alto rischio che corre
-1. *Public-Key Certificates* -> vengono introdotti dei **certificati** che permettono lo scambio delle chiavi senza la l'obbligo di contattare l'authority ad ogni scambio
+1. *Public-Key Certificates* -> vengono introdotti dei **certificati** che permettono lo scambio delle chiavi senza l'obbligo di contattare l'authority ad ogni scambio
 	- un ==certificato è composto da diversi elementi, tra cui: la chiave pubblica, un identificatore dell'owner e da una firma dell'autorità di fiducia==, detta certification authority
-	-  l'utente presenta la propria chiave pubblica alla certification authority e riceve il proprio certificato che potrà essere condiviso agli altri host
+	- l'utente presenta la propria chiave pubblica alla certification authority e riceve il proprio certificato che potrà essere condiviso agli altri host
 	- gli altri host, ricevuto il certificato, potranno verificarlo con la chiave pubblica della certification authority
 
 Un certificato si presenta come:

@@ -132,7 +132,7 @@ Kerberos v.5 apporta delle migliorie tecniche alla v.4:
 
 ### Mutua autenticazione
 Possiamo individuare alcuni protocolli di mutua autenticazione basati su chiave pubblica/privata:
-- **Denning Sacco protocol** -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
+- **Denning Sacco protocol** [[netsec-public-key-infra#Denning-Sacco Protocol]] -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
 - **Woo Lam protocol** -> con questo approccio vengono usate delle nonce al posto dei timestamp
 Entrambi i protocolli hanno comunque delle debolezze e questo dimostra quanto sia difficile creare un protocollo solido di autenticazione.
 
