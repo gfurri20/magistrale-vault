@@ -115,7 +115,7 @@ L'insieme di tutti gli utenti associati ad un determinato AS e TGS è detto Kerb
 
 Potrebbe succedere che un utente voglia accedere ad un servizio presente su un Realm diverso da quello a cui appartiene, in questo caso il TGS locale non produrrà il `ticket` di servizio ma bensì un `remote-ticket` che potrà essere presentato ad un TGS esterno per ottener il `ticket` di servizio esterno utile per accedere al servizio non locale desiderato.
 
-Ovviamente questo metodo necessità di un numero elevato di chiavi tra entità.
+Ovviamente questo metodo necessita di un numero elevato di chiavi tra entità.
 
 ## Kerberos v.5
 Kerberos v.5 apporta delle migliorie tecniche alla v.4:
@@ -135,6 +135,7 @@ Kerberos v.5 apporta delle migliorie tecniche alla v.4:
 Possiamo individuare alcuni protocolli di mutua autenticazione basati su chiave pubblica/privata:
 - **Denning Sacco protocol** [[netsec-public-key-infra#Denning-Sacco Protocol]] -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
 - **Woo Lam protocol** -> con questo approccio vengono usate delle nonce al posto dei timestamp
+
 Entrambi i protocolli hanno comunque delle debolezze e questo dimostra quanto sia difficile creare un protocollo solido di autenticazione.
 
 ### Autenticazione one-way
