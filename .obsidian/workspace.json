@@ -13,31 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-user-auth.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a3329a14b36dfa26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "52bd20d8b2a88fc9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/network-security.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,13 +26,25 @@
               "type": "markdown",
               "state": {
                 "file": "corsi/network-security/teoria/netsec-user-auth.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "89620cc56792fb03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md"
+                "file": "corsi/network-security/teoria/netsec-user-auth.md"
               }
             }
           }
@@ -182,10 +170,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "52bd20d8b2a88fc9",
+  "active": "1d24f21753de041f",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-user-auth.md",
+    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
@@ -219,7 +208,6 @@
     "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
     "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
-    "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/network-security/teoria",

@@ -7,7 +7,7 @@ L'autenticazione permette alle aziende di aumentare la sicurezza dei propri serv
 $$\texttt{Message Authentication} \neq \texttt{User Authentication}$$
 L'autenticazione del messaggio verifica che il messaggio non sia stato manomesso e che la sorgente sia autentica.
 
-Esistono due tipi di processi ai autenticazione:
+Esistono due tipi di processi di **autenticazione**:
 - **mutua autenticazione** -> autentica entrambe le entità (o tutte) comprese nella comunicazione
 - **autenticazione one-way** -> coinvolge un trasferimento singolo di informazione da `A` a `B`
 
@@ -56,7 +56,7 @@ Per cercare di difendersi da queste tipologie di attacchi è possibile adottare 
 ### Kerberos (Mutua Autenticazione)
 
 >[!important] Kerberos
->Kerberos è un protocollo di mutua autenticazione centralizzato basato solo su chiavi simmetriche.
+>Kerberos è un protocollo di **mutua autenticazione centralizzato** basato solo su **chiavi simmetriche**.
 
 Utilizza un authentication server (AS) centrale per autenticare utenti con server e server con utenti.
 
@@ -81,6 +81,7 @@ L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
 Esistono due tipi di `ticket`:
 - il `granting-ticket` ovvero l'autorizzazione concessa dal AS a ottenere il `ticket` di servizio dal TGS
 - il `ticket` di servizio che è un oggetto distribuito dal TGS che viene generato previa autenticazione dell'utente per ogni specifico servizio offerto sulla rete.
+
 Un utente che ottiene un `ticket` per un determinato servizio può salvarlo per ri-utilizzarlo più avanti nel tempo (entro una certa scadenza). In questo modo non si affolla di richieste né l'AS né il TGS.
 
 ==In sostanza con l'autenticazione un utente può richiedere più ticket e con un ticket un utente può richiedere più accessi al servizio.==
