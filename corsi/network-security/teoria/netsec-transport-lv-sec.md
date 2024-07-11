@@ -13,11 +13,11 @@ Si compone di una serie di protocolli che fanno affidamento a TCP.
 
 ## TLS Architecture
 Individuiamo due entità principali:
-- **TLS connection** -> relazione tra peer
-	- ogni connessione è associata ad una sessione
+- **TLS connection** -> relazione tra peer (e.g. tra dispositivi di trasmissione)
+	- ogni connessione è associata ad una sessione (una sessione possiede più connessioni)
 - **TLS session** -> relazione tra client e server
 	- necessità una *fase di handshake*
-	- vengono stabilite dei parametri di crittografia comune a tutte  le comunicazioni facenti parti di una sessione
+	- vengono stabiliti dei parametri di crittografia comune a tutte le comunicazioni facenti parti di una sessione
 	- evitano la trasmissione continua di parametri di sicurezza
 
 Lo **stato** di una TLS connection è rappresentato dai seguenti parametri:
@@ -43,15 +43,18 @@ Opzionalmente implementa la mutua autenticazione.
 Fase (1) - scambio di informazioni preliminari:
 1. $Client \rightarrow Server$ `client_hello`:  info condivise di sessione (e.g. versione, ID sessione, cipher suite)
 2. $Server \rightarrow Client$ `server_hello`: info condivise
+
 Fase (2) - il server invia il certificato ed inizia lo scambio di chiavi:
 3. $Server \rightarrow Client$ `certificate`: catena X.509
 4. $Server \rightarrow Client$ `server_key_exchange`: inizia lo scambio di chiavi
 5. $Server \rightarrow Client$ `certificate_request`: richiede il certificato del client
 6. $Server \rightarrow Client$ `server_hello_done`
+
 Fase (3) - il client, dopo aver verificato il certificato del server, procede all'invio del certificato se richiesto e delle informazioni di scambio chiavi
 7. $Client \rightarrow Server$ `certificate`: catena X.509 del client
 8. $Client \rightarrow Server$ `client_key_exchange`: conclude lo scambio di chiavi di sessione
 9. $Client \rightarrow Server$ `certificate_verify`: firma digitale del certificato client
+
 Fase (4) - cambio del cifrario (opzionale) e terminazione dell'handshake
 10. $Client \rightarrow Server$: `change_cipher_spec`
 11. $Client \rightarrow Server$ `finished`
