@@ -54,7 +54,7 @@ Fase (2) - il server invia il certificato ed inizia lo scambio di chiavi:
 Fase (3) - il client, dopo aver verificato il certificato del server, procede all'invio del certificato se richiesto e delle informazioni di scambio chiavi
 7. $Client \rightarrow Server$ `certificate`: catena X.509 del client
 8. $Client \rightarrow Server$ `client_key_exchange`: conclude lo scambio di chiavi di sessione
-9. $Client \rightarrow Server$ `certificate_verify`: firma digitale del certificato client
+9. $Client \rightarrow Server$ `certificate_verify`: risposta al controllo del certificato server
 
 Fase (4) - cambio del cifrario (opzionale) e terminazione dell'handshake
 10. $Client \rightarrow Server$: `change_cipher_spec`
