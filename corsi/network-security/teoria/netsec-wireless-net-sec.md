@@ -1,17 +1,17 @@
 # Wireless Security
-Le connessioni wireless sono, dal punto di vista della sicurezza, molto critiche.
+Le connessioni wireless sono, dal punto di vista della sicurezza, molto critiche. Alcune definizioni:
 - **canale** -> il canale ad onde radio è pubblico e il traffico non è "rinchiuso" in un cavo
 	- è difficile proteggere le comunicazioni in broadcast da ascoltatori malevoli
 	- è più facile sfruttare vulnerabilità presenti in protocolli di rete wireless
 - **mobility** -> la mobilità dei dispositivi può essere un fattore di rischio
 - **risorse** -> le risorse nei dispositivi mobili sono limitate e quindi maggiormente suscettibili ad attacchi DoS
-- **accessibility** -> spesso sensori, telecamere oppure dispositivi wireless sono lasciati non protetti sulla rete (guarda [shodan.io](shodan.io)), rischiano sia via Internet sia via fisica
+- **accessibility** -> spesso sensori, telecamere oppure dispositivi wireless sono lasciati non protetti sulla rete (guarda [shodan.io](shodan.io)), rischiano sia via Internet sia fisicamente
 
 ## Wireless Network Threats
-Le reti wireless possono essere soggetti ad una grande gamma di rischi:
-- **Accidental association** -> accesso intenzionale ad una LAN diversa da quella voluta a causa di sovrapposizioni tra segnali
+Le reti wireless possono essere soggette ad una grande gamma di rischi:
+- **Accidental association** -> accesso non intenzionale ad una LAN diversa da quella voluta a causa di sovrapposizioni tra segnali
 - **Malicious association** -> accesso ad un AP malevolo, apparentemente legittimo (e.g. reti pubbliche)
-- **Ad-hoc networks** -> una rete *ad-hoc* è una rete privata wireless privata tra due peer, la mancanza di centralizzazione potrebbe comportare problemi di controllo
+- **Ad-hoc networks** -> una rete *ad-hoc* è una rete wireless privata tra due peer, la mancanza di centralizzazione potrebbe comportare problemi di controllo
 - **Non-traditional networks** -> reti wireless "personali", basate su protocolli differenti (e.g. Bluetooth, barcode readers), possono essere ascoltate o bucate
 - **Identity theft** -> impersonificazione di un dispositivo attraverso il furto del suo indirizzo MAC (i.e. *MAC spoofing*)
 - **MITM attacks** -> presenza di una terza entità all'interno di una comunicazione che si pensava privata, le reti wireless soffrono molto di questo rischio per loro natura
@@ -24,7 +24,7 @@ Tali contromisure si possono applicare a diversi elementi della comunicazione wi
 - contromisure sulla **trasmissione** -> costante rischio di ==ascoltatori o alterazione== 
 	- *signal-hiding techniques* -> consiste nell'utilizzare tecniche che rendono più difficile l'identificazione degli accessi alla rete wireless; può essere sia fisica (e.g. nascondere gli AP) ma anche multimediale (e.g. non permettere il broadcasting SSID)
 	- *encryption* -> la cifratura dei messaggi introduce un livello di sicurezza maggiore (sempre che le chiavi siano sicure, sempre lì si va a parare 😉)
-- contromisure sui dispositivi fisici di accesso, i.e. **access points** -> il rischio maggiore è l'==accesso non autorizzato==
+- contromisure sui dispositivi fisici di accesso, i.e. **access points AP** -> il rischio maggiore è l'==accesso non autorizzato==
 	- necessario introdurre degli standard di sicurezza, nello specifico *IEEE 802.1X* che introduce un protocollo di autenticazione solido
 - contromisure sulle **reti**, quindi sull'insieme di routers ed endpoints -> comprende una serie di tecniche standard di sicurezza, come:
 	- usare protocolli di cifratura, antivirus
@@ -45,7 +45,7 @@ La crescita esponenziale dei dispositivi mobile ha creato la necessità di mette
 
 Per cercare di limitare tutti i rischi sopra-elencati si possono applicare una serie di tecniche:
 - **device security** -> uso di dispositivi pre-configurati secondo gli standard di sicurezza aziendali (e.g. antivirus, lock, PIN, password manager, etc.)
-- **traffic security** -> uso di tecnologie di cifratura ed autenticazione; quindi implementazione di canali VPN, protocolli di sicurezza ed autenticazioni multifattore
+- **traffic security** -> uso di tecnologie di cifratura ed autenticazione; quindi implementazione di canali VPN, protocolli di sicurezza ed autenticazioni multi-fattore
 - **barrier security** -> uso di dispositivi in grado di proteggere i confini della rete, come un firewall ed intrusion detection systems
 
 ---
@@ -80,8 +80,8 @@ Il livello fisico è il livello più basso dello standard e gestisce il disposit
 
 ### 2. Layer Medium Access Control
 Il secondo layer è incaricato di convertire i dati di alto livello ottenuti dal layer superiore e metterli a disposizione per l'invio fisico sulla rete.
-- *in trasmissione (in uscita)* -> incapsula i dati ricevuti dal layer logico (sottoforma di MSDU) all'interno della MPDU, aggiungendo gli indirizzi fisici ed il controllo degli errori
-- *in ricezione (in entrata)* -> disassembla il frame fisico ricevuto ed applica le procedure di controllo degli errori
+- *in trasmissione (in uscita)* -> incapsula i dati ricevuti dal layer logico (sotto forma di MSDU) all'interno della MPDU, aggiungendo gli indirizzi fisici ed il controllo degli errori
+- *in ricezione (in entrata)* -> dis-assembla il frame fisico ricevuto ed applica le procedure di controllo degli errori
 
 Struttura MPDU:
 ![[mpdu.png]]
@@ -125,7 +125,8 @@ Lo standard RSN definisce i seguenti servizi, ad ogni servizio è associato un s
 - **Access Control** -> *IEEE 802.1 Port-based AC*
 - **Confidenzialità, Origin Auth, Integrità e Replay Protection** -> prima *TKIP* e poi *CCMP*
 	- dati del livello MAC (secondo livello di IEEE 802.11) crittografati e controllata l'integrità
-Ognuno di questi protocolli sfruttano diversi algoritmi di cifratura per raggiungere i propri scopi.
+
+Ognuno di questi protocolli sfrutta diversi algoritmi di cifratura per raggiungere i propri scopi.
 
 ==RSN ha il compito di mettere in sicurezza solamente la comunicazione tra Stazione e il suo AP di riferimento.==
 
@@ -139,7 +140,7 @@ Le operazioni amministrate da RSN possono scomposte in cinque gruppi:
 ![[rsn.png]]
 
 ### 1. Discovery
-Lo scopo di questa fase è fare in modo che ==AP e Stazione si riconoscano e si accordino sulle policies di sicurezza attraverso sulla base delle quali creare una prima associazione==.
+Lo scopo di questa fase è fare in modo che ==AP e Stazione si riconoscano e si accordino sulle policies di sicurezza sulla base delle quali creare una prima associazione==.
 
 Nello specifico tali policies di sicurezza indicano:
 - quale algoritmo di autenticazione utilizzare
@@ -152,7 +153,7 @@ La fase di **Discovery** si divide in tre micro-fasi:
 	- attraverso un specifica richiesta all'AP, detta `probe request` 
 	- attraverso il `beacon` inviato in broadcast periodicamente dall'AP
 2. **Open system auth** -> scambio degli identificatori da parte della Stazione e dell'AP
-3. **Associaiton** -> la Stazione, scelte le specifiche di sicurezza, invia le proprie scelte all'AP attraverso una `Association Request` a cui seguirà una `Association Response` da parte dell'AP
+3. **Association** -> la Stazione, scelte le specifiche di sicurezza, invia le proprie scelte all'AP attraverso una `Association Request` a cui seguirà una `Association Response` da parte dell'AP
 
 ### 2. Authentication
 Durante questa fase la Stazione e l'AP eseguono la ==mutua autenticazione==. In questo modo si tenta di far comunicare sulla rete solo coloro che si sono identificati legittimamente.
