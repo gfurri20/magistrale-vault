@@ -13,31 +13,32 @@ Si compone di una serie di protocolli che fanno affidamento a TCP.
 
 ## TLS Architecture
 Individuiamo due entità principali:
-- **TLS connection** -> relazione tra peer (e.g. tra dispositivi di trasmissione)
-	- ogni connessione è associata ad una sessione (una sessione possiede più connessioni)
-- **TLS session** -> relazione tra client e server
-	- necessità una *fase di handshake*
-	- vengono stabiliti dei parametri di crittografia comune a tutte le comunicazioni facenti parti di una sessione
+- **TLS connection** -> canale di comunicazione tra client e server
+	- ogni connessione è associata ad una sessione
+- **TLS session** -> set di configurazioni tra client e server
+	- necessità una *fase di handshake*, rif. [[netsec-transport-lv-sec#Handshake protocol]]
+	- vengono stabiliti dei ***parametri di crittografia comune a tutte le connessioni facenti parti di una sessione***
 	- evitano la trasmissione continua di parametri di sicurezza
 
-Lo **stato** di una TLS connection è rappresentato dai seguenti parametri:
-- `session identifier` -> identifica una connessione
+Lo **stato** di una *TLS session* è rappresentato dai seguenti parametri:
+- `session identifier` -> identifica la sessione (permette di avere un puntatore a disposizione)
 - `peer certificate` -> certificato X.509 del peer
 - `cipher spec` -> specifiche del cifrario e del MAC utilizzato
-- `master secret` -> segreto condiviso tra peer
+- `master secret` -> segreto condiviso tra client e server, esso è il *generatore* che permette la creazione dei parametri di una TLS connection
+- `is_resumable` -> un flag che specifica quando da una sessione possono nascere nuove connessioni
 
-Lo **stato** di una TLS session è rappresentato dai seguenti parametri:
-- `server and client random`
+Lo **stato** di una *TLS connection* è rappresentato dai seguenti parametri:
+- `server and client random` -> sequenza di byte che identifica una singola connessione
 - `server/client MAC secret` -> chiave MAC usata dal server/client
 - `server/client write key` -> chiave simmetrica condivisa
-- `IV` -> creato durante la fase di handshake
+- `IV` -> creato durante la fase di handshake (uno per ogni chiave su cifrari CBC)
 - `sequence numbers` -> sia il client che il server mantengono un sequence number per identificare l'ordine dei messaggi (resettato al comando di `change cipher`)
 
 ## TLS Protocols
 TLS individua due protocolli uno per la creazione della sessione, **Handshake Protocol**, e uno per il trasferimento delle informazioni, **Record Protocol**.
 
 ### Handshake protocol
-Utilizza la crittografia asimmetrica per trasferire informazioni tra client e server, tra cui la versione utilizzata, i cifrari utilizzati e le chiavi segrete.
+Utilizza la crittografia asimmetrica per trasferire informazioni tra client e server, tra cui la versione utilizzata, i cifrari utilizzati e le chiavi segrete. **Permette la creazione di una sessione.**
 Opzionalmente implementa la mutua autenticazione.
 
 Fase (1) - scambio di informazioni preliminari:
@@ -61,8 +62,10 @@ Fase (4) - cambio del cifrario (opzionale) e terminazione dell'handshake
 12. $Server \rightarrow Client$ `change_cipher_spec`
 13. $Server \rightarrow Client$ `finished`
 
+Inoltre l'handshake crea il `master secret`, condiviso tra client e server.
+
 ### Record Protocol
-Usa le chiavi simmetriche condivise attraverso l'handshake per introdurre **confidenzialità** (cifrario simmetrico), **integrità** (attraverso i MAC) e **autenticità** (certificati X.509) durante lo scambio di messaggi.
+Usa le chiavi simmetriche condivise attraverso l'handshake per introdurre **confidenzialità** (cifrario simmetrico) ed **integrità** (attraverso HMAC) *alle connessioni*.
 
 I dati seguono un processo preciso prima di essere inviati:
 1. *Frammentazione* dei dati in gruppi
@@ -109,7 +112,7 @@ Se una connessione TLS viene chiusa prima dello scambio di tutti i messaggi il p
 SSH è un protocollo che permette la **creazione di un tunnel sicuro** attraverso un mezzo di comunicazione considerato insicuro, come Internet.
 
 SSH fa affidamento a tre protocolli che girano al di sopra di TCP:
-- **Transport Layer Protocol** -> provvede all'autenticazione del server, alla confidenzialità e all'integrità (potrebbe introdurre compressione)
+- **Transport Layer Protocol** -> provvede all'autenticazione del server, alla confidenzialità e all'integrità (potrebbe introdurre compressione), *gode della perfect forward secrecy*
 - **User Authentication Protocol** -> autentica il client verso il server
 - **Connection Protocol** -> gestisce il tunnel cifrato attraverso diversi canali logici
 
