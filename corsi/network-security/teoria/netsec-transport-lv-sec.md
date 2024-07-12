@@ -101,10 +101,10 @@ Una connessione HTTPS richiede:
 - a livello HTTP i due client stabiliscono una connessione
 - a livello TLS viene creata una **sessione** tra i due client; una sessione permette più di una connessione HTTP
 
-La chiusura di una connessione HTTPS viene indicata nel record HTTP: `Connecttion: close`.
+La chiusura di una connessione HTTPS viene indicata nell'header: `Connecttion: close`.
 Questo comporta la chiusura della connessione TLS e di conseguenza di quella TCP.
 
-Se una connessione TLS viene chiusa prima dello scambio di tutti i messaggi il protocollo HTTPS è allertato (potrebbe riconoscere un attacco).
+Se una connessione TLS viene chiusa prima dello scambio di tutti i messaggi il protocollo HTTP è allertato (potrebbe riconoscere un attacco).
 
 ---
 
@@ -112,7 +112,7 @@ Se una connessione TLS viene chiusa prima dello scambio di tutti i messaggi il p
 SSH è un protocollo che permette la **creazione di un tunnel sicuro** attraverso un mezzo di comunicazione considerato insicuro, come Internet.
 
 SSH fa affidamento a tre protocolli che girano al di sopra di TCP:
-- **Transport Layer Protocol** -> provvede all'autenticazione del server, alla confidenzialità e all'integrità (potrebbe introdurre compressione), *gode della perfect forward secrecy*
+- **Transport Layer Protocol** -> provvede all'*autenticazione del server*, alla *confidenzialità* e all'*integrità* (potrebbe introdurre compressione), *gode della perfect forward secrecy*
 - **User Authentication Protocol** -> autentica il client verso il server
 - **Connection Protocol** -> gestisce il tunnel cifrato attraverso diversi canali logici
 
