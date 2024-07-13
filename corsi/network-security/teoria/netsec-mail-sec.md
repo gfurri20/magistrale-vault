@@ -157,7 +157,7 @@ e.g.:
 7. Client `From: alice.sender@example.net` (Header) 
 
 Il mittente utilizza il tag `MAIL FROM:<alice@example.org>` indicando che il messaggio ha origine nel dominio `example.org`.
-L'header specifica, però, specifica l'indirizzo `alice.sender@example.net`.
+L'header specifica, però, l'indirizzo `alice.sender@example.net`.
 
 **Il receivers utilizza un RR di tipo SPF verso `example.net` per controllare che `alice@example.org` sia un indirizzo mail valido.**
 

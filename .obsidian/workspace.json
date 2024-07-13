@@ -170,12 +170,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57379b1213ae8f08",
+  "active": "57ec3e2df6be5028",
   "lastOpenFiles": [
-    "corsi/network-security/assets/mail-arch.PNG",
-    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
+    "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-mail-sec.md",
+    "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
@@ -207,7 +207,6 @@
     "corsi/network-security/assets/stack-ieee802.png",
     "corsi/network-security/assets/rsn.png",
     "corsi/network-security/assets/mpdu.png",
-    "corsi/network-security/assets/ess.png",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/network-security/teoria",
