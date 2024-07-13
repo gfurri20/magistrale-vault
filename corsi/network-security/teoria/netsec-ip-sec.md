@@ -31,7 +31,7 @@ IPsec si compone di diversi sotto-protocolli che permettono il corretto funziona
 	- garantiva l'autenticazione del messaggio
 - **Encapsulating Security Payload (ESP)** -> permette l'incapsulamento dell'header e del trailer
 	- garantisce confidenzialità e autenticazione
-- **Internet Key Exchange (IKE)** -> protocollo di gestione e condivisione delle chiaci specifico di IPsec
+- **Internet Key Exchange (IKE)** -> protocollo di gestione e condivisione delle chiavi specifico di IPsec
 - Algoritmi di cifratura generici
 - Ulteriori protocolli di gestione
 	- **gestione delle policy di sicurezza**
@@ -43,6 +43,8 @@ I protocolli elencati in precedenza sono parte di IPsec e lavorano in sinergia. 
 2. estrazioni dei parametri di sicurezza dai database incaricati
 3. instaurazione delle security association
 4. comunicazione protetta attraverso **ESP**
+
+![[ip-sec-arch.PNG]]
 
 ## IKE
 Il protocollo IPsec inizia con lo scambio iniziale delle chiavi, atto ad instaurare un canale sicuro per la condivisione dei parametri di sicurezza.
@@ -59,10 +61,10 @@ Nello specifico la modalità automatizzata fa uso di due protocolli:
 
 IKE si divide in due fasi:
 1. instaura il canale di comunicazione sicuro ISAKMP attraverso lo scambio delle chiavi, utilizzando Oakley
-- la seconda utilizza il canale di comunicazione ISAKMP, instaurato precedentemente, per negoziare le Security Associations [[netsec-ip-sec#Gestione delle policies]].
+2. utilizza il canale di comunicazione ISAKMP, instaurato precedentemente, per negoziare le Security Associations [[netsec-ip-sec#Gestione delle policies]].
 
 ## Gestione delle Security Associations
-La comunicazione IPsec fa affidamento alle **Security Associations (SA)**, ovvero delle connessioni logiche tra sorgente e destinatario, influenzate da determinati parametri di sicurezza.
+La comunicazione IPsec fa affidamento alle **Security Associations (SA)**, ==ovvero delle connessioni logiche tra sorgente e destinatario, influenzate da determinati parametri di sicurezza.==
 
 Ogni SA è univocamente identificata da:
 - un *security parameters index* -> identificativo generico di una SA
@@ -93,18 +95,19 @@ In questo caso all'interno del SPD sono specificate 3 policies, il processo che 
 1. la prima regola lascia passare tutti i pacchetti che usano il protocollo UDP, originari da `1.2.3.101:500` verso ogni IP esterno ma diretto alla porta `500`
 2. la seconda regola protegge i pacchetti compatibili attraverso l'uso di ESP
 3. la terza regola è la **regola di default** che scarta tutti quei pacchetti che non hanno trovato compatibilità nelle regole precedenti.
-==Quando un pacchetto deve essere protetto allora si interroga il SAD per ottenere le procedura di crittografia attraverso ESP oppure per instaurare delle nuove SA attraverso IKE.==
+
+==Quando un pacchetto deve essere protetto allora si interroga il SAD per ottenere la procedura di crittografia attraverso ESP oppure per instaurare delle nuove SA attraverso IKE.==
 
 Anche per i pacchetti in input è possibile definire dei filtri attraverso delle policies.
 
 ### SA bundles
 Le SA possono essere raggruppate in bundles, ovvero una sequenza di SA che specificano le caratteristiche che un determinato tipo di traffico IP deve avere.
 
-==Sostanzialmente è possibile incapsulare SA dentro altre SA creando questi SA bundles.== In questo modo le proprietà di ogni SA potranno essere sommate.
+==Sostanzialmente è possibile incapsulare SA dentro altre SA creando questi SA bundles.== In questo modo le proprietà di ogni SA si sovrappongono.
 
-Come detto ESP non integra immediatamente l'autenticazione, se lo fa agisce autentica direttamente il cipher-text.
+Come detto ESP non integra immediatamente l'autenticazione, se lo fa autentica direttamente il cipher-text.
 
-Ci sono altri, attraverso i bundle, per garantire autenticazione dopo la cifratura:
+Ci sono altri modi, attraverso i bundle, per garantire autenticazione dopo la cifratura:
 - **Transport Adjacency** -> permette un solo livello di combinazione
 	- applica più protocolli di sicurezza allo stesso pacchetto IP
 	- applica prima ESP senza autenticazione
@@ -120,9 +123,9 @@ ESP (successore di AH) è il protocollo che **permette l'incapsulamento** vero e
 
 Potrebbe essere aggiunto del *padding* ai dati, nel caso in cui l'algoritmo di cifratura necessitasse di lunghezze specifiche.
 
-AH garantiva out-of-the-box anche l'autenticazione, mentre ESP no. Con ESP è il primo utente che allega il campo autenticazione, nel caso avesse necessità di farlo. ==La procedura di autenticazione in ESP viene eseguita sul cipher-text.==
+AH garantiva "out-of-the-box" l'autenticazione, mentre ESP no. Con ESP è il primo utente che allega il campo autenticazione, nel caso avesse necessità di farlo. ==La procedura di autenticazione in ESP viene eseguita sul cipher-text.==
 
-#### AH
+### AH
 AH è effettivamente il predecessore di ESP ma non introduceva cifratura, **garantiva solo integrità**.
 
 Quindi permetteva solo di introdurre canali autenticati ma non confidenziali.
@@ -137,7 +140,7 @@ Nella modalità trasporto ==l'header IP originario non viene incluso nei dati ci
 - `ESP trlr` -> trailer ESP che contiene l'eventuale padding e le info sul prossimo pacchetto
 - `ESP auth` -> il digest dei parametri hashati con HMAC
 
-Con questa modalità non vengono creati nuovi pacchetti e quindi funziona bene La procedura di autenticazione in ESP viene eseguita sul cipher-text.in reti in cui l'incremento della grandezza di un pacchetto potrebbe causare problemi.
+Con questa modalità non vengono creati nuovi pacchetti. La procedura di autenticazione in ESP viene eseguita sul cipher-text in reti in cui l'incremento della grandezza di un pacchetto potrebbe causare problemi.
 Alle volte, questa modalità, ==potrebbe essere vittima di analisi del traffico==.
 
 Spesso usato per le **remote-access VPNs**.
