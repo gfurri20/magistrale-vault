@@ -1,11 +1,13 @@
 # Mail Architecture
 Lo scambio di mail da `Alice` a `Bob` coinvolge molteplici attori e protocolli:
 1. `Alice` si interfaccia con un client di posta elettronica detto, in gergo, **Message User Agent (MUA)**
-2. Il MUA inoltra il messaggio ad un host incaricato di trasmetterlo sulla rete, il **Mail Submission Agent (MSA)** (potrebbe anche essere integrato nel MUA)
+2. Il MUA inoltra il messaggio ad un host incaricato di trasmetterlo sulla rete: il **Mail Submission Agent (MSA)** (potrebbe anche essere integrato nel MUA)
 3. L'email per raggiungere `Bob` deve passare attraverso la rete, quindi il sistema lo inoltra attraverso una serie di **Message Transfer Agent (MTA)**
 4. Prossima alla destinazione, la mail raggiunge un **Message Delivery Agent (MDA)** che funge da end-point per la mail
 5. L'MDA trasferisce la mail ad un **Message Store (MS)** al quale `Bob` può accedere, per scaricare la mail, attraverso il proprio MUA
-L'inseme di tutti i MSA, MTA e MDA formano il **Message Handling System (MHS)**, incaricato di trasferire la mail sulla rete.
+L'insieme di tutti i MSA, MTA e MDA formano il **Message Handling System (MHS)**, incaricato di trasferire la mail sulla rete.
+
+![[mail-arch.PNG]]
 
 ## Protocolli Mail
 Esistono due protocolli usati per il trasferimento delle mail:
@@ -58,7 +60,7 @@ Per contrastare (o limitare) questi rischi è necessario introdurre una serie di
 - ***DANE*** -> introduce un nuovo metodo di scambio chiavi per DNSSEC, permette di certificare i domini associati ad uno specifico IP
 - ***Sender Policy Framework (SPF)*** -> associa un dominio ad un insieme di indirizzi IP
 - ***DKIM*** -> permette agli MTA di firmare digitalmente alcuni header del body del messaggio SMTP
-	- DKIM permette di firmare le mail in modo da garantire **non-ripudiabilità** sulle mail inviate da uno specifico dominio
+	- permette di firmare le mail in modo da garantire **non-ripudiabilità** sulle mail inviate da uno specifico dominio
 	- la mail di un utente è firmata attraverso la chiave privata del dominio mittente
 	- l'MDA destinatario interroga il DNS per ottenere la chiave pubblica del dominio mittente
 - ***DMARC*** -> mette a conoscenza della sorgente delle policy applicate da SPF e DKIM
@@ -122,7 +124,7 @@ Esistono diversi tipi di Resource Record, ognuno con una funzionalità diversa:
 Una richiesta DNS vanilla potrebbe essere intercettata, un attaccante potrebbe restituire un IP di un server malevolo a client ignari, quindi è necessario introdurre un grado di sicurezza.
 Garantisce protezione end-to-end attraverso l'uso di firme digitali, introducendo **integrità** ed **autenticazione**.
 
-L'amministratore DNS della zona firmerà digitalmente ogni gruppo di RR. ==Per verificare l'integrità della chiave pubblica dell'amministratore è necessario scendere la catena di fiducia partendo da una zona DNS sicura==. La chiave pubblica di una zona fidata è detta **trust anchor**.
+L'**amministratore DNS** della zona firmerà digitalmente ogni gruppo di RR. ==Per verificare l'integrità della chiave pubblica dell'amministratore è necessario scendere la catena di fiducia partendo da una zona DNS sicura==. La chiave pubblica di una zona fidata è detta **trust anchor**.
 
 DNSSEC amplia l'insieme dei RR:
 - **DNSKEY** -> contiene la chiave pubblica dell'amministratore di zona
