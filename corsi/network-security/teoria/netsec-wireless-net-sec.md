@@ -160,7 +160,7 @@ Durante questa fase la Stazione e l'AP eseguono la ==mutua autenticazione==. In 
 
 Il protocollo che gestisce questa fase è *Extensible Authentication Protocol (EAP)*.
 Esso si divide in due micro-fasi:
-1. **EAP exchange** -> scambio di informazioni preliminare che ==permette l'autenticazione==, viene utilizzato il protocollo scelto durante la fase di Discovery. L'autenticazione coinvolge un AS centralizzato.
+1. **EAP exchange** -> scambio di informazioni preliminare che ==permette l'autenticazione==, viene utilizzato il protocollo scelto durante la fase di Discovery. L'autenticazione *coinvolge un AS centralizzato*.
 2. **Secure key delivery** -> infine l'==AS genera una MSK== (Master Session Key), che verrà spedita in modo sicuro alla Stazione
 
 La **MSK** è una chiave segreta che l'AP condivide con ogni client, essa permette di generare tutte le altre chiavi utili.

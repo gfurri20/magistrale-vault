@@ -20,31 +20,19 @@
             }
           },
           {
-            "id": "ce91a4441beea235",
+            "id": "57ec3e2df6be5028",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba6418779f1ea7e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md"
+                "file": "corsi/network-security/teoria/netsec-mail-sec.md"
               }
             }
           }
@@ -170,12 +158,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba6418779f1ea7e1",
+  "active": "57ec3e2df6be5028",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
+    "corsi/network-security/teoria/netsec-ICS-sec.md",
+    "corsi/network-security/teoria/netsec-mail-sec.md",
+    "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
-    "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
@@ -205,9 +196,6 @@
     "corsi/network-security/assets/mpdu.png",
     "corsi/network-security/assets/ess.png",
     "corsi/codice-malevolo/lezioni/03_04_2024-analisi-dinamica.md",
-    "corsi/codice-malevolo/lezioni/05_04_2024-analisi-traffico-rete.md",
-    "corsi/codice-malevolo/lezioni/27_03_2024-analisi-statica.md",
-    "corsi/codice-malevolo/lezioni/08_03_2024-malware-analysis.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
     "corsi/network-security/teoria",
