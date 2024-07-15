@@ -74,13 +74,12 @@ Inoltre AES non si basa sulla rete di Feistel perché elabora i blocchi in paral
 
 ### Block processing
 Un algoritmo di crittografia simmetrica processa un blocco alla volta.
-Quindi è possibile utilizzare modalità di processing dei blocchi differente, nello specifico ne esistono cinque:
+Quindi è possibile utilizzare modalità di processing dei blocchi differente, nello specifico ne esistono quattro:
 - **ECB** -> Ogni blocco di plain-text è cifrato indipendentemente usando la stessa chiave, il che può portare a problemi di sicurezza per messaggi lunghi e strutturati
 	- blocchi con lo stesso testo vengono cifrati con lo stesso cipher-text (attacchi padding oracle)
 	- NON usa un IV (initialization vector)
 - **CBC** -> Ogni blocco di plain-text è XORato con il blocco cifrato precedente prima di essere cifrato, migliorando la sicurezza (non al massimo perché soffre ancora contro attacchi di bit-flipping).
 - **CFB** -> Il plain-text è diviso in segmenti e ogni segmento è cifrato separatamente ed influenzato dal segmento precedente attraverso diverse operazioni (tra cui shifts e xors)
-- **OFB** -> è simile a CFB ma semplicemente non restituisce il feedback come CFB.
 - **CTR** -> Permette la *cifratura parallela* dei blocchi, migliorando l'efficienza hardware e software.
 	- l'i-esimo blocco è acceduto random, aumentando le prestazioni
 	- è sicuro almeno tanto quanto gli altri processing
