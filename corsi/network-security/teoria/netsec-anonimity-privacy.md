@@ -10,8 +10,7 @@ L'anonimato può essere utile in diverse occasioni:
 # Anonimato
 
 > [!info] Anonimato
-> Lo stato di **non essere identificabile rispetto ad un insieme di soggetti**, in questo caso tra gli utenti di Internet.
-> Tale insieme di soggetti è detto **anonymity set**.
+> Lo stato di **non essere identificabile rispetto ad un insieme di soggetti**, in questo caso tra gli utenti di Internet. Tale insieme di soggetti è detto **anonymity set**.
 
 Più è grande l'anonymity set più lo stato di anonimato acquisito è robusto.   
 
@@ -22,7 +21,7 @@ Due caratteristiche dell'anonimato sono:
 
 Esistono diversi tipi di attacchi che potrebbero rompere l'anonimato:
 - analisi passiva del traffico
-- analisi attiva del traffico tramite l'aggiunta di pacchetti al traffico
+- analisi attiva del traffico tramite l'aggiunta di pacchetti
 - compromissioni di nodi di rete (e.g. routers)
 	- diventano indispensabili meccanismi di ridondanza
 
