@@ -20,54 +20,55 @@
             }
           },
           {
-            "id": "7248474cdc903b9f",
+            "id": "980b3f3b4f61273c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-infra.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b37b678165ebf856",
+            "id": "d6a709b10bb6f8fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-symmetric-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7851dfb0106adac9",
+            "id": "8adfde04c577f0e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
+                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ef0d6422e31b4e65",
+            "id": "af324c8adb029008",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-introduction.md",
+                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -133,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/network-security.md",
+                "file": "corsi/network-security/teoria/netsec-user-auth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/network-security.md"
+                "file": "corsi/network-security/teoria/netsec-user-auth.md"
               }
             }
           }
@@ -193,23 +194,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f19eb6c6c673db21",
+  "active": "980b3f3b4f61273c",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-public-key-infra.md",
+    "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+    "corsi/network-security/teoria/netsec-user-auth.md",
+    "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-introduction.md",
-    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/teoria/netsec-anonimity-privacy.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/assets/ip-sec-arch.PNG",
-    "corsi/network-security/teoria/netsec-mail-sec.md",
     "corsi/network-security/assets/mail-arch.PNG",
-    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
-    "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",
