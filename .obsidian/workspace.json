@@ -20,31 +20,30 @@
             }
           },
           {
-            "id": "8adfde04c577f0e3",
+            "id": "5dfdd04b8782a2e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+                "file": "corsi/network-security/teoria/netsec-anonimity-privacy.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "af324c8adb029008",
+            "id": "3617ddfb559e2403",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/network-security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md",
+                "file": "corsi/network-security/network-security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-mail-sec.md"
+                "file": "corsi/network-security/network-security.md"
               }
             }
           }
@@ -170,11 +169,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "af324c8adb029008",
+  "active": "f19eb6c6c673db21",
   "lastOpenFiles": [
-    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
-    "corsi/network-security/teoria/netsec-mail-sec.md",
+    "corsi/network-security/teoria/netsec-ip-sec.md",
+    "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-anonimity-privacy.md",
+    "corsi/network-security/teoria/netsec-mail-sec.md",
+    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
@@ -182,9 +184,6 @@
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-ICS-sec.md",
-    "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
-    "corsi/network-security/teoria/netsec-anonimity-privacy.md",
-    "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/assets/ip-sec-arch.PNG",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/cybersecurity/lezioni/20_11_2023-access-control.md",
