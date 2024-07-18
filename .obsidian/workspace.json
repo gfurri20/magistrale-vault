@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md",
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/network-security/teoria/netsec-transport-lv-sec.md"
+                "file": "corsi/network-security/teoria/netsec-ip-sec.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   "active": "66124a85fefff3e5",
   "lastOpenFiles": [
     "corsi/network-security/network-security.md",
+    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
+    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "conflict-files-obsidian-git.md",
@@ -165,7 +167,6 @@
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",
-    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
     "corsi/network-security/assets/rsn.png",
@@ -174,7 +175,6 @@
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "Untitled.canvas",
-    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
     "corsi/codice-malevolo/progetto",
     "corsi/network-security/teoria/netsec-introduction.md",
     "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
