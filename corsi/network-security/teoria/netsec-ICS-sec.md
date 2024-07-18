@@ -5,7 +5,7 @@
 
 Un CPS si compone di tre componenti:
 - **Sensor Network** -> monitorano i fenomeni fisici derivanti dai processi fisici
-- **Communication Network** -> utilizza i dati ricavati dalla Sensor Network per prendere decisione attraverso il sistema informatico
+- **Communication Network** -> utilizza i dati ricavati dai Sensor Network per prendere decisioni attraverso il sistema informatico
 - **Actuator Network** -> implementa le decisioni prese dal sistema informatico sui processi fisici
 
 ![[cps.png]]
@@ -26,8 +26,7 @@ Possibili attaccanti di un CPS, ognuno con intenzioni diverse:
 
 ---
 # Industrial Control Systems (ICS)
-Un ICS è un sistema di automazione che provvede al controllo e al monitoraggio delle funzioni all'interno di un'azienda.
-Una rete di ICS compone un CPS.
+Un ICS è un sistema di automazione che provvede al controllo e al monitoraggio delle funzioni all'interno di un'azienda. Una rete di ICS compone un CPS.
 
 Un ICS si compone di diversi elementi:
 - **HMI** -> interfaccia utente di visualizzazione e controllo

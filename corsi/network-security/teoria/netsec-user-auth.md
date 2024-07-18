@@ -7,7 +7,7 @@ L'autenticazione permette alle aziende di aumentare la sicurezza dei propri serv
 $$\texttt{Message Authentication} \neq \texttt{User Authentication}$$
 L'autenticazione del messaggio verifica che il messaggio non sia stato manomesso e che la sorgente sia autentica.
 
-Esistono due tipi di processi ai autenticazione:
+Esistono due tipi di processi di **autenticazione**:
 - **mutua autenticazione** -> autentica entrambe le entità (o tutte) comprese nella comunicazione
 - **autenticazione one-way** -> coinvolge un trasferimento singolo di informazione da `A` a `B`
 
@@ -56,7 +56,7 @@ Per cercare di difendersi da queste tipologie di attacchi è possibile adottare 
 ### Kerberos (Mutua Autenticazione)
 
 >[!important] Kerberos
->Kerberos è un protocollo di mutua autenticazione centralizzato basato solo su chiavi simmetriche.
+>Kerberos è un protocollo di **mutua autenticazione centralizzato** basato solo su **chiavi simmetriche**.
 
 Utilizza un authentication server (AS) centrale per autenticare utenti con server e server con utenti.
 
@@ -67,9 +67,9 @@ L'autenticazione di una semplice postazione di lavoro non può sostituirsi all'a
 
 Kerberos si prepone essere:
 - **Sicuro** -> un ascoltatore malevolo non riesce ad ottenere abbastanza informazioni per impersonare un utente
-- **Reliable** -> un AS può essere immediatamente rimpiazzato da server di backup
-- **Transparent** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
-- **Scalable** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
+- **Affidabile** -> un AS può essere immediatamente rimpiazzato da server di backup
+- **Trasparente** -> idealmente un utente non sa che l'inserimento della semplice password comporta un processo gestito da Kerberos
+- **Scalabile** -> dovrebbe essere in grado di supportare un largo numero di utenti e servers
 
 #### Kerberos v.4 Architecture
 L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
@@ -81,6 +81,7 @@ L'ultima specifica della versione 4 di Kerberos specifica 4 attori:
 Esistono due tipi di `ticket`:
 - il `granting-ticket` ovvero l'autorizzazione concessa dal AS a ottenere il `ticket` di servizio dal TGS
 - il `ticket` di servizio che è un oggetto distribuito dal TGS che viene generato previa autenticazione dell'utente per ogni specifico servizio offerto sulla rete.
+
 Un utente che ottiene un `ticket` per un determinato servizio può salvarlo per ri-utilizzarlo più avanti nel tempo (entro una certa scadenza). In questo modo non si affolla di richieste né l'AS né il TGS.
 
 ==In sostanza con l'autenticazione un utente può richiedere più ticket e con un ticket un utente può richiedere più accessi al servizio.==
@@ -114,7 +115,7 @@ L'insieme di tutti gli utenti associati ad un determinato AS e TGS è detto Kerb
 
 Potrebbe succedere che un utente voglia accedere ad un servizio presente su un Realm diverso da quello a cui appartiene, in questo caso il TGS locale non produrrà il `ticket` di servizio ma bensì un `remote-ticket` che potrà essere presentato ad un TGS esterno per ottener il `ticket` di servizio esterno utile per accedere al servizio non locale desiderato.
 
-Ovviamente questo metodo necessità di un numero elevato di chiavi tra entità.
+Ovviamente questo metodo necessita di un numero elevato di chiavi tra entità.
 
 ## Kerberos v.5
 Kerberos v.5 apporta delle migliorie tecniche alla v.4:
@@ -132,8 +133,9 @@ Kerberos v.5 apporta delle migliorie tecniche alla v.4:
 
 ### Mutua autenticazione
 Possiamo individuare alcuni protocolli di mutua autenticazione basati su chiave pubblica/privata:
-- **Denning Sacco protocol** -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
+- **Denning Sacco protocol** [[netsec-public-key-infra#Denning-Sacco Protocol]] -> utilizza un AS centralizzato per distribuire i certificati ma richiede la sincronizzazione veritiera dei clock
 - **Woo Lam protocol** -> con questo approccio vengono usate delle nonce al posto dei timestamp
+
 Entrambi i protocolli hanno comunque delle debolezze e questo dimostra quanto sia difficile creare un protocollo solido di autenticazione.
 
 ### Autenticazione one-way

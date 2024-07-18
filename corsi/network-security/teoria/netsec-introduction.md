@@ -8,19 +8,21 @@ Distinguiamo due approcci alla sicurezza in base all'ambito:
 - **Network Security** - fa riferimento specifico alla protezione delle infrastrutture di rete e dei servizi che implementano
 
 ## Obiettivi
-La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione, sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
+La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione; sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
 
 L'ambito che ci interessa maggiormente è la **Network Security**, e quindi, tali obiettivi assumono un carattere specifico:
-- *Confidentiality* - assicura che utenti non autorizzati non abbiano accesso a risorse private
-- *Integrity* - assicura che un servizio (o infrastruttura) svolga i compiti per il quale è stato progettato e costruito
-- *Availability* - assicura che un servizio (o infrastruttura) sia sempre disponibile nei momenti in cui è stat progettata per esserlo; in sostanza cerca di evitare disservizi
+- *Confidentiality* -> assicura che utenti non autorizzati non abbiano accesso a risorse private
+- *Integrity* -> assicura che un servizio (o infrastruttura) svolga i compiti per il quale è stato progettato e costruito
+- *Availability* -> assicura che un servizio (o infrastruttura) sia sempre disponibile nei momenti in cui è stata progettata per esserlo; in sostanza cerca di evitare disservizi
+- *Authentication* -> assicura che l'accesso ad un servizio è eseguito previa verifica dell'identità dell'utente
+- *Accountability* -> capacità di associare azioni compiute al responsabile
 
 ---
 # OSI Security Architecture
 Definiamo gli elementi che caratterizzano l'architettura di sicurezza definita dal modello OSI.
 
 > [!warning] Security Attacks
-> Azioni che compromettono la sicurezza delle informazioni
+> Azioni che compromettono la sicurezza delle informazioni o dell'infratruttura in generale
 
 > [!tip] Security Services
 > Servizi che migliorano la sicurezza dei sistemi di elaborazione dati e dei trasferimenti di informazioni
@@ -28,10 +30,10 @@ Definiamo gli elementi che caratterizzano l'architettura di sicurezza definita d
 > [!note] Security Mechanisms
 > Processi o dispositivi che rilevano, prevengono, mitigano o recuperano da un Security Attack
 
-## ⚠ Security Attack
+## ❗ Security Attack
 Innanzitutto definiamo una sostanziale differenza tra **Threats** e **Attacks**:
-- **Threats** - *Potenziali* violazioni della sicurezza che potrebbero causare danni sfruttando eventuali vulnerabilità
-- **Attacks** - Tentativi *deliberati* di eludere i servizi di sicurezza e violare le politiche di sicurezza del sistema
+- **Threats** -> *Potenziali* violazioni della sicurezza che potrebbero causare danni sfruttando eventuali vulnerabilità
+- **Attacks** -> Tentativi *deliberati* di eludere i servizi di sicurezza e violare le politiche di sicurezza del sistema
 
 In generale esistono due tipi di attacchi (ref.: [RFC 4949](https://datatracker.ietf.org/doc/html/rfc4949)): **Passivi** e **Attivi**.
 
@@ -99,7 +101,7 @@ Ormai i meccanismi di sicurezza sono molti e di svariate topologie:
 In particolare gli algoritmi crittografici si snodano in diversi modi.
 
 ### Algoritmi crittografici
-Innanzitutto, un algoritmo crittografico è una procedura che permette di cifrare i dati per cercare di renderli visibili solo a coloro che sono autorizzati.
+Innanzitutto, un algoritmo crittografico è una procedura che permette di cifrare i dati per cercare di renderli ==comprensibili solo a coloro che sono autorizzati==.
 
 Gli algoritmi di crittografia possono essere divisi in diverse categorie.
 - Reversibilità del payload:
@@ -150,8 +152,8 @@ A loro volta si sotto-strutturano in:
 
 # Network Security
 La Network Security mira a proteggere due elementi fondamentali:
-- La **comunicazione** tra entità - attraverso specifici protocolli che definiscono standard e procedure che governano l'ordine di trasmissione dei dati (e.g. HTTPS)
-- I **dispositivi** fisici - attraverso strumenti che hanno l'obiettivo di analizzare il traffico in entrata ed uscita del dispositivo
+- La **comunicazione** tra entità -> attraverso specifici protocolli che definiscono standard e procedure che governano l'ordine di trasmissione dei dati (e.g. HTTPS)
+- I **dispositivi** fisici -> attraverso strumenti che hanno l'obiettivo di analizzare il traffico in entrata ed uscita del dispositivo
 
 Per proteggere i dispositivi fisici ci sono tre possibilità
 - **Firewall** - soluzione HW/SW che permette di limitare gli accessi o il traffico ai dispositivi in base a delle *politiche di sicurezza*, sostanzialmente agisce da filtro
@@ -171,9 +173,9 @@ Per questo motivo viene definito un **modello di fiducia** che specifica quali r
 >La fiducia è la confidenza che un'entità agirà in modo da non compromettere la sicurezza dell'utente del sistema di cui quell'entità fa parte.
 
 Definiamo tre concetti rilevanti che caratterizzano un **modello di fiducia**.
-1. **Affidabilità (Trustworthiness)** - caratteristica di un'entità che riflette il grado di merito di fiducia che tale entità possiede
-2. **Propensione a fidarsi (Propensity to trust)** - tendenza a essere disposti a fidarsi degli altri in una vasta gamma di situazioni e obiettivi di fiducia. Questo suggerisce che ogni individuo ha un livello di base di fiducia che influenzerà la sua disponibilità a fare affidamento sulle parole e azioni degli altri
-3. **Rischio (Risk)** - misura in cui un'entità è minacciata da una circostanza o evento potenziale, e tipicamente una funzione di:
+1. **Affidabilità (Trustworthiness)** -> caratteristica di un'entità che riflette il grado di fiducia che tale entità possiede
+2. **Propensione a fidarsi (Propensity to trust)** -> tendenza a essere disposti a fidarsi degli altri in una vasta gamma di situazioni e rispetto agli obiettivi di fiducia. Questo suggerisce che ogni individuo ha un livello base di fiducia che influenzerà la sua disponibilità a fare affidamento sulle azioni degli altri
+3. **Rischio (Risk)** -> misura in cui un'entità è minacciata da una circostanza o evento potenziale, e tipicamente una funzione di:
     - gli impatti negativi che sorgerebbero se la circostanza o l'evento si verificasse
     - la probabilità di occorrenza
 

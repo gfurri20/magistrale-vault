@@ -3,7 +3,7 @@ L'obiettivo è difendersi dagli attacchi passivi ed attivi. Grazie alla semplice
 Gli attacchi attivi, d'altro canto, mirano a manipolare la comunicazione e non sempre la crittografia permette la massima protezione, e.g. attacchi di bit flipping possono permettere all'attaccante di modificare il payload a piacere.
 
 # Message Authentication
-Le procedure di Message Auth permettono di verificare che i messaggi ricevuti siano autentici:
+Le procedure di Message Authentication permettono di verificare che i messaggi ricevuti siano autentici:
 1. verificano che l'origine sia autentica
 2. verificano che il messaggio non sia stato manipolato
 
@@ -15,14 +15,14 @@ Questo si può fare in due modalità:
 	- si possono introdurre codici di verifica, numeri di sequenza e timestamp per cercare di aumentare la sicurezza
 - *senza la crittografia* - il messaggio è lasciato in chiaro, viene semplicemente autenticato
 	- non c'è confidenzialità (potrebbe essere letto da altri)
-	- viene aggiunto un `authentication tag` che permetterà di verificare l'originalità del messaggio
+	- viene aggiunto un `authentication tag/code` che permetterà di verificare l'originalità del messaggio
 
 ## One Way Functions
-Questo `authentication tag` è generato da una **One Way Hash Function** che prende in input, solamente, il messaggio e genera una sequenza alfanumerica di lunghezza fissata detta *digest*. Non serve una chiave.
+Questo `authentication tag` è generato da una **One Way Hash Function** che prende in input solamente il messaggio e genera una sequenza alfanumerica di lunghezza fissata detta *digest*. Non serve una chiave.
 
 La caratteristica principale delle One Way Hash Functions è che, attraverso il solo digest non è possibile ricomporre il payload originale.
 
-Quindi si prende il payload, si genera il suo digest e lo si allega al payload.
+Quindi si prende il payload, si genera il suo digest e lo si allega al messaggio.
 Si può aggiungere un layer crittografico in tre diverse modalità:
 1. crittografia simmetrica
 2. crittografia asimmetrica
@@ -62,12 +62,13 @@ Ci sono *diverse implementazioni* di one way hash functions:
 - **CMAC**
 	- il MAC viene generato attraverso un algoritmo di crittografia simmetrica
 	- di solito usa la modalità CBC di gestione dei blocchi
+	- utilizza una chiave $K$
 
 	![CMAC-CBC](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/CBC-MAC_structure_%28en%29.svg/600px-CBC-MAC_structure_%28en%29.svg.png)
 
 - **CCM** - utilizza i cifrari a blocchi per creare il MAC, segue una procedura detta "authenticate-then-encrypt":
 	- CMAC crea il message authentication code
-	- successivamente il messaggio e il MAC creato vengono uniti e criptati usando la modalità CTR, rif.: [[netsec-symmetric-crypto#Block processing]]
+	- successivamente il messaggio e il MAC creato vengono uniti e cifrati usando la modalità CTR, rif.: [[netsec-symmetric-crypto#Block processing]]
 	- questo metodo, quindi, garantisce ==confidenzialità== e ==autenticità== simultaneamente
 
 # Public Cryptography
@@ -77,11 +78,11 @@ Diffie e Hellman, nel 1976, furono i primi a teorizzare e sperimentare tale appr
 La sostanza è semplice: ad ogni individuo sono associate **due chiavi**, una **privata** ed un **pubblica**. La prima è in possesso del singolo soggetto, mentre la seconda è, appunto, di dominio pubblico.
 
 I tre usi più comuni sono:
-1. *digital signature* - utilizzo della chiave privata per crittografare un payload, in questo modo il payload sarà leggibile da tutti coloro che possiedono la chiave pubblica, questo garantisce **autenticità**
+1. *digital signature* -> utilizzo della chiave privata per crittografare un payload, in questo modo il payload sarà verificabile da tutti coloro che possiedono la chiave pubblica, questo garantisce **autenticità**
 		![digital-sign](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Private_key_signing.svg/375px-Private_key_signing.svg.png)
-1. *public-key encryption* - utilizzo della chiave pubblica per crittografare un payload, in questo modo solo chi possederà la rispettiva chiave privata potrà accedere al payload, ciò garantisce **confidenzialità**
+2. *public-key encryption* - utilizzo della chiave pubblica per crittografare un payload, in questo modo solo chi possederà la rispettiva chiave privata potrà accedere al payload, ciò garantisce **confidenzialità**
 		![public-key-enc](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/375px-Public_key_encryption.svg.png)
-1. *key exchange* - utilizzo combinato delle chiavi asimmetriche per lo scambio sicuro di eventuali chiavi simmetriche
+3. *key exchange* - utilizzo combinato delle chiavi asimmetriche per lo scambio sicuro di eventuali chiavi simmetriche
 		![key-exchange](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Public_key_shared_secret.svg/375px-Public_key_shared_secret.svg.png)
 
 Esistono diverse implementazioni pratiche:
@@ -94,14 +95,14 @@ Esistono diverse implementazioni pratiche:
 | *Elliptic Curve* | ✅       | ✅            | ✅            |
 
 ## Diffie-Hellman
-Primo algoritmo a chiave pubblica creato, utilizzato per lo scambio sicuro di chiavi simmetriche.
+Primo algoritmo a chiave pubblica, utilizzato per lo scambio sicuro di chiavi simmetriche.
 
 La **robustezza** di questo algoritmo fa affidamento sulla difficoltà di calcolare logaritmi discreti.
 
 In $\textcolor{blue}{blu}$ indichiamo i parametri pubblici e in $\textcolor{red}{rosso}$ i parametri segreti:
 1. Alice e Bob stabiliscono pubblicamente due valori $\textcolor{blue}{p}$ e $\textcolor{blue}{\alpha}$, il primo è un numero primo casuale, il secondo è un generatore modulo $\textcolor{blue}{p}$ (rif.: [radice primitiva](https://it.wikipedia.org/wiki/Radice_primitiva_modulo_n)), nella pratica vengono usati numeri piccoli
-2. Entrambi gli attori generano un numero casuale privato e calcolano un numero modulo $\textcolor{blue}{p}$:
-	1. Alice genera $\textcolor{red}{a}$ (minore di $\textcolor{blue}{p}$)e calcola $\textcolor{blue}{A} = \textcolor{blue}{\alpha^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
+2. Entrambi gli attori generano un numero casuale privato e calcolano un numero modulo $\textcolor{blue}{p}$
+	1. Alice genera $\textcolor{red}{a}$ (minore di $\textcolor{blue}{p}$) e calcola $\textcolor{blue}{A} = \textcolor{blue}{\alpha^{\textcolor{red}{a}}} \texttt{ mod } \textcolor{blue}{p}$
 	2. Bob genera $\textcolor{red}{b}$ (minore di $\textcolor{blue}{p}$) e calcola $\textcolor{blue}{B} = \textcolor{blue}{\alpha^{\textcolor{red}{b}}} \texttt{ mod } \textcolor{blue}{p}$
 3. Alice invia a Bob $\textcolor{blue}{A}$ e viceversa, Bob invia ad Alice $\textcolor{blue}{B}$
 4. Entrambi gli attori, una volta ricevuti i numeri, calcolano:
@@ -114,6 +115,8 @@ $$\textcolor{red}{k_A} = \textcolor{blue}{A^{\textcolor{red}{b}}} \texttt{ mod }
 Nello specifico il passaggio $(\textcolor{blue}{\alpha^{\textcolor{red}{ab}}} \texttt{ mod } p)$ non può essere calcolato perché nessuno, tecnicamente, possiede sia $\textcolor{red}{a}$ che $\textcolor{red}{b}$.
 
 Per rendere efficace tale algoritmo è necessario scegliere numeri enormi, impossibili da scomporre in tempi utili.
+
+Diffie-Hellman gode della proprietà di **perfect forward secrecy**, ovvero assicura che se una chiave di cifratura a lungo termine viene compromessa, le chiavi di sessione generate a partire da essa rimangono riservate.
 
 Inoltre si può aumentare il numero di entità che condividono il segreto, aumentando il numero di interi segreti che calcolano la chiave.
 Assumiamo 3 entità: Alice, Bob e Charlie, si può creare una chiave segreta condivisa del tipo:

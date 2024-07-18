@@ -1,6 +1,6 @@
-Esistono diverse tecniche per aggiungere sicurezza direttamente sugli end-host.
+Esistono diverse tecniche per aggiungere sicurezza direttamente sugli end-host, sui perimetri e sulle frontiere.
 # Firewalls
-**Un firewall permette di proteggere i flussi di traffico in entrata e in uscita** rispetto ad una rete, attraverso delle regole dette policies:
+**Un firewall è un dispositivo HW/SW che permette di proteggere i flussi di traffico in entrata e in uscita** rispetto ad una rete, attraverso delle regole dette policies:
 - definisce un collo di bottiglia che filtra il traffico con l'obiettivo di proteggere la rete da ogni possibile minaccia
 - permette di monitorare eventi di sicurezza
 - aggiunge sicurezza a quei servizi che non la implementano per natura (e.g. NAT)
@@ -17,7 +17,7 @@ Esistono diverse tecniche attraverso le quali un firewall controlla il traffico:
 
 Esistono quattro principali tipologie di firewall:
 1. **Packet Filtering**
-2. **Stateful Inspection**
+2. **Stateful Inspection** (aka Stateful packet filtering)
 3. **Application Proxy**
 4. **Circuit-level Proxy**
 
@@ -82,7 +82,7 @@ Un Circuit-Level FW non permette connessioni TCP end-to-end perché instaura due
 
 ==E' un Application-Level FW, però a livello TCP==.
 
-Il FW a questo punto avrà il compito di inoltrare i pacchetti tra una connessione e l'altra, **senza controllare il contenuto**.
+Il FW a questo punto avrà il compito di inoltrare i pacchetti tra una connessione e l'altra, **senza controllare il contenuto a livello applicazione**.
 Il livello di sicurezza dipende dal numero e dal tipo di connessioni che vengono autorizzate.
 
 In questo caso l'overhead è presente sulle connessioni in entrata che devono essere esaminate, perché l'amministratore di rete assume che gli utenti interni siano fidati.
@@ -93,31 +93,36 @@ All'interno di una rete possono essere configurati più firewall, ognuno di tipo
 Spesso all'interno di una rete aziendale si individua una porzione che contiene i servizi che devono essere esposti sulla rete.
 Tale porzione di rete è detta Demilitarized Zone (DMZ), essa viene separata dalla rete interna in modo da creare aree che necessitano di sicurezza differente.
 
-Di solito si individua un **FW esterno**, che garantisce una protezione iniziale ma che permette il traffico verso la DMZ, ed un **FW interno**, che aumenta il grado di protezione nei confronti della rete interna.
+Di solito si individua un **FW esterno**, che garantisce una protezione iniziale ma che permette il traffico verso la DMZ, ed un **FW interno**, che aumenta il grado di protezione nei confronti della rete locale interna.
 
 
 ---
 
-# Intrusion Detection Systems (IDS)
+# Intrusion Detection System (IDS)
 
 >[!info] Intrusion
->Violazione della policy di sicurezza, con l'obiettivo di violare la confidenzialità, integrità o disponibilità di un determinato servizio, sistema o infrastruttura.
+>**Violazione della policy di sicurezza**, con l'obiettivo di violare la confidenzialità, integrità o disponibilità di un determinato servizio, sistema o infrastruttura.
 >Può essere causa di un attaccante esterno/interno oppure di un dipendente che sfrutta le proprie autorizzazioni.
 
 >[!info] Intrusion detection
->Il processo che raccoglie ed analizza le informazioni relative agli eventi del sistema e che permette di individuare segni di intrusione.
+>Il processo che raccoglie ed analizza le informazioni relative agli eventi del sistema e che **permette di individuare segni di intrusione**.
 
 >[!important] Intrusion Detection System
->Un insieme di processi SW e componenti HW che implementano il processo di intrusion detection e rendicontazione dei vari tentativi di intrusione non autorizzati.
+>Un insieme di processi SW e componenti HW che **implementano il processo di intrusion detection** e rendicontazione dei vari tentativi di intrusione non autorizzati.
+
+Gli *obiettivi principiali* di un IDS sono:
+- **prevenzione efficace** di intrusioni evitando falsi negativi o positivi
+- **identificazione veloce** di eventuali intrusioni, in modo da prendere provvedimenti utili nell'immediato
+- rilevazioni di informazioni utili per lo **studio delle tecniche di intrusione**
 
 Gli IDS possono essere *classificati come segue*:
-- **Host-Based** IDS -> vengono associati ad un ==singolo host==, aggiungono un layer di sicurezza specializzato a dispositivi a rischio
+- **Host-Based** IDS -> vengono associati ad un ==singolo host== e aggiungono un layer di sicurezza specializzato a dispositivi a rischio
 	- analisi più tempestiva, precisa e completa attuata in diverse modalità
 	- in alcuni casi può anche fermare un attacco in corso
 	- permette di identificare *sia minacce esterne che interne*
 	- sfrutta una *combinazione tra anomaly detection e misuse detection*
 	- introducono un certo grado di overhead
-- **Network-Based** IDS -> ==monitorano il traffico della rete== a cui sono associati e dei dispositivi facentene parte
+- **Network-Based** IDS (NIDS) -> ==monitorano il traffico della rete== a cui sono associati e dei dispositivi facentene parte
 	- ascolta il traffico in modalità promiscua in punti strategici
 	- si concentrano sul traffico livello rete, trasporto ed applicazione
 	- i pacchetti sono considerati *interessanti se matchano una firma*
@@ -125,9 +130,9 @@ Gli IDS possono essere *classificati come segue*:
 		- cerca in base a porte conosciute
 		- cerca in base a combinazioni sospette di header
 
-Un IDS si compone di *tre parti logiche*:
+Un IDS si compone di *tre parti fisiche*:
 - **Sensori** -> responsabili della ==raccolta dei dati==
-	- raccolgono informazioni di natura diversa (e.g. pacchetti di rete, file di log, ...)
+	- raccolgono informazioni di natura diversa (e.g. pacchetti di rete, audits, eccetera)
 	- inviano le informazioni agli analizzatori
 - **Analizzatori** -> responsabili di ==identificare se un'intrusione è avvenuta== o meno attraverso l'analisi dei dati
 	- ricevono dati dai sensori oppure da altri analizzatori
@@ -136,14 +141,8 @@ Un IDS si compone di *tre parti logiche*:
 	- visualizzazione dei risultati
 	- impostazioni relative al sistema
 
-## Obiettivi
-Gli obiettivi principiali di un IDS sono:
-- **prevenzione efficace** di intrusioni evitando falsi negativi o positivi
-- **identificare velocemente** eventuali intrusioni in modo da prendere provvedimenti utili nell'immediato
-- rilevazioni di informazioni utili per lo **studio delle tecniche di intrusione**
-
 ## Approcci alla Intrusion detection
-Alla base dell'intrusion detection c'è la possibilità di ==registrare il comportamento degli utenti per individuare in modo efficace ed efficiente eventuali comportamenti anomali==. Distinguiamo due approcci complementari:
+Alla base dell'intrusion detection c'è la possibilità di ==registrare il comportamento degli utenti per individuare in modo efficace ed efficiente eventuali comportamenti anomali==. Distinguiamo due approcci:
 - **Misuse detection** -> definisce regole in modo da *identificare incidenti di sicurezza o pattern ricorrenti di attacco*
 	- sfrutta algoritmi di pattern-matching e database di tecniche già analizzate
 	- *debole contro attacchi inediti*
@@ -154,7 +153,7 @@ Alla base dell'intrusion detection c'è la possibilità di ==registrare il compo
 	- trade-off tra falsi positivi e falsi negativi (i.e. certe volte le attività di un utente malevolo si possono sovrapporre a quelle di un utente legittimo)
 
 ## Network-Based IDS (NIDS)
-Un NIDS può essere configurato in diverse posizioni della rete per garantire il controllo di traffichi differenti:
+Un NIDS può essere configurato in diverse posizioni della rete per garantire il controllo di segmenti di traffico differenti:
 1. all'imbocco della rete esterna
 2. nella DMZ per l'analisi del traffico relativo ai servizi
 3. all'interno della rete interna dedicata ai servizi locali

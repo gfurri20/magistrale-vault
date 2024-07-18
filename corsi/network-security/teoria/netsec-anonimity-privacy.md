@@ -10,8 +10,7 @@ L'anonimato può essere utile in diverse occasioni:
 # Anonimato
 
 > [!info] Anonimato
-> Lo stato di **non essere identificabile rispetto ad un insieme di soggetti**, in questo caso tra gli utenti di Internet.
-> Tale insieme di soggetti è detto **anonymity set**.
+> Lo stato di **non essere identificabile rispetto ad un insieme di soggetti**, in questo caso tra gli utenti di Internet. Tale insieme di soggetti è detto **anonymity set**.
 
 Più è grande l'anonymity set più lo stato di anonimato acquisito è robusto.   
 
@@ -22,7 +21,7 @@ Due caratteristiche dell'anonimato sono:
 
 Esistono diversi tipi di attacchi che potrebbero rompere l'anonimato:
 - analisi passiva del traffico
-- analisi attiva del traffico tramite l'aggiunta di pacchetti al traffico
+- analisi attiva del traffico tramite l'aggiunta di pacchetti
 - compromissioni di nodi di rete (e.g. routers)
 	- diventano indispensabili meccanismi di ridondanza
 
@@ -82,6 +81,12 @@ Vantaggi:
 
 Si potrebbe cercare di diminuire la latenza stabilendo, attraverso delle chiavi asimmetrica, un canale di comunicazione basato su chiavi simmetriche.
 
+Pacchetto di un mixer la cui destinazione è $B$:
+$$\{ R_1, \{ R_0, M \}_{PU_B}, B \}_{PU_1}$$
+- $R_i$ è il padding associato al pacchetto
+- $M$ è il messaggio
+- $B$ è il prossimo destinatario
+- $PU_1$ è la chiave privata del mixer 1 
 
 ## Routing Randomizzato
 Un altro approccio è quello di nascondere i messaggi randomizzando il routing del pacchetto.
@@ -89,8 +94,7 @@ Un altro approccio è quello di nascondere i messaggi randomizzando il routing d
 I router non sanno se il mittente del pacchetto che ricevono è il vero mittente oppure un altro router.
 
 ### Onion Routing
-L'**Onion Routing** permette di randomizzare il percorso scegliendo una sequenza di router casualmente.
-Questa tecnica ammette anche la presenza di alcuni router malevoli.
+L'**Onion Routing** permette di randomizzare il percorso scegliendo una sequenza di router *casualmente*. Questa tecnica ammette anche la presenza di alcuni router malevoli.
 
 Ogni router incapsula le informazioni ricevute con la propria chiave pubblica, ed invia il pacchetto al prossimo hop, unico host di cui è a conoscenza il router.
 
@@ -105,6 +109,7 @@ Tor ha delle difficoltà:
 3. esistono dei directory servers che gestiscono i router sulla rete
 
 Si cerca di creare un **Location Hidden Server (LHS)**, ovvero un server capace di comunicare sulla rete ma che non si sa dove si trovi fisicamente, o da chi sia gestito:
+- offre un generico servizio anonimo
 - accessibile ovunque
 - resistente alla censura
 - resistente ad attacchi DoS

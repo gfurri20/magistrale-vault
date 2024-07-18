@@ -5,7 +5,7 @@ La sicurezza di una comunicazione crittografata dipende dalla segretezza delle c
 > [!info] Cryptographic Key Management
 > Insieme di processi, protocolli ed attività utente atte alla gestione ed amministrazione delle chiavi di un sistema crittografico.
 
-Comprende la generazione, protezione, trasferimento, scambio e uso delle chiavi.
+Comprende la generazione, protezione, ***distribuzione*** ed uso delle chiavi.
 ==La sicurezza di un sistema crittografico dipende dal sistema che gestisce le chiavi.==
 
 ## Symmetric Key Distribution
@@ -31,8 +31,8 @@ Diventa fondamentale, quindi, gestire delle entità di terze parti, dette **Key 
 > Entità terza che genera o/e distribuisce le chiavi simmetriche di sessione per permettere la comunicazione sicura tra altre due entità
 
 Nello specifico, il KDC, può operare in due modalità:
-1. *modalità di traduzione* -> la chiave di sessione $K_s$ è generata da `A`, il `KDC` non farà altro che inoltrare a `B` la chiave (il `KDC` potrebbe anche relegare ad il compito di fare il forward)
-2. *modalità di distribuzione* -> la chiave di sessione $K_s$ è generata da il `KDC` a seguito di una richiesta specifica:
+1. *modalità di traduzione* -> **la chiave di sessione $K_s$ è generata da `A`**, il `KDC` non farà altro che inoltrare a `B` la chiave (il `KDC` potrebbe anche relegare ad `A` il compito di fare il forward)
+2. *modalità di distribuzione* -> **la chiave di sessione $K_s$ è generata da il `KDC`** a seguito di una richiesta specifica:
 	1. il `KDC` può inoltrare sia ad `A` che a `B`
 	2. il `KDC` può inoltrare ad `A` che si occuperà di fare il forward
 
@@ -40,13 +40,15 @@ Nello specifico, il KDC, può operare in due modalità:
 Le chiavi simmetriche di sessione possono essere distribuite lungo una gerarchia, le chiavi più in basso sono usate maggiormente ma devono essere cambiate spesso (i.e. **ephemeral keys**); mentre le chiavi più in alto permettono la generazione delle chiavi sottostanti e possiedono un ciclo di vita maggiore (i.e. **master keys**).
 
 #### Otway-Rees Protocol
-Otway-Rees è un protocollo ==server-based== (i.e. prevede la presenza di un server centrale) che permette la ==mutua autenticazione== attraverso la generazione di una chiave simmetrica tra due utenti (la chiave simmetrica tra utenti e server si suppone esista).
+Otway-Rees è un protocollo ==server-based== (i.e. prevede la presenza di un server centrale, come un KDC) che permette la ==mutua autenticazione== attraverso la generazione di una chiave simmetrica tra due utenti (la chiave simmetrica tra utenti e server si suppone esista).
 
 Se implementato correttamente ==è immune== ad attacchi **MITM**, **Replay** e **Data Modification**.
 ![[otway-rees-protocol.png]]
 Purtroppo questo algoritmo soffre un attacco particolare: **Reflection + Type Flaw Attack**.
-Se un eventuale utente malevolo `Evil` si interpone bloccando il messaggio (4) potrebbe sostituire il parametro $\{N_A, K_{AB}\}_{K_{AS}}$ con $\{N_A, \textcolor{red}{ID_{Sess}, ID_A, ID_B}\}_{K_{AS}}$ (supponendo che $|K_{AB}| = |ID_{Sess}, ID_A, ID_B|$).
+Se un eventuale utente malevolo `Evil` si interpone bloccando il messaggio (4) potrebbe sostituire il parametro $\{N_A, K_{AB}\}_{K_{AS}}$ con $\{N_A, \textcolor{red}{ID_{Sess}, ID_A, ID_B}\}_{K_{AS}}$ (supponendo che $|K_{AB}| = |ID_{Sess}, ID_A, ID_B|$), prelevato dal messaggio (1).
 In questo modo `Alice` vede $N_A$, la considera valida, ed accetta $\{ID_{Sess}, ID_A, ID_B\}$ come chiave simmetrica di sessione.
+
+La segretezza si rompe se `Evil` impersona il server.
 
 ==In questo modo l'autenticazione e la segretezza sono compromesse.==
 
@@ -54,21 +56,20 @@ In questo modo `Alice` vede $N_A$, la considera valida, ed accetta $\{ID_{Sess},
 Andrew Secret RPC è un protocollo che permette di scambiare una nuova chiave di sessione $K'_{AB}$ tra `Alice` e `Bob` direttamente (non c'è il server), sfruttando la presenza di una chiave di sessione già presente $K_{AB}$.
 ![[andrew-secret-protocol.png]]
 Purtroppo questo algoritmo soffre un attacco particolare: **Reflection + Type Flaw Attack** (simile all'attacco per Otway-Rees).
-Se un eventuale utente malevolo `Evil` si interpone intercettando il messaggio (3), potrebbe successivamente inoltrare al posto del massaggio (4) un payload modificato t.c. $\{\textcolor{red}{N_A + 1}, \textcolor{red}{N_B}\}_{K_{AB}}$ in direzione di `Alice` (supponendo che $|K'_{AB}| = |N_B|$).
-In questo modo `Alice`  accetta $\{N_A + 1\}$ come chiave simmetrica di sessione.
+Se un eventuale utente malevolo `Evil` si interpone intercettando il messaggio (2), potrebbe successivamente inoltrare al posto del massaggio (4) un payload modificato t.c. $\{\textcolor{red}{N_A + 1}, \textcolor{red}{N_B}\}_{K_{AB}}$ in direzione di `Alice` (supponendo che $|K'_{AB}| = |N_B|$).
+In questo modo `Alice` accetta $\{N_A + 1\}$ come chiave simmetrica di sessione.
 
 Questo attacco viola l'autenticazione ma **non** la segretezza!
 
 ### Using Asymmetric Cryptography
-Uno degli usi più utili della crittografia simmetrica è proprio lo scambio di chiavi.
-Ci sono diversi approcci per lo scambio di chiavi di sessione tramite crittografia simmetrica.
+Ci sono diversi approcci per lo scambio di chiavi di sessione tramite crittografia asimmetrica.
 
 #### Simple Approach
 
 ![[simple-key-exchange.png]]
 
-1. `Alice` genera la coppia chiave pubblica, privata: $\{PU_a, PR_a\}$ e la invia a bob allegandola ad un proprio identificatore `Bob` -> $\{PU_a, ID_a\}$
-2. `Bob` genera la chiave di sessione $K_s$, la incapsula con la chiave pubblica di `Alice`, e successivamente la invia ad `Alice` -> $E_{PU_A}(K_s)$
+1. `Alice` genera la coppia chiave pubblica, privata: $\{PU_a, PR_a\}$ e la invia a `Bob` allegandola ad un proprio identificatore -> $\{PU_a, ID_a\}$
+2. `Bob` genera la chiave di sessione $K_s$, la cifra con la chiave pubblica di `Alice`, e successivamente la invia ad `Alice` -> $E_{PU_A}(K_s)$
 3. `Alice` decripta con la propria chiave privata ed ottiene $K_s$
 4. Infine entrambi scartano le chiavi asimmetriche usate
 
@@ -77,6 +78,21 @@ Questo approccio, però, è **vulnerabile ad attacchi MITM** in quanto ==le chia
 ![[mitm-simple-key-exchange.png]]
 
 Il risultato è che `Alice` e `Bob` pensano di parlare privatamente tra di loro ma in realtà sono "manipolati" da `Evil`.
+
+Quindi la segretezza e l'autenticazine sono rotte.
+
+#### Denning-Sacco Protocol
+Il protocollo permette lo scambio di una chiave di sessione simmetrica tra due client. Si prevede la presenza di un server che distribuisce certificati digitali (i.e. una CA).
+
+1. `Alice` -> `Server`: $ID_A, ID_B$
+2. `Server` - > `Alice`: $C_A, C_B$
+3. `Alice` -> `Bob`: $C_A, C_B, \{ [T_A, K_s]_{PR_A} \}_{PU_B}$
+
+Il punto di forza di questo protocollo risiede nel fatto che `Bob` è sicuro che la chiave pubblica sia di `Alice` in quanto è firmata con la sua chiave privata, il tutto cifrato con la chiave pubblica di `Bob`, il che indica che il messaggio è per `Bob`. Come extra, la chiave di `Alice` è provata da $C_A$.
+
+Questo protocollo è vulnerabile ad un MITM, ma è risolvibile aggiungendo i nomi di `Alice` e `Bob` insieme al timestamp e la chiave. In tal modo è facile verificare se qualcuno usa la propria chiave per modificare la cifratura della firma.
+
+3. `A` -> `B`: $C_A, C_B, \{ [ID_A, ID_B, T_A, K_s]_{PR_A} \}_{PU_B}$
 
 #### Needham-Schroeder Public Key
 Per ==aggiungere confidenzialità ed autenticità== (ed evitare attacchi di tipo replay) è necessario migliorare lo scambio di messaggi, aggiungendo alcune nonce.
@@ -92,18 +108,19 @@ In questo modo `Bob` pensa di parlare con `Alice`, quando invece sta parlando co
 Per migliorare la situazione si può introdurre un identificatore di `Bob` al passaggio (3): $\{N_A,N_B,\textcolor{blue}{ID_B}\}_{PU_A}$, il protocollo così modificato si chiama *NSL*.
 In questo caso **il replay non potrà avere effetto** in quanto `Alice` si accorgerà che il mittente e $ID_B$ non corrispondono.
 
-Se `Evil` riuscisse a manomettere il messaggio (3) in modo tale che risulti contenere $ID_E$ di `Evil` ($\{N_A,N_B,\textcolor{red}{ID_E}\}_{PU_A}$), allora non si verifica errore e l'attacco procederà (tale attacco è detto **Type Flaw Attack**).
+Se `Evil` riuscisse a manomettere il messaggio (3) in modo tale che risulti contenere $ID_E$ di `Evil` ($\{N_A,N_B,\textcolor{red}{ID_E}\}_{PU_A}$), allora non si verifica errore e l'attacco procederà (tale attacco è detto **Data Modification Attack**).
 
 Per migliorare al massimo la sicurezza di *NSL* è necessario firmare alcuni parametri con le chiavi private dei mittenti:
 1. `Alice` ->  `Bob`: $\{[N_A, ID_A]_{PR_A}\}_{PU_{B}}$
 2. `Bob` -> `Alice`: $\{N_A, [N_B]_{PR_B}\}_{PU_A}$
 3. `Alice` -> `Bob`: $\{[N_B]_{PR_A}\}_{PU_B}$
+4. `Alice` -> `Bob`: $\{ [K_s]_{PR_A} \}_{PU_B}$
 `Evil` è ancora in grado di **impersonare** `Alice` dal punto di vista di `Bob` però non riuscirà più ad effettuare il **reflecting** verso `Alice` dei messaggi di `Bob` in quanto `Alice` si accorgerà dell'errore verificando la presenza della firma di `Evil`.
 
 ## Asymmetric Key Distribution
 Anche le chiavi pubbliche asimmetriche devono poter essere condivise, per fare ciò si possono usare diverse tecniche:
 1. *Public Announcement* -> condivisione in broadcast delle chiavi pubbliche
-	-  approccio conveniente ma chiunque può condividere chiavi pubbliche
+	- approccio conveniente ma chiunque può condividere chiavi pubbliche
 	- alcuni utenti malevoli potrebbero impersonare un altro utente ma distribuire la propria chiave pubblica
 2. *Publicly Available Directory* -> mantenimento delle chiavi pubbliche in una repository pubblica gestita da un'entità autorizzata centrale
 	- la registrazione della chiave e l'accesso alla repo devono essere autenticati
@@ -113,9 +130,9 @@ Anche le chiavi pubbliche asimmetriche devono poter essere condivise, per fare c
 	- la comunicazione è caratterizzata da un maggior numero di messaggi perché è necessario eseguire le richieste
 	- è buona pratica refreshare le chiavi spesso (aumenta il traffico)
 	- l'==authority rimane un collo di bottiglia== a causa dell'alto rischio che corre
-1. *Public-Key Certificates* -> vengono introdotti dei **certificati** che permettono lo scambio delle chiavi senza la l'obbligo di contattare l'authority ad ogni scambio
+1. *Public-Key Certificates* -> vengono introdotti dei **certificati** che permettono lo scambio delle chiavi senza l'obbligo di contattare l'authority ad ogni scambio
 	- un ==certificato è composto da diversi elementi, tra cui: la chiave pubblica, un identificatore dell'owner e da una firma dell'autorità di fiducia==, detta certification authority
-	-  l'utente presenta la propria chiave pubblica alla certification authority e riceve il proprio certificato che potrà essere condiviso agli altri host
+	- l'utente presenta la propria chiave pubblica alla certification authority e riceve il proprio certificato che potrà essere condiviso agli altri host
 	- gli altri host, ricevuto il certificato, potranno verificarlo con la chiave pubblica della certification authority
 
 Un certificato si presenta come:
@@ -157,6 +174,8 @@ Un certificato generato da una CA possiede le seguenti caratteristiche:
 - nessuno può modificare il certificato al di fuori della CA
 - i certificati possono, quindi, essere conservati in directory senza sicurezza
 - un utente può trasmettere il proprio certificato a chiunque, direttamente
+
+La registrazione di un certificato avviene inviando una specifica richiesta ad una **Registration Authority RA**.
 
 ### Ottenimento e Verifica di un certificato
 Esistono diversi modelli di fiducia che permettono di stabilire la validità di un certificato:
@@ -201,7 +220,7 @@ Ogni CA `X` può mantenere una cache (aggiornata periodicamente) per non dover i
 #### Web of Trust e PGP
 Ibrido tra Direct Trust ed Hierarchical Trust. Quindi un certificato può essere verificato direttamente, attraverso una catena o da un gruppo di entità.
 
-Questo approccio è spesso utilizzato da **PGP** (Pretty Good Privacy), ovvero uno standard con lo stesso scopo di X.509, la più grande differenza sta nel fatto che PGP non è centralizzato ma si basa su una *rete di fiducie*.
+Questo approccio è spesso utilizzato da **PGP** (Pretty Good Privacy), ovvero uno standard con lo stesso scopo di X.509, la più grande differenza sta nel fatto che **PGP non è centralizzato** ma si basa su una *rete di fiducie*.
 
 A differenza di X.509, PGP possiede diverse caratteristiche:
 - una PGP key può essere associata a più signature
@@ -209,6 +228,7 @@ A differenza di X.509, PGP possiede diverse caratteristiche:
 - le firme per una singola chiave potrebbero corrispondere a diversi livelli di fiducia
 - un utente `A` può ritenere valido il certificato di `B` solo se tale certificato è stato firmato da un utente `C` ritenuto affidabile da `A`
 - l'insieme delle chiavi possedute da un utente è sostanzialmente una rete di fiducia relative a quell'utente
+
 Con questo approccio ==il livello di fiducia è indicato nel certificato (cosa che manca in X.509)==.
 
 ### Revoca di un certificato
@@ -217,6 +237,7 @@ Un certificato deve essere revocato nel caso in cui:
 - la chiave privata dell'utente è compromessa
 - la CA è compromessa
 - l'utente cambia CA
+
 Ogni CA deve mantenere una lista pubblica dei certificati revocati che non sono più validi.
 
 ---
@@ -244,7 +265,7 @@ Si preferisce un protocollo rispetto ad un altro in base alle **necessità**.
 
 La crittografia asimmetrica offre due servizi di sicurezza:
 - *confidenzialità* attraverso la possibilità di criptare un messaggio utilizzando una chiave pubblica valida $\{M\}_{PU_A}$
-- *data integrity con identificazione dell'origine* attraverso la possibilità di firmare digitalmente un messaggio utilizzando una chiave privata valida $[M]_{PR_A}$
+- *data integrity con autenticazione dell'origine* attraverso la possibilità di firmare digitalmente un messaggio utilizzando una chiave privata valida $[M]_{PR_A}$
 
 Un messaggio può essere crittografato da $PU_1$ e allo stesso firmato da $PR_2$ per garantire ognuno dei precedenti obiettivi ${M}_{PU_1}^{PR_2}$.
 
