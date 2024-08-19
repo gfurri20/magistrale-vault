@@ -1,16 +1,16 @@
 Indice delle lezioni teoriche:
-- 2 ottobre 2023 -> [[02_10_2023-introduzione]]
-- 4 ottobre 2023 -> [[04_10_2023-cyber-kill-chain-MITRE]]
-- 9 ottobre 2023 -> [[09_10_2023-malware]]
-- 16 ottobre 2023 -> [[16_10_2023-social-engineering-phishing]]
-- 6 novembre 2023 -> [[06_11_2023-attacchi-infrastrutture-critiche-ICS]]
-- 8 novembre 2023 -> [[08_11_2023-autenticazione-utente]]
-- 15 novembre 2023 -> [[15_11_2023-autenticazione-passwordless]]
-- 20 novembre 2023 -> [[20_11_2023-access-control]]
-- 22 novembre 2023 -> [[22_11_2023-cyber-risk-management]]
-- 27 novembre 2023 -> [[27_11_2023-threat-modelling-STRIDE]]
-- 29 novembre 2023 -> **todo**
-- 6 dicembre 2023 -> **todo**
+- 2 ottobre 2023 -> [[2023_10_02_introduzione]]
+- 4 ottobre 2023 -> [[2023_10_04_cyber_kill_chain_MITRE]]
+- 9 ottobre 2023 -> [[2023_10_09_malware]]
+- 16 ottobre 2023 -> [[2023_10_16_socia_engineering_phishing]]
+- 6 novembre 2023 -> [[2023_11_06_attacchi_infrastrutture_critiche_ICS]]
+- 8 novembre 2023 -> [[2023_11_08_autenticazione_utente]]
+- 15 novembre 2023 -> [[2023_11_15_autenticazione_passwordless]]
+- 20 novembre 2023 -> [[2023_11_20_access_control]]
+- 22 novembre 2023 -> [[2023_11_22_cyber_risk_management]]
+- 27 novembre 2023 -> [[2023_11_27_threat_modelling_STRIDE]]
+- 29 novembre 2023 -> [[2023_11_29_CFS_privacy]]
+- 6 dicembre 2023 -> [[2023_12_06_privacy_threats_anonymization]]
 - 13 dicembre 2023 -> **todo**
 
 Per i laboratori non ho preso appunti...

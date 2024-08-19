@@ -27,7 +27,7 @@ Prima di procedere alla spiegazione di ogni elemento definiamo alcuni termini fo
 > Colui o coloro (in caso di un gruppo) che eseguono attacchi alle organizzazioni
 
 > [!info] Risk
-> Impatto negativo che potrebbe avere un attacco ai danni di una organizzazione (su tutti i suoi assets)
+> Impatto negativo che [](2023_10_04_cyber_kill_chain_MITRE.md) una organizzazione (su tutti i suoi assets)
 
 > [!info] Security Controls
 > Tutte le operazione e disposizioni messe in atto per proteggere gli assets di una organizzazione

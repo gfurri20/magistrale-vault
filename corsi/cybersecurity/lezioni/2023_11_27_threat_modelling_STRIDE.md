@@ -88,7 +88,7 @@ Ogni cerchio rappresenta una super-minaccia (perché comprende altri scenari).
 
 Dopo aver stilato l'albero completo di ogni super-minaccia rispetto ad ogni elemento del nostro sistema (quindi sì è un bel lavorone, proporzionato alla gradenzza del sistema) si fa necessario attuare un'analisi dei rischi per eseguire una priorizzazione.
 
-L'analisi dei rischi si esegue confrontando *likelihood* e *impact*, nelle modalità descritte in [[22_11_2023-cyber-risk-management]].
+L'analisi dei rischi si esegue confrontando *likelihood* e *impact*, nelle modalità descritte in [[2023_11_22_cyber_risk_management]].
 
 STRIDE offre una categorizzazione dei rischi in base a quattro possibili livelli (da 1 il più alto a 4 il più basso):
 1. **very high** - deve essere gestito nella fase di sviluppo, immediatamente

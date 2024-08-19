@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md"
+                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md"
               }
             }
           }
@@ -147,9 +147,20 @@
   },
   "active": "66124a85fefff3e5",
   "lastOpenFiles": [
+    "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
+    "corsi/cybersecurity/lezioni/2023_11_06_attacchi_infrastrutture_critiche_ICS.md",
+    "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
+    "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
     "corsi/cybersecurity/cybersecurity.md",
-    "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
-    "corsi/cybersecurity/lezioni/15_11_2023-autenticazione-passwordless.md",
+    "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+    "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
+    "corsi/cybersecurity/lezioni/2023_11_27_threat_modelling_STRIDE.md",
+    "corsi/cybersecurity/lezioni/2023_11_22_cyber_risk_management.md",
+    "corsi/cybersecurity/lezioni/2023_11_20_access_control.md",
+    "corsi/cybersecurity/lezioni/2023_10_16_socia_engineering_phishing.md",
+    "corsi/cybersecurity/lezioni/2023_11_15_autenticazione_passwordless.md",
+    "corsi/cybersecurity/lezioni/2023_10_09_malware.md",
+    "corsi/cybersecurity/lezioni/2023_11_08_autenticazione_utente.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
@@ -171,24 +182,13 @@
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",
-    "corsi/network-security/teoria/netsec-symmetric-crypto.md",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
     "corsi/network-security/assets/rsn.png",
-    "corsi/codice-malevolo/progetto/analisi-malware.md",
-    "corsi/codice-malevolo/codice-malevolo.md",
-    "corsi/codice-malevolo/lezioni/22_05_2024-anti-debug-analysis.md",
     "Untitled.canvas",
     "corsi/codice-malevolo/progetto",
-    "corsi/network-security/teoria/netsec-introduction.md",
-    "corsi/network-security/teoria/netsec-public-key-MAC-crypto.md",
-    "Untitled.md",
     "corsi/network-security/assets/simple-key-exchange",
     "corsi/network-security/assets",
-    "corsi/cybersecurity/lezioni/02_10_2023-introduzione.md",
     "corsi/network-security/teoria",
-    "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
-    "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",

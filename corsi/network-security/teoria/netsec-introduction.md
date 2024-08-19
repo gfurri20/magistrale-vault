@@ -8,7 +8,7 @@ Distinguiamo due approcci alla sicurezza in base all'ambito:
 - **Network Security** - fa riferimento specifico alla protezione delle infrastrutture di rete e dei servizi che implementano
 
 ## Obiettivi
-La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione; sono specificati qua: [[02_10_2023-introduzione#I Sei Pilastri]]
+La sicurezza informatica si basa sul cercare di garantire costantemente 6 obiettivi specifici che si articolano differentemente in base all'ambito di applicazione; sono specificati qua: [[2023_10_02_introduzione#I Sei Pilastri]]
 
 L'ambito che ci interessa maggiormente è la **Network Security**, e quindi, tali obiettivi assumono un carattere specifico:
 - *Confidentiality* -> assicura che utenti non autorizzati non abbiano accesso a risorse private
@@ -69,7 +69,7 @@ Lo standard [X.800](https://www.itu.int/rec/T-REC-X.800-199103-I/en) stabilisce 
 ### Access Control
 Limitazione e *controllo dell'accesso ai sistemi* e alle applicazioni attraverso protocolli di comunicazione, basato sull'*identificazione e autenticazione* delle entità.
 
-Per approfondire: [[20_11_2023-access-control]].
+Per approfondire: [[2023_11_20_access_control]].
 
 ### Data Confidentiality
 Protezione dei dati trasmessi da attacchi passivi, si possono cercare di proteggere intere comunicazioni oppure singoli messaggi.

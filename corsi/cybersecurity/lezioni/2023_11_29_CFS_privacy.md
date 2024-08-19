@@ -56,6 +56,31 @@ Nonostante questa vaghezza sulla definizione, ==la Privacy è considerata un dir
 
 Il GDPR la riassume in quattro parole: **Transparency, Purpose, Proportionality, Accountability**.
 
-## Approcci alla privacy
-Le tecnologie di *soft privacy* e *hard privacy* mirano a proteggere la privacy degli utenti, esse differiscono nel loro approccio. Le tecnologie di soft privacy sono generalmente più accessibili ed economiche, poiché possono essere facilmente installate sui dispositivi esistenti (e.g. tunnel encryption via TLS). Tuttavia, potrebbero non fornire una protezione completa contro metodi di tracciamento sofisticati. Le tecnologie di hard privacy, invece, offrono una protezione più robusta ma possono essere più costose e meno convenienti da utilizzare (ad esempio l'instradamento a cipolla).
+## Approcci alla Privacy
+Le tecnologie di *soft privacy* e *hard privacy* mirano a proteggere la privacy degli utenti, esse differiscono nel loro approccio.
 
+Le tecnologie di soft privacy sono generalmente più accessibili ed economiche, poiché possono essere facilmente installate sui dispositivi esistenti (e.g. tunnel encryption via TLS). Tuttavia, potrebbero non fornire una protezione completa contro metodi di tracciamento sofisticati.
+L'utente non controlla le informazioni che vengono condivise, ne perde totalmente il controllo.
+
+Le tecnologie di hard privacy, invece, offrono una protezione più robusta ma possono essere più costose e meno convenienti da utilizzare (ad esempio l'instradamento a cipolla).
+L'utente diventa l'obiettivo da tutelare, le informazioni condivise con limitate al minimo.
+
+## Proprietà della Privacy
+Entrambi gli approcci sopra-descritti fanno riferimento a diverse proprietà che caratterizzano in grado di Privacy.
+- **Anonymity** -> capacità di un utente di restare anonimo, ovvero di ==non essere rintracciato rispetto ad un insieme di soggetti== (i.e. anonymity set). Diventa fondamentale costruire questi insiemi di soggetti, più l'insieme è grande maggiore sarà il grado di anonimia
+	- un primo approccio all'anonymity è quello della *pseudonymity*, ovvero l'uso di pseudonimi per nascondere la vera identità
+- **Undetectability** -> incapacità di confermare o meno l'esistenza di un oggetto di interesse rispetto ad un insieme di soggetti
+- **Unobservability** -> incapacità di confermare o meno l'avvenuta di una specifica azione rispetto ad un insieme di soggetti
+	- fondamentale per nascondere le azioni degli utenti (e.g. visita di una pagina web)
+- **Unlikability** -> incapacità di collegare due entità prodotte dallo stesso soggetto all'interno di un anonymity set
+- **Plausible Deniability** -> incapacità di confermare che un utente possiede conoscenze oppure ha compiuto una determinata operazione, tale proprietà va ad *eliminare il concetto di non ripudiabilità*
+- **Confidentiality** -> introdurre confidenzialità significa: preservare le restrizioni autorizzate sull'accesso e la divulgazione delle informazioni, inclusi i mezzi per proteggere la privacy personale e le informazioni proprietarie
+- **Compliance** -> grado di conformazione alle norme stabilite dagli enti di standardizzazione (e.g. GDPR compliance)
+- **Awareness** -> grado di conoscenza a disposizione dell'utente relativamente al trattamento delle informazioni personali
+
+Tali proprietà sono in relazione tra di loro, nello specifico:
+- Unobservability richiede Anonymity e Undetectability
+- Plausible Deniability richiede Anonymity
+- Anonymiti richiede Unlikability e viceversa
+
+Tutte le proprietà sopra citate fanno affidamento sulla Confidenzialità.
