@@ -147,8 +147,9 @@
   },
   "active": "66124a85fefff3e5",
   "lastOpenFiles": [
-    "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
     "corsi/cybersecurity/cybersecurity.md",
+    "corsi/cybersecurity/lezioni/29_11_2023-CFS-privacy.md",
+    "corsi/cybersecurity/lezioni/15_11_2023-autenticazione-passwordless.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
@@ -188,7 +189,6 @@
     "corsi/codice-malevolo/lezioni/13_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/14_06_2024_laboratorio.md",
     "corsi/codice-malevolo/lezioni/12_06_2024_analisi-pdf-file.md",
-    "corsi/codice-malevolo/lezioni/12_06_2024.md",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
     "corsi/cybersecurity/lezioni",

@@ -47,3 +47,15 @@ I livelli sono:
 - **Livello 2 - Informata dei rischi:** l'organizzazione è più consapevole dei rischi per la sicurezza informatica e condivide le informazioni su base informale. Non dispone di un processo di gestione dei rischi per la sicurezza informatica.
 - **Livello 3 - Ripetibile:** l'organizzazione e i suoi alti dirigenti sono consapevoli dei rischi per la sicurezza informatica. Hanno implementato un piano di gestione dei rischi per la sicurezza informatica ripetibile a livello di organizzazione. Il team di sicurezza informatica ha creato un piano d'azione per monitorare e rispondere in modo efficiente agli attacchi informatici.    
 - **Livello 4 - Adattiva:** l'organizzazione è ora resiliente da un punto di vista informatico e utilizza le lezioni apprese e gli indicatori predittivi per prevenire gli attacchi informatici. ==Le organizzazioni adattive integrano la gestione dei rischi per la sicurezza informatica nella loro definizione dei budget e nella loro cultura organizzativa.==
+
+---
+
+# Privacy
+Il concetto di *Privacy* non possiede una definizione precisa ed unica, essa rimane un concetto vago ed astratto che spesso viene interpretato in maniera differente.
+Nonostante questa vaghezza sulla definizione, ==la Privacy è considerata un diritto fondamentale dell'uomo== (art. 8, European Convention of Human Rights).
+
+Il GDPR la riassume in quattro parole: **Transparency, Purpose, Proportionality, Accountability**.
+
+## Approcci alla privacy
+Le tecnologie di *soft privacy* e *hard privacy* mirano a proteggere la privacy degli utenti, esse differiscono nel loro approccio. Le tecnologie di soft privacy sono generalmente più accessibili ed economiche, poiché possono essere facilmente installate sui dispositivi esistenti (e.g. tunnel encryption via TLS). Tuttavia, potrebbero non fornire una protezione completa contro metodi di tracciamento sofisticati. Le tecnologie di hard privacy, invece, offrono una protezione più robusta ma possono essere più costose e meno convenienti da utilizzare (ad esempio l'instradamento a cipolla).
+

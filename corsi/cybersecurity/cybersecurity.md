@@ -11,7 +11,6 @@ Indice delle lezioni teoriche:
 - 27 novembre 2023 -> [[27_11_2023-threat-modelling-STRIDE]]
 - 29 novembre 2023 -> **todo**
 - 6 dicembre 2023 -> **todo**
-- 11 dicembre 2023 -> **todo**
 - 13 dicembre 2023 -> **todo**
 
 Per i laboratori non ho preso appunti...
