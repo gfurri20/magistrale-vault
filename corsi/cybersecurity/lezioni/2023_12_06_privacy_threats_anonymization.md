@@ -29,4 +29,19 @@ Questa classificazione è il tentativo di rendere meno vago il concetto di priva
 >[!info] PETS
 >Strumenti, meccanismi ed architetture che tentano di mitigare il problemi relativi alla privacy
 
-Essendo un insieme di strumenti 
+Essendo un insieme di strumenti trovano applicazione sia lato utente che lato organizzazione, mettendo a disposizione una vasta gamma di possibilità.
+
+Si individuano diverse tecnologie, atte alla protezione della privacy:
+- **Data Protection** -> progettazioni di sistemi che minimizzano il numero di informazioni personali raccolte e sfruttate; inoltre aiutano a mantenere la compliance con le regolamentazioni (e.g. rende difficile la possibilità di infrangere le regolamentazioni)
+	- sistemi di cifratura
+	- autenticazione ed autorizzazione degli utenti (e.g. sistemi AC)
+	- mantenimento di log ed audit
+	- eliminazione sicura di dati ed informazioni per cui è stata richiesta la cancellazione
+- **User Awareness** -> permettono all'utente di avere il totale controllo sulle informazioni e sulle circostanze attraverso le quali esse vengono condivise ed utilizzate
+	- privacy by design
+	- controlli della privacy facili ed intuitivi
+	- privacy policy chiare e coincise
+- **Anonymity** -> tecnologie di anonimizzazione
+	- DB anonymization: k-anonymity, l-diversity, t-closeness
+	- communications: onion networks, mixnets
+	- credentials: Idemix
