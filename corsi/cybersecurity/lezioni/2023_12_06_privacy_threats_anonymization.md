@@ -60,5 +60,53 @@ Gli attributi che caratterizzano le informazioni personali di un individuo si di
 
 L'obiettivo è quello di andare a sanificare queste informazioni in modo da renderle non collegabili ai soggetti effettivi.
 
+## k-anonymity
+Si dice che la versione anonimizzata di un DB possiede la proprietà di **k-anonymity** se le informazioni, per ogni persona contenutevi, non possono essere distinte da almeno altri $k-1$ soggetti le cui informazioni compaiono nel rilascio di dati stesso.
+
+Questa tecnica venne ideata nel 1998 e tentava di risolvere il seguente problema: _"Forniti dei dati strutturati sul campo, produrre un rilascio dei dati con garanzie scientifiche che le persone che sono i soggetti ai quali i dati si riferiscono non possano essere identificate nuovamente mentre i dati rimangono di utilità pratica"_.
+
+Esempio di $\textit{2-anonymity}$ per la tupla di **quasi-identificatori**: $\texttt{(eta', sesso, domicilio)}$:
+
+| Nome      | Età | Genere  | Domicilio  | Religione | Malattia         |
+| --------- | --- | ------- | ---------- | --------- | ---------------- |
+| Ramsha    | 30  | Femmina | Tamil Nadu | Induista  | Cancro           |
+| Yadu      | 24  | Femmina | Kerala     | Induista  | Infezione virale |
+| Salima    | 28  | Femmina | Tamil Nadu | Musulmano | TBC              |
+| Sunny     | 27  | Maschio | Karnataka  | Parsi     | non malato       |
+| Joan      | 24  | Femmina | Kerala     | Cristiano | Cardiopatia      |
+| Bahuksana | 23  | Maschio | Karnataka  | Buddista  | TBC              |
+| Rambha    | 19  | Maschio | Kerala     | Induista  | Cancro           |
+| Kishor    | 29  | Maschio | Karnataka  | Induista  | Cardiopatia      |
+| Johnson   | 17  | Maschio | Kerala     | Cristiano | Cardiopatia      |
+| John      | 19  | Maschio | Kerala     | Cristiano | Infezione virale |
+
+La tabella in forma anonima si può trasformare in:
+
+| Nome | Età                            | Genere  | Domicilio  | Religione | Malattia         |
+| ---- | ------------------------------ | ------- | ---------- | --------- | ---------------- |
+| *    | <span style="color:green">20-30</span> | <span style="color:green">Femmina</span> | <span style="color:green">Tamil Nadu</span> | *         | Cancro           |
+| *    | <span style="color:blue">20-30</span> | <span style="color:blue">Femmina</span> | <span style="color:blue">Kerala</span>     | *         | Infezione virale |
+| *    | <span style="color:green">20-30</span> | <span style="color:green">Femmina</span> | <span style="color:green">Tamil Nadu</span> | *         | TBC              |
+| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | nessuna          |
+| *    | <span style="color:blue">20-30</span> | <span style="color:blue">Femmina</span> | <span style="color:blue">Kerala</span>     | *         | Cardiopatia      |
+| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | TBC              |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Cancro           |
+| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | Cardiopatia      |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Cardiopatia      |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Infezione virale |
+
+Le tecniche utilizzate per implementare $\textit{k-anonymity}$ sono:
+- **Generalizzazione** -> sostituzione dei quasi-identificatori attraverso intervalli o ampliando la categoria
+	- $\texttt{eta' 29}$ --> $\texttt{eta' 20-30}$
+- **Soppressione** -> eliminazione totale o parziale di informazioni per aumentare il grado di anonimizzazione
+	- $\texttt{CAP 24542}$ -> $\texttt{CAP 24***}$
+	- $\texttt{CAP 24542}$ -> $\texttt{CAP *****}$
+
+Ovviamente il grado di anonimato e l'utilità delle informazioni potrebbero crescere in maniera inversamente proporzionale tra loro; diventa necessario fare un ==trade-off tra privacy ed utilità==, nel rispetto delle regolamentazioni.
+
+Attacchi contro database k-anonimizzati, essi derivano dal fatto che non vengono protetti i dati se info mancanti sono presenti altrove oppure se l'attaccante ha a disposizione il background.
+- **Homogeneity Attack** -> sfrutta il caso in cui tutti i valori per un valore sensibile all'interno di un set di k record sono identici. In tali casi, anche se i dati sono stati k-anonimizzati, è possibile prevedere esattamente il valore sensibile per l'insieme di k record
+- **Background Attack** -> sfrutta un'associazione tra uno o più attributi di quasi-identificatore con l'attributo sensibile per ridurre l'insieme dei possibili valori per l'attributo sensibile
 
 
+## l-diversity
