@@ -1,4 +1,4 @@
-# Tassonomia di Solove
+# Tassonomia della Privacy di Solove
 La tassonomia della privacy di Daniel Solove è un framework teorico che classifica le diverse minacce alla privacy, rendendole più comprensibili e sistematiche. Solove suddivide le violazioni della privacy in quattro categorie principali.
 - ***Information Collection*** -> raccolta delle informazioni dell'individuo
 	- **Surveillance** -> raccolta di informazioni individuali attraverso l'osservazione, l'ascolto e la registrazione delle attività umane
@@ -20,4 +20,13 @@ La tassonomia della privacy di Daniel Solove è un framework teorico che classif
 	- **Intrusion** -> invasione della vita privata di una persona
 	- **Decisional Interference** -> intrusione governativa nelle decisioni private di una persona
 
-Questa classificazione è il tentativo di rendere meno vago il concetto di privacy e di ampliare la letteratura relativa 
+Questa classificazione è il tentativo di rendere meno vago il concetto di privacy e di ampliare la letteratura relativa.
+
+---
+
+# Privacy Enhancing Technologies (PETS)
+
+>[!info] PETS
+>Strumenti, meccanismi ed architetture che tentano di mitigare il problemi relativi alla privacy
+
+Essendo un insieme di strumenti 
