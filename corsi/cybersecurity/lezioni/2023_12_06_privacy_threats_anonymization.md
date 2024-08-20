@@ -110,3 +110,5 @@ Attacchi contro database k-anonimizzati, essi derivano dal fatto che non vengono
 
 
 ## l-diversity
+Il modello $l$-diversity è un'estensione del modello k-anonymity. Il modello di $l$-diversity gestisce alcuni dei punti deboli del modello k-anonymity in cui le identità protette al livello di k-individui non equivalgono a proteggere i corrispondenti valori sensibili che sono stati generalizzati o soppressi, specialmente quando i valori sensibili all'interno di un gruppo mostrano omogeneità. Il modello $l$-diversity aggiunge la promozione della diversità intragruppo per i valori sensibili nel meccanismo di anonimizzazione.
+
