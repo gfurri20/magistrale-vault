@@ -110,5 +110,18 @@ Attacchi contro database k-anonimizzati, essi derivano dal fatto che non vengono
 
 
 ## l-diversity
-Il modello $l$-diversity è un'estensione del modello k-anonymity. Il modello di $l$-diversity gestisce alcuni dei punti deboli del modello k-anonymity in cui le identità protette al livello di k-individui non equivalgono a proteggere i corrispondenti valori sensibili che sono stati generalizzati o soppressi, specialmente quando i valori sensibili all'interno di un gruppo mostrano omogeneità. Il modello $l$-diversity aggiunge la promozione della diversità intragruppo per i valori sensibili nel meccanismo di anonimizzazione.
+Il modello $l$-diversity è un'estensione del modello k-anonymity.
+Il modello di $l$-diversity gestisce alcuni dei punti deboli del modello k-anonymity in cui le identità protette al livello di k-individui non equivalgono a proteggere i corrispondenti valori sensibili che sono stati generalizzati o soppressi, specialmente quando i valori sensibili all'interno di un gruppo mostrano omogeneità.
+Il modello $l$-diversity aggiunge la promozione della diversità intragruppo per i valori sensibili nel meccanismo di anonimizzazione.
 
+Ogni classe di equivalenza (i.e. tuple di quasi-identificatori equivalenti) deve avere almeno $l$ *valori sensibili ben rappresentati*.
+
+==La distribuzione delle informazioni sensibili per ogni classe di equivalenza deve essere il più simile possibile all'intero DB.==
+
+Distinguiamo due definizioni di *valori sensibili ben rappresentati*:
+- **Distinct l-diversity** -> devono esistere almeno $l$ valori sensibili distinti per ogni classe di equivalenza
+- **Entropy l-diversity** -> oltre ad avere un numero adeguato di valori sensibili distinti, diventa necessario distribuire in maniera il più uniforme possibile i valori stessi, si definisce il concetto di *entropia*, ovvero il numero minimo di valori sensibili per ogni classe come il logaritmo di $l$: $log(l)$.
+
+
+## t-closeness
+Il modello t-closeness estende il modello l-diversity trattando distintamente i valori di un attributo tenendo conto della distribuzione dei valori dei dati per quell'attributo.
