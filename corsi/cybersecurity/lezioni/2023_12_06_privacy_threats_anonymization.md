@@ -45,3 +45,20 @@ Si individuano diverse tecnologie, atte alla protezione della privacy:
 	- DB anonymization: k-anonymity, l-diversity, t-closeness
 	- communications: onion networks, mixnets
 	- credentials: Idemix
+
+---
+
+# Data Anonymization
+
+>[!info] Data Anonymization
+>Processo di sanitizzazione delle informazioni con lo scopo di aumentare la privacy utente, all'interno di una specifica struttura dati.
+
+Gli attributi che caratterizzano le informazioni personali di un individuo si dividono in diverse categorie:
+- **Explicit identifiers** -> identifica specificamente un utente (e.g. username, CI identifier)
+- **Quasi-identifiers** -> attributo anagrafico o informativo di un individuo (e.g. data di nascita, CAP)
+- **Sensitive attributes** -> informazioni personali private sensibili (e.g. malattie, stipendio, segreti in generale)
+
+L'obiettivo è quello di andare a sanificare queste informazioni in modo da renderle non collegabili ai soggetti effettivi.
+
+
+
