@@ -84,18 +84,18 @@ Esempio di $\textit{2-anonymity}$ per la tupla di **quasi-identificatori**: $\te
 
 La tabella in forma anonima si può trasformare in:
 
-| Nome | Età                            | Genere  | Domicilio  | Religione | Malattia         |
-| ---- | ------------------------------ | ------- | ---------- | --------- | ---------------- |
-| *    | <span style="color:green">20-30</span> | <span style="color:green">Femmina</span> | <span style="color:green">Tamil Nadu</span> | *         | Cancro           |
-| *    | <span style="color:blue">20-30</span> | <span style="color:blue">Femmina</span> | <span style="color:blue">Kerala</span>     | *         | Infezione virale |
-| *    | <span style="color:green">20-30</span> | <span style="color:green">Femmina</span> | <span style="color:green">Tamil Nadu</span> | *         | TBC              |
-| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | nessuna          |
-| *    | <span style="color:blue">20-30</span> | <span style="color:blue">Femmina</span> | <span style="color:blue">Kerala</span>     | *         | Cardiopatia      |
-| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | TBC              |
-| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Cancro           |
-| *    | <span style="color:red">20-30</span>  | <span style="color:red">Maschio</span> | <span style="color:red">Karnataka</span>  | *         | Cardiopatia      |
-| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Cardiopatia      |
-| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>     | *         | Infezione virale |
+| Nome | Età                                         | Genere                                     | Domicilio                                   | Religione | Malattia         |
+| ---- | ------------------------------------------- | ------------------------------------------ | ------------------------------------------- | --------- | ---------------- |
+| *    | <span style="color:green">20-30</span>      | <span style="color:green">Femmina</span>   | <span style="color:green">Tamil Nadu</span> | *         | Cancro           |
+| *    | <span style="color:blue">20-30</span>       | <span style="color:blue">Femmina</span>    | <span style="color:blue">Kerala</span>      | *         | Infezione virale |
+| *    | <span style="color:green">20-30</span>      | <span style="color:green">Femmina</span>   | <span style="color:green">Tamil Nadu</span> | *         | TBC              |
+| *    | <span style="color:red">20-30</span>        | <span style="color:red">Maschio</span>     | <span style="color:red">Karnataka</span>    | *         | nessuna          |
+| *    | <span style="color:blue">20-30</span>       | <span style="color:blue">Femmina</span>    | <span style="color:blue">Kerala</span>      | *         | Cardiopatia      |
+| *    | <span style="color:red">20-30</span>        | <span style="color:red">Maschio</span>     | <span style="color:red">Karnataka</span>    | *         | TBC              |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>   | *         | Cancro           |
+| *    | <span style="color:red">20-30</span>        | <span style="color:red">Maschio</span>     | <span style="color:red">Karnataka</span>    | *         | Cardiopatia      |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>   | *         | Cardiopatia      |
+| *    | <span style="color:magenta">età ≤ 20</span> | <span style="color:magenta">Maschio</span> | <span style="color:magenta">Kerala</span>   | *         | Infezione virale |
 
 Le tecniche utilizzate per implementare $\textit{k-anonymity}$ sono:
 - **Generalizzazione** -> sostituzione dei quasi-identificatori attraverso intervalli o ampliando la categoria
@@ -113,16 +113,32 @@ Attacchi contro database k-anonimizzati, essi derivano dal fatto che non vengono
 
 ## l-diversity
 Il modello $l$-diversity è un'estensione del modello k-anonymity.
-Il modello di $l$-diversity gestisce alcuni dei punti deboli del modello k-anonymity in cui le identità protette al livello di k-individui non equivalgono a proteggere i corrispondenti valori sensibili che sono stati generalizzati o soppressi, specialmente quando i valori sensibili all'interno di un gruppo mostrano omogeneità.
-Il modello $l$-diversity aggiunge la promozione della diversità intragruppo per i valori sensibili nel meccanismo di anonimizzazione.
 
-Ogni classe di equivalenza (i.e. tuple di quasi-identificatori equivalenti) deve avere almeno $l$ *valori sensibili ben rappresentati*.
+Il **problema principale della k-anonymity** è che non importa quanto alto sia il valore rappresentato da k, se i dati non sono distribuiti uniformemente allora **rimane possibile identificate gli individui**.
+
+Esempio: data una tabella a cui è stata applicata k-anonymity con $k = 3$.
+
+| Age                                   | ZIP                                    | Disease |
+| ------------------------------------- | -------------------------------------- | ------- |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | Cancer  |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | Cancer  |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | Cancer  |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | Cancer  |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | Flu     |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | Flu     |
+Se un eventuale attaccante conosce alcuni dati su Bob (background attack) come $\texttt{(age = 22, ZIP = 47655)}$, allora intuisce facilmente che Bob ha il cancro.
+
+> Ogni classe di equivalenza deve avere almeno $l$ *valori sensibili differenti*.
+
+Nell'esempio la classe di equivalenza in blu possiede 2-diversity.
 
 ==La distribuzione delle informazioni sensibili per ogni classe di equivalenza deve essere il più simile possibile all'intero DB.==
 
 Distinguiamo due definizioni di *valori sensibili ben rappresentati*:
 - **Distinct l-diversity** -> devono esistere almeno $l$ valori sensibili distinti per ogni classe di equivalenza
 - **Entropy l-diversity** -> oltre ad avere un numero adeguato di valori sensibili distinti, diventa necessario distribuire in maniera il più uniforme possibile i valori stessi, si definisce il concetto di *entropia*, ovvero il numero minimo di valori sensibili per ogni classe come il logaritmo di $l$: $log(l)$.
+
+Il problema principale della l-diver
 
 
 ## t-closeness
