@@ -54,12 +54,14 @@ Si individuano diverse tecnologie, atte alla protezione della privacy:
 >Processo di sanitizzazione delle informazioni con lo scopo di aumentare la privacy utente, all'interno di una specifica struttura dati.
 
 Gli attributi che caratterizzano le informazioni personali di un individuo si dividono in diverse categorie:
-- **Explicit identifiers** -> identifica specificamente un utente (e.g. username, CI identifier)
+- **Explicit identifiers** -> identifica specificamente un utente (e.g. username, IP address)
 - **Quasi-identifiers** -> attributo anagrafico o informativo di un individuo (e.g. data di nascita, CAP)
 - **Sensitive attributes** -> informazioni personali private sensibili (e.g. malattie, stipendio, segreti in generale)
 
 L'obiettivo è quello di andare a sanificare queste informazioni in modo da renderle non collegabili ai soggetti effettivi.
 
+>[!info] Classe di equivalenza
+>Si dice classe di equivalenza un insieme di individui aventi la stessa tupla di quasi-identificatori (anche anonimizzati)
 ## k-anonymity
 Si dice che la versione anonimizzata di un DB possiede la proprietà di **k-anonymity** se le informazioni, per ogni persona contenutevi, non possono essere distinte da almeno altri $k-1$ soggetti le cui informazioni compaiono nel rilascio di dati stesso.
 
