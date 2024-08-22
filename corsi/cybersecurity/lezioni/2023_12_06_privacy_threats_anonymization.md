@@ -138,8 +138,18 @@ Distinguiamo due definizioni di *valori sensibili ben rappresentati*:
 - **Distinct l-diversity** -> devono esistere almeno $l$ valori sensibili distinti per ogni classe di equivalenza
 - **Entropy l-diversity** -> oltre ad avere un numero adeguato di valori sensibili distinti, diventa necessario distribuire in maniera il più uniforme possibile i valori stessi, si definisce il concetto di *entropia*, ovvero il numero minimo di valori sensibili per ogni classe come il logaritmo di $l$: $log(l)$.
 
-Il problema principale della l-diver
+Il **problema** principale **della l-diversity** è che **ignora la semantica**, nel senso che rimane comunque possibile associare ad un individuo (attraverso un background attack) una serie di caratteristiche.
 
+Nella successiva tabella, avendo a disposizione i quasi-identificatori di Bob, non sappiamo quale malattia abbia Bob di preciso, ma è sicuro che Bob abbia qualche tipo di problema di salute; inoltre è possibile intuire che Bob percepisce un salario di "bassa categoria".
+
+| Age                                   | ZIP                                    | Salary | Disease       |
+| ------------------------------------- | -------------------------------------- | ------ | ------------- |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | 3K     | Cancer        |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | 5K     | Heart Disease |
+| <span style="color:green">2*</span>   | <span style="color:green">476**</span> | 2K     | Flu           |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | 22K    | Cancer        |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | 19K    | Flu           |
+| <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | 23K    | Flu           |
 
 ## t-closeness
 Il modello t-closeness estende il modello $l$-diversity trattando distintamente i valori di un attributo tenendo conto della distribuzione dei valori dei dati per quell'attributo.
