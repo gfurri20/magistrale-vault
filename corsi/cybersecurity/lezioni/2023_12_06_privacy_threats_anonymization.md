@@ -152,6 +152,28 @@ Nella successiva tabella, avendo a disposizione i quasi-identificatori di Bob, n
 | <span style="color:blue">40-50</span> | <span style="color:blue">4790*</span>  | 23K    | Flu           |
 
 ## t-closeness
-Il modello t-closeness estende il modello $l$-diversity trattando distintamente i valori di un attributo tenendo conto della distribuzione dei valori dei dati per quell'attributo.
+Il modello t-closeness estende il modello $l$-diversity con l'obiettivo di migliorare il procedimento di anonimizzazione di un database.
 
-Una classe di equivalenza gode di t-closeness se la distanza tra la distribuzione di un attributo sensibile appartenente alla classe e la distribuzione dell'attributo nell'intera tabella è minore o uguale ad una treshold t.
+Per cercare di uniformare le distribuzioni relative alle informazioni sensibili si utilizza una metrica detta **Earth Mover's Distance**. Tale metrica ==permette di calcolare il lavoro che si compie per trasformare una distribuzione in un'altra.==
+
+Calcolare tale metrica su dati numerici ordinati è facile, dati i seguenti salari:
+$$\texttt{ D = \{3K, 4K, 5K, 6K, 7K, 8K, 9K, 10K, 11K\} }$$
+e le seguenti classi di equivalenza:
+- $\texttt{P1 = \{3K, 4K, 5K\}}$
+- $\texttt{P2 = \{6K, 8K, 11K\}}$
+
+Diventa necessario calcolare quale delle due distribuzione si avvicina maggiormente alla distribuzione originale $\texttt{D}$.
+Per farlo si utilizza una formula specifica, tralasciando i calcoli si ottiene che $\texttt{P2}$ ha un coefficiente pari a $0.167$ mentre $\texttt{P1}$ pari a $0.375$.
+In conclusione $\texttt{P2}$ ha una distribuzione più simile a quella originale.
+
+Calcolare la metrica su elementi non numerici diventa più complicato perché è necessario introdurre una gerarchia ad albero degli elementi.
+
+La distanza tra le distribuzioni si ottiene andando a mettere in relazione la distanza tra la prima categoria in comune che contiene entrambi gli elementi esaminati.
+
+==Quindi il valore _t_ che definisce la t-closeness non è altro che il valore che va a rappresentare la distanza tra le varie distribuzioni.==
+
+---
+
+# Differential Privacy
+
+
