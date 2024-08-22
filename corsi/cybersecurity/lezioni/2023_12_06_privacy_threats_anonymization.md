@@ -126,6 +126,4 @@ Distinguiamo due definizioni di *valori sensibili ben rappresentati*:
 ## t-closeness
 Il modello t-closeness estende il modello $l$-diversity trattando distintamente i valori di un attributo tenendo conto della distribuzione dei valori dei dati per quell'attributo.
 
-An equivalence class is said to have _t_-closeness if the distance between the distribution of a sensitive attribute in this class and the distribution of the attribute in the whole table is no more than a threshold _t_.
-
-Una classe di equivalenza gode di t-closeness se la distanza tra la distribuzione di un attributo sensibile 
+Una classe di equivalenza gode di t-closeness se la distanza tra la distribuzione di un attributo sensibile appartenente alla classe e la distribuzione dell'attributo nell'intera tabella è minore o uguale ad una treshold t.
