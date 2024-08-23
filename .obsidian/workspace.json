@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+                "file": "corsi/cybersecurity/cybersecurity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47b14b0e3c3d7311",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md"
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md"
               }
             }
           }
@@ -145,15 +158,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "66124a85fefff3e5",
+  "active": "47b14b0e3c3d7311",
   "lastOpenFiles": [
-    "Pasted image 20240822162948.png",
+    "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
+    "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+    "Pasted image 20240822162948.png",
     "corsi/cybersecurity/lezioni/2023_11_06_attacchi_infrastrutture_critiche_ICS.md",
     "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
     "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
-    "corsi/cybersecurity/cybersecurity.md",
-    "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
     "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
     "corsi/cybersecurity/lezioni/2023_11_27_threat_modelling_STRIDE.md",
     "corsi/cybersecurity/lezioni/2023_11_22_cyber_risk_management.md",
@@ -183,7 +196,6 @@
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
-    "corsi/network-security/assets/rsn.png",
     "Untitled.canvas",
     "corsi/codice-malevolo/progetto",
     "corsi/network-security/assets/simple-key-exchange",

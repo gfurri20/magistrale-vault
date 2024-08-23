@@ -11,6 +11,6 @@ Indice delle lezioni teoriche:
 - 27 novembre 2023 -> [[2023_11_27_threat_modelling_STRIDE]]
 - 29 novembre 2023 -> [[2023_11_29_CFS_privacy]]
 - 6 dicembre 2023 -> [[2023_12_06_privacy_threats_anonymization]]
-- 13 dicembre 2023 -> **todo**
+- 13 dicembre 2023 -> [[2023_12_13_data_protection]]
 
 Per i laboratori non ho preso appunti...
