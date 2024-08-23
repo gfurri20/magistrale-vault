@@ -175,5 +175,17 @@ La distanza tra le distribuzioni si ottiene andando a mettere in relazione la di
 ---
 
 # Differential Privacy
+I tre approcci visti sopra hanno i loro problemi, ciò ci conduce ad affermare che la semplice anonimizzazione non basta.
+
+Una prima contromisura può essere quella di permettere solo queries di aggregazione, evitando di fatto interrogazione che potrebbero ledere la privacy degli individui.
+Il problema sta nell'inserimento di un nuovo record, il quale potrebbe essere identificabile calcolando le differenze tra i risultati delle interrogazioni di aggregazione, tale tipo di attacco è detto **Reconstruction attack**.
+
+Per evitare la sopra-specificata problematica si può ricorrere al concetto di **Differential Privacy**: essa permette di quantificare il tasso di rischio associato alla privacy rispetto alle pubblicazioni che presentano dati elaborati per preservare la privacy.
+
+Si cerca, quindi, di introdurre del rumore (in gergo noise) all'interno delle distribuzione per viziare i risultati delle aggregazioni, per fare ciò si utilizza una laplaciana.
+
+Esistono due luoghi di applicazione del rumore:
+- **Local Differential Privacy** -> il rumore viene applicato localmente al dispositivo utente, successivamente i dati "sporchi" verranno inviati al db. Questo garantisce un rumore maggiore.
+- **Global/Centralized Differential Privacy** -> il rumore viene applicato direttamente al database
 
 
