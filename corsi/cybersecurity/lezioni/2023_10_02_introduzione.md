@@ -1,7 +1,7 @@
 Lo scopo ultimo della sicurezza informatica è quello di proteggere i nostri **dispositivi** e l'accesso ai **servizi** che utilizziamo.
 Inoltre permette di proteggere l'accesso non autorizzato alla moltitudine di **informazioni personali** che possediamo.
 
-La sicurezza informatica si basa su sei pilastri ([[i-sei-pilastri]]):
+La sicurezza informatica si basa su sei pilastri:
 - Confidenzialità (Confidentiality)
 - Integrità (Integrity)
 - Disponibilità (Availability)
@@ -21,7 +21,7 @@ Prima di procedere alla spiegazione di ogni elemento definiamo alcuni termini fo
 > Rischio informatico, ovvero qualsiasi situazione che potrebbe portare, potenzialmente, ad una compromissione dell'organizzazione in uno o più dei suoi elementi
 
 > [!info] Attack
-> La realizzazione di un rischio che compromette uno o più dei sei pilastri sopra descritti. Un attacco avviene sfruttando una o più vulnerabilità [[04_10_2023-cyber-kill-chain-MITRE]]
+> La realizzazione di un rischio che compromette uno o più dei sei pilastri sopra descritti. Un attacco avviene sfruttando una o più vulnerabilità
 
 > [!info] Threat Actor
 > Colui o coloro (in caso di un gruppo) che eseguono attacchi alle organizzazioni
