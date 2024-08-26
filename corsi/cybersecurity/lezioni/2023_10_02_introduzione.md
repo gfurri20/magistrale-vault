@@ -5,7 +5,7 @@ La sicurezza informatica si basa su sei pilastri:
 - Confidenzialità (Confidentiality)
 - Integrità (Integrity)
 - Disponibilità (Availability)
-- Autenticità(Authenticity)
+- Autenticità (Authenticity)
 - Rendicontabilità (Accountability)
 - Sicurezza (Safety)
 
@@ -15,7 +15,7 @@ Prima di procedere alla spiegazione di ogni elemento definiamo alcuni termini fo
 > Tutto ciò che è di valore all'azienda. Quindi tutto ciò che diviene essenziale proteggere (e.g. dispositivi, reti, individuo, eccetera)
 
 > [!info] Vulnerability
-> Tradotto letteralmente una vulnerabilità. Un bug, una debolezza oppure un errore che potrebbe compromettere la confidenzialità, l'integrità o la disponibilità
+> Un bug, una debolezza oppure un errore che potrebbe compromettere la confidenzialità, l'integrità o la disponibilità
 
 > [!info] Cyber Threat
 > Rischio informatico, ovvero qualsiasi situazione che potrebbe portare, potenzialmente, ad una compromissione dell'organizzazione in uno o più dei suoi elementi
@@ -27,7 +27,7 @@ Prima di procedere alla spiegazione di ogni elemento definiamo alcuni termini fo
 > Colui o coloro (in caso di un gruppo) che eseguono attacchi alle organizzazioni
 
 > [!info] Risk
-> Impatto negativo che [](2023_10_04_cyber_kill_chain_MITRE.md) una organizzazione (su tutti i suoi assets)
+> Impatto negativo su una organizzazione (su tutti i suoi assets)
 
 > [!info] Security Controls
 > Tutte le operazione e disposizioni messe in atto per proteggere gli assets di una organizzazione
