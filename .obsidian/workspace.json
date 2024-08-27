@@ -32,6 +32,30 @@
             }
           },
           {
+            "id": "12c280de126bb2e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/cybersecurity/lezioni/2023_11_20_access_control.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "59fbaee2f1c6d8c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "corsi/cybersecurity/cybersecurity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "6a33d17573caf520",
             "type": "leaf",
             "state": {
@@ -44,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
+                "file": "corsi/cybersecurity/cybersecurity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
+                "file": "corsi/cybersecurity/cybersecurity.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md"
+                "file": "corsi/cybersecurity/cybersecurity.md"
               }
             }
           }
@@ -170,12 +194,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7b4e675dec79108d",
+  "active": "59fbaee2f1c6d8c3",
   "lastOpenFiles": [
+    "corsi/cybersecurity/lezioni/2023_11_08_autenticazione_utente.md",
+    "corsi/cybersecurity/lezioni/2023_11_20_access_control.md",
+    "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
     "corsi/cybersecurity/lezioni/2023_10_16_social_engineering_phishing.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_10_09_malware.md",
-    "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
     "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
     "i-sei-pilastri.md",
     "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
@@ -185,9 +211,7 @@
     "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
     "corsi/cybersecurity/lezioni/2023_11_27_threat_modelling_STRIDE.md",
     "corsi/cybersecurity/lezioni/2023_11_22_cyber_risk_management.md",
-    "corsi/cybersecurity/lezioni/2023_11_20_access_control.md",
     "corsi/cybersecurity/lezioni/2023_11_15_autenticazione_passwordless.md",
-    "corsi/cybersecurity/lezioni/2023_11_08_autenticazione_utente.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
