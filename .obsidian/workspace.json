@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/cybersecurity/cybersecurity.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/cybersecurity.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/cybersecurity.md",
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/cybersecurity/cybersecurity.md"
+                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md"
               }
             }
           }
@@ -147,6 +147,8 @@
   },
   "active": "6719e98a20126bb8",
   "lastOpenFiles": [
+    "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
+    "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
     "corsi/cybersecurity/lezioni/2023_11_27_threat_modelling_STRIDE.md",
     "corsi/cybersecurity/lezioni/2023_11_22_cyber_risk_management.md",
@@ -155,14 +157,12 @@
     "corsi/cybersecurity/lezioni/2023_11_08_autenticazione_utente.md",
     "corsi/cybersecurity/lezioni/2023_11_06_attacchi_infrastrutture_critiche_ICS.md",
     "corsi/cybersecurity/lezioni/2023_10_16_social_engineering_phishing.md",
-    "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
     "corsi/cybersecurity/lezioni/2023_10_09_malware.md",
     "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
     "i-sei-pilastri.md",
     "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
     "Pasted image 20240822162948.png",
-    "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
