@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7d02daf534041680",
+        "id": "1f9b199914f486ce",
         "type": "tabs",
         "children": [
           {
-            "id": "6719e98a20126bb8",
+            "id": "6066ae2ad8ec00b5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -145,8 +137,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6719e98a20126bb8",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
+    "corsi/progettazione-",
+    "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
     "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
@@ -161,7 +155,6 @@
     "corsi/cybersecurity/lezioni/2023_10_09_malware.md",
     "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
     "i-sei-pilastri.md",
-    "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
     "Pasted image 20240822162948.png",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
@@ -179,7 +172,6 @@
     "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
     "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/network-security/assets/fw-sceheme.png",
-    "corsi/network-security/teoria/netsec-anonimity-privacy.md",
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
     "corsi/network-security/assets/email-sec-protocols.png",
