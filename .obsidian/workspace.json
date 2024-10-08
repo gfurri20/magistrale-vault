@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_08_software_process_activities.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_08_software_process_activities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_08_software_process_activities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md"
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_08_software_process_activities.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   "active": "ce47bcbde8631135",
   "lastOpenFiles": [
     "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
-    "corsi/cybersecurity/cybersecurity.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_08_software_process_activities.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+    "corsi/cybersecurity/cybersecurity.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_01_intro.md",
     "corsi/progettazione-e-validazione/lab",
     "corsi/progettazione-e-validazione/lezioni",
@@ -176,7 +177,6 @@
     "corsi/network-security/teoria/netsec-user-auth.md",
     "corsi/network-security/teoria/netsec-public-key-infra.md",
     "conflict-files-obsidian-git.md",
-    "corsi/network-security/teoria/netsec-ICS-sec.md",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/assets/ip-sec-arch.PNG",
     "corsi/network-security/assets/cps-zones.png",
