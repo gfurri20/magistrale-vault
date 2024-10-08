@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1f9b199914f486ce",
+        "id": "993a50323b29775e",
         "type": "tabs",
         "children": [
           {
-            "id": "6066ae2ad8ec00b5",
+            "id": "ce47bcbde8631135",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md"
+              }
             }
           }
         ]
@@ -137,12 +145,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57379b1213ae8f08",
+  "active": "ce47bcbde8631135",
   "lastOpenFiles": [
-    "corsi/progettazione-",
+    "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
+    "corsi/cybersecurity/cybersecurity.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_01_intro.md",
+    "corsi/progettazione-e-validazione/lab",
+    "corsi/progettazione-e-validazione/lezioni",
+    "corsi/progettazione-e-validazione",
     "corsi/cybersecurity/lezioni/2023_12_13_data_protection.md",
     "corsi/cybersecurity/lezioni/2023_12_06_privacy_threats_anonymization.md",
-    "corsi/cybersecurity/cybersecurity.md",
     "corsi/cybersecurity/lezioni/2023_11_29_CFS_privacy.md",
     "corsi/cybersecurity/lezioni/2023_11_27_threat_modelling_STRIDE.md",
     "corsi/cybersecurity/lezioni/2023_11_22_cyber_risk_management.md",
@@ -169,8 +182,6 @@
     "corsi/network-security/assets/cps-zones.png",
     "Pasted image 20240708164141.png",
     "corsi/network-security/assets/cps.png",
-    "corsi/network-security/teoria/netsec-net-endpoint-sec.md",
-    "corsi/codice-malevolo/progetto/analisi-documento.md",
     "corsi/network-security/assets/fw-sceheme.png",
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
@@ -183,9 +194,6 @@
     "corsi/network-security/teoria",
     "corsi/network-security/lab",
     "corsi/flips/ml-slides-merro.pdf",
-    "corsi/cybersecurity/lezioni",
-    "corsi/complessita-e-algoritmi/lezioni-rizzi",
-    "corsi/complessita-e-algoritmi/tutorato",
     "Network Security/Untitled.canvas"
   ]
 }
