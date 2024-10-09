@@ -79,3 +79,39 @@ Svantaggi 🚫
 - difficile pensare incrementi sensati nelle successive iterazioni
 - la specifica è portata avanti in parallelo e questo non è possibile per alcune commesse (e.g. commesse governative o critiche)
 
+---
+
+# AGILE
+==La qualità del processo di sviluppo si riflette sulla qualità del prodotto.==
+
+Si dice AGILE perché se si è agili è facile reagire velocemente al cambiamento.
+
+1. Specifica e Design ed Implementazione procedono **interlacciati** tra di loro
+2. Si producono molte versioni o prodotti incrementali, la comunicazione deve essere rapida
+3. necessario dotarsi di strumenti opportuni per la gestione del processo di sviluppo, nelle sue parti ripetititve
+	- i casi di test devono scriptati e sempre utilizzabili
+
+Nuovi punti salienti:
+~~documentazione~~ -> SW funzionante
+~~contrattazione~~ -> collaborazione
+~~aderenza al piano scelto~~ -> gestione rapida del cambiamento
+
+Agile perde utilità nel caso di imposizioni da parte di normative o regolamentazioni perché si perde "agilità".
+
+*Extreme programming* -> estremizza l'agile attraverso un approccio iterativo estremo (e.g. tantissimi rilasci, compilazione solo a seguito di ok da TUTTI i test)
+- piano definito un po' alla volta
+- release piccolissime e frequentemente
+- design estremamente semplice
+- test-first development, penso agli scenari prima ancora di sviluppare la funzionalità
+- refactoring, attività di riduzione della complessità, deliberatamente pensate per mantenere il sw facile
+- sviluppo a coppie
+- integrazione continua, attributi immediatamente inseriti (post-test)
+- definizione del ritmo di sviluppo, esso deve essere sostenibile
+- cliente presente nel team di sviluppo per aumentare la collaborazione
+
+## Principi
+- **coinvolgimento del cliente** -> è come se l'utente finale facesse parte del team di sviluppo, quindi la collaborazione è fluida e diretta
+- **consegna incrementale**
+- **il focus è sulle persone** -> si punta sulle skill personali degli sviluppatori, tanta responsabilità agli stessi, che è riconosciuta e valorizzata lasciandoli molto liberi
+- **cambiamento facile da implementare**
+- **mantenimento della semplicità** -> software incrementale è soggetto a molti cambiamenti agli stessi elementi, necessario mantenere la semplicità per facilitare le modifiche ricorrenti
