@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/Untitled.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/Untitled.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/Untitled.md",
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/Untitled.md"
+                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md"
               }
             }
           }
@@ -147,10 +147,10 @@
   },
   "active": "ce47bcbde8631135",
   "lastOpenFiles": [
-    "corsi/progettazione-e-validazione/lezioni/2024_10_08-09_agile.md",
-    "corsi/progettazione-e-validazione/lezioni/Untitled.md",
-    "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
     "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_08-09_agile.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
     "corsi/cybersecurity/cybersecurity.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_01_intro.md",
     "corsi/progettazione-e-validazione/lab",
