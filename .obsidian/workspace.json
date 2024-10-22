@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md"
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md"
               }
             }
           }
@@ -148,6 +148,9 @@
   "active": "ce47bcbde8631135",
   "lastOpenFiles": [
     "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
+    "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
+    "corsi/progettazione-e-validazione/lezioni/2024_10_22_requirements_specification_and_validation.md",
+    "corsi/progettazione-e-validazione/lezioni/Untitled.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_08-09_agile.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_02_software_process.md",
@@ -174,9 +177,6 @@
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
     "corsi/network-security/teoria/netsec-wireless-net-sec.md",
-    "corsi/network-security/teoria/netsec-transport-lv-sec.md",
-    "corsi/network-security/teoria/netsec-user-auth.md",
-    "corsi/network-security/teoria/netsec-public-key-infra.md",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/assets/ip-sec-arch.PNG",
     "corsi/network-security/assets/cps-zones.png",

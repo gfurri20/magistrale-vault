@@ -63,6 +63,7 @@ Per raccogliere tutte le informazioni necessari ci sono diverse modalità:
 	- una parte di una storia può trasformarsi in diversi scenari
 
 ### 2. Specifica
-
+Vedi [[2024_10_22_requirements_specification_and_validation#Requirements Specification]]
 
 ### 3. Validazione
+Vedi [[2024_10_22_requirements_specification_and_validation#Requirements Validation]]
