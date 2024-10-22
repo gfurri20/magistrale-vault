@@ -29,3 +29,40 @@ Spesso ad un user requirement corrispondono molteplici system requirements.
 - sono molto importanti perché ==vincolano il tipo di architettura== che dovremmo utilizzare
 - un requisito non-funzionale ==può generare svariati requisiti funzionali==
 - spesso si utilizzano delle tassonomie gerarchiche per individuare tutti i req. non funzionali (vedi slides)
+
+## Processo di lavoro
+Il processo si divide in varie fasi ed ha il compito di raccogliere e specificare i requisiti adeguati.
+
+L'obiettivo è la composizione del documenti dei requisiti, fondamentale per passare alla fase di sviluppo.
+
+La divisione è logica, nella realtà, le tre fasi sotto-riportate non sempre eseguite in un ordine preciso. 
+
+### 1. Elicitazione
+In questa fase ingegneri del SW e stakeholders lavorano insieme per capire:
+- il dominio di applicazione del sistema
+- requisiti funzionali
+- requisiti non-funzionali
+- vincoli
+
+Spesso gli stakeholders non sanno cosa vogliono concretamente, oppure esprimono i requisiti nel loro gergo, avendo una conoscenza esplicita che non esprimono.
+
+Differenti stakeholders possono avere requisiti diversi, rispetto ai loro POV.
+
+I requisiti sono in continua evoluzione, quindi vanno "inseguiti" costantemente nel tempo.
+
+Per raccogliere tutte le informazioni necessari ci sono diverse modalità:
+- **Interviste** -> domande esplicite allo stakeholder
+	- crocette o domande aperte
+	- lo stakeholder va guidato nell'indagine
+	- esistono dei problemi legati alla distanza culturale (inserimento di termini tecnici), va usata la prospettiva dello stakeholder
+- **Studi etnografici** -> l'ingegnere dei requisiti si "immerge" nella realtà aziendale per comprendere come gli stakeholder lavorano, con lo scopo di capire a pieno i requisiti
+	- ovviamente costano molto economicamente e temporalmente
+- **Storie e scenari** -> analisi delle storie e degli scenari di lavoro esemplificativi
+	- *Storie* -> narrative e ad alto livello
+	- *Scenari* -> strutturati per sottolineare informazioni specifiche
+	- una parte di una storia può trasformarsi in diversi scenari
+
+### 2. Specifica
+
+
+### 3. Validazione
