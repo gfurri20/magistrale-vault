@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024_10_22_progetto"
-            }
-          },
-          {
-            "id": "16c51214da8aa86a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.4"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
+              "title": "2024_10_23_lab_tools"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2024_10_22_progetto"
+              "title": "Backlinks for 2024_10_23_lab_tools"
             }
           },
           {
@@ -125,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2024_10_22_progetto"
+              "title": "Outgoing links from 2024_10_23_lab_tools"
             }
           },
           {
@@ -152,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md"
+                "file": "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 2024_10_22_progetto"
+              "title": "Outline of 2024_10_23_lab_tools"
             }
           }
         ]
@@ -174,10 +161,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "16c51214da8aa86a",
+  "active": "ce47bcbde8631135",
   "lastOpenFiles": [
     "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
-    "corsi/progettazione-e-validazione/lab/2024_10_22_progetto.md",
+    "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md",
+    "corsi/progettazione-e-validazione/lab/progetto.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_22_requirements_specification_and_validation.md",
     "corsi/progettazione-e-validazione/lezioni/Untitled.md",
     "corsi/progettazione-e-validazione/lezioni/2024_10_16_requirement_engineering.md",
@@ -205,7 +193,6 @@
     "Pasted image 20240822162948.png",
     "corsi/network-security/teoria/netsec-ip-sec.md",
     "corsi/network-security/network-security.md",
-    "corsi/network-security/teoria/netsec-wireless-net-sec.md",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/assets/ip-sec-arch.PNG",
     "corsi/network-security/assets/cps-zones.png",
