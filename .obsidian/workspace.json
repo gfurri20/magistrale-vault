@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2024_10_23_lab_tools"
             }
+          },
+          {
+            "id": "5cf1a6e72cd54fa4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -161,7 +174,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce47bcbde8631135",
+  "active": "5cf1a6e72cd54fa4",
   "lastOpenFiles": [
     "corsi/progettazione-e-validazione/progettazione-e-validazione.md",
     "corsi/progettazione-e-validazione/lab/2024_10_23_lab_tools.md",
