@@ -59,4 +59,6 @@ Inoltre la good practice dice di eseguire modifiche in piccole parti, senza mai 
 
 Esistono liste già compilate contenenti diversi tipi di refactoring: refactoring.com.
 
+---
 
+Tipica domanda d'esame
