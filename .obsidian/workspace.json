@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hacking/over-the-wire/leviathan.md",
+                "file": "corsi/software-security/progetto/appunti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "leviathan"
+              "title": "appunti"
             }
           }
         ]
@@ -162,10 +162,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce47bcbde8631135",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
-    "README.md",
+    "corsi/codice-malevolo/codice-malevolo.md",
+    "corsi/software-security/progetto/appunti.md",
+    "corsi/software-security/progetto",
+    "corsi/software-security",
     "hacking/over-the-wire/leviathan.md",
+    "README.md",
     "hacking/over-the-wire/nathan.md",
     "hacking/over-the-wire",
     "corsi/progettazione-e-validazione/lezioni/2025_01_07_refactoring.md",
@@ -195,8 +199,6 @@
     "corsi/cybersecurity/lezioni/2023_11_06_attacchi_infrastrutture_critiche_ICS.md",
     "corsi/cybersecurity/lezioni/2023_10_16_social_engineering_phishing.md",
     "corsi/cybersecurity/lezioni/2023_10_04_cyber_kill_chain_MITRE.md",
-    "corsi/cybersecurity/lezioni/2023_10_09_malware.md",
-    "corsi/cybersecurity/lezioni/2023_10_02_introduzione.md",
     "Pasted image 20240822162948.png",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/assets/ip-sec-arch.PNG",
@@ -209,8 +211,6 @@
     "corsi/network-security/assets/email-sec-protocols.png",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
     "Untitled.canvas",
-    "corsi/codice-malevolo/progetto",
-    "corsi/network-security/assets/simple-key-exchange",
     "Network Security/Untitled.canvas"
   ]
 }
