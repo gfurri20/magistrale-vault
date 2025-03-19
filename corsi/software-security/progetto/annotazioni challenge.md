@@ -15,15 +15,46 @@ Essa invoca un interrupt 80 utile per le chiamate a sistema, inoltre è presente
 
 Deduco quindi che, attraverso la concatenazione di return sia **necessario invocare una chiamata di sistema** (e.g. `execv`) **per aprire la shell**.
 
-Dov'è la vulnerabilità?
+Dov'è la vulnerabilità per fare buffer overflow?
 
 ```c
 char soldi[4];
 read(STDIN_FILENO, soldi, soldi);
 ```
 
-Qua il programma legge da `stdin` ed inserisce nel buffer `soldi` un numero di caratteri grande tanto quanto lo stesso contenuto di `soldi`, permettendoci quindi di scrivere tutto quello ce vogliamo nello stack.
+Qua il programma legge da `stdin` ed inserisce nel buffer `soldi` un numero di caratteri grande tanto quanto lo stesso contenuto di `soldi`, permettendoci quindi di scrivere tutto quello che vogliamo nello stack.
 
 ## Esecuzione del binario
+Qualsiasi input sul binario ci ritorna sempre il secondo branch dell'if nella funzione `main`, questo perché il primo branch si raggiunge inserendo nella variabile `soldi` il valore `due\0`, con il carattere terminale `\0`, se lo inseriamo da tastiera, otterremo sempre `due\n` e di conseguenza non entriamo nel primo branch, quello utile per raggiungere l'istruzione `ret` di partenza.
+
+## Buffer Overflow
+Dopo un esamine con `gdb` noto che per iniziare la rop bisogna smashare lo stack con la seguente stringa: `due\0AAAAAAAAAAAAXXXX`, una stringa di `16 + 4` caratteri:
+- `due\0` - quattro caratteri per entrare nel branch corretto della condizione
+- `AAAAAAAAAAAA` - dodici caratteri di padding per raggiungere il return address
+- `XXXX` - il return address da cui cominciare l'attacco ROP
+Dall'indirizzo `XXXX` si inseriranno tutti gli altri valori utili per il compimento dell'attacco.
+
+## Chiamata a `execve`
+Io penso che si debba usare l'interrupt `0x80` per chiamare una syscall ed eseguire un comando per aprire la shell.
+
+Tramite questo link individuo di cosa ha bisogno la syscall
+[Chromium OS Docs - Linux System Call Table](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86-32_bit)
+
+Ovvero individuo la configurazione dei registri per la chiamata della syscall.
+
+| %EAX   | arg0 (%EBX)             | arg1 (%ECX)      | arg2 (%EDX)      |
+| ------ | ----------------------- | ---------------- | ---------------- |
+| `0x0b` | `command` or `filename` | eventuali `argv` | eventuale `envp` |
+
+Quindi dovremmo settare in eax il valore `0x0b` e in ebx il puntatore alla stringa `/bin/sh`.
+
+Devo quindi creare una rop chain in grado di:
+1. iniettare in eax `0x0b`
+2. iniettare in ebx il puntatore a `/bin/sh`
+3. azzerare ecx ed edx
+4. chiamare `int 0x80` con i registri configurati ad hoc
+5. godermi la mia nuova shell
+
+## 1. 
 
 
