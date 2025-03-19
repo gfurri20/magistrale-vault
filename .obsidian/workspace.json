@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "993a50323b29775e",
+        "id": "73726126d5a50c29",
         "type": "tabs",
         "children": [
           {
-            "id": "ce47bcbde8631135",
+            "id": "251582980cb261f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,10 +162,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57379b1213ae8f08",
+  "active": "251582980cb261f5",
   "lastOpenFiles": [
-    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/software-security/progetto/appunti.md",
+    "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/software-security/progetto",
     "corsi/software-security",
     "hacking/over-the-wire/leviathan.md",
