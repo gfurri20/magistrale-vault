@@ -55,6 +55,6 @@ Devo quindi creare una rop chain in grado di:
 4. chiamare `int 0x80` con i registri configurati ad hoc
 5. godermi la mia nuova shell
 
-## 1. 
+E' chiaro che per iniettare ciò di cui ho bisogno basta inserirli nella stringa di buffer overflow senza cercare robe assurde nei gadget...
 
 
