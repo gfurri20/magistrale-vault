@@ -22,7 +22,7 @@ char soldi[4];
 read(STDIN_FILENO, soldi, soldi);
 ```
 
-Qua il programma legge da `stdin` ed inserisce nel buffer `soldi` un numero di caratteri grande tanto quanto lo stesso contenuto di `soldi`
+Qua il programma legge da `stdin` ed inserisce nel buffer `soldi` un numero di caratteri grande tanto quanto lo stesso contenuto di `soldi`, permettendoci quindi di scrivere tutto quello ce vogliamo nello stack.
 
 ## Esecuzione del binario
 
