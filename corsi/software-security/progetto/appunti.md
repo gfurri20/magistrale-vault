@@ -35,7 +35,10 @@ Possiamo però concatenare diversi pezzettini di codice (preesistente nel binari
 
 Source - [[1008.4099] Security Mitigations for Return-Oriented Programming Attacks](https://ar5iv.labs.arxiv.org/html/1008.4099)
 
-Address Space Layout Randomization (ASLR) as a countermeasure. ASLR renders the layout of an application’s address space less predictable because it relocates the base addresses of executable modules and other memory mappings.
+>Address Space Layout Randomization (ASLR) as a countermeasure. ASLR renders the layout of an application’s address space less predictable because it relocates the base addresses of executable modules and other memory mappings.
+
+>In order to prevent from effectively using such cases in the ROP attack we propose that every instruction with RET opcode inside of its body will be obfuscated in a special manner. Of course control transfer instructions or any other instructions that use immediate data offsets are an exception to this rule since the immediate displacements are calculated by the linker.
+
 
 
 
