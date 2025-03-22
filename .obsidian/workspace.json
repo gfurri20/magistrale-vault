@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hacking/over-the-wire/leviathan.md",
+                "file": "hacking/over-the-wire/krypton.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "leviathan"
+              "title": "krypton"
             }
           }
         ]
@@ -164,13 +164,14 @@
   },
   "active": "251582980cb261f5",
   "lastOpenFiles": [
+    "hacking/over-the-wire/leviathan.md",
+    "hacking/over-the-wire/krypton.md",
     "corsi/software-security/progetto/appunti.md",
     "corsi/software-security/progetto/annotazioni esercizio 1.md",
     "corsi/software-security/progetto/annotazioni esercizio 2.md",
     "corsi/codice-malevolo/codice-malevolo.md",
     "corsi/software-security/progetto",
     "corsi/software-security",
-    "hacking/over-the-wire/leviathan.md",
     "README.md",
     "hacking/over-the-wire/nathan.md",
     "hacking/over-the-wire",
@@ -198,7 +199,6 @@
     "corsi/cybersecurity/lezioni/2023_11_20_access_control.md",
     "corsi/cybersecurity/lezioni/2023_11_15_autenticazione_passwordless.md",
     "corsi/cybersecurity/lezioni/2023_11_08_autenticazione_utente.md",
-    "corsi/cybersecurity/lezioni/2023_11_06_attacchi_infrastrutture_critiche_ICS.md",
     "Pasted image 20240822162948.png",
     "corsi/network-security/assets/mail-arch.PNG",
     "corsi/network-security/assets/ip-sec-arch.PNG",

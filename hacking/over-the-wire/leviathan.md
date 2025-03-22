@@ -7,6 +7,7 @@
 | `leviathan4` | `WG1egElCvO` |
 | `leviathan5` | `0dyxT7F4QD` |
 | `leviathan6` | `szo7HDB88w` |
+| `leviathan7` | `qEs5Io5yM8` |
 
 ## leviathan0
 Cerca nel file html in `.backup` la parola `leviathan1`
@@ -30,3 +31,9 @@ No comment ahaha
 
 # leviathan5
 Link simbolico `-s` sul file letto
+
+# leviathan6
+Controlla il codice disassemblato, basta `objdump -d` e cerca per la chiamata `movl` che carica in memoria il codice da comparare.
+
+# leviathan7
+FINISH
