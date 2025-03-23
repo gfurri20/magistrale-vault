@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "hacking/over-the-wire/krypton.md",
+                "file": "corsi/software-security/progetto/appunti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "krypton"
+              "title": "appunti"
             }
           }
         ]
@@ -162,11 +162,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "251582980cb261f5",
+  "active": "57379b1213ae8f08",
   "lastOpenFiles": [
+    "hacking/over-the-wire/krypton.md",
     "Pasted image 20250322220614.png",
     "hacking/over-the-wire/leviathan.md",
-    "hacking/over-the-wire/krypton.md",
     "corsi/software-security/progetto/appunti.md",
     "corsi/software-security/progetto/annotazioni esercizio 1.md",
     "corsi/software-security/progetto/annotazioni esercizio 2.md",
@@ -208,7 +208,6 @@
     "corsi/network-security/assets/fw-sceheme.png",
     "corsi/network-security/assets/dns-scheme.png",
     "corsi/network-security/assets/smime-flow.png",
-    "corsi/network-security/assets/email-sec-protocols.png",
     "corsi/network-security/assets/sicurezza-reti-dispensina.pdf",
     "Untitled.canvas",
     "Network Security/Untitled.canvas"

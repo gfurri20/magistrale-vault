@@ -11,8 +11,11 @@ Scaletta per report:
 	- fasi dell'attacco
 3. Contromisure applicabili per arginare tali tipologie di attacchi
 	- Addresses randomizations (non proprio sicura se si trova l'offset)
-	- altre contromisure che ora non saprei ahaha
-4. ROP in contesti moderni
+	- vedi kBouncer e ROPecker
+4. Attacchi che hanno sfruttato effettivamente la tecnica ROP
+	- [New Wekby Attacks Use DNS Requests As Command and Control Mechanism](https://unit42.paloaltonetworks.com/unit42-new-wekby-attacks-use-dns-requests-as-command-and-control-mechanism/)
+	- [Evasive Maneuvers by the Wekby Group with Custom ROP-packing and DNS Covert Channels](https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop)
+5. ROP in contesti moderni
 	- [Gadgets of Gadgets in Industrial Control Systems: Return Oriented Programming Attacks on PLCs | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/10132957)
 
 Paper letti e magari citati:
