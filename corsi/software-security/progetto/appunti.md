@@ -12,6 +12,7 @@ Scaletta per report:
 3. Contromisure applicabili per arginare tali tipologie di attacchi
 	- Addresses randomizations (non proprio sicura se si trova l'offset)
 	- vedi kBouncer e ROPecker
+	- vedi SafeLLVM, Zipper Stack e ROPocop
 4. Attacchi che hanno sfruttato effettivamente la tecnica ROP
 	- [New Wekby Attacks Use DNS Requests As Command and Control Mechanism](https://unit42.paloaltonetworks.com/unit42-new-wekby-attacks-use-dns-requests-as-command-and-control-mechanism/)
 	- [Evasive Maneuvers by the Wekby Group with Custom ROP-packing and DNS Covert Channels](https://www.anomali.com/blog/evasive-maneuvers-the-wekby-group-attempts-to-evade-analysis-via-custom-rop)
