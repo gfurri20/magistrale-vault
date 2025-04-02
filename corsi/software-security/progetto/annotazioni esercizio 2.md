@@ -13,7 +13,7 @@ void angelo_della_morte() {
 
 Essa invoca un interrupt 80 utile per le chiamate a sistema, inoltre è presente una variabile globale di tipo stringa contenente `/bin/sh`.
 
-Deduco quindi che, attraverso la concatenazione di return sia **necessario invocare una chiamata di sistema** (e.g. `execv`) **per aprire la shell**.
+Deduco quindi che, attraverso la concatenazione di return sia **necessario invocare una chiamata di sistema** (e.g. `execve`) **per aprire la shell**.
 
 Dov'è la vulnerabilità per fare buffer overflow?
 
