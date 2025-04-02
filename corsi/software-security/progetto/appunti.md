@@ -68,3 +68,5 @@ In risposta agli attacchi basati su buffer overflow, vennero implementate protez
 Nel 2007, Hovav Shacham presentò il concetto di "Return-Oriented Programming" (ROP) nel suo lavoro intitolato "The Geometry of Innocent Flesh on the Bone: Return-into-libc without Function Calls (on the x86)". Questa tecnica avanzata consentiva agli aggressori di eseguire codice arbitrario combinando brevi sequenze di istruzioni già presenti nel programma, ciascuna terminante con un'istruzione di ritorno, aggirando così le protezioni W⊕X e DEP senza necessità di iniettare nuovo codice. ​[arXiv+3hovav.net+3Black Hat+3](https://hovav.net/ucsd/dist/geometry.pdf?utm_source=chatgpt.com)
 
 Questi sviluppi evidenziano l'evoluzione continua delle tecniche di attacco e delle contromisure nel campo della sicurezza informatica, sottolineando l'importanza di una costante ricerca e aggiornamento per proteggere i sistemi dalle minacce emergenti.
+
+Prova di co
