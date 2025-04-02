@@ -69,4 +69,4 @@ Nel 2007, Hovav Shacham presentò il concetto di "Return-Oriented Programming" (
 
 Questi sviluppi evidenziano l'evoluzione continua delle tecniche di attacco e delle contromisure nel campo della sicurezza informatica, sottolineando l'importanza di una costante ricerca e aggiornamento per proteggere i sistemi dalle minacce emergenti.
 
-Prova di co
+Prova di commit
