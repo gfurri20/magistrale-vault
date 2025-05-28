@@ -28,7 +28,7 @@ Qua il programma legge da `stdin` ed inserisce nel buffer `soldi` un numero di c
 Qualsiasi input sul binario ci ritorna sempre il secondo branch dell'if nella funzione `main`, questo perché il primo branch si raggiunge inserendo nella variabile `soldi` il valore `due\0`, con il carattere terminale `\0`, se lo inseriamo da tastiera, otterremo sempre `due\n` e di conseguenza non entriamo nel primo branch, quello utile per raggiungere l'istruzione `ret` di partenza.
 
 ## Buffer Overflow
-Dopo un esamine con `gdb` noto che per iniziare la rop bisogna smashare lo stack con la seguente stringa: `due\0AAAAAAAAAAAAXXXX`, una stringa di `16 + 4` caratteri:
+Dopo un esame con `gdb` noto che per iniziare la rop bisogna smashare lo stack con la seguente stringa: `due\0AAAAAAAAAAAAXXXX`, una stringa di `16 + 4` caratteri:
 - `due\0` - quattro caratteri per entrare nel branch corretto della condizione
 - `AAAAAAAAAAAA` - dodici caratteri di padding per raggiungere il return address
 - `XXXX` - il return address da cui cominciare l'attacco ROP
