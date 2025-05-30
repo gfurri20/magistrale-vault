@@ -1,0 +1,145 @@
+*Rielaborazione delle lezioni 1, 2 e 3.*
+
+Che cos'è un software e le relative tutele, italiane, europee ed estere (americane).
+
+Normativa principale italiana: carta costituzionale, comprende leggi e codici (e.g. codice civile).
+Il codice civile raggruppa gli articoli che regolano contratti e tutele civili (non penale).
+
+> [!info] Bene
+> Un bene è un oggetto di diritto, quindi è ricollegato al concetto di proprietà.
+
+I beni di dividono in:
+- **beni mobili**, ciò che non è collegato ad un terreno/suolo (e.g. automobile è un bene mobile registrato, perché ci si paga delle tasse)
+- **beni immobili**, il contrario (e.g. casa)
+
+Sono beni anche gli oggetti che non sono di nessuno (e.g. tesori, *res nullius*).
+
+Dividiamo anche:
+- **beni materiali**, tutto ciò che ha una consistenza corporea (e.g. telefono, hardware)
+	- anche forze ed energie naturali che hanno valore economico (e.g. gas metano)
+- **beni immateriali** (o incorporali), non hanno una consistenza corporea ma che hanno un valore economico (e.g. software)
+
+## Proprietà intellettuale
+**I beni immateriali sono frutto della creatività e dall'intelletto umano**, sono disciplinati in tramite:
+- **diritto d'autore**
+- **diritto industriale**
+
+Tali beni sono costituzionalmente tutelati attraverso specifici articoli (e.g. paternità dell'opera).
+
+---
+### Diritto industriale
+Il diritto industriale **tutela il brevetto, il marchio e il know-how**.
+Il know-how ha valore in quanto segreto (e.g. formula segreta della coca-cola).
+
+***In generale la differenza principale tra diritto d'autore e diritto industriale è che il primo tutela la concretizzazione dell'idea, il secondo l'idea stessa!***
+
+I brevetti possono spaziare in ogni ambito e spesso l'emissione deve essere supervisionata da uno specialista.
+
+Prevale il segno distintivo o le caratteristiche del marchio/prodotto. Si può registrare anche il design.
+
+Lo strumento di tutela impiegato è quello della **Privativa d'uso**, ossia il diritto esclusivo di produrre e vendere il bene, oggetto della protezione.
+
+Il diritto industriale si può acquisire:
+- attraverso il brevetto, quindi con invenzioni tecnologiche
+- registrazione del marchio
+
+---
+### Diritto d'autore
+Norme che tutelano il diritto d'autore:
+- CODICE CIVILE
+	- (art. 2575 C.C.) Formano oggetto del diritto d'autore le **opere d'ingegno**, il software è categorizzato come tutela di un'opera letteraria.
+	- (art. 2576 C.C.) Il **titolo originario dell'acquisto** è sostanzialmente il contratto di ottenimento del bene ed è costituito dalla creazione dell'opera.
+- Legge sul Diritto d'Autore (LdA), modificata nel corso degli anni, tutele le opere create dall'ingegno umano
+	- **LDA - Art. 1-2**, elenca tutte le opere tutelate, compresi i programmi per elaboratore, banche dati ma anche opere digitali.
+		- *i programmi per elaboratore, in qualsiasi forma espressi purché originali quale risultato di creazione intellettuale dell’autore*
+		- Condizioni per la tutela:
+			- deve essere un'opera di carattere intellettuale
+			- deve avere un valore creativo, non di novità assoluta ma sufficiente
+		- Oggetto della tutela:
+			- Il diritto d'autore tutela la **forma espressiva**, la concretizzazione dell'opera
+	- **LDA - Art. 110**, senza un contratto di consenso alla copia (e.g. traduzione di un software in un altro linguaggio), la copia risulta essere plagio.
+		- **Il trasferimento dei diritti d'autore deve essere provato per iscritto!**
+
+**Il diritto di autore si ottiene nel momento in cui il bene tutelato viene creato.**
+Esso è tutelato in ogni parte del mondo.
+
+Cosa disciplina? **La concretizzazione di un'idea** (e.g. un film sulla seconda guerra mondiale è tutelato mentre l'idea alla base no).
+In Italia l'idea non è possibile brevettarla.
+La tutela dura 70 anni oltre la morte dell'autore.
+
+#### L'autore
+L'autore è una persona **fisica**, che sia minore, interdetto o inabilitato.
+(Art. 8 LdA) Si presume essere l'autore colui che è indicato come autore.
+
+E' possibile registrare l'opera presso la SIAE e anche mantenere l'anonimato (chissà se ha senso).
+
+Nel caso di più autori, Art. 7 LdA e Art. 10 LdA tutelano opere collettive.
+
+Titolo d'acquisto dell'opera rispetto all'autore:
+- **titolo originario d'acquisto**, creazione
+- **titolo derivativo d'acquisto**, mediante eredità, donazione o acquisto materiale
+
+I diritti dell'autore si dividono in:
+- **diritti morali**
+- **diritti patrimoniali**
+
+##### Diritti Morali
+Diritti della personalità, tutelano il legame tra la persona e l'opera (paternità intellettuale). 
+
+Si creano quando viene creata l'opera.
+
+Caratteristiche:
+- inalienabile, non toglibile
+- imprescrittibile, non c'è una scadenza per l'azionamento del diritto
+- intrasmissibili
+- non si trasmettono per mortis causa
+
+Quali sono (Art. 20-24 e 142-143 LdA):
+- diritto di rivendicazione
+	- Parenti del cuius - il diritto di rivendicare può essere fatto valere senza limite di tempo dai parenti
+- diritto di rivelare l'identità
+- diritto di opporsi alle deformazioni/mutilazioni che causano un danno all'autore
+- diritto di ritirare l'opera dal commercio per ragioni morali
+
+##### Diritti Patrimoniali
+Art. 12-19 LDA - diritto esclusivo di **utilizzare l'opera economicamente** in ogni forma e modo.
+
+Esempi di attività non esaustivi:
+- acquisto e rivendita
+- modifica
+- traduzione
+- *pubblicazione*
+
+Sono diritti:
+- **esclusivi**, salvo eccezioni (da esame)
+- **assoluti**, fatti valere nei confronti di chiunque
+- **alienabili**, trasmissibili tramite contratti
+- durata limitata, **cedibili**
+
+Art. 19 LDA - afferma che gli art. 12-19 sono indipendenti tra loro ed esclusivi. Puoi sfruttare il tuo possedimento come vuoi.
+- Art. 12.1 - **diritto di prima pubblicazione**, posso decidere se pubblicare o meno
+- Art. 12.2 - **diritto esclusivo di utilizzo**, posso utilizzarla come mi pare nei limiti della legge
+- Art. 13 - **diritto di riproduzione**, il copyright
+	- violazione anche in caso di contesto diverso di quello consentito dall'autore
+	- la cessione non determina il diritto di riproduzione, in generale non determina la cessione di tutti i diritti relativi
+- Art. 14 - diritto di trascrizione (deprecato)
+- Art. 16 - **diritto di comunicazione al pubblico**
+	- diffusione, diritto esclusivo
+	- messa a disposizione, accesso potenziale all'opera (tipo on demand)
+- Art. 17 - **diritto di distribuzione**
+	- messa in commercio dell'opera
+- Art. 18 - **diritto di elaborazione**, l'autore può sempre tradurre e modificare l'opera
+	- 18bis - **diritto di noleggio e prestito**, licenze di utilizzo
+		- noleggio, cessione da parte dell'autore per beneficio economico
+		- prestito
+
+Il **diritto di seguito** è il diritto di dare una percentuale sul prezzo di vendita.
+
+I diritti patrimoniali necessitano di un'articolazione complessa per cercare di includere tutti i casi possibili, ogni diritto è **indipendente** nel senso che il trasferimento di uno di questi diritti non implica il trasferimento di tutti gli altri (Art. 19 LDA).
+
+Art. 110 LDA - **il trasferimento** dei diritti d'autore **deve essere PROVATO per iscritto** tramite un contratto tra le parti.
+
+Art. 25 LDA - la durata del diritto d'autore è di 70 post-morte dell'autore.
+
+
+**NFT** - Difficile applicare il diritto di seguito agli NFT, a causa della complessità di tracciamento.
