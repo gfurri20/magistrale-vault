@@ -116,7 +116,7 @@ Sono diritti:
 - **alienabili**, trasmissibili tramite contratti
 - durata limitata, **cedibili**
 
-Art. 19 LDA - afferma che gli art. 12-19 sono indipendenti tra loro ed esclusivi. Puoi sfruttare il tuo possedimento come vuoi.
+Art. 19 LDA - afferma che gli art. 12-18 sono indipendenti tra loro ed esclusivi. Puoi sfruttare il tuo possedimento come vuoi.
 - Art. 12.1 - **diritto di prima pubblicazione**, posso decidere se pubblicare o meno
 - Art. 12.2 - **diritto esclusivo di utilizzo**, posso utilizzarla come mi pare nei limiti della legge
 - Art. 13 - **diritto di riproduzione**, il copyright
