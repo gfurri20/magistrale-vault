@@ -37,3 +37,71 @@ La legge individua:
 I contratti innominati possono essere:
 - atipici
 - **tipizzati**, non esistono in forma autonoma nel codice civile (e.g. licenza d'uso software), ma hanno possiedono una forma appunto tipica
+
+### Fasi del contratto
+
+La stesura di un contratto si divide in fasi:
+- **Fase precontrattuale** - negoziazione tra le parti
+	- attività volte alle trattative
+	- *lettera d'intenti* - documenti di inizio trattativa
+		- funzione preliminare di instaurazione rapporto
+		- vaga e generica
+	- *verbali di riunione* - trascrittura della riunione
+		- possono essere prova in tribunale se scritti bene
+		- comprovano gli incontri
+	- *studio di fattibilità* - previsione degli obiettivi e relativi costi
+		- può essere un lavoro costoso e complesso
+	- Disposizioni imperative - comportamento tra le parti
+		- il contratto deve essere eseguito in buona fede
+- **Stipulazione del contratto**
+
+---
+
+## Contratti informatici
+Il software è un bene **mobile, immateriale e tutelato dalla legge sul diritto d'autore**.
+
+I diritti d'autore su un software si possono acquistare:
+- a titolo originario (crearlo)
+	- sviluppo interno, non c'è bisogno di un contratto
+	- sviluppo esterno
+		- SW già esistente
+			- acquisizione definitiva
+			- acquisizione temporanea
+				- licenza esclusiva
+				- licenza non esclusiva
+		- SW non esistente
+- a titolo derivativo (acquistarlo)
+
+Esistono diverse tipologie di contratti di informatica:
+- **Licenza d'uso Software**
+- **Sviluppo Software**
+- **Manutenzione Software**
+- Disaster recovery (non si usa più tanto)
+
+### Licenza d'uso Software
+Trasferimento all'utente la **possibilità** di utilizzare una pacchetto applicativo:
+- contratto innominato (anche se ormai è tipico)
+- Oggetto del contratto: licenza di utilizzo esclusivo o non esclusivo di un prodotto, in certi casi anche l'eventuale possibilità di cedere a terzi il diritto stesso
+- Utilizzo del prodotto nei termini stabiliti dal contratto
+- Il licenziatario (colui che acquista la licenza) non può intervenire sul codice
+
+### Sviluppo Software
+Assimilabile al contratto d'appalto: concessione della gestione di qualcosa mantenendone la proprietà.
+
+Dunque consiste nella **realizzazione di un programma per uno specifico utente che ne acquista la titolarità**.
+- è un contratto atipico e nominato
+- spesso esistono lacune cognitive in entrambi le parti
+
+**Realizzazione di un programma per uno specifico utente che ne acquista la titolarità, esclusiva** (la titolarità consegue dopo l'*intero* pagamento)
+
+Appalto - prestazione d'opera
+- appalto in caso di due società
+- contratto d'opera in caso di un singolo soggetto
+
+
+### Manutenzione Software
+Intervento di duplice natura sul software già realizzato (deve essere di proprietà):
+- **ordinaria** - correzione di errori o bug
+- **straordinaria** - nuova realizzazione ad hoc, nuove features o nuova release
+	- fa riferimento al contratto di sviluppo software (per operare serve il permesso)
+
