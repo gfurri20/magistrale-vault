@@ -20,3 +20,43 @@ Possibilità che mi sono venute in mente:
 	- potrebbe essere interessante magari degli itemset frequenti anche qua ma boh
 
 Magari questo potrebbe essermi utile https://github.com/awesomedata/awesome-public-datasets
+
+---
+
+Sono riuscito ad installare `graphframes` ed usarlo con `jupyter` non so come:
+
+Installare `pip install pyspark graphframes-py jupyterlab`
+
+Inserire il seguente codice:
+```python
+
+# NECESSARIO SCARICARE IL JAR
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("GraphFrames Example") \
+    .config("spark.jars.packages", "io.graphframes:graphframes-spark4_2.13:0.9.2") \
+    .getOrCreate()
+
+
+from graphframes import GraphFrame
+
+nodes = [
+    (1, "Alice", 30),
+    (2, "Bob", 25),
+    (3, "Charlie", 35)
+]
+nodes_df = spark.createDataFrame(nodes, ["id", "name", "age"])
+
+edges = [
+    (1, 2, "friend"),
+    (2, 1, "friend"),
+    (2, 3, "friend"),
+    (3, 2, "enemy")  # eek!
+]
+edges_df = spark.createDataFrame(edges, ["src", "dst", "relationship"])
+
+g = GraphFrame(nodes_df, edges_df)
+```
+
+
