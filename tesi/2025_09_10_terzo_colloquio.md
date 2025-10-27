@@ -12,8 +12,8 @@ Domande da implementare:
 4) In effetti le vasche sono tre. Riesci ad individuare quali registri delle PLC sono dedicati alle misure e quali alle attuazioni, per ciascuna vasca? 
 5) In effetti le vasche sono tre. Riesci ad individuare se ci sono registri delle PLC utilizzati per memorizzare altri informazioni significative, come setpoint o altro?
 6) Considerato che le vasche sono tre, riesci a dedurre se esiste una connessione fisica, ovvero dei tubi, che colleghino due o più vasche? (questa è una informazione che nel nostro paper non siamo in grado di derivare)
-7) Supponendo di aver individuato i registri dedicati a contenere le misure e le attuazioni per ciascuna vasca, riesci a costrure per ciascuna vasca, un grafico che spieghi come queste grandezze, misure e attuazioni, evolvono al passare del tempo?
-8) Riesci a costrurmi un grafico che rappresenti il funzionamento dell’intero sistema al passare del tempo?
+7) Supponendo di aver individuato i registri dedicati a contenere le misure e le attuazioni per ciascuna vasca, riesci a costruire per ciascuna vasca, un grafico che spieghi come queste grandezze, misure e attuazioni, evolvono al passare del tempo?
+8) Riesci a costruirmi un grafico che rappresenti il funzionamento dell’intero sistema al passare del tempo?
 9) Per ciascuna vasca, riesci ad estrapolare degli invarianti che mettano in relazione le misure con le attuazioni? 
 10) Riesci ad estrapolare degli invarianti significativi che leghino il contenuto dei registri dell’intero sistema industriale?
 
