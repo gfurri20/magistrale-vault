@@ -28,4 +28,3 @@ Domanda: qual è il modello migliore? https://huggingface.co/spaces/open-llm-lea
 Alcuni modelli potrebbero permette la risposta schematizzata (e.g. in JSON) 
 Framework python di openai.
 
-Tesi Key
