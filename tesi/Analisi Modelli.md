@@ -10,3 +10,7 @@ Devo capire come "dialogare" in streaming con il modello in modo da interagire d
 
 ---
 
+**28 ottobre 2025**
+
+Risulta interessante capire come mantenere un contesto per avanzare nel porre domande.
+Ciò che devo capire è come mantenerlo: qual è il metodo migliore e come implementarlo nel codice.
