@@ -14,3 +14,11 @@ Devo capire come "dialogare" in streaming con il modello in modo da interagire d
 
 Risulta interessante capire come mantenere un contesto per avanzare nel porre domande.
 Ciò che devo capire è come mantenerlo: qual è il metodo migliore e come implementarlo nel codice.
+Per fare ciò, attualmente, ho adottato un sistema che utilizza una variabile `contex`. Questa variabile mantiene le risposte ad ogni domanda e viene riproposta come contesto prima della domanda successiva.
+In questo modo il modello è a conoscenza delle sue risposte precedenti.
+
+Purtroppo LLAMA non risulta essere troppo efficace, nemmeno conoscendo il nome dei registri.
+
+C'è da migliorare le domande e cominciare a salvarsi un po' di risultati per analizzare meglio.
+
+
