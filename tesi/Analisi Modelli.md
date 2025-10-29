@@ -21,4 +21,7 @@ Purtroppo LLAMA non risulta essere troppo efficace, nemmeno conoscendo il nome d
 
 C'è da migliorare le domande e cominciare a salvarsi un po' di risultati per analizzare meglio.
 
+---
+
+**29 ottobre 2025**
 
