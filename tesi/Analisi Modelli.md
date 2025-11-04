@@ -74,3 +74,8 @@ Oggi ho svolto diverse prove, impostando alcuni parametri differenti.
 | `Q11`   | Trova delle relazioni ma niente di più tra registri sulla base del fatto che i loro valori cambiano insieme<br>- `PLC1_InputRegisters_IW0` and `PLC2_InputRegisters_IW0`<br>- `PLC1_MemoryRegisters_MW0` and `PLC2_MemoryRegisters_MW0`<br>- `PLC3_Coils_QX00` connected to the `PLC1_Coils_QX00` and `PLC2_Coils_QX00`<br>- `PLC1_MemoryRegisters_MW1` and `PLC3_MemoryRegisters_MW1`<br>- `PLC2_MemoryRegisters_MW1` connected to `PLC1_MemoryRegisters_MW1` and `PLC3_MemoryRegisters_MW1` |
 
 
+---
+
+## **4 novembre 2025**
+
+
