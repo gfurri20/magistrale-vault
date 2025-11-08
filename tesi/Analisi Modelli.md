@@ -57,7 +57,7 @@ Oggi ho svolto diverse prove, impostando alcuni parametri differenti.
 - `baseline.csv` senza compressione
 - `meta-llama/llama-3.3-8b-instruct:free`
 - header del dataset non Anonimizzato (quindi con i nomi dei registri)
-- prime 2000 righe di dataset in analisi
+- prime `2000` righe di dataset in analisi
 - contesto progressivo nelle chiamate
 
 | Domanda | Commento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -83,7 +83,7 @@ Oggi ho svolto diverse prove, impostando alcuni parametri differenti.
 - `baseline.csv` senza compressione
 - `qwen/qwen3-235b-a22b:free`
 - header del dataset non Anonimizzato (quindi con i nomi dei registri)
-- prime 100 righe di dataset in analisi (poche ma i modelli fanno vomitare se non paghi)
+- prime `100` righe di dataset in analisi (poche ma i modelli fanno vomitare se non paghi)
 - contesto progressivo nelle chiamate
 
 Qua c'è un bel problema: con solo 100 righe di database il registro che mantiene il livello di Tank3 non viene aggiornato e rimane costante ad 1. Questo causa un errore nell'analisi del modello perché non permette la visualizzazione del trend di crescita e descrescita.
@@ -103,3 +103,35 @@ Qua c'è un bel problema: con solo 100 righe di database il registro che mantien
 | `Q11`   | Crashato                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 Qwen sembra dimostrarsi un buon modello d'analisi e dovrebbe essere approfondito maggiormente con configurazioni diverse.
+
+
+---
+
+## **8 novembre 2025**
+### **Test 1**
+Innanzitutto ho modificato leggermente il testo "developer" di setting del modello:
+```
+Within the full response attach an evaluable response — in this case, Yes, No or a Number.
+```
+
+- `baseline.csv` con compressione, nello specifico
+	- `Deduplication: reduced size from 30059 to 10279`
+	- `Remove one every 2: reduced size from 10279 to 5140`
+- modello di openrouter `openrouter/polaris-alpha`
+- header del dataset non Anonimizzato (quindi con i nomi dei registri)
+- prime `5000` righe di dataset in analisi (poche ma i modelli fanno vomitare se non paghi)
+- contesto progressivo nelle chiamate
+
+| Domanda | Commento                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Q1`    | **NO** - identifica il numero corretto di PLC (3) e individua dei trend nei dati in analisi:<br>pattern a triangolo/rampa ripetitivi, commutazioni a soglia fissa, diverse PLC che condividono patterns correlati; inoltre fa riferimento al fenomeno di isteresi.<br>Afferma che non c'è un'impronta digitale e che quindi non è possibile affermarlo con certezza, tra gli esempi parla di tank e trasferimenti d'acqua. |
+| `Q2`    | **SI, 3** - individua tre registri `IWx` (associati a 3 PLC diverse) che oscillano tra specifici intervalli. Inoltre, per ognuno di essi altri registri fungono da threshold ed attuatori `MWx` e `QXx`                                                                                                                                                                                                                    |
+| `Q3`    | **SI** - senza ulteriori specifiche                                                                                                                                                                                                                                                                                                                                                                                        |
+| `Q4`    | **SI** - molto semplicemente per le tre tanks: `IWx` misure e `MWx`/`QXxy` attuatori                                                                                                                                                                                                                                                                                                                                       |
+| `Q5`    | **SI** - molto semplicemente per le tre tanks: `IWx` misure e `MWx`/`QXxy` attuatori                                                                                                                                                                                                                                                                                                                                       |
+| `Q6`    |                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `Q7`    |                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `Q8`    | Non eseguite                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `Q9`    | Non eseguite                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `Q10`   |                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `Q11`   |                                                                                                                                                                                                                                                                                                                                                                                                                            |
