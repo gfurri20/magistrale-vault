@@ -209,5 +209,38 @@ Individua alcune proprietà semplici, senza approfondirle.
 
 L'ultima riga individua un'invariante Inter-PLC, in cui viene quasi individuato il canale di comunicazione sia tra PLC, che fisico con i tubi di trasferimento dell'acqua.
 
+1. **Setpoint Constants**:
+    - `PLC1_MemoryRegisters_MW0 == 40`
+    - `PLC1_MemoryRegisters_MW1 == 80`
+    - `PLC2_MemoryRegisters_MW0 == 10`
+    - `PLC2_MemoryRegisters_MW1 == 20`
+    - `PLC3_MemoryRegisters_MW1 == 10`
+2. **Coil Synchronization**:
+    - `PLC1_Coils_QX01 == PLC1_Coils_QX02` (drain valves always match)
+3. **Mutual Exclusion (No Simultaneous Fill/Drain)**:
+    - `PLC1_Coils_QX00 * (PLC1_Coils_QX01 OR PLC1_Coils_QX02) == 0` (fill and drain never active together)
+4. **PLC3 Idle**:
+    - `PLC3_Coils_QX00 == 0`
+5. **PLC3 Normal Range**:
+    - `PLC3_InputRegisters_IW0 IN {1, 2}`
+6. **Trend Correlations** (using prev/current for delta):
+    - If `PLC1_Coils_QX00 == 1 AND prev_PLC1_Coils_QX00 == 0`, then `PLC1_InputRegisters_IW0 <= 53` AND next level > current (ascending starts)
+    - If `PLC1_Coils_QX01 == 1 AND prev_PLC1_Coils_QX01 == 0`, then `PLC1_InputRegisters_IW0 >= 80` AND next level < current (descending starts)
+    - Similar for PLC2: `PLC2_Coils_QX00 == 1` implies next `PLC2_InputRegisters_IW0 >= current` (fills 10→20)
+7. **Inter-PLC Dependency (Purification Flow)**:
+    - When `PLC1_Coils_QX01 == 1` (draining T-201), `PLC2_Coils_QX00 == 1` often (70% correlation; T-201 outflow feeds T-202 fill)
+8. **Level Bounds**:
+    - `40 <= PLC1_InputRegisters_IW0 <= 81`
+    - `10 <= PLC2_InputRegisters_IW0 <= 20`
+    - `PLC3_InputRegisters_IW0 <= 2`
 
 
+Alcune considerazioni:
+- **PLC3**
+	- i dati in input non sono rappresentativi del comportamento di PLC3 in quanto valori ed invarianti estratte non sono corrette
+- **Comunicazione PLC1 e PLC2**
+	- sembra individuare un collegamento tra `PLC1_QX01`e `PLC1_QX02`, il primo è l'effettivo attuatore e prende il proprio valore dal secondo che è un registro utilizzato come output di comunicazione con PLC2
+- T-201 outflow feeds T-202 fill
+- **Non sa cos'è un'invariante**
+	- non individua quelle configurazioni ILLEGALI che porterebbero a compromettere il sistema.
+	- individua, però, delle proprietà (ancora un po' lasche) del sistema
