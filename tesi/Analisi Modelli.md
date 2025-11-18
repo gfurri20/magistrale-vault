@@ -142,3 +142,7 @@ Non so per quale motivo segna a PLC3_MW1 un valore costante di 80 nonostante sia
 Non riesce ad individuare la correlazione tra spegnimento di `PLC1_QX00` e l'accensione di `PLC1_QX01 == PLC1_QX02 == PLC2_QX00`, trend che stabilisce la fine del riempimento di Tank1, l'inizio dello svuotamento della stessa e il riempimento di Tank2.
 
 Altra cosa interessante da capire sarebbe il come mai il livello di Tank1 registra, durante lo svuotamento, alcuni momenti di fermo.
+
+---
+
+## **18 novembre 2025**
