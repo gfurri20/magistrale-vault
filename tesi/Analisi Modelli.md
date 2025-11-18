@@ -146,3 +146,68 @@ Altra cosa interessante da capire sarebbe il come mai il livello di Tank1 regist
 ---
 
 ## **18 novembre 2025**
+
+Configurazione:
+- `baseline.csv` con compressione, nello specifico
+	- `Deduplication: reduced size from 30059 to 10279`
+	- `Remove one every 2: reduced size from 10279 to 5140`
+- modello di openrouter `openrouter/sherlock-think-alpha`
+- header del dataset non Anonimizzato (quindi con i nomi dei registri)
+- tutte le righe del dataset compresso
+
+
+Testo in input:
+```
+# Context
+You are an expert in Industrial Control Systems (ICS).
+Your expertise is in understanding system architecture by analyzing the time-series values of its registers.
+An ICS system is secured using invariants: these are properties or relationships that must always remain constant to ensure the system's correct and safe operation.
+Present your findings in a clear, structured format.
+
+---
+
+# ICS in analysis
+The system being analyzed has 3 PLCs. Each PLC controls 3 water tanks (and their related components):
+- PLC1 controls T-201 
+- PLC2 controls T-202
+- PLC3 controls T-203
+The system's purpose is water purification (creating potable water) via a chemical process.
+
+---
+
+# Data
+The analysis dataset is a time-series scan of the system's register states.
+The plaintext dataset is in CSV format:
+* The first row is the header (column names).
+* All data is comma-separated.
+* Data values in subsequent rows correspond to the header columns by their position (index).
+
+---
+
+# Task
+Your objectives are:
+1. Register Classification: Analyze the data and classify the registers by their functional type for every PLC.
+2. Invariant Extraction: Identify and extract significant invariants from the data. These invariants are the critical relationships that define the system's normal behavior.
+   Goal: These invariants will be used to monitor the system, secure it, and verify that its normal operational flow is not compromised at any time.
+3. Try to demonstrate the invariants you found with examples from the data provided.
+4. Try to demonstrate this property: "When PLC1_Coils_QX00 changes its state from 0 to 1, it activates an ascending trend in T-201."
+"""
+```
+
+
+Cataloga bene i vari registri ed individua i trend di crescita e decrescita in abse allo stato dei Coils.
+
+Individua alcune proprietà semplici, senza approfondirle.
+
+|Invariant|Description|
+|---|---|
+|If `PLC1_Coils_QX00==1 ∧ PLC1_Coils_QX01==0 ∧ PLC1_Coils_QX02==0` then `PLC1_InputRegisters_IW0 > prev_PLC1_InputRegisters_IW0`|Filling mode → level **increases**.|
+|If `PLC1_Coils_QX00==0 ∧ PLC1_Coils_QX01==1 ∧ PLC1_Coils_QX02==1` then `PLC1_InputRegisters_IW0 < prev_PLC1_InputRegisters_IW0` (or equal)|Draining mode → level **decreases/stabilizes**.|
+|If `PLC2_Coils_QX00==1` then `PLC2_InputRegisters_IW0 >= prev_PLC2_InputRegisters_IW0`|Filling → non-decreasing.|
+|If `PLC2_Coils_QX00==0` then `PLC2_InputRegisters_IW0 <= prev_PLC2_InputRegisters_IW0`|Draining → non-increasing.|
+|`PLC1_Coils_QX00==1 ∧ PLC1_Coils_QX01==0 ∧ PLC1_Coils_QX02==0` IFF `PLC2_Coils_QX00==0`|**Inter-PLC**: T-201 fills ↔ T-202 drains (water transfer). Reverse holds during drain/fill swap.|
+
+L'ultima riga individua un'invariante Inter-PLC, in cui viene quasi individuato il canale di comunicazione sia tra PLC, che fisico con i tubi di trasferimento dell'acqua.
+
+
+
