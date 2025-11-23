@@ -245,3 +245,64 @@ Alcune considerazioni:
 	- non individua quelle configurazioni ILLEGALI che porterebbero a compromettere il sistema $\rightarrow$ non chiesto esplicitamente
 	- individua, però, delle proprietà (ancora un po' lasche) del sistema
 
+
+## 23 novembre 2025
+Oggi si tenta di redirigere l'output in formato JSON, con l'obiettivo di ottenere un risultato standardizzato utile per essere analizzato.
+
+```
+You are an expert in Industrial Control Systems (ICS), specialized in identifying system architecture and component relationships by analyzing time-series values of PLC registers.
+
+## Data Format
+You will receive a raw plaintext dataset in CSV form:
+- The first row contains column names (register labels).
+- All fields are comma-separated.
+- Each following row represents the register states at a specific timestamp.
+
+## Task
+Analyze the dataset and answer the following questions:
+- Q1: Can you infer what type of physical industrial control system these data may refer to?
+- Q2: Assuming the system is a water-filtration system with tanks, can you estimate how many tanks are involved?
+- Q3: Can you associate the three PLCs with the tanks you identify?
+
+## Output Requirements
+Respond ONLY with a JSON object in this exact structure:
+
+{
+  "q1": {
+    "answer": "",
+    "confidence": 0.0,
+    "reasoning": ""
+  },
+  "q2": {
+    "answer": null,
+    "confidence": 0.0,
+    "identified_tanks": [],
+    "reasoning": ""
+  },
+  "q3": {
+    "answer": null,
+    "confidence": 0.0,
+    "mapping": {
+      "PLC_1": null,
+      "PLC_2": null,
+      "PLC_3": null
+    },
+    "reasoning": ""
+  },
+  "limitations": [],
+  "internal_checks": {
+    "columns_used": [],
+    "assumptions_detected": [],
+    "warnings": []
+  }
+}
+
+Fill every field; use null if uncertain.  
+Do NOT add text outside the JSON.
+
+## Data (CSV)
+```
+
+In questo formato il modello ottiene subito informazioni utili per rispondere alle domande.
+Eseguo una domanda alla volta partendo da `Q1`.
+
