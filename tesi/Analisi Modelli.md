@@ -232,7 +232,7 @@ L'ultima riga individua un'invariante Inter-PLC, in cui viene quasi individuato 
 8. **Level Bounds**:
     - `40 <= PLC1_InputRegisters_IW0 <= 81`
     - `10 <= PLC2_InputRegisters_IW0 <= 20`
-    - `PLC3_InputRegisters_IW0 <= 2`
+    - `PLC3_InputRegisters_IW0 <= 2` $\rightarrow$ Non identifica la vera soglia
 
 
 Alcune considerazioni:
@@ -242,5 +242,6 @@ Alcune considerazioni:
 	- sembra individuare un collegamento tra `PLC1_QX01`e `PLC1_QX02`, il primo è l'effettivo attuatore e prende il proprio valore dal secondo che è un registro utilizzato come output di comunicazione con PLC2
 - T-201 outflow feeds T-202 fill
 - **Non sa cos'è un'invariante**
-	- non individua quelle configurazioni ILLEGALI che porterebbero a compromettere il sistema.
+	- non individua quelle configurazioni ILLEGALI che porterebbero a compromettere il sistema $\rightarrow$ non chiesto esplicitamente
 	- individua, però, delle proprietà (ancora un po' lasche) del sistema
+
