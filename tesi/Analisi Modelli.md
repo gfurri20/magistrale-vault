@@ -301,8 +301,11 @@ Fill every field; use null if uncertain.
 Do NOT add text outside the JSON.
 
 ## Data (CSV)
+data.....
 ```
 
-In questo formato il modello ottiene subito informazioni utili per rispondere alle domande.
-Eseguo una domanda alla volta partendo da `Q1`.
+In questo formato il modello ottiene subito informazioni utili per rispondere alle domande, annullando la validità dell'analisi immediatamente.
+
+Bisogna pensare ad un modello di prompt che permetta di essere applicato su svariate tipologie di dataset e che quindi generalizzi il più possibile la risposta.
+
 
