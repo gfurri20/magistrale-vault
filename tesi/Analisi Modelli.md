@@ -308,4 +308,101 @@ In questo formato il modello ottiene subito informazioni utili per rispondere al
 
 Bisogna pensare ad un modello di prompt che permetta di essere applicato su svariate tipologie di dataset e che quindi generalizzi il più possibile la risposta.
 
+Si potrebbe pensare a due approcci distinti:
+1. **Domande sequenziali con contesto** - il framework pone domande in maniera sequenziale al modello. Ad ogni domanda viene aggiunto il JSON della risposta precedente, aggiornando il contesto man mano che vengono poste domande ulteriori
+	- controllo su ogni domanda e possibilità di creare un framework interattivo
+	- errori a cascata -> un errore in `Q1` comporterebbe un'informazione sbagliata nelle domande successive
+	- aumento "incontrollato" dei token del messaggio, questo potrebbe dover comportare una diminuzione dei dati in ingresso
+2. **Prompt neutrale** - il framework pone una singola domanda, il prompt di richiesta sarà il più neutrale possibile per cercare di evitare eventuali "spoiler" e procedere con un'analisi blind dei dati
+	- non è necessario occuparsi del contesto in quanto viene presentato un singolo e completo prompt
+	- prompt generico che potrebbe non essere compreso nel dettaglio dal modello
 
+In entrambe le situazioni diventa importante capire come strutturare il JSON di output.
+
+Alcuni parametri generali sull'intera analisi che si possono mantenere:
+```json
+"limitations": [],
+"internal_checks": {
+	"columns_used": [],
+	"assumptions_detected": [],
+	"warnings": []
+}
+```
+
+Possibile struttura per risposta a **domande sequenziali con contesto**:
+```json
+{
+	"responses": [
+		"{i}": {
+			"short_answer": "",
+		    "confidence": 0.0,
+		    "reasoning": ""
+		},
+	],
+	"limitations": [],
+	"internal_checks": {
+		"columns_used": [],
+		"assumptions_detected": [],
+		"warnings": []
+	}
+}
+```
+
+Ogni domanda è indicizzata da un identificativo `"{i}"`. Ciò permette di esprimere un numero arbitrario di domande (in altrettante interrogazioni) e di ricollegarsi facilmente alla risposta precedente.
+
+Inoltre questo permetterebbe di allargare il contesto semplicemente aggiungendo un campo `response` nella lista all'interno del JSON; di conseguenza diminuendo il numero di caratteri che compongono il contesto.
+
+Ovvio che bisogna capire anche come aggiungere al contesto i parametri generali -> si potrebbero includere nella risposta. 
+
+```json
+{
+	"responses": [
+		"{i}": {
+			"short_answer": "",
+		    "confidence": 0.0,
+		    "reasoning": "",
+		    "limitations": [],
+			"internal_checks": {
+				"columns_used": [],
+				"assumptions_detected": [],
+				"warnings": []
+			},
+		},
+	],
+}
+```
+
+Invece per quanto riguarda il **prompt neutrale** si potrebbero inserire dei campi che rispecchino le richieste di inferenza proposte:
+```
+Analyze the dataset and infer:
+- possible types of physical processes represented by the registers,
+- possible subsystem groupings
+```
+
+ottenendo:
+
+```json
+{
+  "system_type_inference": {
+    "answer": "",
+    "confidence": 0.0,
+    "reasoning": ""
+  },
+  "subsystem_inference": {
+    "estimated_subsystems": null,
+    "confidence": 0.0,
+    "identified_groups": [],
+    "reasoning": ""
+  },
+  "limitations": [],
+  "internal_checks": {
+    "columns_used": [],
+    "assumptions_detected": [],
+    "warnings": []
+  }
+}
+```
+
+Si potrebbe aumentare la precisione identificando con un indice ogni richiesta di inferenza e collegandola nel template di risposta.
+
+In un framework il cui compito è quello di analizzare dataset provenienti da ICS eterogenei tra di loro, il template di output dovrebbe essere il più generico possibile pur facendo in modo che il modello raccolga tutte le informazioni utili per l'obiettivo finale: *identificazione corretta delle invarianti*.
