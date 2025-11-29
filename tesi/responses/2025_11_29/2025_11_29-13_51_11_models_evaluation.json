@@ -1,0 +1,368 @@
+{
+    "question": "Q1: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Not Identifiable']",
+    "tested_models": [
+        "x-ai/grok-4.1-fast:free",
+        "openai/gpt-oss-20b:free",
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "nvidia/nemotron-nano-12b-v2-vl:free",
+        "tngtech/deepseek-r1t2-chimera:free"
+    ],
+    "total_evaluation_time": 15048.0,
+    "models_log": [
+        {
+            "model": "x-ai/grok-4.1-fast:free",
+            "valid_tests_number": 10,
+            "correct_answers_counter": 10,
+            "wrong_answers_counter": 0,
+            "errors_counter": 0,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.8,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 393.5
+        },
+        {
+            "model": "openai/gpt-oss-20b:free",
+            "valid_tests_number": 6,
+            "correct_answers_counter": 4,
+            "wrong_answers_counter": 2,
+            "errors_counter": 4,
+            "accuracy": 66.66666666666666,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 1,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.71,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Power Generation Plant",
+                    "confidence": 0.65,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1331.7
+        },
+        {
+            "model": "meta-llama/llama-3.3-70b-instruct:free",
+            "valid_tests_number": 9,
+            "correct_answers_counter": 1,
+            "wrong_answers_counter": 8,
+            "errors_counter": 1,
+            "accuracy": 11.11111111111111,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Not Identifiable",
+                    "confidence": 1.0,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Not Identifiable",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Not Identifiable",
+                    "confidence": 0.5,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.9994591673660278,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Not Identifiable",
+                    "confidence": 0.0,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Not Identifiable",
+                    "confidence": 0.5,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.98,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 2113.6
+        },
+        {
+            "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+            "valid_tests_number": 4,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 4,
+            "errors_counter": 6,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.92,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 5,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 7,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 8,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 10164.7
+        },
+        {
+            "model": "tngtech/deepseek-r1t2-chimera:free",
+            "valid_tests_number": 9,
+            "correct_answers_counter": 9,
+            "wrong_answers_counter": 0,
+            "errors_counter": 1,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 80,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1044.6
+        }
+    ]
+}
