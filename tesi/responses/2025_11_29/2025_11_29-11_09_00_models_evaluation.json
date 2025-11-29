@@ -1,0 +1,79 @@
+{
+    "question": "Q1: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Not Identifiable']",
+    "models": [
+        "x-ai/grok-4.1-fast:free"
+    ],
+    "evaluation_time": 383,
+    "models_log": [
+        {
+            "model": "x-ai/grok-4.1-fast:free",
+            "valid_tests_number": 10,
+            "correct_answers_counter": 10,
+            "wrong_answers_counter": 0,
+            "errors_counter": 0,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ]
+        }
+    ]
+}
