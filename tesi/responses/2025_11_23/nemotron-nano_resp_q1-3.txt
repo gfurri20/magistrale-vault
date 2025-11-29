@@ -1,0 +1,94 @@
+{
+  "q1": {
+    "answer": "This appears to be a multi-stage water treatment or chemical dosing system with level control, likely a water purification plant or wastewater treatment facility.",
+    "confidence": 0.85,
+    "reasoning": "The data shows multiple PLCs controlling what appears to be liquid levels in tanks (PLC1_InputRegisters_IW0, PLC2_InputRegisters_IW0, PLC3_InputRegisters_IW0 showing values from 0-81 that behave like level sensors). The system has multiple stages with interlocks - when one tank level drops, another starts filling. The memory registers (MW0, MW1) at 40 and 80 suggest setpoints or thresholds. The coil outputs (QX00, QX01, QX02) control pumps/valves in a sequenced manner. The 'prev_' columns suggest this is training data showing state transitions. The cycling patterns and staged control with 3 different PLCs controlling different tank levels strongly indicates a multi-stage liquid processing system like water treatment."
+  },
+  "limitations": [
+    "Cannot definitively identify the specific type of industrial process without domain knowledge",
+    "No direct measurement units provided - all values are register values",
+    "Limited context about the physical layout and process flow"
+  ],
+  "internal_checks": {
+    "columns_used": [
+      "PLC1_InputRegisters_IW0",
+      "PLC2_InputRegisters_IW0",
+      "PLC3_InputRegisters_IW0",
+      "PLC1_Coils_QX00",
+      "PLC1_Coils_QX01",
+      "PLC1_Coils_QX02",
+      "PLC2_Coils_QX00",
+      "PLC3_Coils_QX00"
+    ],
+    "assumptions_detected": [
+      "Input registers represent liquid levels (0-81 range)",
+      "Coil outputs control pumps/valves",
+      "Memory registers (40, 80) are setpoints/thresholds",
+      "System operates in discrete stages with interlocks"
+    ],
+    "warnings": [
+      "Analysis based on pattern recognition without process documentation",
+      "Register naming convention suggests but doesn't confirm liquid level interpretation"
+    ]
+  }
+}
+
+// NEUTRAL PROMPT ANALYSIS
+{
+  "system_type_inference": {
+    "answer": "PLC-based process automation system with sensor inputs, memory storage units, and actuator outputs.",
+    "confidence": 0.8,
+    "reasoning": "The registers include InputRegisters (sensor-like signals), MemoryRegisters (data storage/processing), and Coils (actuator outputs typical in industrial control systems). Temporal patterns and inter-PLC dependencies suggest a multistage control workflow.",
+    "limitations": [
+      "Assumes standard PLC register functionality; non-standard implementations are possible.",
+      "Insufficient data to validate specific process purpose (e.g., manufacturing vs security systems)."
+    ],
+    "internal_checks": {
+      "columns_used": [
+        "InputRegisters_IW0",
+        "MemoryRegisters_MW0/MW1",
+        "Coils_QX00",
+        "_prev" suffixes
+      ],
+      "assumptions_detected": [
+        "Hexadecimal vs decimal register values unclear.",
+        "Register addresses imply but don't confirm register function."
+      ]
+    }
+  },
+  "subsystem_inference": {
+    "estimated_subsystems": [
+      {
+        "name": "Controller PLC (PLC3)",
+        "confidence": 0.85,
+        "reasoning": "PLC3 receives inputs and drives system logic. Its sensors (IW0) show decreasing signals triggering downstream PLCs (PLC1 coil activation at 53 value)."
+      },
+      {
+        "name": "Motor Control Subsystem (PLC1)",
+        "confidence": 0.78,
+        "reasoning": "PLC1 has three Coils_QX00-QX02 and memory registers. QX00-QX02 likely correspond to motor states (start/run/stop) activated by PLC3's control signals."
+      },
+      {
+        "name": "Fault/Delay Mechanism (PLC2)",
+        "confidence": 0.72,
+        "reasoning": "PLC2 shows repeated register values and brief coil activations (e.g., Coil_QX00 pulsing while IW0 remains constant at 10)."
+      }
+    ],
+    "identified_groups": [
+      {
+        "name": "Command Chain",
+        "confidence": 0.82,
+        "components": [
+          "PLC3_IW0",
+          "PLC1_QX00",
+          "PLC2_QX00"
+        ],
+        "reasoning": "PLC3's declining input signal eventually activates PLC1's primary coil and PLC2's pulsed coil."
+      }
+    ]
+  },
+  "limitations": [
+    "Coil behavior consistency needs longer observational period.",
+    "PLC numbering doesn't confirm logic flow hierarchy."
+  ]
+}

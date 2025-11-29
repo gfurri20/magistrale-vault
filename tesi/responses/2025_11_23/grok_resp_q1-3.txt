@@ -1,0 +1,58 @@
+{
+  "q1": {
+    "answer": "Multi-tank liquid level control system (two main tanks with pumps for filling/emptying/transfer)",
+    "confidence": 0.95,
+    "reasoning": "The dataset shows PLC1_InputRegisters_IW0 oscillating between approximately 40 and 80, and PLC2_InputRegisters_IW0 between 10 and 20, with inverse correlation: when PLC1 level decreases, PLC2 increases, and vice versa, indicating liquid transfer between two tanks via pumps. PLC1_MemoryRegisters_MW0=40 (low setpoint), MW1=80 (high setpoint); PLC2_MW0=10, MW1=20 similarly. PLC1_Coils_QX00-QX02 activate together (often 0,0,0 or 1,1,1) during transfer phases, likely controlling multiple pumps. PLC2_Coils_QX00 and PLC3_Coils_QX00 toggle similarly. PLC3_InputRegisters_IW0 mostly 1 (possibly flow sensor), PLC3_MemoryRegisters_MW1=10 constant. Previous values (prev_*) detect edges/changes for control logic. Pattern repeats cyclically with hysteresis control typical of tank level systems to avoid chattering."
+  },
+  "limitations": ["No explicit timestamps or units; assumes sequential time-series at fixed interval.", "Possibly simulated data; real-world noise absent.", "Limited to IW0/MW0/MW1/QX00; other registers may exist.", "PLC3 role minor (constant input), possibly auxiliary flow/pressure sensor."],
+  "internal_checks": {
+    "columns_used": ["PLC1_InputRegisters_IW0", "PLC2_InputRegisters_IW0", "PLC1_MemoryRegisters_MW0", "PLC1_MemoryRegisters_MW1", "PLC2_MemoryRegisters_MW0", "PLC2_MemoryRegisters_MW1", "PLC1_Coils_QX00", "PLC1_Coils_QX01", "PLC1_Coils_QX02", "PLC2_Coils_QX00", "PLC3_Coils_QX00", "PLC3_InputRegisters_IW0", "prev_* columns for change detection"],
+    "assumptions_detected": ["IW0 values represent tank levels (e.g., % full).", "MW0/MW1 are low/high setpoints.", "Coils control pumps/valves.", "System cycles between transfer directions."],
+    "warnings": ["Repetitive pattern suggests looped simulation or steady-state operation.", "PLC3_IW0 occasionally 2, possibly disturbance or secondary input.", "No evidence of faults or anomalies in provided snippet."]
+  }
+}
+
+// NEUTRAL PROMPT ANALYSIS
+{
+  "system_type_inference": {
+    "answer": "Multi-tank liquid level control system or similar accumulating process (e.g., hoppers, reservoirs) with hysteresis or bang-bang control between low and high setpoints.",
+    "confidence": 0.85,
+    "reasoning": "PLC1_IW0 oscillates between approximately 40 (PLC1_MW0 constant) and 80 (PLC1_MW1 constant), ramping up/down by 1 per timestep when coils QX00/QX01/QX02 are in states like [0,1,1] (decreasing) or [1,1,1] (increasing), [0,0,0] (idle/hold). PLC2_IW0 similarly oscillates between 10 (PLC2_MW0) and 20 (PLC2_MW1), controlled by PLC2_QX00 (1 increasing, 0 decreasing). PLC3_IW0 mostly constant at 1 (occasionally 2), MW1=10 constant, QX00 mostly 0, suggesting supervisory or sensor role. 'prev_' columns indicate lagged states for change detection or PID. Cyclic ramping patterns typical of PLC-simulated tank filling/draining tests. Constant MW values match setpoints."
+  },
+  "subsystem_inference": {
+    "estimated_subsystems": 3,
+    "confidence": 0.9,
+    "identified_groups": [
+      "PLC3 (supervisory/sensor: IW0 mode/input, MW1 constant parameter, QX00 output)",
+      "PLC1 (primary tank/controller: IW0 level, MW0/MW1 setpoints 40/80, QX00/QX01/QX02 valve/pump controls)",
+      "PLC2 (secondary tank/controller: IW0 level, MW0/MW1 setpoints 10/20, QX00 pump/output)",
+      "Previous states (lagged values for rate/change detection)"
+    ],
+    "reasoning": "Registers clearly grouped by PLC prefix (PLC1, PLC2, PLC3) with distinct behaviors: PLC1 has complex coil outputs and wide level range; PLC2 simpler with narrower range; PLC3 minimal variation. 'prev_' columns form a history group. Co-variation (e.g., levels sync ramps) suggests interconnected tanks in series/parallel. No cross-PLC dependencies visible in names but implied by synchronized cycles."
+  },
+  "limitations": [
+    "No explicit timestamps or units; assumes uniform timestep and values proportional to physical quantities (e.g., level in % or cm).",
+    "Repetitive cyclic patterns suggest simulated test data rather than real dynamics (no noise, exact ±1 changes).",
+    "Limited variation in PLC3; role inferred as supervisory.",
+    "No direct inter-PLC communication visible; assumes via shared process."
+  ],
+  "internal_checks": {
+    "columns_used": [
+      "PLC3_InputRegisters_IW0", "PLC3_MemoryRegisters_MW1", "PLC3_Coils_QX00",
+      "PLC1_InputRegisters_IW0", "PLC1_MemoryRegisters_MW0", "PLC1_MemoryRegisters_MW1", "PLC1_Coils_QX00", "PLC1_Coils_QX01", "PLC1_Coils_QX02",
+      "PLC2_InputRegisters_IW0", "PLC2_MemoryRegisters_MW0", "PLC2_MemoryRegisters_MW1", "PLC2_Coils_QX00",
+      "All prev_ columns"
+    ],
+    "assumptions_detected": [
+      "Integer values represent normalized physical states (e.g., IW0 as tank level).",
+      "MW constants as setpoints (low/high).",
+      "Coil patterns (0/1) encode control modes (drain/fill/idle).",
+      "Cyclic behavior from setpoint hysteresis control."
+    ],
+    "warnings": [
+      "Dataset very large/repetitive; analyzed patterns via sampling first/last sections and mid-cycles.",
+      "No anomalies or faults detected; normal cyclic operation.",
+      "PLC3_QX00 mostly inactive (0), minor role."
+    ]
+  }
+}
