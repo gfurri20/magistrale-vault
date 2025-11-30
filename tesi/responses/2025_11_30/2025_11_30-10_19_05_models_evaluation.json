@@ -1,0 +1,80 @@
+{
+    "question": "Q1: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Not Identifiable']",
+    "tested_models": [
+        "openrouter/bert-nebulon-alpha"
+    ],
+    "total_evaluation_time": 2.7,
+    "models_log": [
+        {
+            "model": "openrouter/bert-nebulon-alpha",
+            "valid_tests_number": 0,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 0,
+            "errors_counter": 10,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 1,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 2,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 3,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 4,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 5,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 7,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 8,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 9,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                }
+            ],
+            "model_evaluation_time": 2.7
+        }
+    ]
+}
