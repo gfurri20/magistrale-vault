@@ -1,0 +1,620 @@
+{
+    "question": "Q1: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Not Identifiable']",
+    "tested_models": [
+        "x-ai/grok-4.1-fast:free"
+    ],
+    "total_evaluation_time": 3804.0,
+    "models_log": [
+        {
+            "model": "x-ai/grok-4.1-fast:free",
+            "valid_tests_number": 100,
+            "correct_answers_counter": 100,
+            "wrong_answers_counter": 0,
+            "errors_counter": 0,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 20,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 21,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 22,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 23,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 24,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 25,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 26,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 27,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 28,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 29,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 30,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 31,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 32,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 33,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 34,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 35,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 36,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 37,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 38,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 39,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 40,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 41,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 42,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 43,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 44,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 45,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 46,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 47,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 48,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 49,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 50,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 51,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 52,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 53,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 54,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 55,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 56,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 57,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 58,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 59,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 60,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 61,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 62,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 63,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 64,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 65,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 66,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 67,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.88,
+                    "error_code": null
+                },
+                {
+                    "run": 68,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 69,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 70,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 71,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 72,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 73,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 74,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 75,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 76,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 77,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 78,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 79,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 80,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 81,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 82,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 83,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 84,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 85,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 86,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 87,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 88,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 89,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 90,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 91,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 92,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 93,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 94,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 95,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 96,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 97,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 98,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 99,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.95,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 3804.0
+        }
+    ]
+}
