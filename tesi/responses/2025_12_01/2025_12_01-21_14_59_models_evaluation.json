@@ -1,0 +1,274 @@
+{
+    "question": "Q1.2: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Nuclear Power Plant', 'Chemical Batch Reactor', 'HVAC & Building Management', 'Automated Bottling Plant', 'Smart Grid Substation', 'Water Purification Plant', 'Wastewater Treatment Facility', 'Not Identifiable']",
+    "tested_models": [
+        "x-ai/grok-4.1-fast:free",
+        "tngtech/deepseek-r1t2-chimera:free"
+    ],
+    "tested_dataset_name": "plc_data_log_20251128_212142_compressed_751_rows.csv",
+    "dataset_header_anonymization": false,
+    "total_evaluation_time": 2362.7,
+    "models_log": [
+        {
+            "model": "x-ai/grok-4.1-fast:free",
+            "valid_tests_number": 20,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 20,
+            "errors_counter": 0,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Manufacturing Assembly Line",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.87,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.92,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.92,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "HVAC & Building Management",
+                    "confidence": 0.92,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1236.6
+        },
+        {
+            "model": "tngtech/deepseek-r1t2-chimera:free",
+            "valid_tests_number": 20,
+            "correct_answers_counter": 3,
+            "wrong_answers_counter": 17,
+            "errors_counter": 0,
+            "accuracy": 15.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.88,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 3,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 85,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 85,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "Wastewater Treatment Facility",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "Chemical Batch Reactor",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1126.1
+        }
+    ]
+}
