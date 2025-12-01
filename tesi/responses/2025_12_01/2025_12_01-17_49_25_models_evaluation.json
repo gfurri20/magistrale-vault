@@ -1,0 +1,154 @@
+{
+    "question": "Q1: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Not Identifiable']",
+    "tested_models": [
+        "x-ai/grok-4.1-fast:free",
+        "tngtech/deepseek-r1t2-chimera:free"
+    ],
+    "tested_dataset_name": "plc_data_log_20251128_212142_compressed_751_rows.csv",
+    "dataset_header_anonymization": true,
+    "total_evaluation_time": 595.8,
+    "models_log": [
+        {
+            "model": "x-ai/grok-4.1-fast:free",
+            "valid_tests_number": 0,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 0,
+            "errors_counter": 10,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 1,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 2,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 3,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 4,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 5,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 7,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 8,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 9,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                }
+            ],
+            "model_evaluation_time": 21.4
+        },
+        {
+            "model": "tngtech/deepseek-r1t2-chimera:free",
+            "valid_tests_number": 10,
+            "correct_answers_counter": 10,
+            "wrong_answers_counter": 0,
+            "errors_counter": 0,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.6,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 85,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 85,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "Water Purification Plant",
+                    "confidence": 8,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 574.4
+        }
+    ]
+}
