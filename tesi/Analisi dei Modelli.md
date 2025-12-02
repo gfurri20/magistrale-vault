@@ -42,3 +42,26 @@ Si contraddistinguono due modelli sui quali sarà interessante approfondire l'an
 	- `101: Model error` - 0
 	- `301: missing short answer error` - 0
 - devo capire come poter dir qualcosa sulla confidenza espressa per interrogazione dai modelli: la considero tutta insieme o solo per risposte della stessa natura?
+
+## Esecuzione su [[magistrale-vault/tesi/Domande#Q1|Q1]]
+L'obiettivo è quello di concentrare l'analisi sui modelli migliori risultanti dal capitolo precedente [[Analisi dei Modelli#Esecuzione 2025_11_29-13_51_11]].
+
+Modelli presi in considerazione:
+- `x-ai/grok-4.1-fast:free`
+- `tngtech/deepseek-r1t2-chimera:free`
+
+Dataset di analisi: `plc_data_log_20251128_212142_compressed_751_rows.csv`
+Ovvero il dataset `plc_data_log_20251128_212142.csv` elaborato a 751 righe.
+
+Sono stati eseguite quattro test, che si differenziano per domanda posta e tipologia di header (anonimizzato o no):
+- $T_{\texttt{Q1.1}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset **non** anonimizzato
+- $T_{\texttt{Q1.1}}^{\texttt{A}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset anonimizzato
+- $T_{\texttt{Q1.2}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]] e dataset **non** anonimizzato
+- $T_{\texttt{Q1.2}}^{\texttt{A}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]] e dataset anonimizzato
+
+Di seguito per ogni test verranno riportati i risultati ottenuti.
+
+### Test su Q1.1
+
+
+
