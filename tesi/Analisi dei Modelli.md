@@ -88,7 +88,6 @@ DeepSeek, nonostante l'Anon. Header, non peggiora drasticamente il tasso delle r
 
 ![[2025_12_02_q1_responses_img2.png]]
 ##### Confidenza dei modelli
-
 DeepSeek si conferma un modello robusto, la box delle risposte corrette è molto compatta con dei baffi ridotti.
 Questo sottolinea un'ottima coerenza e fiducia nelle proprie risposte corrette.
 Con Anon. Header la confidenza crea una box più ampia e posta leggermente sotto la box delle risposte corrette, ciò significa che quando sbaglia lo fa con una confidenza di risposta minore.
@@ -123,3 +122,40 @@ Con Anon. Header Grok si fissa su tale risposta.
 ##### Confidenza dei modelli
 Entrambi i modelli mostrano una confidenza nello sbagliare.
 ![[2025_12_02_q1_responses_img6.png]]
+
+### Dataset baseline
+Dataset di analisi: `baseline_compressed_1285_rows.csv` Ovvero il dataset `baseline.csv` elaborato e compresso a 1285 righe.
+
+Questo dataset rappresenta la base di conoscenza standard, contenente una quantità maggiore di informazioni storiche rispetto alla versione `plc_data_log`. Mantiene la struttura originale dei dati ma in forma compressa per ottimizzare l'analisi.
+
+#### Test su Q1.1
+Test sulla domanda con Dominio di risposta semplificato: 5 risposte possibili di natura diversa tra loro + la risposta nulla.
+
+Dall'analisi dei risultati si evince che l'utilizzo del dataset `baseline` ha migliorato significativamente le prestazioni generali rispetto al dataset `plc_data_log`, specialmente per Grok nello scenario con header. DeepSeek raggiunge la perfezione in entrambi gli scenari.
+
+##### Distribuzione dei test
+DeepSeek si conferma infallibile, ottenendo il 100% di risposte corrette indipendentemente dall'anonimizzazione. Grok mostra un netto miglioramento quando i nomi delle colonne sono presenti (95%), ma crolla significativamente quando vengono rimossi.
+
+| Modello     | Accuracy (Original Header)     | Accuracy (Anon. Header)     |
+| ----------- | ------------------------------ | --------------------------- |
+| DeepSeek    | 100%                           | 100%                        |
+| Grok        | 95%                            | 40%                         |
+**Accuracy** calcola il successo del modello sulle risposte che non vanno in errore (errore tecnico nella risposta).
+
+![[2025_12_02_q1_responses_img7.png]]
+
+##### Distribuzione delle risposte
+Nello scenario **Original Header**, entrambi i modelli convergono quasi perfettamente sulla risposta corretta ("Water Purification Plant"), con Grok che commette un solo errore ("Manufacturing Assembly Line").
+
+Nello scenario **Anon. Header**, la differenza diventa abissale. Mentre DeepSeek rimane ancorato alla risposta corretta senza esitazioni, Grok entra in confusione: le sue risposte si disperdono tra "Power Generation Plant" e "Manufacturing Assembly Line", con un aumento dei casi "Not Identifiable". Questo indica che Grok dipende fortemente dalle etichette semantiche delle colonne per orientarsi nel dataset `baseline`.
+
+![[2025_12_02_q1_responses_img8.png]]
+
+##### Confidenza dei modelli
+DeepSeek mostra una confidenza eccezionalmente alta e stabile (scatole verdi compatte verso l'alto) in entrambi gli scenari. La sua sicurezza è pienamente giustificata dalla sua accuratezza del 100%.
+
+Grok, nello scenario Anonimo (grafico in basso), evidenzia il suo problema di calibrazione: le scatole rosse (risposte errate) si sovrappongono in termini di confidenza a quelle verdi. Ciò significa che spesso fornisce risposte errate (come "Power Generation") con una confidenza medio-alta (attorno a 0.8), dimostrando di non essere "consapevole" di quando sta analizzando male i dati numerici con header anonimizzato.
+
+![[2025_12_02_q1_responses_img9.png]]
+#### Test su Q1.2
+Non ho ancora eseguito il codice...
