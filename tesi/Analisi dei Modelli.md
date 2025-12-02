@@ -52,9 +52,6 @@ Modelli presi in considerazione:
 - `x-ai/grok-4.1-fast:free`
 - `tngtech/deepseek-r1t2-chimera:free`
 
-Dataset di analisi: `plc_data_log_20251128_212142_compressed_751_rows.csv`
-Ovvero il dataset `plc_data_log_20251128_212142.csv` elaborato a 751 righe.
-
 Sono stati eseguite quattro test, che si differenziano per domanda posta e tipologia di header (**Original Header** oppure **Anon. Header**):
 - $T_{\texttt{Q1.1}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset **non** anonimizzato
 - $T_{\texttt{Q1.1}}^{\texttt{A}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset anonimizzato
@@ -63,11 +60,18 @@ Sono stati eseguite quattro test, che si differenziano per domanda posta e tipol
 
 Di seguito per ogni test verranno riportati i risultati ottenuti.
 
-### Test su Q1.1
+### Dataset plc_data_log
+Dataset di analisi: `plc_data_log_20251128_212142_compressed_751_rows.csv`
+Ovvero il dataset `plc_data_log_20251128_212142.csv` elaborato a 751 righe.
+
+Il dataset `plc_data_log_20251128_212142.csv` risulta essere una versione più snella e compatta di `baseline.csv`, arricchita però dal timestamp delle letture del registro.
+I valori Booleani sono rappresentanti come `true` o `false` e non `1` o `0`.
+Inoltre sono stati rimossi i valori dei registri `prev_*`.
+#### Test su Q1.1
 Test sulla domanda con Dominio di risposta semplificato: 5 risposte possibili di natura diversa tra loro + la risposta nulla.
 
 Dall'analisi dei risultati si evince che DeepSeek sembra essere un modello migliore rispetto a Grok in questo contesto, con dei risultati ben migliori e precisi.
-#### Distribuzione dei test
+##### Distribuzione dei test
 DeepSeek si dimostra essere più affidabile ottenendo una percentuale di risposte corrette di gran lunga maggiore rispetto a Grok.
 
 | Modello  | Accuracy (Original Header) | Accuracy (Anon. Header) |
@@ -77,13 +81,13 @@ DeepSeek si dimostra essere più affidabile ottenendo una percentuale di rispost
 **Accuracy** calcola il successo del modello sulle risposte che non vanno in errore (errore tecnico nella risposta).
 
 ![[2025_12_02_q1_responses_img1.png]]
-#### Distribuzione delle risposte
+##### Distribuzione delle risposte
 Grok ha una dispersione maggiore nelle risposte, soprattutto con Anon. Header, sottolinea la poca precisione ed un alto tasso di indecisione.
 
 DeepSeek, nonostante l'Anon. Header, non peggiora drasticamente il tasso delle risposte corrette, mantenendo una certa soglia di sicurezza.
 
 ![[2025_12_02_q1_responses_img2.png]]
-#### Confidenza dei modelli
+##### Confidenza dei modelli
 
 DeepSeek si conferma un modello robusto, la box delle risposte corrette è molto compatta con dei baffi ridotti.
 Questo sottolinea un'ottima coerenza e fiducia nelle proprie risposte corrette.
@@ -93,13 +97,13 @@ Grok presenta delle box rosse molto compatte, ad un livello pari di quelle verdi
 Risulta essere un modello confuso ed impreciso.
 ![[2025_12_02_q1_responses_img3.png]]
 
-### Test su [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]]
+#### Test su [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]]
 Q1.2 non cambia il testo della domanda, ma bensì amplia il dominio delle risposte, includendo possibilità molto più simili, di natura, al sistema di riferimento.
 
 Il tasso di successo dei modelli in esame cala drasticamente, sottolineando come un aumento di complessità del dominio (ancora limitato) di risposte possa essere "fatale".
 Se l'obiettivo è quello di rispondere su un dominio illimitato, allora i segnali non son positivi.
 
-#### Distribuzione dei test
+##### Distribuzione dei test
 L'**Accuracy** di entrambi i modelli cala drasticamente, arrivando, nel caso di Grok a 0%.
 
 | Modello  | Accuracy (Original Header) | Accuracy (Anon. Header) |
@@ -107,7 +111,7 @@ L'**Accuracy** di entrambi i modelli cala drasticamente, arrivando, nel caso di 
 | DeepSeek |            25%             |           10%           |
 |   Grok   |             0%             |           0%            |
 ![[2025_12_02_q1_responses_img4.png]]
-#### Distribuzione delle risposte
+##### Distribuzione delle risposte
 DeepSeek - Original Header si confonde spesso con "Wastewater Treatment Facility", un sistema di natura molto simile all'ICS in analisi.
 Con l'anonimizzazione dell'header la risposta più comune diventa "Chemical Batch Reactor".
 DeepSeek confonde la risposta corretta con i due sistemi di natura più simile tra le possibile risposte, dimostrando, comunque, la capacità di dedurre a grandi linee la (macro)-natura del sistema in esame.
@@ -116,6 +120,6 @@ Grok, con un'alta confidenza, risponde la maggior parte delle volte "HVAC & Buil
 Con Anon. Header Grok si fissa su tale risposta.
 
 ![[2025_12_02_q1_responses_img5.png]]
-#### Confidenza dei modelli
+##### Confidenza dei modelli
 Entrambi i modelli mostrano una confidenza nello sbagliare.
 ![[2025_12_02_q1_responses_img6.png]]
