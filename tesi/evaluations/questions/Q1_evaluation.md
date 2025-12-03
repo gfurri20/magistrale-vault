@@ -107,7 +107,7 @@ L'**Accuracy** di entrambi i modelli cala drasticamente, arrivando, nel caso di 
 
 | Modello  | Accuracy (Original Header) | Accuracy (Anon. Header) |
 | :------: | :------------------------: | :---------------------: |
-| DeepSeek |            25%             |           10%           |
+| DeepSeek |           ~26.3%           |          ~5.3%          |
 |   Grok   |             0%             |           0%            |
 ![[2025_12_02_q1_responses_img4.png]]
 ##### Distribuzione delle risposte
