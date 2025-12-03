@@ -136,10 +136,10 @@ Dall'analisi dei risultati si evince che l'utilizzo del dataset `baseline` ha mi
 ##### Distribuzione dei test
 DeepSeek si conferma infallibile, ottenendo il 100% di risposte corrette indipendentemente dall'anonimizzazione. Grok mostra un netto miglioramento quando i nomi delle colonne sono presenti (95%), ma crolla significativamente quando vengono rimossi.
 
-| Modello     | Accuracy (Original Header)     | Accuracy (Anon. Header)     |
-| ----------- | ------------------------------ | --------------------------- |
-| DeepSeek    | 100%                           | 100%                        |
-| Grok        | 95%                            | 40%                         |
+| Modello  | Accuracy (Original Header) | Accuracy (Anon. Header) |
+| -------- | -------------------------- | ----------------------- |
+| DeepSeek | 100%                       | 100%                    |
+| Grok     | 95%                        | 40%                     |
 **Accuracy** calcola il successo del modello sulle risposte che non vanno in errore (errore tecnico nella risposta).
 
 ![[2025_12_02_q1_responses_img7.png]]
