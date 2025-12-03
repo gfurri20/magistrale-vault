@@ -158,4 +158,35 @@ Grok, nello scenario Anonimo (grafico in basso), evidenzia il suo problema di ca
 
 ![[2025_12_02_q1_responses_img9.png]]
 #### Test su Q1.2
-Non ho ancora eseguito il codice...
+Test sulla domanda con Dominio di risposta complesso: 11 risposte possibili.
+
+Dall'analisi dei risultati emerge chiaramente la difficoltà di entrambi i modelli nel gestire questo livello di complessità, anche con il dataset `baseline`. Le prestazioni sono drasticamente inferiori rispetto al dominio semplificato.
+
+##### Distribuzione dei test
+DeepSeek mantiene un leggero vantaggio, riuscendo a identificare correttamente l'impianto nel 40% dei casi quando gli header sono presenti, contro il 20% di Grok. Nello scenario anonimo, le prestazioni crollano per entrambi, ma DeepSeek riesce comunque a strappare un 20% di accuratezza, mentre Grok fallisce totalmente (0%).
+
+|Modello|Accuracy (Original Header)|Accuracy (Anon. Header)|
+|---|---|---|
+|DeepSeek|40%|20%|
+|Grok|20%|0%|
+**Accuracy** calcola il successo del modello sulle risposte che non vanno in errore.
+
+![[2025_12_02_q1_responses_img10.png]]
+
+##### Distribuzione delle risposte
+Nello scenario **Original Header**, si nota una grande dispersione.
+- **DeepSeek** individua correttamente "Water Purification Plant" 8 volte, ma si confonde spesso con "Wastewater Treatment Facility" (trattamento acque reflue), un errore semanticamente molto vicino.
+- **Grok** si disperde notevolmente, privilegiando erroneamente "HVAC & Building Management" (8 volte), dimostrando di non aver colto la natura idraulica del sistema.
+
+Nello scenario **Anon. Header**, la situazione peggiora:
+- **DeepSeek** perde la bussola e inizia a prediligere "Chemical Batch Reactor" e "Wastewater Treatment", riducendo le risposte corrette a 4.
+- **Grok** collassa completamente su "HVAC & Building Management" (17 volte).
+
+![[2025_12_02_q1_responses_img11.png]]
+
+##### Confidenza dei modelli
+La boxplot della confidenza rivela un dettaglio critico: l'**Overconfidence**.
+- **DeepSeek** (box verdi e rosse) mantiene una confidenza molto alta (>0.8) sia quando indovina sia quando sbaglia. Questo è pericoloso in un contesto industriale reale, perché l'operatore non avrebbe segnali di incertezza dal modello.
+- **Grok**, similmente, mostra una confidenza altissima (spesso sopra 0.9) per le sue risposte errate (scatole rosse), specialmente nello scenario anonimo dove sbaglia tutto ma è "sicurissimo" di aver ragione.
+
+![[2025_12_02_q1_responses_img12.png]]
