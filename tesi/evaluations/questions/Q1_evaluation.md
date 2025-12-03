@@ -45,18 +45,18 @@ Si contraddistinguono due modelli sui quali sarà interessante approfondire l'an
 
 ---
 
-## Esecuzione su [[magistrale-vault/tesi/Domande#Q1|Q1]]
-L'obiettivo è quello di concentrare l'analisi sui modelli migliori risultanti dal capitolo precedente [[Analisi dei Modelli#Esecuzione 2025_11_29-13_51_11]].
+## Esecuzione su [[Questions#Q1|Q1]]
+L'obiettivo è quello di concentrare l'analisi sui modelli migliori risultanti dal capitolo precedente [[Q1_evaluation#Esecuzione 2025_11_29-13_51_11]].
 
 Modelli presi in considerazione:
 - `x-ai/grok-4.1-fast:free`
 - `tngtech/deepseek-r1t2-chimera:free`
 
 Sono stati eseguite quattro test, che si differenziano per domanda posta e tipologia di header (**Original Header** oppure **Anon. Header**):
-- $T_{\texttt{Q1.1}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset **non** anonimizzato
-- $T_{\texttt{Q1.1}}^{\texttt{A}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.1|Q1.1]] e dataset anonimizzato
-- $T_{\texttt{Q1.2}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]] e dataset **non** anonimizzato
-- $T_{\texttt{Q1.2}}^{\texttt{A}}$ - test su domanda [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]] e dataset anonimizzato
+- $T_{\texttt{Q1.1}}$ - test su domanda [[Questions#Q1.1|Q1.1]] e dataset **non** anonimizzato
+- $T_{\texttt{Q1.1}}^{\texttt{A}}$ - test su domanda [[Questions#Q1.1|Q1.1]] e dataset anonimizzato
+- $T_{\texttt{Q1.2}}$ - test su domanda [[Questions#Q1.2|Q1.2]] e dataset **non** anonimizzato
+- $T_{\texttt{Q1.2}}^{\texttt{A}}$ - test su domanda [[Questions#Q1.2|Q1.2]] e dataset anonimizzato
 
 Di seguito per ogni test verranno riportati i risultati ottenuti.
 
@@ -96,7 +96,7 @@ Grok presenta delle box rosse molto compatte, ad un livello pari di quelle verdi
 Risulta essere un modello confuso ed impreciso.
 ![[2025_12_02_q1_responses_img3.png]]
 
-#### Test su [[magistrale-vault/tesi/Domande#Q1.2|Q1.2]]
+#### Test su [[Questions#Q1.2|Q1.2]]
 Q1.2 non cambia il testo della domanda, ma bensì amplia il dominio delle risposte, includendo possibilità molto più simili, di natura, al sistema di riferimento.
 
 Il tasso di successo dei modelli in esame cala drasticamente, sottolineando come un aumento di complessità del dominio (ancora limitato) di risposte possa essere "fatale".
