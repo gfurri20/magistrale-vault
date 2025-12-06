@@ -1,0 +1,64 @@
+{
+    "question": "Q2.1: Identify how many tanks are involved during the operations of the ICS under consideration between the following options: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+    "tested_models": [
+        "tngtech/deepseek-r1t2-chimera:free",
+        "amazon/nova-2-lite-v1:free",
+        "qwen/qwen3-coder:free"
+    ],
+    "tested_dataset_name": "plc_data_log_20251128_212142_compressed_1501_rows.csv",
+    "dataset_header_anonymization": false,
+    "total_evaluation_time": 198.9,
+    "models_log": [
+        {
+            "model": "tngtech/deepseek-r1t2-chimera:free",
+            "valid_tests_number": 1,
+            "correct_answers_counter": 1,
+            "wrong_answers_counter": 0,
+            "errors_counter": 0,
+            "accuracy": 100.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 112.3
+        },
+        {
+            "model": "amazon/nova-2-lite-v1:free",
+            "valid_tests_number": 0,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 0,
+            "errors_counter": 1,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                }
+            ],
+            "model_evaluation_time": 23.1
+        },
+        {
+            "model": "qwen/qwen3-coder:free",
+            "valid_tests_number": 1,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 1,
+            "errors_counter": 0,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "2",
+                    "confidence": 0.8,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 63.4
+        }
+    ]
+}

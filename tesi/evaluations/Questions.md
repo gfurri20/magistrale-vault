@@ -39,7 +39,12 @@ Identificazione del numero di tanks utilizzate nel sistema.
 ## Q2.1
 Dominio a 10 numeri: $D = [1, 10]$
 ```python
-Q2.1: Identify how many tanks are involved during the operations of the ICS under consideration between the following options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Q2.1: Only based on data provided, identify how many tanks are involved during the operations of the ICS under consideration between the following options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
+Contesto:
+```
+The ICS is a simplified version of a Water Purification Plant.
+It produces filtered water through filtration and reverse osmosis processes.
+```
 
