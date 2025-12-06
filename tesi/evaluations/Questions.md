@@ -32,4 +32,14 @@ Q1.2: Infer, based on data provided, what type of phisical Industrial Control Sy
 
 ---
 # Q2
-Identificazione del numero di 
+Identificazione del numero di tanks utilizzate nel sistema.
+
+**Contesto indotto**: Assumere che l'ICS di riferimento sia un sistema di filtraggio dell'acqua: Water Purification Plant.
+
+## Q2.1
+Dominio a 10 numeri: $D = [1, 10]$
+```python
+Q2.1: Identify how many tanks are involved during the operations of the ICS under consideration between the following options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+
