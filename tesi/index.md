@@ -13,9 +13,11 @@ I modelli vengono valutati attraverso una serie di domande descritte ed organizz
 
 Le diverse valutazioni (insieme di test) vengono riportati nei moduli di `QX?evaluation`, con `X` l'identificativo della domanda madre.
 
+I moduli di valutazione vengono organizzati nelle cartelle relative al sistema ICS preso in considerazione.
+
 Ogni valutazione è seguita da un riassunto generato con Gemini, in modo da snellire i risultati e mantenere quelli più interessanti.
 
-Di seguito le valutazioni:
+Di seguito le valutazioni per il sistema SWAT (vedi paper [Ceccato et. al](https://profs.scienze.univr.it/~ceccato/papers/2022/cps4cip2022.pdf)):
 - [[Q1_evaluation]] (riassunto [[Q1_evaluation_summary]])
 - [[Q2_evaluation]]
 
@@ -23,11 +25,12 @@ Di seguito le valutazioni:
 Ogni directory nel progetto raccoglie file precisi, in modo che l'ambiente di lavoro sia organizzato e per il più possibile pulito.
 
 **`datasets`**
-Raccoglie i dataset utilizzati per le valutazioni. Ogni dataset ha delle caratteristiche uniche e rappresenta i valori dei registri ogni intervallo di tempo.
+Raccoglie i dataset utilizzati per le valutazioni. Essi sono raggruppati in sotto-directories in base alla tipologia di ICS per i quali raccolgono info.
+Ogni dataset ha delle caratteristiche uniche e rappresenta i valori dei registri ogni intervallo di tempo.
 
 **`evaluations`**
-Organizza le valutazioni dei modelli, attualmente sono presenti solo valutazioni basate su domande. Le fonti di ragionamento sono i dati di `datasets` passati in formato testuale csv.
-	`evaluations/questions` vedi [[index#Domande di valutazione]]
+Organizza le valutazioni dei modelli in base all'ICS preso in considerazione. Le fonti di ragionamento sono i dati di `datasets` passati in formato testuale csv.
+	`evaluations/{ICS}/questions` vedi [[index#Domande di valutazione]]
 
 **`images`**
 Contiene tutte le immagini del progetto usate nei vati documenti. Le sottocartelle prendono il nome del documento in cui la foto è inserita, cercando di mantenere il tutto più ordinato possibile.

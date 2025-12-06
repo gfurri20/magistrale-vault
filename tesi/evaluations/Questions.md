@@ -2,6 +2,17 @@ In questo documento verranno definite le domande testate, in modo da tenere trac
 
 Ogni domanda sarà nominata secondo il seguente formato: `Q[CATEGORIA].[VERSIONE]`. Dove `CATEOGORIA` e `VERSIONE` sono interi.
 
+# Contesto
+Le domande successive a Q1, necessitano di informazioni aggiuntive per fare in modo che il modello formuli una risposta.
+Posso definire queste informazioni: **Contesto**
+
+Ora ==devo capire come dare questo contesto==.
+
+Potrebbe essere dato correttamente: Contesto **indotto**
+Oppure potrei chiedere al modello stesso di fornirmi il contesto, a partire dalla domanda precedente: Contesto **ricavato**.
+
+Per ora mi concentrerò su valutazioni a partire da contesto indotto, esso sarà inserito direttamente nel prompt di richiesta valutazione per ogni modello.
+
 # Q1
 Identificazione della tipologia di ICS fisico.
 
@@ -18,3 +29,7 @@ Dominio ristretto 10 possibilità + quella nulla. Alcune possibilità sono molto
 ```python
 Q1.2: Infer, based on data provided, what type of phisical Industrial Control System (ICS) between the following options: ['Power Generation Plant', 'Manufacturing Assembly Line', 'Oil and Gas Refinery', 'Water Purification Plant', 'Nuclear Power Plant', 'Chemical Batch Reactor', 'HVAC & Building Management', 'Automated Bottling Plant', 'Smart Grid Substation', 'Wastewater Treatment Facility', 'Not Identifiable']
 ```
+
+---
+# Q2
+Identificazione del numero di 
