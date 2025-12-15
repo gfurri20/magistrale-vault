@@ -48,3 +48,11 @@ The ICS is a simplified version of a Water Purification Plant.
 It produces filtered water through filtration and reverse osmosis processes.
 ```
 
+---
+
+# Q3
+Identificazione del numero di PLCs coinvolte nel sistema.
+
+**Contesto indotto**: Assumere che l'ICS di riferimento sia un sistema di filtraggio dell'acqua che sfrutta tre tank di dimensioni diverse.
+
+Si potrebbe aumentare il contesto spiegando le funzionalità dei tank per ognuna delle tre fasi di filtraggio (1. filtraggio, 2. reverse osmosis, 3. backtank).
