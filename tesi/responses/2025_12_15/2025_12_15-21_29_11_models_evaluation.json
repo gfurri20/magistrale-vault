@@ -1,0 +1,274 @@
+{
+    "question": "Q2.1: Only based on data provided, identify how many tanks are involved during the operations of the ICS under consideration between the following options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+    "tested_models": [
+        "kwaipilot/kat-coder-pro:free",
+        "mistralai/devstral-2512:free"
+    ],
+    "tested_dataset_name": "plc_data_log_20251128_212142_compressed_1501_rows.csv",
+    "dataset_header_anonymization": true,
+    "total_evaluation_time": 1744.7,
+    "models_log": [
+        {
+            "model": "kwaipilot/kat-coder-pro:free",
+            "valid_tests_number": 18,
+            "correct_answers_counter": 6,
+            "wrong_answers_counter": 12,
+            "errors_counter": 2,
+            "accuracy": 33.33333333333333,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "5",
+                    "confidence": 3,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "1",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "4",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "8",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "6",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "9",
+                    "confidence": 8,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "10",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "3",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "4",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 11,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 13,
+                    "short_answer": "2",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "2",
+                    "confidence": 0.98,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "3",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "1",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "4",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1457.1
+        },
+        {
+            "model": "mistralai/devstral-2512:free",
+            "valid_tests_number": 20,
+            "correct_answers_counter": 0,
+            "wrong_answers_counter": 20,
+            "errors_counter": 0,
+            "accuracy": 0.0,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "2",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "2",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "2",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "2",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "2",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "2",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "2",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "2",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "2",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 287.6
+        }
+    ]
+}
