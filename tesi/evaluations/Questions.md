@@ -56,3 +56,34 @@ Identificazione del numero di PLCs coinvolte nel sistema.
 **Contesto indotto**: Assumere che l'ICS di riferimento sia un sistema di filtraggio dell'acqua che sfrutta tre tank di dimensioni diverse.
 
 Si potrebbe aumentare il contesto spiegando le funzionalità dei tank per ognuna delle tre fasi di filtraggio (1. filtraggio, 2. reverse osmosis, 3. backtank).
+
+## Q3.1
+Dominio a 10 numeri: $D = [1, 10]$.
+```
+Q3.1: Based on provided data and context, identify how many PLCs are involved during the operations of the ICS under consideration between the following options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+Contesto:
+```
+The ICS is a simplified version of a Water Purification Plant.
+It produces filtered water through filtration and reverse osmosis processes.
+The operations involve three water tanks having varying capacities.
+```
+
+## Q3.2
+Si può creare un dominio che permetta al modello di rispondere associando PLC a serbatoio?
+
+```
+{T1:PLC1, T2:PLC2, T3:PLC3}
+```
+
+E' anche vero che sono solo nomi, sarebbe la stessa cosa se si producesse:
+
+```
+{T1:PLC10, T2:PLC3, T3:PLC2}
+```
+
+Bisognerebbe attribuire delle caratteristiche alle PLC in modo tale che l'assegnazione abbia un senso. Come? #TODO
+
+
+
