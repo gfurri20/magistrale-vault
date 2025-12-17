@@ -1,0 +1,406 @@
+{
+    "question": "Q2.1: Only based on data provided, identify how many tanks are involved during the operations of the ICS under consideration between the following options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+    "tested_models": [
+        "kwaipilot/kat-coder-pro:free",
+        "tngtech/deepseek-r1t2-chimera:free",
+        "mistralai/mistral-small-3.1-24b-instruct:free"
+    ],
+    "tested_dataset_name": "plc_data_log_20251128_212142_compressed_1501_rows.csv",
+    "dataset_header_anonymization": false,
+    "total_evaluation_time": 4240.5,
+    "models_log": [
+        {
+            "model": "kwaipilot/kat-coder-pro:free",
+            "valid_tests_number": 18,
+            "correct_answers_counter": 11,
+            "wrong_answers_counter": 7,
+            "errors_counter": 2,
+            "accuracy": 61.111111111111114,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 2,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "10",
+                    "confidence": 100,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": "5",
+                    "confidence": 0.8,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "3",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": "6",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 7,
+                    "short_answer": "3",
+                    "confidence": 9,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "2",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "4",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "3",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 14,
+                    "short_answer": "10",
+                    "confidence": 1,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "2",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "3",
+                    "confidence": 0.82,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 1457.8
+        },
+        {
+            "model": "tngtech/deepseek-r1t2-chimera:free",
+            "valid_tests_number": 15,
+            "correct_answers_counter": 10,
+            "wrong_answers_counter": 5,
+            "errors_counter": 5,
+            "accuracy": 66.66666666666666,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": "3",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 1,
+                    "short_answer": "3",
+                    "confidence": 9,
+                    "error_code": null
+                },
+                {
+                    "run": 2,
+                    "short_answer": "3",
+                    "confidence": 7,
+                    "error_code": null
+                },
+                {
+                    "run": 3,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 4,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 5,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 7,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 8,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 9,
+                    "short_answer": "3",
+                    "confidence": 0.9,
+                    "error_code": null
+                },
+                {
+                    "run": 10,
+                    "short_answer": "4",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 11,
+                    "short_answer": "3",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": "3",
+                    "confidence": 0.75,
+                    "error_code": null
+                },
+                {
+                    "run": 13,
+                    "short_answer": "3",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 14,
+                    "short_answer": "2",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 15,
+                    "short_answer": "2",
+                    "confidence": 0.7,
+                    "error_code": null
+                },
+                {
+                    "run": 16,
+                    "short_answer": "2",
+                    "confidence": 80,
+                    "error_code": null
+                },
+                {
+                    "run": 17,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 18,
+                    "short_answer": "2",
+                    "confidence": 90,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                }
+            ],
+            "model_evaluation_time": 2309.2
+        },
+        {
+            "model": "mistralai/mistral-small-3.1-24b-instruct:free",
+            "valid_tests_number": 6,
+            "correct_answers_counter": 4,
+            "wrong_answers_counter": 2,
+            "errors_counter": 14,
+            "accuracy": 66.66666666666666,
+            "tests": [
+                {
+                    "run": 0,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 1,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 2,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 3,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 4,
+                    "short_answer": "2",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 5,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 6,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 7,
+                    "short_answer": "3",
+                    "confidence": 0.85,
+                    "error_code": null
+                },
+                {
+                    "run": 8,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 201
+                },
+                {
+                    "run": 9,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 10,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 11,
+                    "short_answer": "3",
+                    "confidence": 0.95,
+                    "error_code": null
+                },
+                {
+                    "run": 12,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 13,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 14,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 15,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 16,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 17,
+                    "short_answer": null,
+                    "confidence": null,
+                    "error_code": 101
+                },
+                {
+                    "run": 18,
+                    "short_answer": "2",
+                    "confidence": 0.999,
+                    "error_code": null
+                },
+                {
+                    "run": 19,
+                    "short_answer": "3",
+                    "confidence": 0.99,
+                    "error_code": null
+                }
+            ],
+            "model_evaluation_time": 473.5
+        }
+    ]
+}
