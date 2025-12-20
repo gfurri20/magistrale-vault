@@ -42,3 +42,9 @@ Nello specifico Devstral peggiora totalmente in quanto sembra fissarsi sempre su
 |`kat-coder-pro:free`|60%|362|10%|296|
 |`deepseek-r1t2-chimera:free`|15%|1391|0%|1568|
 |`devstral-2512:free`|100%|471|0%|424|
+
+Rispetto al dataset precedente si misura un netto peggioramento. I primi due modelli riducono drasticamente l'accuratezza; mentre Devstral mantiene il suo comportamento "binario" rispetto all'header originale e anonimizzato.
+
+![[Code_Generated_Image(14).png]]
+
+![[Code_Generated_Image(15).png]]
