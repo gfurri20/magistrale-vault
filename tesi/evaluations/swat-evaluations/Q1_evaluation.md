@@ -45,7 +45,7 @@ Si contraddistinguono due modelli sui quali sarà interessante approfondire l'an
 
 ---
 
-## Esecuzione su [[Questions#Q1|Q1]]
+## Valutazione approfondita
 L'obiettivo è quello di concentrare l'analisi sui modelli migliori risultanti dal capitolo precedente [[Q1_evaluation#Esecuzione 2025_11_29-13_51_11]].
 
 Modelli presi in considerazione:
