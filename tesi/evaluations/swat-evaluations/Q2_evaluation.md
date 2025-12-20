@@ -36,3 +36,9 @@ Nello specifico Devstral peggiora totalmente in quanto sembra fissarsi sempre su
 ![[Code_Generated_Image(12).png]]
 
 ### Dataset `baseline`
+
+|**Modello**|**Accuracy (Original Header)**|**tmp (sec)**|**Accuracy (Anon. Header)**|**tmp (sec)**|
+|---|---|---|---|---|
+|`kat-coder-pro:free`|60%|362|10%|296|
+|`deepseek-r1t2-chimera:free`|15%|1391|0%|1568|
+|`devstral-2512:free`|100%|471|0%|424|
