@@ -50,6 +50,11 @@ The ICS is a simplified version of a Water Purification Plant.
 It produces filtered water through filtration and reverse osmosis processes.
 ```
 
+
+```
+The ICS is a simplified version of a Water Purification Plant.
+```
+
 ---
 
 # Q3
