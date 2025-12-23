@@ -4,6 +4,13 @@ In questa fase di test, ai modelli è stato chiesto di identificare il numero di
 * **Opzioni:** Da '1' a '10'.
 * **Risposta Corretta (Ground Truth):** 3 (dedotta dalle performance perfette nello scenario chiaro).
 
+### Report Utilizzati
+I report utilizzati in analisi sono compresi nel folder:
+- `2025_12_17/*`
+### Dataset Utilizzati
+1.  **`plc_data_log`**: Dataset compresso a 1501 righe. Versione snella con timestamp e booleani (`true`/`false`).
+2.  **`baseline`**: Dataset compresso a 1285 righe. Base di conoscenza standard, più ricca di informazioni storiche.
+
 ---
 
 ## 1. Analisi su Dataset `plc_data_log`

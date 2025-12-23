@@ -1,4 +1,3 @@
-# Report Valutazione Modelli ICS - Analisi Q1
 
 ## 1. Introduzione e Selezione dei Modelli
 L'obiettivo dell'analisi è valutare le prestazioni di modelli LLM nell'inferire la tipologia di un sistema di controllo industriale (ICS) fisico basandosi sui log dei dati.
@@ -20,6 +19,10 @@ Sono stati eseguiti quattro tipologie di test incrociando le seguenti condizioni
     * **Original Header:** Nomi delle colonne visibili (es. nomi dei sensori).
     * **Anon. Header:** Nomi delle colonne rimossi, lasciando solo i dati grezzi.
 
+### Report Utilizzati
+I report utilizzati in analisi sono compresi nelle seguenti folder:
+- `2025_12_02/*`
+- `2025_12_03/*`
 ### Dataset Utilizzati
 1.  **`plc_data_log`**: Dataset compresso a 751 righe. Versione snella con timestamp e booleani (`true`/`false`).
 2.  **`baseline`**: Dataset compresso a 1285 righe. Base di conoscenza standard, più ricca di informazioni storiche.
