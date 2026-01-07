@@ -32,6 +32,28 @@ Nel primo caso assumiamo che l'attaccante possieda un dataset di serie temporali
 ## LLM Interrogation
 Assumiamo che l'attaccante abbia accesso a LLM allo stato dell'arte, sia commerciali che open-source già addestrate e pronte all'uso per interrogazioni "one-shot".
 
-## Security Goal
+## Obiettivo
+L'obiettivo dell'attaccante è quello di inferire le caratteristiche dell'ICS target, tramite interrogazioni a LLM, sfruttando i dump ottenuti.
+Un attacco viene considerato di successo se (qua da capire se possiamo effettivamente parlare di successo, solo se accuracy è 100%, introduco degli intervalli? da valutare).
 
+---
+
+In questa sezione definiamo formalmente le capacità dell'avversario, i vettori di acquisizione dati e il ruolo delle Large Language Models (LLM) come oracolo per l'inferenza semantica.
+
+Consideriamo un attaccante ($A$) motivato dalla ricognizione semantica dell'infrastruttura ICS target. L'obiettivo ultimo di $A$ è acquisire una comprensione profonda del processo fisico per pianificare futuri attacchi "stealth".
+
+L'avversario non possiede alcuna conoscenza a priori della topologia di rete, delle specifiche del processo industriale o della mappatura di memoria delle PLC.
+
+Assumiamo che $A$ abbia successo nell'ottenere dati storici grezzi dal sistema. Definiamo due scenari distinti basati sulla natura dell'esfiltrazione e sulla qualità dei meta-dati disponibili:
+
+- **Scenario A: Network Scanning (Unlabeled Dataset).** L'attaccante ha accesso alla rete e interroga le PLC in un intervallo di tempo $T$.
+    - $A$ ottiene serie temporali di valori grezzi associati solo a indirizzi di memoria fisici la cui label non fornisce informazioni semantiche sul sistema.
+
+- **Scenario B: Physical/Engineering Dump (Labeled Dataset).** L'attaccante ottiene il dump tramite supporti fisici (es. USB smarrita, furto di hardware, insider threat).
+    - Oltre alle serie temporali, $A$ recupera le etichette dei registri, con la possibilità di ottenere informazioni semantiche dai soli nomi.        
+
+Si assume che $A$ abbia accesso a Large Language Models (LLM). L'attaccante utilizza il modello in modalità **"One-Shot Inference"**. La LLM viene utilizzata come un motore di ragionamento generalista per correlare i pattern numerici con la conoscenza ingegneristica presente nel suo training set.
+
+L'attaccante sottoporrà alcune domande sequenziali al modello, con l'obiettivo di **individuare le caratteristiche del sistema**.
+La sequenzialità delle domande, impone l'arricchimento del prompt con il contesto delle domande precedenti. (da valutare la frase)
 
