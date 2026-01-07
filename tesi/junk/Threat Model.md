@@ -19,10 +19,7 @@ TODO
 2. Inserire nell'output i dati di ragionamento della risposta
 3. Bozza threat model ed eventuale related work
 
-## Threat Model Description
-Un thread model deve specificare:
-- le abilità dell'attaccante
-- le conoscenze a priori dell'attaccante
-- l'obiettivo dell'attaccante
-- 
+## Attaccante
+Consideriamo un attaccante il cui obiettivo è la ricognizione semantica dell'ICS target, con il fine ultimo di organizzare attacchi "stealth" allo stesso.
+L'attaccante non possiede alcuna conoscenza a priori dell'infrastruttura e delle operazioni svolte dal sistema.
 
