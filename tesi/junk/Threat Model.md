@@ -15,7 +15,7 @@ Qual è il modo migliore per passare informazioni?
 - contesto o no? Risposta secca alle domande precedenti (a cascata)
 
 TODO
-1. Aumentare il numero di dataset, anche di sistemi diversi -> modificare il dominio includendo solo "macro-domini". Proseguo con le domande originali
+1. Aumentare il numero di dataset, anche di sistemi diversi -> (semplificazione del dominio di risposta) modificare il dominio includendo solo "macro-domini". Proseguo con le domande originali
 2. Inserire nell'output i dati di ragionamento della risposta
 3. Bozza threat model ed eventuale related work
 
