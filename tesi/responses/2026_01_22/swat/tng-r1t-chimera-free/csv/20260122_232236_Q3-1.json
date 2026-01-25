@@ -1,0 +1,85 @@
+{
+    "experiment_id": "exp_20260122_231915",
+    "config": {
+        "model": "tngtech/tng-r1t-chimera:free",
+        "dataset_format": "csv",
+        "iterations": 10,
+        "question": "Q3-1: Identify how many PLCs are involved during the operations of the ICS under consideration between the following options: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']."
+    },
+    "dataset": {
+        "filepath": "../datasets/swat/compressed_simplified-swat_plc-data-log_750-lines.csv",
+        "system_name": "swat",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": "3",
+            "confidence": 0.98,
+            "reasoning": "The data includes headers for three distinct PLCs (PLC1, PLC2, and PLC3), each with their own registers (IR0, C0, C1, C2). No other PLC prefixes are present in the headers or data, indicating that only these three PLCs are involved in the operations."
+        },
+        {
+            "run": 2,
+            "short_answer": "3",
+            "confidence": 95,
+            "reasoning": "The CSV headers explicitly list three PLCs: PLC1, PLC2, and PLC3 with multiple registers each. All three show active data changes throughout the time-series, confirming their operational status. The contextual mention of three water tanks aligns with three PLCs, one per tank. No additional PLCs are referenced in the data headers or values."
+        },
+        {
+            "run": 3,
+            "short_answer": "3",
+            "confidence": 0.95,
+            "reasoning": "The dataset contains columns specifically labeled for PLC1, PLC2, and PLC3, each with multiple registers (e.g., IR0, C0, C1, C2). Analysis of the data shows active changes in values across all three PLCs' registers, confirming their involvement in the operations. No columns or data points indicating additional PLCs (e.g., PLC4 or higher) were found in the headers or data rows, ruling out higher counts. Given the explicit presence and activity of three distinct PLCs, the answer is confidently determined to be 3."
+        },
+        {
+            "run": 4,
+            "short_answer": "3",
+            "confidence": 1.0,
+            "reasoning": "The headers of the CSV data explicitly mention PLC1, PLC2, and PLC3 registers. Examination of all column names confirms these are the only PLCs present. There are no indications of additional PLCs in the dataset, as all register names are prefixed with these three PLC identifiers. Thus, three PLCs are involved in the operations."
+        },
+        {
+            "run": 5,
+            "short_answer": "3",
+            "confidence": 0.95,
+            "reasoning": "The dataset's header includes columns for PLC1, PLC2, and PLC3, each with multiple registers showing active data across the entire time series. All three PLCs demonstrate changing values in their respective registers, confirming their operational status. No additional PLCs beyond these three are indicated in the data headers or the records."
+        },
+        {
+            "run": 6,
+            "short_answer": "3",
+            "confidence": 1.0,
+            "reasoning": "The provided data includes three distinct PLCs labeled as PLC1, PLC2, and PLC3, each with active registers and coils that change values over time. The headers and data confirm no additional PLCs beyond these three are present or involved in the operations."
+        },
+        {
+            "run": 7,
+            "short_answer": "3",
+            "confidence": 100,
+            "reasoning": "The dataset includes columns labeled as PLC1, PLC2, and PLC3, with multiple registers for each. No additional PLCs are referenced in the data headers or entries. The headers explicitly show three distinct PLCs, confirming that three PLCs are involved in the operations."
+        },
+        {
+            "run": 8,
+            "short_answer": "3",
+            "confidence": 95,
+            "reasoning": "The dataset includes headers for PLC1, PLC2, and PLC3 with multiple registers each (e.g., IR0, C0, C1, C2 for PLC1). Analysis of the data shows active value changes in all three PLC registers throughout the operational period. No evidence of PLCs beyond these three exists in the data structure or values. The system involves three water tanks, which may each be controlled by one PLC, aligning with three PLCs being present."
+        },
+        {
+            "run": 9,
+            "short_answer": "3",
+            "confidence": 95,
+            "reasoning": "The dataset includes registers for PLC1, PLC2, and PLC3. Each PLC has multiple registers (e.g., IR0, C0, C1, C2) that show active changes in their values over time, indicating all three PLCs are operational. No other PLCs (PLC4 or higher) are referenced in the column headers or data."
+        },
+        {
+            "run": 10,
+            "short_answer": "3",
+            "confidence": 1.0,
+            "reasoning": "The dataset includes registers from three distinct PLCs: PLC1, PLC2, and PLC3. Each PLC's registers (IR0 and various C registers) show active changes throughout the data, confirming their operational involvement. No additional PLCs are indicated in the headers or data."
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 10,
+        "incorrect_n": 0,
+        "error_n": 0,
+        "accuracy": 100.0,
+        "reliability": 100.0,
+        "precision": 100.0,
+        "evaluation_time": 201.2
+    }
+}

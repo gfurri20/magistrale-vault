@@ -1,0 +1,115 @@
+{
+    "experiment_id": "exp_20260122_225000",
+    "config": {
+        "model": "xiaomi/mimo-v2-flash:free",
+        "dataset_format": "csv",
+        "iterations": 10,
+        "question": "Q3-1: Identify how many PLCs are involved during the operations of the ICS under consideration between the following options: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']."
+    },
+    "dataset": {
+        "filepath": "../datasets/swat/compressed_simplified-swat_plc-data-log_750-lines.csv",
+        "system_name": "swat",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 2,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 3,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 4,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 5,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 6,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 7,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 8,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 9,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        },
+        {
+            "run": 10,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "code": null,
+            "msg": "Missing short answer in response.",
+            "error_code": 301
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 0,
+        "incorrect_n": 0,
+        "error_n": 10,
+        "accuracy": 0.0,
+        "reliability": 0.0,
+        "precision": 0.0,
+        "evaluation_time": 22.3
+    }
+}

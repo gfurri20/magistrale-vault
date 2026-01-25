@@ -1,0 +1,85 @@
+{
+    "experiment_id": "exp_20260123_013208",
+    "config": {
+        "model": "tngtech/tng-r1t-chimera:free",
+        "dataset_format": "markdown_kv",
+        "iterations": 10,
+        "question": "Q3-1: Identify how many PLCs are involved during the operations of the ICS under consideration between the following options: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']."
+    },
+    "dataset": {
+        "filepath": "../datasets/swat/compressed_simplified-swat_plc-data-log_750-lines.csv",
+        "system_name": "swat",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": "3",
+            "confidence": 0.95,
+            "reasoning": "The data consistently shows registers and coils for PLC1, PLC2, and PLC3 across all timestamps without any indication of additional PLCs. These three PLCs align with the system's context of managing three water tanks, and no data points to the involvement of more than three PLCs."
+        },
+        {
+            "run": 2,
+            "short_answer": "3",
+            "confidence": 100,
+            "reasoning": "The provided data consistently includes three distinct PLCs labeled PLC1, PLC2, and PLC3 throughout all timestamp entries. No references to PLC4 or higher are present in the dataset, confirming that only three PLCs are actively involved in the system's operations during the recorded period."
+        },
+        {
+            "run": 3,
+            "short_answer": "3",
+            "confidence": 5,
+            "reasoning": "The data consistently shows registers for PLC1, PLC2, and PLC3, with no evidence of additional PLCs. Each PLC has distinct registers (IR0, C0, C1, C2) that change values over time, confirming their active role in system operations. The naming convention and context of three water tanks support three separate PLCs."
+        },
+        {
+            "run": 4,
+            "short_answer": "3",
+            "confidence": 10,
+            "reasoning": "The provided data consistently lists registers for three distinct PLCs: PLC1, PLC2, and PLC3. Each timestamp contains data points from all three PLCs, with no references to PLC4 or beyond. Given the operational context of a water system with three tanks, the presence of three PLCs aligns with typical ICS architectures where each PLC may control one tank. This makes 3 the definitive answer."
+        },
+        {
+            "run": 5,
+            "short_answer": "3",
+            "confidence": 10.0,
+            "reasoning": "In the provided dataset, three distinct PLCs are consistently present across all timestamps: PLC1, PLC2, and PLC3. Each PLC has its own set of registers (IR0, C0, etc.) that are actively updated throughout the operational cycle. No other PLC identifiers (e.g., PLC4 or higher) are observed in any record, confirming that exactly three PLCs are involved."
+        },
+        {
+            "run": 6,
+            "short_answer": "3",
+            "confidence": 1.0,
+            "reasoning": "The provided data consistently shows registers from three distinct PLCs: PLC1, PLC2, and PLC3. There are no references to any other PLCs (e.g., PLC4 or higher) in any of the timestamped records. Each timestamp includes data from these three PLCs only, confirming their active involvement in the ICS operations."
+        },
+        {
+            "run": 7,
+            "short_answer": "3",
+            "confidence": 0.9,
+            "reasoning": "The data consistently shows the presence and activity of three distinct PLCs (PLC1, PLC2, PLC3) through their Input Registers (IR) and Coil (C) values over time, confirming their operation in the Water & Wastewater ICS system."
+        },
+        {
+            "run": 8,
+            "short_answer": "3",
+            "confidence": 0.98,
+            "reasoning": "The data contains entries for PLC1, PLC2, and PLC3 across all timestamps. No other PLC identifiers (e.g., PLC4 or higher) are present. Each PLC has multiple registers (IR0, C0, C1, etc.), and the context of a Water & Wastewater System with three tanks supports having three PLCs managing different aspects of the operation. The consistent presence of exactly three PLCs in the data confirms this."
+        },
+        {
+            "run": 9,
+            "short_answer": "3",
+            "confidence": 100,
+            "reasoning": "The data consistently shows three distinct PLCs (PLC1, PLC2, PLC3) with active input registers (IR) and control registers (C0, C1) that change state over time. No higher-numbered PLCs (PLC4-PLC10) appear in any records. The context of three water tanks also aligns with having three dedicated PLCs for control. This confirms exactly 3 PLCs are involved."
+        },
+        {
+            "run": 10,
+            "short_answer": "3",
+            "confidence": 1.0,
+            "reasoning": "The dataset consistently references three distinct PLCs (PLC1, PLC2, and PLC3) across all timestamps, with no evidence of other PLCs. Each PLC shows active register and coil activity, confirming their operational roles in the ICS."
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 10,
+        "incorrect_n": 0,
+        "error_n": 0,
+        "accuracy": 100.0,
+        "reliability": 100.0,
+        "precision": 100.0,
+        "evaluation_time": 203.7
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "experiment_id": "exp_20260122_221255",
+    "config": {
+        "model": "mistralai/devstral-2512:free",
+        "dataset_format": "csv",
+        "iterations": 10,
+        "question": "Q1-1: Classify the physical Industrial Control System (ICS) into one of the following categories: ['Energy & Power System', 'Oil, Gas & Chemicals System', 'Manufacturing System', 'Water & Wastewater System', 'Building Automation System', 'Not Identifiable']"
+    },
+    "dataset": {
+        "filepath": "../datasets/swat/compressed_simplified-swat_plc-data-log_750-lines.csv",
+        "system_name": "swat",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where PLC registers exhibit cyclic behavior indicative of batch processing or discrete manufacturing operations. The presence of multiple control signals (e.g., PLC1_C0, PLC1_C1) and their frequent toggling suggest a system managing multiple stages of a manufacturing process. The values in the registers (e.g., PLC1_IR0) show gradual changes, which align with the incremental nature of manufacturing operations such as filling, heating, or assembly processes."
+        },
+        {
+            "run": 2,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where PLC registers exhibit cyclic behavior and discrete state changes. The presence of multiple control registers (e.g., PLC1_C0, PLC1_C1) and their frequent toggling suggest a system managing sequential operations, such as assembly lines or batch processing. The values in the registers (e.g., PLC1_IR0) indicate varying operational states, which align with manufacturing processes where different stages or machines are activated/deactivated in a coordinated manner. The lack of continuous, high-frequency fluctuations (common in energy/power systems) and the absence of slow, gradual changes (typical in water/wastewater systems) further support this classification."
+        },
+        {
+            "run": 3,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns consistent with a manufacturing system, where PLC registers are likely controlling discrete processes such as assembly lines or batch processing. The presence of multiple PLCs with varying input/output states and the cyclic nature of the data suggest a system designed for repetitive tasks, which is typical in manufacturing environments. The transitions between states (e.g., PLC1_C0, PLC1_C1) indicate control logic that aligns with manufacturing workflows, such as starting/stopping machinery or switching between operational modes."
+        },
+        {
+            "run": 4,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns consistent with a manufacturing system, where PLC registers are used to control and monitor discrete processes. The presence of multiple PLCs with varying input and control registers suggests a system designed for sequential or batch processing, typical in manufacturing environments. The cyclic nature of the data, with repeated patterns of control signals and input readings, aligns with manufacturing operations such as assembly lines or batch production."
+        },
+        {
+            "run": 5,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where discrete processes and state changes are common. The presence of multiple PLCs with varying input and control registers suggests a system managing different stages of a manufacturing process. The cyclic nature of the data, with repeated sequences of state changes, aligns with the operation of machinery and production lines. Additionally, the absence of continuous process variables (common in systems like Oil, Gas & Chemicals) and the discrete nature of the control signals further support this classification."
+        },
+        {
+            "run": 6,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where PLC registers exhibit cyclic behavior indicative of batch processing or discrete manufacturing steps. The presence of multiple control signals (e.g., PLC1_C0, PLC1_C1) and their transitions suggest coordinated operations common in manufacturing environments. The values in PLC1_IR0 and PLC2_IR0 show gradual changes, which could represent temperature or pressure readings in a controlled manufacturing process. The periodic resets and transitions in the control signals (PLC1_C0, PLC1_C1, PLC2_C0) further support this classification."
+        },
+        {
+            "run": 7,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns consistent with a manufacturing system, such as cyclic behavior in PLC registers, which is typical for production lines or batch processes. The presence of multiple control signals (e.g., PLC1_C0, PLC1_C1) and their transitions suggest discrete control actions, common in manufacturing. Additionally, the values in PLC1_IR0 and PLC2_IR0 exhibit gradual changes, which could indicate process variables like temperature or pressure being monitored and controlled in a manufacturing environment."
+        },
+        {
+            "run": 8,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns consistent with a manufacturing system, such as cyclic behavior in PLC registers, which is typical for production lines or batch processing. The presence of multiple PLCs with coordinated control signals (e.g., PLC1_C0, PLC1_C1, PLC2_C0) suggests a system designed for discrete manufacturing processes. The values in the registers fluctuate in a manner that aligns with production cycles, including start/stop sequences and state transitions."
+        },
+        {
+            "run": 9,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where discrete processes and state changes are common. The presence of multiple PLCs with varying input and control registers suggests a system managing different stages of a manufacturing process. The frequent transitions between states (e.g., True/False values in control registers) and the cyclic nature of the data (e.g., repeated sequences of values) are indicative of batch processing or assembly line operations, which are characteristic of manufacturing systems."
+        },
+        {
+            "run": 10,
+            "short_answer": "Manufacturing System",
+            "confidence": 0.85,
+            "reasoning": "The data shows patterns typical of a manufacturing system, where PLC registers exhibit cyclic behavior indicative of batch processing or discrete manufacturing steps. The presence of multiple control signals (PLC1_C0, PLC1_C1, etc.) and their transitions suggest coordinated operations common in manufacturing environments. The values in PLC1_IR0 and PLC2_IR0 show gradual changes, which could represent temperature or pressure readings in a controlled manufacturing process. Additionally, the periodic activation of control signals (e.g., PLC1_C0, PLC1_C1) aligns with the sequential operations often found in manufacturing systems."
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 0,
+        "incorrect_n": 10,
+        "error_n": 0,
+        "accuracy": 0.0,
+        "reliability": 100.0,
+        "precision": 0.0,
+        "evaluation_time": 95.4
+    }
+}

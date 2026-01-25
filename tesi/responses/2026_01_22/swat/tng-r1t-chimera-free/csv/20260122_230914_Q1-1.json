@@ -1,0 +1,85 @@
+{
+    "experiment_id": "exp_20260122_230351",
+    "config": {
+        "model": "tngtech/tng-r1t-chimera:free",
+        "dataset_format": "csv",
+        "iterations": 10,
+        "question": "Q1-1: Classify the physical Industrial Control System (ICS) into one of the following categories: ['Energy & Power System', 'Oil, Gas & Chemicals System', 'Manufacturing System', 'Water & Wastewater System', 'Building Automation System', 'Not Identifiable']"
+    },
+    "dataset": {
+        "filepath": "../datasets/swat/compressed_simplified-swat_plc-data-log_750-lines.csv",
+        "system_name": "swat",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 0.9,
+            "reasoning": "The data exhibits patterns indicative of controlled filling and emptying processes, consistent with tank level management in water systems. PLC1_IR0 shows cyclical variations (56-80), likely representing a tank level with PLC1_C0 controlling a pump or valve. PLC2_IR0 (10-20) could monitor flow or pressure, with PLC2_C0 activating during low-flow conditions. These behaviors align with water/wastewater treatment operations involving level regulation and pumping. The absence of characteristics specific to other categories (e.g., power generation metrics or manufacturing state machines) supports this classification."
+        },
+        {
+            "run": 2,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 90,
+            "reasoning": "The data exhibits cyclic behavior in PLC1_IR0 (50-80) and PLC2_IR0 (10-20) indicative of level control in tanks, with boolean outputs (C0, C1, C2) representing pump/valve states. This pattern is characteristic of water systems managing filling/draining cycles through actuator control, aligning more closely with Water & Wastewater System parameters than other categories."
+        },
+        {
+            "run": 3,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 0.9,
+            "reasoning": "The system exhibits behaviors consistent with liquid level management using pumps and valves. PLC1 shows cyclic behavior (fill/drain cycles) indicative of tank level control. PLC2's interaction suggests valve control based on tank levels. PLC3's state changes (0-3) likely represent operational modes of a pump or treatment process. These patterns are characteristic of water processing systems, where maintaining and cycling liquid levels is central. The absence of high-pressure or temperature signals rules out Oil/Gas or Energy systems."
+        },
+        {
+            "run": 4,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 0.9,
+            "reasoning": "The data exhibits cyclic patterns in PLC1_IR0, resembling tank level fluctuations, with associated control signals (C0, C1, C2) likely managing filling and draining. PLC2_IR0's narrower range suggests flow or pressure monitoring, while PLC3_IR0's intermittent values may indicate pump/valve states. These characteristics align with water system operations involving level control, flow management, and periodic pump activation, making 'Water & Wastewater System' the most probable classification."
+        },
+        {
+            "run": 5,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 90,
+            "reasoning": "The data exhibits cyclical patterns in analog inputs (PLC1_IR0: 50-80 range) and digital outputs (C0, C1, C2) consistent with tank level management (filling/draining) and valve/pump control. Multiple PLCs coordinate these processes, which aligns with water treatment or distribution systems. The numeric ranges and control logic better match water/wastewater operations than manufacturing or energy systems, where sensor ranges and process dynamics would differ significantly. Resistance heating systems or batch reactors in other industries would show different time-series characteristics. Regular ON/OFF cycling of PLC1_C0/C1/C2 and PLC2_C0 suggests pump/valve control for liquid transfer."
+        },
+        {
+            "run": 6,
+            "short_answer": "Manufacturing System",
+            "confidence": 8,
+            "reasoning": "The data shows cyclical behavior with interdependent PLC controls\u2014PLC1_IR0 likely represents a process variable (e.g., temperature) regulated by PLC1_C0 (heating/cooling signal). PLC2_IR0 inversely correlates with PLC1_IR0, suggesting a secondary cooling mechanism. PLC3_IR0 shows state changes, possibly for safety. This pattern aligns with manufacturing processes requiring precise temperature control, as seen in systems like injection molding, not water or energy systems."
+        },
+        {
+            "run": 7,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 0.9,
+            "reasoning": "The data shows cyclical patterns in PLC1_IR0, resembling tank level control with filling (PLC1_C0 active) and draining (PLC1_C1/C2 active). PLC2_IR0 inversely correlates, suggesting outflow monitoring. This behavior is characteristic of water level management systems, commonly found in Water & Wastewater Systems. The periodic filling and draining, along with boolean controls for valves/pumps, align with processes in water treatment or distribution."
+        },
+        {
+            "run": 8,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 90,
+            "reasoning": "The data exhibits cyclical behavior in analog values (likely representing tank levels) and boolean states (pumps/valves) that correlate inversely, characteristic of water filling and draining processes. The interaction between PLCs suggests a system managing liquid levels, common in water treatment or distribution systems. The pattern does not align with manufacturing, energy, or building automation systems which involve more complex or different control sequences."
+        },
+        {
+            "run": 9,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 80,
+            "reasoning": "The data shows cyclic behavior in PLC1_IR0 values, consistent with a tank level being regulated (filling when PLC1_C0 is True, draining when PLC1_C1/C2 are True). PLC2 appears to control inflow/outflow valves, and PLC3 may handle supervisory functions. This pattern is typical of water/wastewater systems where level control and flow management are critical. The system's behavior aligns more with water treatment processes than manufacturing or building automation."
+        },
+        {
+            "run": 10,
+            "short_answer": "Water & Wastewater System",
+            "confidence": 0.85,
+            "reasoning": "The data shows cyclic patterns in PLC1_IR0 (possibly a level or pressure sensor) with corresponding boolean controls (PLC1_C0-C2) likely managing pumps or valves. PLC2_IR0 trends inversely with PLC1_IR0, suggesting a secondary control loop (e.g., flow rate). The PLC3 interactions are sparse but may indicate system states. These patterns are characteristic of water distribution or wastewater treatment systems, where level and flow control are critical (e.g., pump controls, tank levels). The absence of high-frequency signals or motor currents makes Energy/Power less likely."
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 9,
+        "incorrect_n": 1,
+        "error_n": 0,
+        "accuracy": 90.0,
+        "reliability": 100.0,
+        "precision": 90.0,
+        "evaluation_time": 323.0
+    }
+}
