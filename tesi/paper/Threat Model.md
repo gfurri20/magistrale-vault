@@ -50,7 +50,7 @@ Assumiamo che $A$ abbia successo nell'ottenere dati storici grezzi dal sistema. 
     - $A$ ottiene serie temporali di valori grezzi associati solo a indirizzi di memoria fisici la cui label non fornisce informazioni semantiche sul sistema.
 
 - **Scenario B: Physical/Engineering Dump (Labeled Dataset).** L'attaccante ottiene il dump tramite supporti fisici (es. USB smarrita, furto di hardware, insider threat).
-    - Oltre alle serie temporali, $A$ recupera le etichette dei registri, con la possibilità di ottenere informazioni semantiche dai soli nomi.        
+    - Oltre alle serie temporali, $A$ recupera le etichette dei registri, con la possibilità di ottenere informazioni semantiche dai soli nomi.
 
 Si assume che $A$ abbia accesso a Large Language Models (LLM). L'attaccante utilizza il modello in modalità **"One-Shot Inference"**. La LLM viene utilizzata come un motore di ragionamento generalista per correlare i pattern numerici con la conoscenza ingegneristica presente nel suo training set.
 
