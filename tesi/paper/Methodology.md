@@ -38,6 +38,8 @@ Quali sono le caratteristiche di una domanda generale?
 Individuare le domande generale da porre a tutti i sistemi.
 Individuare, per ogni dataset (sistema) in analisi, le domande specifiche per approfondire la ricognizione semantica.
 
+Le domande specifiche, per via del loro livello di approfondimento, è giusto che vengano integrate con un contesto esaustivo, estrapolato in caso dalle domande generali.
+
 **Spunti per domande generali**
 - macro-impianto di cui fa parte il sistema in analisi
 - numero di PLC che compongono il sistema in a numero di analisi
@@ -45,8 +47,10 @@ Individuare, per ogni dataset (sistema) in analisi, le domande specifiche per ap
 
 **Spunti per domande specifiche**
 - numero di componenti specifici che compongono il sistema in analisi (e.g. water tanks per SwAT)
+- la concentrazione è posta sulla Fisica del sistema
 - unità di misura dei dati mantenuti nei vari input registers
-- identificazione di eventuali threshold o setpoints (non è generale perché la threshold dipende dalla tipologia di dato)
+- identificazione di eventuali threshold o set points (non è generale perché la threshold dipende dalla tipologia di dato)
+- classificazione di una porzione del processo (e.g. funzione di tank 1 in swat)
 
 ---
 
