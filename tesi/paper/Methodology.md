@@ -36,5 +36,8 @@ Quali sono le caratteristiche di una domanda generale?
 Individuare le domande generale da porre a tutti i sistemi.
 Individuare, per ogni dataset (sistema) in analisi, le domande specifiche per approfondire la ricognizione semantica.
 
+---
+
+
 
 
