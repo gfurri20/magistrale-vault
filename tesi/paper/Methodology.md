@@ -14,6 +14,8 @@ Metodologia, domande, obiettivo dell'analisi, tramite per raggiungere l'obiettiv
 Cosa compone una metodologia?
 Ricercare e prendere spunto da paper pubblicati.
 
+Obiettivo: **ricognizione semantica del sistema**
+
 ---
 
 Quali domande proporre al modello?
@@ -35,6 +37,16 @@ Quali sono le caratteristiche di una domanda generale?
 
 Individuare le domande generale da porre a tutti i sistemi.
 Individuare, per ogni dataset (sistema) in analisi, le domande specifiche per approfondire la ricognizione semantica.
+
+**Spunti per domande generali**
+- macro-impianto di cui fa parte il sistema in analisi
+- numero di PLC che compongono il sistema in a numero di analisi
+- numero di registri rispetto alla tipologia (e.g. input, coils, ecc.)
+
+**Spunti per domande specifiche**
+- numero di componenti specifici che compongono il sistema in analisi (e.g. water tanks per SwAT)
+- unità di misura dei dati mantenuti nei vari input registers
+- identificazione di eventuali threshold o setpoints (non è generale perché la threshold dipende dalla tipologia di dato)
 
 ---
 
