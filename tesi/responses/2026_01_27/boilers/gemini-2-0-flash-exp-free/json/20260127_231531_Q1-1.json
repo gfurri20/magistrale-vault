@@ -1,0 +1,35 @@
+{
+    "experiment_id": "exp_20260127_231526",
+    "config": {
+        "model": "google/gemini-2.0-flash-exp:free",
+        "dataset_format": "json",
+        "iterations": 1,
+        "question": "Q1-1: Classify the physical Industrial Control System (ICS) into one of the following categories: ['Energy & Power System', 'Oil, Gas & Chemicals System', 'Manufacturing System', 'Water & Wastewater System', 'Building Automation System', 'Not Identifiable']"
+    },
+    "dataset": {
+        "filepath": "../datasets/boilers/compressed_boilers_plc-data-log_750-lines.csv",
+        "system_name": "boilers",
+        "is_anon": false
+    },
+    "runs": [
+        {
+            "run": 1,
+            "short_answer": null,
+            "confidence": null,
+            "reasoning": null,
+            "error": {
+                "code": 101,
+                "msg": "Model returned an error."
+            }
+        }
+    ],
+    "aggregated_stats": {
+        "correct_n": 0,
+        "incorrect_n": 0,
+        "error_n": 1,
+        "accuracy": 0.0,
+        "reliability": 0.0,
+        "precision": 0.0,
+        "evaluation_time": 4.8
+    }
+}
