@@ -14,19 +14,31 @@ CAPTURE_LEN = 10  # in seconds
 LEN_GATHER_SAMPLES = int(CAPTURE_LEN / TIME_BETWEEN_SAMPLES)
 
 plc_ports_and_registers = {
-    # set here the ports where the modbus services are listening for each PLC, and the registers you want to read
-    # for each kind of register you can specify multiple ranges as (start, count) tuples
-    # for instance, (0, 7) means read registers 0,1,2,3,4,5,6 (7 registers starting from 0)
-    # 1502: {
-    #     # IW0 (input register 0--5), QX0.0-QX0.6 (coils 0..6), MD0--5 (data registers 0..5)
-    #     "input_registers": [(0, 6)],
-    #     "coils": [(0, 7)],
-    #     "discrete_input_registers": [(0, 6)],
-    # },
+    # PLC1
     2502: {
-        # IW0 (input register 0--5), QX0.0-QX0.7 (coils 0..7) and QX1.0, MW0-MW1 (holding registers 0..1), MD0--5 (data registers 0..5)
         "input_registers": [(0, 1)],
         "coils": [(0, 2)],
+        "holding_registers": [(0, 1), (1025, 1)],
+        #"discrete_input_registers": [(0, 0)],
+    },
+    # PLC2
+    3502: {
+        "input_registers": [(0, 1)],
+        "coils": [(0, 3)],
+        "holding_registers": [(0, 1), (1025, 1)],
+        #"discrete_input_registers": [(0, 0)],
+    },
+    # PLC3
+    4502: {
+        "input_registers": [(0, 1)],
+        "coils": [(0, 2)],
+        "holding_registers": [(0, 1), (1025, 1)],
+        #"discrete_input_registers": [(0, 0)],
+    },
+    # PLC4
+    5502: {
+        "input_registers": [(0, 1)],
+        "coils": [(0, 3)],
         "holding_registers": [(0, 1), (1025, 1)],
         #"discrete_input_registers": [(0, 0)],
     }
@@ -50,7 +62,7 @@ with open(LOG_FILE, "w") as f:
         #         header += f",PLC{port}_DR{start + i}"
 
     # use this to replace the name of the PLCs in the header if needed
-    header = header.replace("1502", "1").replace("2502", "2")
+    header = header.replace("2502", "1").replace("3502", "2").replace("4502", "3").replace("5502", "4")
 
     f.write(header + "\n")
 
