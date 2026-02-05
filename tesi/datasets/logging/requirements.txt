@@ -1,0 +1,2 @@
+easymodbus==1.4.0
+tqdm
