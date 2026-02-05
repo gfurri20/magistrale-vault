@@ -23,10 +23,10 @@ Quali domande proporre al modello?
 **Domande generali** che possono essere poste su dataset di sistemi eterogenei.
 Una domanda generale possiede un dominio di risposta costante per ogni ICS e risulta essere un primo movimento verso la ricognizione semantica.
 Quali sono le caratteristiche di una domanda generale?
-- dominio di risposta costante
+- dominio di risposta uguale per ogni dataset
 - non fa riferimento a possibili componenti specifici del sistema
 - cerca informazioni che OGNI sistema possiede (e.g. numero di PLC oppure eventuali componenti fisici aggiuntivi)
-- la cross-valutazione ci permette di capire quale tipologia di dataset si adatti maggiormente per un'analisi semantica
+- la cross-valutazione ci permette di capire quale modello individua le caratteristiche del sistema con la maggiore precisione
 
 **Domande specifiche** che mirano ad ottenere risposte su caratteristiche precise ed eventualmente uniche del sistema.
 Una domanda specifica mira ad identificare le caratteristiche uniche del sistema in analisi, approfondendo la ricognizione semantica generale.
