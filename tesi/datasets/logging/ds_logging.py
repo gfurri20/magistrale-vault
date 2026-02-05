@@ -27,8 +27,8 @@ plc_ports_and_registers = {
         # IW0 (input register 0--5), QX0.0-QX0.7 (coils 0..7) and QX1.0, MW0-MW1 (holding registers 0..1), MD0--5 (data registers 0..5)
         "input_registers": [(0, 1)],
         "coils": [(0, 2)],
-        "holding_registers": [(0, 2)],
-        "discrete_input_registers": [(0, 0)],
+        "holding_registers": [(0, 1), (1025, 1)],
+        #"discrete_input_registers": [(0, 0)],
     }
 }
 
@@ -44,10 +44,10 @@ with open(LOG_FILE, "w") as f:
                 header += f",PLC{port}_C{start + i}"
         for start, count in regs["holding_registers"]:
            for i in range(count):
-               header += f",PLC{port}_MW{start + i}"
-        for start, count in regs["discrete_input_registers"]:
-            for i in range(count):
-                header += f",PLC{port}_DR{start + i}"
+               header += f",PLC{port}_HW{start + i}"
+        # for start, count in regs["discrete_input_registers"]:
+        #     for i in range(count):
+        #         header += f",PLC{port}_DR{start + i}"
 
     # use this to replace the name of the PLCs in the header if needed
     header = header.replace("1502", "1").replace("2502", "2")
@@ -86,10 +86,10 @@ for _ in trange(LEN_GATHER_SAMPLES, desc="Gathering samples"):
            holdingRegisters = plc.read_holdingregisters(start, count)
            for val in holdingRegisters:
                log_line += f",{val}"
-        for start, count in regs["discrete_input_registers"]:
-            discreteInputs = plc.read_discreteinputs(start, count)
-            for val in discreteInputs:
-                log_line += f",{val}"
+        # for start, count in regs["discrete_input_registers"]:
+        #     discreteInputs = plc.read_discreteinputs(start, count)
+        #     for val in discreteInputs:
+        #         log_line += f",{val}"
     #print(f"Sampled in {time.time() - start_time} seconds")
 
     with open(LOG_FILE, "a") as f:
